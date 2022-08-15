@@ -62,6 +62,11 @@ Carthage/Build
 Dependencies/
 .accio/
 
+# OS-specific files
+.DS_Store
+.Trashes
+Thumbs.db
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
