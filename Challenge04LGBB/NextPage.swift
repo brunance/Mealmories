@@ -17,7 +17,7 @@ class NextPage: UIViewController {
         let transition = CATransition()
             transition.duration = 0.4
         transition.type = CATransitionType.reveal
-            transition.subtype = CATransitionSubtype.fromRight
+            transition.subtype = CATransitionSubtype.fromLeft
             guard let window = view.window else { return }
             window.layer.add(transition, forKey: kCATransition)
         
