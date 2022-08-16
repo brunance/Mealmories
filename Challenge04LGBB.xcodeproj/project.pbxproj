@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		4FED12F628AA8A80002113D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED12F528AA8A80002113D3 /* AppDelegate.swift */; };
 		4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED12F728AA8A80002113D3 /* SceneDelegate.swift */; };
-		4FED12FA28AA8A80002113D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED12F928AA8A80002113D3 /* ViewController.swift */; };
+		4FED12FA28AA8A80002113D3 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED12F928AA8A80002113D3 /* FirstPage.swift */; };
 		4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FB28AA8A80002113D3 /* Main.storyboard */; };
 		4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FE28AA8A83002113D3 /* Assets.xcassets */; };
 		4FED130228AA8A83002113D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED130028AA8A83002113D3 /* LaunchScreen.storyboard */; };
+		5150963228ABCDAF006CA521 /* NextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5150963128ABCDAF006CA521 /* NextPage.swift */; };
+		5150963428ABCDD0006CA521 /* NextPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5150963328ABCDD0006CA521 /* NextPage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4FED12F228AA8A80002113D3 /* Challenge04LGBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge04LGBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FED12F528AA8A80002113D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FED12F728AA8A80002113D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4FED12F928AA8A80002113D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4FED12F928AA8A80002113D3 /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
 		4FED12FC28AA8A80002113D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FED12FE28AA8A83002113D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FED130128AA8A83002113D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FED130328AA8A83002113D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5150963128ABCDAF006CA521 /* NextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPage.swift; sourceTree = "<group>"; };
+		5150963328ABCDD0006CA521 /* NextPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NextPage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				4FED12F528AA8A80002113D3 /* AppDelegate.swift */,
 				4FED12F728AA8A80002113D3 /* SceneDelegate.swift */,
-				4FED12F928AA8A80002113D3 /* ViewController.swift */,
+				4FED12F928AA8A80002113D3 /* FirstPage.swift */,
+				5150963128ABCDAF006CA521 /* NextPage.swift */,
 				4FED12FB28AA8A80002113D3 /* Main.storyboard */,
+				5150963328ABCDD0006CA521 /* NextPage.storyboard */,
 				4FED12FE28AA8A83002113D3 /* Assets.xcassets */,
 				4FED130028AA8A83002113D3 /* LaunchScreen.storyboard */,
 				4FED130328AA8A83002113D3 /* Info.plist */,
@@ -127,6 +133,7 @@
 			files = (
 				4FED130228AA8A83002113D3 /* LaunchScreen.storyboard in Resources */,
 				4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */,
+				5150963428ABCDD0006CA521 /* NextPage.storyboard in Resources */,
 				4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FED12FA28AA8A80002113D3 /* ViewController.swift in Sources */,
+				4FED12FA28AA8A80002113D3 /* FirstPage.swift in Sources */,
+				5150963228ABCDAF006CA521 /* NextPage.swift in Sources */,
 				4FED12F628AA8A80002113D3 /* AppDelegate.swift in Sources */,
 				4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */,
 			);
@@ -287,7 +295,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				DEVELOPMENT_TEAM = XKBJR2ZWTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,7 +308,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunance.Challenge04LGBB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gabriel.Challenge04LGBB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -315,7 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				DEVELOPMENT_TEAM = XKBJR2ZWTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunance.Challenge04LGBB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gabriel.Challenge04LGBB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
