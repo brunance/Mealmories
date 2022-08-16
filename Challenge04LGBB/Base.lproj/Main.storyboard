@@ -29,6 +29,7 @@
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="gnP-s4-eJn" appends="YES" id="Qmu-ub-3Nv"/>
+                            <outletCollection property="gestureRecognizers" destination="imW-zx-ASP" appends="YES" id="Fbl-jz-Ci1"/>
                         </connections>
                     </view>
                     <connections>
@@ -39,6 +40,11 @@
                 <swipeGestureRecognizer direction="left" id="gnP-s4-eJn">
                     <connections>
                         <action selector="swipeLeft:" destination="BYZ-38-t0r" id="LON-1p-aEm"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="imW-zx-ASP">
+                    <connections>
+                        <action selector="SwipeRight:" destination="BYZ-38-t0r" id="3pA-vT-q9G"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
