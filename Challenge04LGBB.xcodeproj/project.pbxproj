@@ -23,6 +23,11 @@
 
 /* Begin PBXFileReference section */
 		4F10029528AD17B70052D2B8 /* SegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedController.swift; sourceTree = "<group>"; };
+		4F10029728AD21540052D2B8 /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
+		4F10029828AD21540052D2B8 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
+		4F10029928AD21540052D2B8 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
+		4F10029A28AD21540052D2B8 /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
+		4F10029B28AD21540052D2B8 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		4FA1996A28ABC68500EF920A /* progressbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = progressbar.storyboard; sourceTree = "<group>"; };
 		4FA1996C28ABCD7600EF920A /* SegmentedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedProgressBar.swift; sourceTree = "<group>"; };
 		4FED12F228AA8A80002113D3 /* Challenge04LGBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge04LGBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +54,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F10029C28AD215B0052D2B8 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4F10029928AD21540052D2B8 /* Baloo2-Bold.ttf */,
+				4F10029B28AD21540052D2B8 /* Baloo2-ExtraBold.ttf */,
+				4F10029728AD21540052D2B8 /* Baloo2-Medium.ttf */,
+				4F10029828AD21540052D2B8 /* Baloo2-Regular.ttf */,
+				4F10029A28AD21540052D2B8 /* Baloo2-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		4FED12E928AA8A80002113D3 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +95,7 @@
 				4FED130028AA8A83002113D3 /* LaunchScreen.storyboard */,
 				4FED130328AA8A83002113D3 /* Info.plist */,
 				4FED12FE28AA8A83002113D3 /* Assets.xcassets */,
+				4F10029C28AD215B0052D2B8 /* fonts */,
 				6608015C28ABE785005FC8A0 /* RecipeView.swift */,
 				6608015E28ABEA0A005FC8A0 /* RecipeViewController.swift */,
 				6608016028ABEDB2005FC8A0 /* RecipeDetailViewController.swift */,
