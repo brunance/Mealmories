@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="921.73913043478262" y="85.714285714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Detail View Controller-->
         <scene sceneID="GEQ-De-sB0">
             <objects>
-                <viewController id="k0r-Gz-Q50" sceneMemberID="viewController">
+                <viewController id="k0r-Gz-Q50" customClass="RecipeDetailViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vQH-f3-95q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +135,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imagemIntrucao" destination="RSD-7v-EP0" id="OEi-qk-vGS"/>
+                        <outlet property="labelContagemTurno" destination="X0x-UW-Frx" id="fjp-hY-aVl"/>
+                        <outlet property="labelImagem" destination="tnG-RT-wwe" id="CNY-7J-Ayb"/>
+                        <outlet property="labelIntrucao" destination="4mZ-YQ-6Ll" id="kBf-cZ-4bV"/>
+                        <outlet property="labelTurno" destination="0aA-Ej-i2r" id="cGT-M3-tUf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgb-Yp-W0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
