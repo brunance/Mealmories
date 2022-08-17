@@ -23,8 +23,8 @@ class FirstPage: UIViewController {
  
     @IBAction func swipeLeft(_ sender: Any) {
         cont += 1
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! FirstPage
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Transition", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Transition") as! FirstPage
         
 
         let transition = CATransition()
@@ -42,8 +42,8 @@ class FirstPage: UIViewController {
     
     @IBAction func SwipeRight(_ sender: Any) {
         cont -= 1
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! FirstPage
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Transition", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Transition") as! FirstPage
         
 
         let transition = CATransition()
