@@ -14,13 +14,15 @@ class Recipe {
     var descricaoReceita : [String]
     var pessoaTurno: [String]
     var numeroEtapas: Int
+    var imagemIntrucao: UIImage
     
-    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int){
+    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: UIImage){
         self.tituloReceita = tituloReceita
         self.numeroIntrucoes = numeroIntrucoes
         self.pessoaTurno = pessoaTurno
         self.descricaoReceita = descricaoReceita
         self.numeroEtapas = numeroEtapas
+        self.imagemIntrucao = imagemIntrucao
     }
     
     init(){
@@ -29,5 +31,6 @@ class Recipe {
         self.pessoaTurno = [""]
         self.descricaoReceita = [""]
         self.numeroEtapas = 0
+        self.imagemIntrucao = UIImage()
     }
 }
