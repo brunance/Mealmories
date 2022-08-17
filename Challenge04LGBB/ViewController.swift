@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         spb.startAnimation()
         spb.skip()
         super.viewDidLoad()
+    
         // Do any additional setup after loading the view.
     }
     
