@@ -30,9 +30,6 @@ class RecipeDetailViewController: UIViewController{
         ]
         navigationController?.navigationBar.backgroundColor = UIColor.blue
         statusbar.backgroundColor = UIColor.blue
-        imagemIntrucao.image = recipes[0].imagemIntrucao
-        labelIntrucao.text = recipes[0].descricaoReceita[count]
-        labelTurno.text = "Turno \(recipes[0].pessoaTurno[count])"
         viewTurno.layer.borderColor = UIColor.blue.cgColor
         viewTurno.layer.cornerRadius = 15
         viewTurno.layer.borderWidth = 5    }
