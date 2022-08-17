@@ -25,8 +25,8 @@ class RecipeViewController: UIViewController{
     
     override func viewDidLoad() {
         navigationController?.navigationBar.backgroundColor = UIColor.blue
-        statusbar.backgroundColor = UIColor.blue
-        viewTurno.layer.borderColor = UIColor.blue.cgColor
+        statusbar.backgroundColor = UIColor(named: "Adulto_Blue")
+        viewTurno.layer.borderColor = UIColor(named: "Adulto_Blue")?.cgColor
         viewTurno.layer.cornerRadius = 15
         viewTurno.layer.borderWidth = 5
         print("view atrualizada")
