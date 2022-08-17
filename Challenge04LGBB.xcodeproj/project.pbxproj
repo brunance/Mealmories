@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4F10029628AD17B70052D2B8 /* SegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10029528AD17B70052D2B8 /* SegmentedController.swift */; };
-		4FA1996B28ABC68500EF920A /* progressbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FA1996A28ABC68500EF920A /* progressbar.storyboard */; };
 		4FA1996D28ABCD7600EF920A /* SegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1996C28ABCD7600EF920A /* SegmentedProgressBar.swift */; };
 		4FED12F628AA8A80002113D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED12F528AA8A80002113D3 /* AppDelegate.swift */; };
 		4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED12F728AA8A80002113D3 /* SceneDelegate.swift */; };
 		4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FB28AA8A80002113D3 /* Main.storyboard */; };
 		4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FE28AA8A83002113D3 /* Assets.xcassets */; };
-		4FED130228AA8A83002113D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED130028AA8A83002113D3 /* LaunchScreen.storyboard */; };
 		5150964028AD1CFE006CA521 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5150963F28AD1CFE006CA521 /* FirstPage.swift */; };
 		6608015D28ABE785005FC8A0 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608015C28ABE785005FC8A0 /* RecipeView.swift */; };
 		6608015F28ABEA0A005FC8A0 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608015E28ABEA0A005FC8A0 /* RecipeViewController.swift */; };
@@ -28,14 +26,12 @@
 		4F10029928AD21540052D2B8 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
 		4F10029A28AD21540052D2B8 /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
 		4F10029B28AD21540052D2B8 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
-		4FA1996A28ABC68500EF920A /* progressbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = progressbar.storyboard; sourceTree = "<group>"; };
 		4FA1996C28ABCD7600EF920A /* SegmentedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedProgressBar.swift; sourceTree = "<group>"; };
 		4FED12F228AA8A80002113D3 /* Challenge04LGBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge04LGBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FED12F528AA8A80002113D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FED12F728AA8A80002113D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4FED12FC28AA8A80002113D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FED12FE28AA8A83002113D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4FED130128AA8A83002113D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FED130328AA8A83002113D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5150963F28AD1CFE006CA521 /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
 		6608015C28ABE785005FC8A0 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
@@ -54,7 +50,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F10029C28AD215B0052D2B8 /* fonts */ = {
+		4F10029C28AD215B0052D2B8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				4F10029928AD21540052D2B8 /* Baloo2-Bold.ttf */,
@@ -63,7 +59,28 @@
 				4F10029828AD21540052D2B8 /* Baloo2-Regular.ttf */,
 				4F10029A28AD21540052D2B8 /* Baloo2-SemiBold.ttf */,
 			);
-			path = fonts;
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4F10029D28AD37740052D2B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F10029528AD17B70052D2B8 /* SegmentedController.swift */,
+				6608015E28ABEA0A005FC8A0 /* RecipeViewController.swift */,
+				6608016028ABEDB2005FC8A0 /* RecipeDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4F10029E28AD37970052D2B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6608015C28ABE785005FC8A0 /* RecipeView.swift */,
+				5150963F28AD1CFE006CA521 /* FirstPage.swift */,
+				4FA1996C28ABCD7600EF920A /* SegmentedProgressBar.swift */,
+				4FED12FB28AA8A80002113D3 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4FED12E928AA8A80002113D3 = {
@@ -85,20 +102,13 @@
 		4FED12F428AA8A80002113D3 /* Challenge04LGBB */ = {
 			isa = PBXGroup;
 			children = (
-				5150963F28AD1CFE006CA521 /* FirstPage.swift */,
 				4FED12F528AA8A80002113D3 /* AppDelegate.swift */,
 				4FED12F728AA8A80002113D3 /* SceneDelegate.swift */,
-				4FA1996C28ABCD7600EF920A /* SegmentedProgressBar.swift */,
-				4F10029528AD17B70052D2B8 /* SegmentedController.swift */,
-				4FED12FB28AA8A80002113D3 /* Main.storyboard */,
-				4FA1996A28ABC68500EF920A /* progressbar.storyboard */,
-				4FED130028AA8A83002113D3 /* LaunchScreen.storyboard */,
+				4F10029E28AD37970052D2B8 /* View */,
+				4F10029D28AD37740052D2B8 /* Controller */,
+				4F10029C28AD215B0052D2B8 /* Fonts */,
 				4FED130328AA8A83002113D3 /* Info.plist */,
 				4FED12FE28AA8A83002113D3 /* Assets.xcassets */,
-				4F10029C28AD215B0052D2B8 /* fonts */,
-				6608015C28ABE785005FC8A0 /* RecipeView.swift */,
-				6608015E28ABEA0A005FC8A0 /* RecipeViewController.swift */,
-				6608016028ABEDB2005FC8A0 /* RecipeDetailViewController.swift */,
 			);
 			path = Challenge04LGBB;
 			sourceTree = "<group>";
@@ -161,10 +171,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FED130228AA8A83002113D3 /* LaunchScreen.storyboard in Resources */,
 				4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */,
 				4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */,
-				4FA1996B28ABC68500EF920A /* progressbar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +203,6 @@
 				4FED12FC28AA8A80002113D3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4FED130028AA8A83002113D3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4FED130128AA8A83002113D3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
