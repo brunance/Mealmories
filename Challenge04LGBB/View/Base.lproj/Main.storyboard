@@ -8,10 +8,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Progressbar-->
+        <scene sceneID="csf-QS-IDd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Progressbar" id="mcc-cR-mO1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yTn-D0-EjS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsm-Ok-1eU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="-134"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +32,15 @@
                                 <buttonConfiguration key="configuration" style="filled" title="View 1"/>
                                 <connections>
                                     <segue destination="k0r-Gz-Q50" kind="show" animates="NO" id="rMV-1b-ahi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-Ld-TN3">
+                                <rect key="frame" x="175" y="245" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="mcc-cR-mO1" kind="show" id="Pxi-2G-7Nf"/>
                                 </connections>
                             </button>
                         </subviews>
