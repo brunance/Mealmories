@@ -30,17 +30,17 @@ class RecipeViewController: UIViewController{
         recipes = [
             Recipe(tituloReceita: "Pão de Queijo", numeroIntrucoes: 9, pessoaTurno: ["Adulto", "Criança", "Mix", "Adulto", "Mix", "Criança", "Mix", "Adulto", "Adulto"], descricaoReceita: ["Em uma vasilha, junte os ingredientes secos: polvilho doce, o parmesão", "misture bem com uma colher ou com a mão!", "Adicione o creme de leite, aos poucos, misturando com as mãos até formar uma massa homogênea e firme.","Retire porções pequenas da massa", "modele do formato que quiser, bolinhas, dadinhos, seja criativo!", "Unte uma fôrma com manteiga e trigo, papel manteiga ou spray de untar ", "Coloque uma ao lado da outra na fôrma grande untada", "Leve ao forno alto, preaquecido, por 15 minutos ou até dourar.", "Retire e sirva em seguida."], numeroEtapas: 3, imagemIntrucao: UIImage(named: "imagePlaceholder")!,CorDaTela: [UIColor(named: "Adulto_Blue")!,UIColor.orange,UIColor.red,UIColor(named: "Adulto_Blue")!,UIColor.red,UIColor.orange,UIColor.red,UIColor(named: "Adulto_Blue")!,UIColor(named: "Adulto_Blue")!])
         ]
-        labelTurno.text = "Turno \(recipes[0].pessoaTurno[cont])"
-        labelIntrucao.text = "\(recipes[0].descricaoReceita[cont])"
-        navigationController?.navigationBar.backgroundColor = recipes[0].CorDaTela[cont]
-        statusbar.backgroundColor = recipes[0].CorDaTela[cont]
-        viewTurno.layer.borderColor = recipes[0].CorDaTela[cont].cgColor
+        labelTurno.text = "Turno \(recipes[0].pessoaTurno[count])"
+        labelIntrucao.text = "\(recipes[0].descricaoReceita[count])"
+        navigationController?.navigationBar.backgroundColor = recipes[0].CorDaTela[count]
+        statusbar.backgroundColor = recipes[0].CorDaTela[count]
+        viewTurno.layer.borderColor = recipes[0].CorDaTela[count].cgColor
 
         
        
     }
     @IBAction func SwipeLeft(_ sender: Any) {
-        cont += 1
+        count += 1
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
         
@@ -56,7 +56,7 @@ class RecipeViewController: UIViewController{
     }
     
     @IBAction func SwipeRight(_ sender: Any) {
-        cont -= 1
+        count -= 1
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
         
