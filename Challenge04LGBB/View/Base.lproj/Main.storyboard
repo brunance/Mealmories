@@ -97,6 +97,11 @@
                                 <rect key="frame" x="185" y="746" width="44" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="QN8-dL-sRv">
+                                <rect key="frame" x="72" y="160" width="270" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rJl-mD-UKU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -131,6 +136,7 @@
                         <outlet property="labelImagem" destination="tnG-RT-wwe" id="CNY-7J-Ayb"/>
                         <outlet property="labelIntrucao" destination="4mZ-YQ-6Ll" id="kBf-cZ-4bV"/>
                         <outlet property="labelTurno" destination="0aA-Ej-i2r" id="cGT-M3-tUf"/>
+                        <outlet property="progressBar" destination="QN8-dL-sRv" id="E9o-32-Jhg"/>
                         <outlet property="statusbar" destination="vAU-Bi-V7b" id="D8C-7H-NY1"/>
                         <outlet property="viewTurno" destination="vMc-XE-WMT" id="tfM-cG-f4g"/>
                     </connections>

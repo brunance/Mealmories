@@ -6,7 +6,9 @@ var count = 0
 class RecipeViewController: UIViewController{
     
     var recipes : [Recipe] = []
-        
+    var cont = 5
+    
+    @IBOutlet weak var progressBar: UIStackView!
     @IBOutlet weak var labelIntrucao: UILabel!
     @IBOutlet weak var imagemIntrucao: UIImageView!
     @IBOutlet weak var labelTurno: UILabel!
@@ -21,10 +23,12 @@ class RecipeViewController: UIViewController{
     
     @IBOutlet weak var LampImage: UIImageView!
     @IBOutlet weak var LabelDica: UILabel!
+    
     override func viewDidLoad() {
        
         viewTurno.layer.cornerRadius = 15
         viewTurno.layer.borderWidth = 5
+        
         recipes = [
             Recipe(tituloReceita: "Pão de Queijo", numeroIntrucoes: 9, pessoaTurno: ["Adulto", "Criança", "Mix", "Adulto", "Mix", "Criança", "Mix", "Adulto", "Adulto"], descricaoReceita: ["Em uma vasilha, junte os ingredientes secos: polvilho doce, e parmesão", "misture bem com uma colher ou com a mão!", "Adicione o creme de leite, aos poucos, misturando com as mãos até formar uma massa homogênea e firme.","Retire porções pequenas da massa", "modele do formato que quiser, bolinhas, dadinhos, seja criativo!", "Unte uma fôrma com manteiga e trigo, papel manteiga ou spray de untar ", "Coloque uma ao lado da outra na fôrma grande untada", "Leve ao forno alto, preaquecido a 180°C , por 15 minutos ou até dourar.", "Retire e sirva em seguida."], numeroEtapas: 3,
                    imagemIntrucao:
@@ -52,7 +56,18 @@ class RecipeViewController: UIViewController{
         if recipes[0].dicas[count] == ""{
             LampImage.isHidden = true
         }
-       
+        for i in 1...5{
+            let view = UIView(frame: CGRect(x: cont, y: Int(progressBar.frame.height)/2, width: 50, height: 10))
+            if i < count + 2{
+                view.backgroundColor = recipes[0].CorDaTela[count]
+            } else {
+                view.backgroundColor = UIColor.gray
+            }
+            view.layer.cornerRadius = 5
+            progressBar.addSubview(view)
+            cont += 52
+        }
+        
        
     }
     @IBAction func SwipeLeft(_ sender: Any) {
