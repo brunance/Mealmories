@@ -117,7 +117,7 @@
                                 <rect key="frame" x="35" y="587" width="344" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="20"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siga as Intruções" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnG-RT-wwe">
@@ -167,6 +167,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ImagemInstrucao" destination="RSD-7v-EP0" id="clp-wI-ved"/>
+                        <outlet property="LInhaDivisoria" destination="S5c-eY-Ajk" id="GGD-04-OpI"/>
                         <outlet property="LabelDica" destination="b8O-GY-1k1" id="03D-Ht-im6"/>
                         <outlet property="imagemIntrucao" destination="RSD-7v-EP0" id="OEi-qk-vGS"/>
                         <outlet property="labelContagemTurno" destination="X0x-UW-Frx" id="fjp-hY-aVl"/>

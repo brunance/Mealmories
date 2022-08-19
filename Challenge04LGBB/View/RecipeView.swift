@@ -14,11 +14,11 @@ class Recipe {
     var descricaoReceita : [String]
     var pessoaTurno: [String]
     var numeroEtapas: Int
-    var imagemIntrucao: UIImage
+    var imagemIntrucao: [UIImage]
     var CorDaTela: [UIColor]
     var dicas: [String]
     
-    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: UIImage,CorDaTela: [UIColor],dicas: [String]){
+    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String]){
         self.tituloReceita = tituloReceita
         self.numeroIntrucoes = numeroIntrucoes
         self.pessoaTurno = pessoaTurno
@@ -35,7 +35,7 @@ class Recipe {
         self.pessoaTurno = [""]
         self.descricaoReceita = [""]
         self.numeroEtapas = 0
-        self.imagemIntrucao = UIImage()
+        self.imagemIntrucao = []
         self.CorDaTela = []
         self.dicas = []
     }
