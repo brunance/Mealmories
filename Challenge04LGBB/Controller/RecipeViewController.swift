@@ -29,7 +29,7 @@ class RecipeViewController: UIViewController{
                     [UIImage(named: "secos.1")!
                      ,UIImage(named: "mistura.1")!
                      ,UIImage(named: "liquidoemistura.1")!
-                     ,UIImage(named: "imagePlaceholder")!
+                     ,UIImage(named: "porções")!
                      ,UIImage(named: "modelagem.1")!
                      ,UIImage(named: "untarforma.1")!
                      ,UIImage(named: "Organizarnaforma.1")!

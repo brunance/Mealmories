@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  Challenge04LGBB
-//
-//  Created by Bruno França do Prado on 15/08/22.
-//
 
 import UIKit
 
