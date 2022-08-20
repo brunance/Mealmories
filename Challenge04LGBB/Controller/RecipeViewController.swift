@@ -61,7 +61,7 @@ class RecipeViewController: UIViewController{
             if i < count + 2{
                 view.backgroundColor = recipes[0].CorDaTela[count]
             } else {
-                view.backgroundColor = UIColor.gray
+                view.backgroundColor = UIColor.lightGray
             }
             view.layer.cornerRadius = 5
             progressBar.addSubview(view)
