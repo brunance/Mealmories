@@ -19,6 +19,7 @@ class RecipeViewController: UIViewController{
     @IBOutlet weak var statusbar: UIView!
     @IBOutlet weak var ContDeInstrucoes: UILabel!
     
+    @IBOutlet weak var sigaAsInstrucoes: UILabel!
     @IBOutlet weak var LampImage: UIImageView!
     @IBOutlet weak var LabelDica: UILabel!
     override func viewDidLoad() {
@@ -49,6 +50,12 @@ class RecipeViewController: UIViewController{
         LInhaDivisoria.backgroundColor = recipes[0].CorDaTela[count]
         imagemIntrucao.image = recipes[0].imagemIntrucao[count]
         ContDeInstrucoes.text = "Passo \(count+1) de \(recipes[0].numeroIntrucoes)"
+        if recipes[0].pessoaTurno[count] == "Mix"{
+            sigaAsInstrucoes.text = "Vocês podem fazer juntos essa etapa!!!"
+        }
+        else{
+            sigaAsInstrucoes.text = "Siga as instruções:"
+        }
         if recipes[0].dicas[count] == ""{
             LampImage.isHidden = true
         }
