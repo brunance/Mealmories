@@ -53,9 +53,11 @@ class RecipeViewController: UIViewController{
         LInhaDivisoria.backgroundColor = recipes[0].CorDaTela[count]
         imagemIntrucao.image = recipes[0].imagemIntrucao[count]
         ContDeInstrucoes.text = "Passo \(count+1) de \(recipes[0].numeroIntrucoes)"
+        
         if recipes[0].dicas[count] == ""{
             LampImage.isHidden = true
         }
+        
         for i in 1...5{
             let view = UIView(frame: CGRect(x: cont, y: Int(progressBar.frame.height)/2, width: 50, height: 10))
             if i < count + 2{
