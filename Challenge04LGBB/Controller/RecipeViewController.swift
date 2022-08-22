@@ -73,7 +73,7 @@ class RecipeViewController: UIViewController{
         }
         else{
         count += 1
-            NextStep()
+            LastStep()
         }
       
     }
@@ -89,6 +89,21 @@ class RecipeViewController: UIViewController{
     }
     
     func NextStep(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
+        
+
+        let transition = CATransition()
+            transition.duration = 0.4
+            transition.type = CATransitionType.reveal
+            transition.subtype = CATransitionSubtype.fromLeft
+            guard let window = view.window else { return }
+            window.layer.add(transition, forKey: kCATransition)
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: false, completion: nil)
+    }
+    func LastStep(){
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
         
