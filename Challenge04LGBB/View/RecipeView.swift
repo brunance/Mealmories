@@ -17,8 +17,10 @@ class Recipe {
     var imagemIntrucao: [UIImage]
     var CorDaTela: [UIColor]
     var dicas: [String]
+    var CorDoFundoDatela:[UIColor]
+    var Etapas:[Int]
     
-    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String]){
+    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String],CorDoFundoDatela: [UIColor],Etapas: [Int]){
         self.tituloReceita = tituloReceita
         self.numeroIntrucoes = numeroIntrucoes
         self.pessoaTurno = pessoaTurno
@@ -27,6 +29,8 @@ class Recipe {
         self.imagemIntrucao = imagemIntrucao
         self.CorDaTela = CorDaTela
         self.dicas = dicas
+        self.CorDoFundoDatela = CorDoFundoDatela
+        self.Etapas = Etapas
     }
     
     init(){
@@ -38,5 +42,7 @@ class Recipe {
         self.imagemIntrucao = []
         self.CorDaTela = []
         self.dicas = []
+        self.CorDoFundoDatela = []
+        self.Etapas = []
     }
 }

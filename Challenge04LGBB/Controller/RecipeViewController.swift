@@ -8,6 +8,8 @@ class RecipeViewController: UIViewController{
     var recipes : [Recipe] = []
     var cont = 5
     
+    @IBOutlet weak var setaPraEsquerda: UIView!
+    @IBOutlet weak var setaPraDireita: UIView!
     @IBOutlet weak var progressBar: UIStackView!
     @IBOutlet weak var labelIntrucao: UILabel!
     @IBOutlet weak var imagemIntrucao: UIImageView!
@@ -19,6 +21,7 @@ class RecipeViewController: UIViewController{
     @IBOutlet weak var bottomColor: UIView!
     @IBOutlet weak var statusbar: UIView!
     
+    @IBOutlet weak var CorDoFundoDaTela: UIView!
     
     @IBOutlet weak var LampImage: UIImageView!
     @IBOutlet weak var LabelDica: UILabel!
@@ -39,33 +42,44 @@ class RecipeViewController: UIViewController{
                      ,UIImage(named: "Organizarnaforma.1")!
                      ,UIImage(named: "forno.1")!,
                      UIImage(named: "paodequeijo.1")!]
-                   ,CorDaTela: [UIColor(named: "Adulto_Blue")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Adulto_Blue")!],dicas: ["Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha.","Deixe sempre um pequeno espaço entre as massas , pode facilitar na hora de retirar os pães.","",""])
-        ]
-       
-        labelTurno.text = "Turno \(recipes[0].pessoaTurno[count])"
+                   ,CorDaTela: [UIColor(named: "Adulto_Blue")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Adulto_Blue")!],dicas: ["Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha.","Deixe sempre um pequeno espaço entre as massas , pode facilitar na hora de retirar os pães.","",""],CorDoFundoDatela: [UIColor(named: "LabelBlue")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelBlue")!],Etapas: [1,1,1,2,2,3,3,3,3])]
+        viewTurno.backgroundColor = recipes[0].CorDoFundoDatela[count]
+        labelContagemTurno.text = "Etapa \(recipes[0].Etapas[count]) de \(recipes[0].numeroEtapas)"
+        CorDoFundoDaTela.backgroundColor = recipes[0].CorDoFundoDatela[count]
+        labelTurno.text = "\(recipes[0].pessoaTurno[count])"
         labelIntrucao.text = "\(recipes[0].descricaoReceita[count])"
         LabelDica.text = "\(recipes[0].dicas[count])"
         statusbar.backgroundColor = recipes[0].CorDaTela[count]
         imagemIntrucao.image = recipes[0].imagemIntrucao[count]
         bottomColor.backgroundColor = recipes[0].CorDaTela[count]
-        
+        setaPraDireita.backgroundColor = recipes[0].CorDaTela[count]
+        setaPraEsquerda.backgroundColor = recipes[0].CorDaTela[count]
         if recipes[0].dicas[count] == ""{
             LampImage.isHidden = true
         }
         
         for i in 1...5{
-            let view = UIView(frame: CGRect(x: cont, y: Int(progressBar.frame.height)/2, width: 10, height: 10))
+            let view = UIView(frame: CGRect(x: cont, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
             if i < count + 2{
                 view.backgroundColor = recipes[0].CorDaTela[count]
             } else {
                 view.backgroundColor = UIColor.lightGray
             }
-            view.layer.cornerRadius = 5
+            view.layer.cornerRadius = 10
             progressBar.addSubview(view)
-            cont += 52
+            cont += 22
         }
         
        
+    }
+    @IBAction func Clicarpradireita(_ sender: Any) {
+        if count == recipes[0].numeroIntrucoes-1{
+            count = recipes[0].numeroIntrucoes-1
+        }
+        else{
+        count += 1
+            LastStep()
+        }
     }
     @IBAction func SwipeLeft(_ sender: Any) {
         if count == recipes[0].numeroIntrucoes-1{
@@ -78,6 +92,15 @@ class RecipeViewController: UIViewController{
       
     }
     
+    @IBAction func clicaresquerda(_ sender: Any) {
+        if count == 0{
+            count = 0
+        }
+        else{
+        count -= 1
+        NextStep()
+        }
+    }
     @IBAction func SwipeRight(_ sender: Any) {
         if count == 0{
             count = 0
