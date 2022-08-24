@@ -96,92 +96,6 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="s93-fs-rjB"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Lf-PWV" userLabel="TurnoView">
-                                <rect key="frame" x="20" y="257" width="374" height="524"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADULTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6u-Eg-cEd">
-                                        <rect key="frame" x="107" y="13" width="160" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="160" id="THl-dI-uTb"/>
-                                            <constraint firstAttribute="height" constant="29" id="kIT-qq-b2w"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="34"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siga as Instruções" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V8-Vs-nYI">
-                                        <rect key="frame" x="0.0" y="42" width="374" height="27.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="9Rn-eh-0f1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secos.1" translatesAutoresizingMaskIntoConstraints="NO" id="sWO-ff-cJH">
-                                        <rect key="frame" x="72" y="79.5" width="230" height="230"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="230" id="SQ7-db-vwf"/>
-                                            <constraint firstAttribute="width" constant="230" id="x6Y-w0-9HT"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aP-jH-D7M">
-                                        <rect key="frame" x="71" y="431" width="303" height="85"/>
-                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="14"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="302-pA-uD6">
-                                        <rect key="frame" x="8" y="448" width="52" height="51"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dica" translatesAutoresizingMaskIntoConstraints="NO" id="bHA-oc-nL9">
-                                                <rect key="frame" x="6" y="8" width="40" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" systemColor="systemPinkColor"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" name="Adulto_Blue"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
-                                                <integer key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em uma vasilha, junte os secos: polvinho doce e o parmesão" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czN-bv-CPP">
-                                        <rect key="frame" x="27" y="337.5" width="320" height="64.5"/>
-                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="LabelBlue"/>
-                                <constraints>
-                                    <constraint firstItem="sWO-ff-cJH" firstAttribute="top" secondItem="6V8-Vs-nYI" secondAttribute="bottom" constant="10" id="2pa-aq-9Gv"/>
-                                    <constraint firstItem="czN-bv-CPP" firstAttribute="top" secondItem="sWO-ff-cJH" secondAttribute="bottom" constant="28" id="8wN-gH-jnC"/>
-                                    <constraint firstItem="sWO-ff-cJH" firstAttribute="leading" secondItem="YgN-Lf-PWV" secondAttribute="leading" constant="72" id="9aI-o0-86H"/>
-                                    <constraint firstAttribute="height" constant="524" id="C95-AS-jmk"/>
-                                    <constraint firstItem="0aP-jH-D7M" firstAttribute="top" secondItem="czN-bv-CPP" secondAttribute="bottom" constant="29" id="Mmj-1z-Ag2"/>
-                                    <constraint firstAttribute="trailing" secondItem="f6u-Eg-cEd" secondAttribute="trailing" constant="107" id="PqK-hh-7V4"/>
-                                    <constraint firstItem="6V8-Vs-nYI" firstAttribute="centerX" secondItem="f6u-Eg-cEd" secondAttribute="centerX" id="W9I-zL-Eld"/>
-                                    <constraint firstAttribute="trailing" secondItem="czN-bv-CPP" secondAttribute="trailing" constant="27" id="XCu-VZ-ztU"/>
-                                    <constraint firstItem="f6u-Eg-cEd" firstAttribute="leading" secondItem="YgN-Lf-PWV" secondAttribute="leading" constant="107" id="a8X-Zj-ADT"/>
-                                    <constraint firstItem="f6u-Eg-cEd" firstAttribute="top" secondItem="YgN-Lf-PWV" secondAttribute="top" constant="13" id="aLi-BH-W6h"/>
-                                    <constraint firstAttribute="trailing" secondItem="sWO-ff-cJH" secondAttribute="trailing" constant="72" id="jO2-Gg-BwX"/>
-                                    <constraint firstAttribute="width" constant="374" id="mHf-DM-kkU"/>
-                                    <constraint firstItem="czN-bv-CPP" firstAttribute="leading" secondItem="YgN-Lf-PWV" secondAttribute="leading" constant="27" id="rfo-r2-Yz4"/>
-                                    <constraint firstItem="6V8-Vs-nYI" firstAttribute="top" secondItem="f6u-Eg-cEd" secondAttribute="bottom" id="uEG-me-eFI"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D7s-53-9PR">
-                                <rect key="frame" x="0.0" y="817" width="414" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Adulto_Blue"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-Tr-ppv" userLabel="TurnoView">
                                 <rect key="frame" x="127" y="146" width="160" height="74"/>
                                 <subviews>
@@ -254,6 +168,102 @@
                                     <action selector="LastStep:" destination="0BQ-UW-R7E" eventType="touchUpInside" id="y0E-5j-UYg"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Lf-PWV" userLabel="TurnoView">
+                                <rect key="frame" x="20" y="245" width="374" height="592"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADULTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6u-Eg-cEd">
+                                        <rect key="frame" x="107" y="13" width="160" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="THl-dI-uTb"/>
+                                            <constraint firstAttribute="height" constant="29" id="kIT-qq-b2w"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siga as Instruções" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V8-Vs-nYI">
+                                        <rect key="frame" x="0.0" y="42" width="374" height="95.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="9Rn-eh-0f1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secos.1" translatesAutoresizingMaskIntoConstraints="NO" id="sWO-ff-cJH">
+                                        <rect key="frame" x="72" y="147.5" width="230" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="230" id="SQ7-db-vwf"/>
+                                            <constraint firstAttribute="width" constant="230" id="x6Y-w0-9HT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aP-jH-D7M">
+                                        <rect key="frame" x="71" y="499" width="294" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="k8p-nE-tv7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="302-pA-uD6">
+                                        <rect key="frame" x="9" y="516" width="52" height="51"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dica" translatesAutoresizingMaskIntoConstraints="NO" id="bHA-oc-nL9">
+                                                <rect key="frame" x="6" y="8" width="40" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="Adulto_Blue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="h6x-ad-IMw"/>
+                                            <constraint firstAttribute="height" constant="51" id="tJz-1V-lFa"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em uma vasilha, junte os secos: polvinho doce e o parmesão" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czN-bv-CPP">
+                                        <rect key="frame" x="27" y="385.5" width="320" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="O1j-La-HMM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="LabelBlue"/>
+                                <constraints>
+                                    <constraint firstItem="0aP-jH-D7M" firstAttribute="top" secondItem="czN-bv-CPP" secondAttribute="bottom" constant="13.5" id="1iY-dD-X9u"/>
+                                    <constraint firstItem="sWO-ff-cJH" firstAttribute="top" secondItem="6V8-Vs-nYI" secondAttribute="bottom" constant="10" id="2pa-aq-9Gv"/>
+                                    <constraint firstItem="0aP-jH-D7M" firstAttribute="leading" secondItem="302-pA-uD6" secondAttribute="trailing" constant="10" id="3jW-Cf-TPn"/>
+                                    <constraint firstItem="302-pA-uD6" firstAttribute="centerY" secondItem="0aP-jH-D7M" secondAttribute="centerY" id="8LI-5U-Evb"/>
+                                    <constraint firstItem="sWO-ff-cJH" firstAttribute="leading" secondItem="YgN-Lf-PWV" secondAttribute="leading" constant="72" id="9aI-o0-86H"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="524" id="C95-AS-jmk"/>
+                                    <constraint firstAttribute="trailing" secondItem="f6u-Eg-cEd" secondAttribute="trailing" constant="107" id="PqK-hh-7V4"/>
+                                    <constraint firstItem="czN-bv-CPP" firstAttribute="top" secondItem="sWO-ff-cJH" secondAttribute="bottom" constant="8" id="TJL-Am-0wo"/>
+                                    <constraint firstItem="6V8-Vs-nYI" firstAttribute="centerX" secondItem="f6u-Eg-cEd" secondAttribute="centerX" id="W9I-zL-Eld"/>
+                                    <constraint firstAttribute="trailing" secondItem="czN-bv-CPP" secondAttribute="trailing" constant="27" id="XCu-VZ-ztU"/>
+                                    <constraint firstItem="f6u-Eg-cEd" firstAttribute="leading" secondItem="YgN-Lf-PWV" secondAttribute="leading" constant="107" id="a8X-Zj-ADT"/>
+                                    <constraint firstItem="f6u-Eg-cEd" firstAttribute="top" secondItem="YgN-Lf-PWV" secondAttribute="top" constant="13" id="aLi-BH-W6h"/>
+                                    <constraint firstAttribute="trailing" secondItem="sWO-ff-cJH" secondAttribute="trailing" constant="72" id="jO2-Gg-BwX"/>
+                                    <constraint firstAttribute="width" constant="374" id="mHf-DM-kkU"/>
+                                    <constraint firstAttribute="trailing" secondItem="0aP-jH-D7M" secondAttribute="trailing" constant="9" id="nv1-97-57y"/>
+                                    <constraint firstItem="czN-bv-CPP" firstAttribute="leading" secondItem="YgN-Lf-PWV" secondAttribute="leading" constant="27" id="rfo-r2-Yz4"/>
+                                    <constraint firstItem="6V8-Vs-nYI" firstAttribute="top" secondItem="f6u-Eg-cEd" secondAttribute="bottom" id="uEG-me-eFI"/>
+                                    <constraint firstAttribute="bottom" secondItem="0aP-jH-D7M" secondAttribute="bottom" constant="8" id="uYz-n0-QF5"/>
+                                    <constraint firstItem="302-pA-uD6" firstAttribute="leading" secondItem="YgN-Lf-PWV" secondAttribute="leading" constant="9" id="zWY-ZJ-NZp"/>
+                                    <constraint firstAttribute="bottom" secondItem="302-pA-uD6" secondAttribute="bottom" constant="25" id="ztf-pw-4q1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KsM-ML-hhk"/>
                         <color key="backgroundColor" name="CorDaview"/>
@@ -263,10 +273,11 @@
                             <constraint firstItem="pne-fb-yWh" firstAttribute="top" secondItem="QhT-km-ZSB" secondAttribute="bottom" constant="27" id="A2M-WV-USc"/>
                             <constraint firstItem="QhT-km-ZSB" firstAttribute="leading" secondItem="M38-D3-D1T" secondAttribute="leading" id="DHX-k9-Noa"/>
                             <constraint firstItem="Hoa-Tr-ppv" firstAttribute="top" secondItem="QhT-km-ZSB" secondAttribute="bottom" constant="24" id="E3D-Th-DY9"/>
+                            <constraint firstItem="KsM-ML-hhk" firstAttribute="bottom" secondItem="YgN-Lf-PWV" secondAttribute="bottom" constant="25" id="F0E-d4-y04"/>
                             <constraint firstItem="KsM-ML-hhk" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wY7-zh-pSu" secondAttribute="trailing" constant="52" id="Ih1-ig-ucZ"/>
                             <constraint firstItem="QhT-km-ZSB" firstAttribute="top" secondItem="M38-D3-D1T" secondAttribute="top" id="JpF-7a-dJJ"/>
                             <constraint firstItem="pne-fb-yWh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KsM-ML-hhk" secondAttribute="leading" constant="52" id="P17-QR-ako"/>
-                            <constraint firstItem="YgN-Lf-PWV" firstAttribute="top" secondItem="Hoa-Tr-ppv" secondAttribute="bottom" constant="37" id="WtD-Ia-dEO"/>
+                            <constraint firstItem="YgN-Lf-PWV" firstAttribute="top" secondItem="Hoa-Tr-ppv" secondAttribute="bottom" constant="25" id="WtD-Ia-dEO"/>
                             <constraint firstItem="Hoa-Tr-ppv" firstAttribute="leading" secondItem="pne-fb-yWh" secondAttribute="trailing" constant="8" id="g1f-le-mDO"/>
                             <constraint firstItem="QhT-km-ZSB" firstAttribute="trailing" secondItem="M38-D3-D1T" secondAttribute="trailing" id="oAs-J7-qgg"/>
                             <constraint firstItem="YgN-Lf-PWV" firstAttribute="leading" secondItem="KsM-ML-hhk" secondAttribute="leading" constant="20" id="pZw-yO-u2g"/>
@@ -281,7 +292,6 @@
                         <outlet property="LampImage" destination="bHA-oc-nL9" id="Opg-0H-DKY"/>
                         <outlet property="botaoir" destination="wY7-zh-pSu" id="RAE-1s-HGR"/>
                         <outlet property="botaovoltar" destination="pne-fb-yWh" id="ivp-rQ-2Et"/>
-                        <outlet property="bottomColor" destination="D7s-53-9PR" id="3eW-LC-0Ba"/>
                         <outlet property="fundoDalampada" destination="302-pA-uD6" id="AkL-eY-4Vb"/>
                         <outlet property="imagemIntrucao" destination="sWO-ff-cJH" id="ha1-Lk-aQ7"/>
                         <outlet property="labelContagemTurno" destination="uYZ-ye-9fs" id="Iu1-sy-kJL"/>

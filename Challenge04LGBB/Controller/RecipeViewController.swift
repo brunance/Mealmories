@@ -23,7 +23,6 @@ class RecipeViewController: UIViewController{
     @IBOutlet weak var viewTurno: UIView!
     @IBOutlet weak var labelContagemTurno: UILabel!
 
-    @IBOutlet weak var bottomColor: UIView!
     @IBOutlet weak var statusbar: UIView!
     
     @IBOutlet weak var CorDoFundoDaTela: UIView!
@@ -58,7 +57,6 @@ class RecipeViewController: UIViewController{
         LabelDica.text = "\(recipes[0].dicas[count])"
         statusbar.backgroundColor = recipes[0].CorDaTela[count]
         imagemIntrucao.image = recipes[0].imagemIntrucao[count]
-        bottomColor.backgroundColor = recipes[0].CorDaTela[count]
         if recipes[0].dicas[count] == ""{
             LampImage.isHidden = true
             fundoDalampada.isHidden = true
