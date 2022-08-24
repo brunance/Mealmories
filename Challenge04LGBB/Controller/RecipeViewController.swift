@@ -6,6 +6,7 @@ var progressBarCount = 0
 
 class RecipeViewController: UIViewController{
     
+    @IBOutlet weak var ProgressBarAux: UIStackView!
     var recipes : [Recipe] = []
     var xspace = 5
     

@@ -113,15 +113,24 @@
                                             <constraint firstAttribute="width" constant="123" id="aZl-6z-yGY"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyr-PI-j8o">
+                                        <rect key="frame" x="18.5" y="33" width="123" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="123" id="Uql-4m-xNY"/>
+                                            <constraint firstAttribute="height" constant="32" id="hyV-zX-JJS"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelBlue"/>
                                 <constraints>
+                                    <constraint firstItem="Hyr-PI-j8o" firstAttribute="centerY" secondItem="2Tq-1N-c0C" secondAttribute="centerY" id="FZc-NQ-3a1"/>
                                     <constraint firstItem="woD-OK-cUV" firstAttribute="top" secondItem="Hoa-Tr-ppv" secondAttribute="top" id="J00-tD-RS7"/>
                                     <constraint firstAttribute="width" constant="160" id="SBj-k2-8Na"/>
                                     <constraint firstAttribute="bottom" secondItem="2Tq-1N-c0C" secondAttribute="bottom" constant="9" id="YrW-Jd-ldQ"/>
                                     <constraint firstItem="woD-OK-cUV" firstAttribute="centerX" secondItem="Hoa-Tr-ppv" secondAttribute="centerX" id="eHv-Ks-oOE"/>
                                     <constraint firstAttribute="height" constant="74" id="g0D-TV-7fn"/>
                                     <constraint firstItem="2Tq-1N-c0C" firstAttribute="centerX" secondItem="woD-OK-cUV" secondAttribute="centerX" id="lco-6K-zA2"/>
+                                    <constraint firstItem="Hyr-PI-j8o" firstAttribute="centerX" secondItem="2Tq-1N-c0C" secondAttribute="centerX" id="rGF-dm-EfP"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -290,6 +299,7 @@
                         <outlet property="CorDoFundoDaTela" destination="YgN-Lf-PWV" id="9BW-iI-ULe"/>
                         <outlet property="LabelDica" destination="0aP-jH-D7M" id="wQH-pV-eh4"/>
                         <outlet property="LampImage" destination="bHA-oc-nL9" id="Opg-0H-DKY"/>
+                        <outlet property="ProgressBarAux" destination="Hyr-PI-j8o" id="sI7-Do-bWl"/>
                         <outlet property="botaoir" destination="wY7-zh-pSu" id="RAE-1s-HGR"/>
                         <outlet property="botaovoltar" destination="pne-fb-yWh" id="ivp-rQ-2Et"/>
                         <outlet property="fundoDalampada" destination="302-pA-uD6" id="AkL-eY-4Vb"/>
