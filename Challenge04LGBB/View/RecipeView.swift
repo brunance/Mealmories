@@ -19,8 +19,9 @@ class Recipe {
     var dicas: [String]
     var CorDoFundoDatela:[UIColor]
     var Etapas:[Int]
+    var InstruçõesPorEtapa:[Int]
     
-    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String],CorDoFundoDatela: [UIColor],Etapas: [Int]){
+    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String],CorDoFundoDatela: [UIColor],Etapas: [Int],InstruçõesPorEtapa: [Int]){
         self.tituloReceita = tituloReceita
         self.numeroIntrucoes = numeroIntrucoes
         self.pessoaTurno = pessoaTurno
@@ -31,6 +32,8 @@ class Recipe {
         self.dicas = dicas
         self.CorDoFundoDatela = CorDoFundoDatela
         self.Etapas = Etapas
+        self.InstruçõesPorEtapa = InstruçõesPorEtapa
+        
     }
     
     init(){
@@ -44,5 +47,6 @@ class Recipe {
         self.dicas = []
         self.CorDoFundoDatela = []
         self.Etapas = []
+        self.InstruçõesPorEtapa = []
     }
 }

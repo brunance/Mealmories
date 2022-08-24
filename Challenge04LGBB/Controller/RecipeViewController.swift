@@ -2,14 +2,19 @@ import Foundation
 import UIKit
 
 var count = 0
+var progressBarCount = 0
 
 class RecipeViewController: UIViewController{
     
     var recipes : [Recipe] = []
-    var cont = 5
+    var xspace = 5
     
-    @IBOutlet weak var setaPraEsquerda: UIView!
-    @IBOutlet weak var setaPraDireita: UIView!
+    @IBOutlet weak var botaovoltar: UIButton!
+    
+  
+    @IBOutlet weak var fundoDalampada: UIView!
+    @IBOutlet weak var botaoir: UIButton!
+    
     @IBOutlet weak var progressBar: UIStackView!
     @IBOutlet weak var labelIntrucao: UILabel!
     @IBOutlet weak var imagemIntrucao: UIImageView!
@@ -31,7 +36,7 @@ class RecipeViewController: UIViewController{
      
         
         recipes = [
-            Recipe(tituloReceita: "Pão de Queijo", numeroIntrucoes: 9, pessoaTurno: ["Adulto", "Criança", "Mix", "Adulto", "Mix", "Criança", "Mix", "Adulto", "Adulto"], descricaoReceita: ["Em uma vasilha, junte os ingredientes secos: polvilho doce, e parmesão", "misture bem com uma colher ou com a mão!", "Adicione o creme de leite, aos poucos, misturando com as mãos até formar uma massa homogênea e firme.","Retire porções pequenas da massa", "modele do formato que quiser, bolinhas, dadinhos, seja criativo!", "Unte uma fôrma com manteiga e trigo, papel manteiga ou spray de untar ", "Coloque uma ao lado da outra na fôrma grande untada", "Leve ao forno alto, preaquecido a 180°C , por 15 minutos ou até dourar.", "Retire e sirva em seguida."], numeroEtapas: 3,
+            Recipe(tituloReceita: "Pão de Queijo", numeroIntrucoes: 9, pessoaTurno: ["Adulto", "Criança", "Mix", "Adulto", "Mix", "Criança", "Mix", "Adulto", "Adulto"], descricaoReceita: ["Em uma vasilha, junte os ingredientes secos: polvilho doce, e parmesão", "Misture bem com uma colher ou com a mão!", "Adicione o creme de leite, aos poucos, misturando com as mãos até formar uma massa homogênea e firme.","Retire porções pequenas da massa", "Modele do formato que quiser, bolinhas, dadinhos, seja criativo!", "Unte uma fôrma com manteiga e trigo, papel manteiga ou spray de untar ", "Coloque uma ao lado da outra na fôrma grande untada", "Leve ao forno alto, preaquecido a 180°C , por 15 minutos ou até dourar.", "Retire e sirva em seguida."], numeroEtapas: 3,
                    imagemIntrucao:
                     [UIImage(named: "secos.1")!
                      ,UIImage(named: "mistura.1")!
@@ -42,7 +47,9 @@ class RecipeViewController: UIViewController{
                      ,UIImage(named: "Organizarnaforma.1")!
                      ,UIImage(named: "forno.1")!,
                      UIImage(named: "paodequeijo.1")!]
-                   ,CorDaTela: [UIColor(named: "Adulto_Blue")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Adulto_Blue")!],dicas: ["Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha.","Deixe sempre um pequeno espaço entre as massas , pode facilitar na hora de retirar os pães.","",""],CorDoFundoDatela: [UIColor(named: "LabelBlue")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelBlue")!],Etapas: [1,1,1,2,2,3,3,3,3])]
+                   ,CorDaTela: [UIColor(named: "Adulto_Blue")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Adulto_Blue")!],dicas: ["Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha.","Deixe sempre um pequeno espaço entre as massas , pode facilitar na hora de retirar os pães.","",""],CorDoFundoDatela: [UIColor(named: "LabelBlue")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelBlue")!],Etapas: [1,1,1,2,2,3,3,3,3],InstruçõesPorEtapa: [3,3,3,2,2,4,4,4,4])]
+        botaoir.backgroundColor = recipes[0].CorDaTela[count]
+        botaovoltar.backgroundColor = recipes[0].CorDaTela[count]
         viewTurno.backgroundColor = recipes[0].CorDoFundoDatela[count]
         labelContagemTurno.text = "Etapa \(recipes[0].Etapas[count]) de \(recipes[0].numeroEtapas)"
         CorDoFundoDaTela.backgroundColor = recipes[0].CorDoFundoDatela[count]
@@ -52,64 +59,61 @@ class RecipeViewController: UIViewController{
         statusbar.backgroundColor = recipes[0].CorDaTela[count]
         imagemIntrucao.image = recipes[0].imagemIntrucao[count]
         bottomColor.backgroundColor = recipes[0].CorDaTela[count]
-        setaPraDireita.backgroundColor = recipes[0].CorDaTela[count]
-        setaPraEsquerda.backgroundColor = recipes[0].CorDaTela[count]
         if recipes[0].dicas[count] == ""{
             LampImage.isHidden = true
+            fundoDalampada.isHidden = true
         }
+        fundoDalampada.backgroundColor = recipes[0].CorDaTela[count]
+        if recipes[0].pessoaTurno[count] == "Mix"{
+            labelImagem.text = "Vocês podem fazer juntos essa etapa!!!"
+        }
+        else{labelImagem.text = "Siga as instruções:"}
         
-        for i in 1...5{
-            let view = UIView(frame: CGRect(x: cont, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
-            if i < count + 2{
+        for i in 1...recipes[0].InstruçõesPorEtapa[count]{
+            let view = UIView(frame: CGRect(x: xspace, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
+            if recipes[0].Etapas[count+1]>recipes[0].Etapas[count]{progressBarCount = 0}
+            if i < progressBarCount + 2{
                 view.backgroundColor = recipes[0].CorDaTela[count]
             } else {
                 view.backgroundColor = UIColor.lightGray
             }
             view.layer.cornerRadius = 10
             progressBar.addSubview(view)
-            cont += 22
+            xspace += 22
         }
         
        
     }
-    @IBAction func Clicarpradireita(_ sender: Any) {
+   
+  
+    
+   
+   
+    @IBAction func NextStep(_ sender: Any) {
         if count == recipes[0].numeroIntrucoes-1{
             count = recipes[0].numeroIntrucoes-1
         }
         else{
         count += 1
+            progressBarCount += 1
             LastStep()
         }
+        
+
+        
     }
-    @IBAction func SwipeLeft(_ sender: Any) {
-        if count == recipes[0].numeroIntrucoes-1{
-            count = recipes[0].numeroIntrucoes-1
+    @IBAction func LastStep(_ sender: Any) {
+        if count == 0{
+            count = 0
         }
         else{
-        count += 1
-            LastStep()
+        count -= 1
+        progressBarCount += 1
+        NextStep()
         }
-      
+
     }
     
-    @IBAction func clicaresquerda(_ sender: Any) {
-        if count == 0{
-            count = 0
-        }
-        else{
-        count -= 1
-        NextStep()
-        }
-    }
-    @IBAction func SwipeRight(_ sender: Any) {
-        if count == 0{
-            count = 0
-        }
-        else{
-        count -= 1
-        NextStep()
-        }
-    }
     
     func NextStep(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
