@@ -18,8 +18,21 @@
         <array key="Baloo2-Regular.ttf">
             <string>Baloo2-Regular</string>
         </array>
+        <array key="Baloo2-SemiBold.ttf">
+            <string>Baloo2-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
+        <!--ChoosenRecipe-->
+        <scene sceneID="zc6-5D-zka">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChoosenRecipe" id="nXb-Ml-c2X" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="t9X-7T-6Tz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzU-9A-STY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="17"/>
+        </scene>
         <!--Recipe View Controller-->
         <scene sceneID="bzl-U3-bYt">
             <objects>
@@ -32,23 +45,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-gz-ToW" userLabel="EtapaStackView">
-                                        <rect key="frame" x="7" y="68" width="401" height="46"/>
+                                        <rect key="frame" x="5" y="68" width="403" height="46"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-vX-Udj" userLabel="Voltar">
-                                                <rect key="frame" x="0.0" y="0.0" width="69" height="46"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-vX-Udj" userLabel="Voltar">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="46"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Back"/>
+                                                <connections>
+                                                    <segue destination="nXb-Ml-c2X" kind="presentation" modalPresentationStyle="fullScreen" id="DoW-HL-gnf"/>
+                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Etapa 1 de 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-ye-9fs">
-                                                <rect key="frame" x="134" y="0.0" width="146" height="46"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etapa 1 de 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-ye-9fs">
+                                                <rect key="frame" x="122" y="0.0" width="159" height="46"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNm-zx-we6" userLabel="Config">
-                                                <rect key="frame" x="345" y="0.0" width="56" height="46"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNm-zx-we6" userLabel="Config">
+                                                <rect key="frame" x="346" y="0.0" width="57" height="46"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="option"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Settings"/>
+                                                <connections>
+                                                    <segue destination="dGO-yq-PMp" kind="presentation" modalPresentationStyle="fullScreen" id="qLg-rD-iJS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -63,36 +82,18 @@
                                     <constraint firstAttribute="height" constant="122" id="tgY-tE-yab"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-Tr-ppv" userLabel="TurnoView">
-                                <rect key="frame" x="20" y="138" width="374" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TURNO ADULTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6u-Eg-cEd">
-                                        <rect key="frame" x="0.0" y="55" width="294" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="34"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Tq-1N-c0C">
-                                        <rect key="frame" x="28" y="0.0" width="165" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.90980392156862744" green="0.96470588235294119" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Lf-PWV" userLabel="TurnoView">
                                 <rect key="frame" x="20" y="257" width="374" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aP-jH-D7M">
+                                        <rect key="frame" x="71" y="431" width="303" height="85"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siga as Intruções" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V8-Vs-nYI">
-                                        <rect key="frame" x="0.0" y="18" width="374" height="21"/>
+                                        <rect key="frame" x="0.0" y="51" width="374" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -103,25 +104,38 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Em uma vasilha, junte os secos: polvinho doce e o parmesão" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czN-bv-CPP">
-                                        <rect key="frame" x="27" y="334" width="320" height="92"/>
+                                        <rect key="frame" x="27" y="312" width="320" height="111"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aP-jH-D7M">
-                                        <rect key="frame" x="71" y="431" width="303" height="85"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADULTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6u-Eg-cEd">
+                                        <rect key="frame" x="107" y="0.0" width="160" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dica" translatesAutoresizingMaskIntoConstraints="NO" id="bHA-oc-nL9">
-                                        <rect key="frame" x="19" y="457" width="44" height="33"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="302-pA-uD6">
+                                        <rect key="frame" x="8" y="448" width="52" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dica" translatesAutoresizingMaskIntoConstraints="NO" id="bHA-oc-nL9">
+                                                <rect key="frame" x="6" y="8" width="40" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="Adulto_Blue"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.90980392160000001" green="0.96470588239999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="LabelBlue"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="20"/>
@@ -133,24 +147,78 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Adulto_Blue"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-Tr-ppv" userLabel="TurnoView">
+                                <rect key="frame" x="132" y="146" width="160" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Turnos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woD-OK-cUV">
+                                        <rect key="frame" x="26" y="0.0" width="107" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Tq-1N-c0C">
+                                        <rect key="frame" x="18" y="33" width="123" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="LabelBlue"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY7-zh-pSu">
+                                <rect key="frame" x="300" y="149" width="67" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="Next">
+                                    <color key="baseForegroundColor" name="Adulto_Blue"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="NextStep:" destination="0BQ-UW-R7E" eventType="touchUpInside" id="HUH-x4-cU7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pne-fb-yWh">
+                                <rect key="frame" x="57" y="149" width="67" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="Back"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="LastStep:" destination="0BQ-UW-R7E" eventType="touchUpInside" id="y0E-5j-UYg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KsM-ML-hhk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="CorDaview"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="QhT-km-ZSB" firstAttribute="top" secondItem="M38-D3-D1T" secondAttribute="top" id="0GZ-E8-4Fr"/>
                             <constraint firstItem="QhT-km-ZSB" firstAttribute="leading" secondItem="KsM-ML-hhk" secondAttribute="leading" id="FaX-in-QPM"/>
                             <constraint firstItem="QhT-km-ZSB" firstAttribute="trailing" secondItem="KsM-ML-hhk" secondAttribute="trailing" id="rTC-cH-Prx"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="SoG-eC-DcZ" appends="YES" id="yOF-5V-ocq"/>
-                            <outletCollection property="gestureRecognizers" destination="ZL5-eU-A7T" appends="YES" id="H1k-gw-f8Z"/>
-                        </connections>
                     </view>
                     <connections>
+                        <outlet property="CorDoFundoDaTela" destination="YgN-Lf-PWV" id="9BW-iI-ULe"/>
                         <outlet property="LabelDica" destination="0aP-jH-D7M" id="wQH-pV-eh4"/>
                         <outlet property="LampImage" destination="bHA-oc-nL9" id="Opg-0H-DKY"/>
+                        <outlet property="botaoir" destination="wY7-zh-pSu" id="RAE-1s-HGR"/>
+                        <outlet property="botaovoltar" destination="pne-fb-yWh" id="ivp-rQ-2Et"/>
                         <outlet property="bottomColor" destination="D7s-53-9PR" id="3eW-LC-0Ba"/>
+                        <outlet property="fundoDalampada" destination="302-pA-uD6" id="AkL-eY-4Vb"/>
                         <outlet property="imagemIntrucao" destination="sWO-ff-cJH" id="ha1-Lk-aQ7"/>
                         <outlet property="labelContagemTurno" destination="uYZ-ye-9fs" id="Iu1-sy-kJL"/>
                         <outlet property="labelImagem" destination="6V8-Vs-nYI" id="EnX-b5-8nI"/>
@@ -162,31 +230,38 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcj-Gk-wQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="SoG-eC-DcZ">
-                    <connections>
-                        <action selector="SwipeLeft:" destination="0BQ-UW-R7E" id="Y3H-Xt-YTA"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="ZL5-eU-A7T">
-                    <connections>
-                        <action selector="SwipeRight:" destination="0BQ-UW-R7E" id="Mqf-tP-Wdc"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2369.5652173913045" y="85.714285714285708"/>
+        </scene>
+        <!--ConfigScreen-->
+        <scene sceneID="ELw-Sx-dRb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ConfigScreen" id="dGO-yq-PMp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="HvY-eh-vjl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPl-uI-Yrc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2936" y="-149"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="Back" width="32" height="32"/>
-        <image name="Dica" width="32" height="32"/>
-        <image name="option" width="32" height="32"/>
+        <image name="Back" width="33" height="33"/>
+        <image name="Dica" width="33" height="33"/>
+        <image name="Next" width="33" height="33"/>
+        <image name="Settings" width="33" height="33"/>
         <image name="secos.1" width="230" height="230"/>
         <namedColor name="Adulto_Blue">
-            <color red="0.14509803921568629" green="0.70196078431372544" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.49803921568627452" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <namedColor name="CorDaview">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelBlue">
+            <color red="0.90980392156862744" green="0.96470588235294119" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
