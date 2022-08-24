@@ -45,10 +45,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-gz-ToW" userLabel="EtapaStackView">
-                                        <rect key="frame" x="5" y="68" width="403" height="46"/>
+                                        <rect key="frame" x="28" y="68" width="358" height="39"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-vX-Udj" userLabel="Voltar">
-                                                <rect key="frame" x="0.0" y="0.0" width="57" height="46"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="41" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="41" id="4jX-jg-9b8"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Back"/>
                                                 <connections>
@@ -56,13 +59,19 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etapa 1 de 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-ye-9fs">
-                                                <rect key="frame" x="122" y="0.0" width="159" height="46"/>
+                                                <rect key="frame" x="106" y="0.0" width="146" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="146" id="3lX-6q-z1g"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNm-zx-we6" userLabel="Config">
-                                                <rect key="frame" x="346" y="0.0" width="57" height="46"/>
+                                                <rect key="frame" x="317" y="0.0" width="41" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="57" id="gVL-Y2-fCQ"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Settings"/>
                                                 <connections>
@@ -70,16 +79,21 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="uYZ-ye-9fs" firstAttribute="leading" secondItem="Ly4-vX-Udj" secondAttribute="trailing" constant="65" id="GpZ-kG-5KJ"/>
+                                            <constraint firstItem="RNm-zx-we6" firstAttribute="leading" secondItem="uYZ-ye-9fs" secondAttribute="trailing" constant="65" id="Yhf-Dz-LvG"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="Adulto_Blue"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="eZT-gz-ToW" secondAttribute="bottom" constant="8" id="MnN-lb-jBb"/>
-                                    <constraint firstAttribute="trailing" secondItem="eZT-gz-ToW" secondAttribute="trailing" constant="6" id="WxR-xG-RBF"/>
-                                    <constraint firstItem="eZT-gz-ToW" firstAttribute="leading" relation="lessThanOrEqual" secondItem="QhT-km-ZSB" secondAttribute="leading" constant="7" id="Zef-AQ-5VK"/>
-                                    <constraint firstAttribute="width" constant="414" id="qf4-Aw-b20"/>
-                                    <constraint firstItem="eZT-gz-ToW" firstAttribute="top" secondItem="QhT-km-ZSB" secondAttribute="top" constant="68" id="rch-Rc-CgT"/>
-                                    <constraint firstAttribute="height" constant="122" id="tgY-tE-yab"/>
+                                    <constraint firstAttribute="height" constant="122" id="6Sj-rT-hCC"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eZT-gz-ToW" secondAttribute="trailing" constant="20" id="Bto-DX-VZ2"/>
+                                    <constraint firstItem="eZT-gz-ToW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QhT-km-ZSB" secondAttribute="leading" constant="20" id="Dbn-ct-Ycv"/>
+                                    <constraint firstAttribute="bottom" secondItem="eZT-gz-ToW" secondAttribute="bottom" constant="15" id="H1P-D5-p4i"/>
+                                    <constraint firstItem="eZT-gz-ToW" firstAttribute="top" secondItem="QhT-km-ZSB" secondAttribute="top" constant="68" id="QRm-mS-RtB"/>
+                                    <constraint firstItem="eZT-gz-ToW" firstAttribute="centerX" secondItem="QhT-km-ZSB" secondAttribute="centerX" id="ges-sR-F5G"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="s93-fs-rjB"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Lf-PWV" userLabel="TurnoView">
@@ -147,9 +161,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Adulto_Blue"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-Tr-ppv" userLabel="TurnoView">
-                                <rect key="frame" x="132" y="146" width="160" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-Tr-ppv" userLabel="TurnoView">
+                                <rect key="frame" x="127" y="146" width="160" height="74"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Turnos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woD-OK-cUV">
                                         <rect key="frame" x="26" y="0.0" width="107" height="55"/>
@@ -165,18 +178,26 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="SBj-k2-8Na"/>
+                                    <constraint firstAttribute="height" constant="74" id="g0D-TV-7fn"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY7-zh-pSu">
-                                <rect key="frame" x="300" y="149" width="67" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY7-zh-pSu">
+                                <rect key="frame" x="295" y="149" width="67" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="YRG-AP-AS0"/>
+                                    <constraint firstAttribute="width" constant="67" id="gLe-Gh-qtB"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="Next">
                                     <color key="baseForegroundColor" name="Adulto_Blue"/>
+                                    <color key="baseBackgroundColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
@@ -187,11 +208,16 @@
                                     <action selector="NextStep:" destination="0BQ-UW-R7E" eventType="touchUpInside" id="HUH-x4-cU7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pne-fb-yWh">
-                                <rect key="frame" x="57" y="149" width="67" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pne-fb-yWh">
+                                <rect key="frame" x="52" y="149" width="67" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="BTy-Ss-1Da"/>
+                                    <constraint firstAttribute="width" constant="67" id="Ygu-zP-KEv"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" image="Back"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="Back">
+                                    <color key="baseBackgroundColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
                                         <integer key="value" value="15"/>
@@ -206,9 +232,17 @@
                         <color key="backgroundColor" name="CorDaview"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="QhT-km-ZSB" firstAttribute="top" secondItem="M38-D3-D1T" secondAttribute="top" id="0GZ-E8-4Fr"/>
-                            <constraint firstItem="QhT-km-ZSB" firstAttribute="leading" secondItem="KsM-ML-hhk" secondAttribute="leading" id="FaX-in-QPM"/>
-                            <constraint firstItem="QhT-km-ZSB" firstAttribute="trailing" secondItem="KsM-ML-hhk" secondAttribute="trailing" id="rTC-cH-Prx"/>
+                            <constraint firstItem="wY7-zh-pSu" firstAttribute="leading" secondItem="Hoa-Tr-ppv" secondAttribute="trailing" constant="8" id="7JG-gc-Unf"/>
+                            <constraint firstItem="pne-fb-yWh" firstAttribute="top" secondItem="QhT-km-ZSB" secondAttribute="bottom" constant="27" id="A2M-WV-USc"/>
+                            <constraint firstItem="QhT-km-ZSB" firstAttribute="leading" secondItem="M38-D3-D1T" secondAttribute="leading" id="DHX-k9-Noa"/>
+                            <constraint firstItem="Hoa-Tr-ppv" firstAttribute="top" secondItem="QhT-km-ZSB" secondAttribute="bottom" constant="24" id="E3D-Th-DY9"/>
+                            <constraint firstItem="KsM-ML-hhk" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wY7-zh-pSu" secondAttribute="trailing" constant="52" id="Ih1-ig-ucZ"/>
+                            <constraint firstItem="QhT-km-ZSB" firstAttribute="top" secondItem="M38-D3-D1T" secondAttribute="top" id="JpF-7a-dJJ"/>
+                            <constraint firstItem="pne-fb-yWh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KsM-ML-hhk" secondAttribute="leading" constant="52" id="P17-QR-ako"/>
+                            <constraint firstItem="Hoa-Tr-ppv" firstAttribute="leading" secondItem="pne-fb-yWh" secondAttribute="trailing" constant="8" id="g1f-le-mDO"/>
+                            <constraint firstItem="QhT-km-ZSB" firstAttribute="trailing" secondItem="M38-D3-D1T" secondAttribute="trailing" id="oAs-J7-qgg"/>
+                            <constraint firstItem="Hoa-Tr-ppv" firstAttribute="centerX" secondItem="uYZ-ye-9fs" secondAttribute="centerX" id="r8K-AU-Xip"/>
+                            <constraint firstItem="wY7-zh-pSu" firstAttribute="top" secondItem="QhT-km-ZSB" secondAttribute="bottom" constant="27" id="ym1-Hr-kJM"/>
                         </constraints>
                     </view>
                     <connections>
