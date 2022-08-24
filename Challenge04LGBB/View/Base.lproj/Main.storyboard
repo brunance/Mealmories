@@ -45,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-gz-ToW" userLabel="EtapaStackView">
-                                        <rect key="frame" x="28" y="68" width="358" height="39"/>
+                                        <rect key="frame" x="26" y="68" width="362" height="39"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-vX-Udj" userLabel="Voltar">
                                                 <rect key="frame" x="0.0" y="0.0" width="41" height="39"/>
@@ -59,16 +59,16 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etapa 1 de 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-ye-9fs">
-                                                <rect key="frame" x="106" y="0.0" width="146" height="39"/>
+                                                <rect key="frame" x="106" y="0.0" width="150" height="39"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="146" id="3lX-6q-z1g"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="3lX-6q-z1g"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNm-zx-we6" userLabel="Config">
-                                                <rect key="frame" x="317" y="0.0" width="41" height="39"/>
+                                                <rect key="frame" x="321" y="0.0" width="41" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="57" id="gVL-Y2-fCQ"/>
                                                 </constraints>
@@ -96,39 +96,38 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="s93-fs-rjB"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Lf-PWV" userLabel="TurnoView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Lf-PWV" userLabel="TurnoView">
                                 <rect key="frame" x="20" y="257" width="374" height="524"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aP-jH-D7M">
-                                        <rect key="frame" x="71" y="431" width="303" height="85"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADULTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6u-Eg-cEd">
+                                        <rect key="frame" x="107" y="13" width="160" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="THl-dI-uTb"/>
+                                            <constraint firstAttribute="height" constant="29" id="kIT-qq-b2w"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="34"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siga as Intruções" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V8-Vs-nYI">
-                                        <rect key="frame" x="0.0" y="51" width="374" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siga as Instruções" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V8-Vs-nYI">
+                                        <rect key="frame" x="0.0" y="42" width="374" height="27.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="9Rn-eh-0f1"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="secos.1" translatesAutoresizingMaskIntoConstraints="NO" id="sWO-ff-cJH">
-                                        <rect key="frame" x="72" y="80" width="230" height="230"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secos.1" translatesAutoresizingMaskIntoConstraints="NO" id="sWO-ff-cJH">
+                                        <rect key="frame" x="72" y="79.5" width="230" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="230" id="SQ7-db-vwf"/>
+                                            <constraint firstAttribute="width" constant="230" id="x6Y-w0-9HT"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Em uma vasilha, junte os secos: polvinho doce e o parmesão" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czN-bv-CPP">
-                                        <rect key="frame" x="27" y="312" width="320" height="111"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADULTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6u-Eg-cEd">
-                                        <rect key="frame" x="107" y="0.0" width="160" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="34"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aP-jH-D7M">
+                                        <rect key="frame" x="71" y="431" width="303" height="85"/>
+                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="14"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="302-pA-uD6">
@@ -148,8 +147,30 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em uma vasilha, junte os secos: polvinho doce e o parmesão" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czN-bv-CPP">
+                                        <rect key="frame" x="27" y="337.5" width="320" height="64.5"/>
+                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelBlue"/>
+                                <constraints>
+                                    <constraint firstItem="sWO-ff-cJH" firstAttribute="top" secondItem="6V8-Vs-nYI" secondAttribute="bottom" constant="10" id="2pa-aq-9Gv"/>
+                                    <constraint firstItem="czN-bv-CPP" firstAttribute="top" secondItem="sWO-ff-cJH" secondAttribute="bottom" constant="28" id="8wN-gH-jnC"/>
+                                    <constraint firstItem="sWO-ff-cJH" firstAttribute="leading" secondItem="YgN-Lf-PWV" secondAttribute="leading" constant="72" id="9aI-o0-86H"/>
+                                    <constraint firstAttribute="height" constant="524" id="C95-AS-jmk"/>
+                                    <constraint firstItem="0aP-jH-D7M" firstAttribute="top" secondItem="czN-bv-CPP" secondAttribute="bottom" constant="29" id="Mmj-1z-Ag2"/>
+                                    <constraint firstAttribute="trailing" secondItem="f6u-Eg-cEd" secondAttribute="trailing" constant="107" id="PqK-hh-7V4"/>
+                                    <constraint firstItem="6V8-Vs-nYI" firstAttribute="centerX" secondItem="f6u-Eg-cEd" secondAttribute="centerX" id="W9I-zL-Eld"/>
+                                    <constraint firstAttribute="trailing" secondItem="czN-bv-CPP" secondAttribute="trailing" constant="27" id="XCu-VZ-ztU"/>
+                                    <constraint firstItem="f6u-Eg-cEd" firstAttribute="leading" secondItem="YgN-Lf-PWV" secondAttribute="leading" constant="107" id="a8X-Zj-ADT"/>
+                                    <constraint firstItem="f6u-Eg-cEd" firstAttribute="top" secondItem="YgN-Lf-PWV" secondAttribute="top" constant="13" id="aLi-BH-W6h"/>
+                                    <constraint firstAttribute="trailing" secondItem="sWO-ff-cJH" secondAttribute="trailing" constant="72" id="jO2-Gg-BwX"/>
+                                    <constraint firstAttribute="width" constant="374" id="mHf-DM-kkU"/>
+                                    <constraint firstItem="czN-bv-CPP" firstAttribute="leading" secondItem="YgN-Lf-PWV" secondAttribute="leading" constant="27" id="rfo-r2-Yz4"/>
+                                    <constraint firstItem="6V8-Vs-nYI" firstAttribute="top" secondItem="f6u-Eg-cEd" secondAttribute="bottom" id="uEG-me-eFI"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="20"/>
@@ -164,23 +185,29 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-Tr-ppv" userLabel="TurnoView">
                                 <rect key="frame" x="127" y="146" width="160" height="74"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Turnos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woD-OK-cUV">
-                                        <rect key="frame" x="26" y="0.0" width="107" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turnos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woD-OK-cUV">
+                                        <rect key="frame" x="27" y="0.0" width="106.5" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Tq-1N-c0C">
-                                        <rect key="frame" x="18" y="33" width="123" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tq-1N-c0C">
+                                        <rect key="frame" x="18.5" y="33" width="123" height="32"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="A9a-Em-ljv"/>
+                                            <constraint firstAttribute="width" constant="123" id="aZl-6z-yGY"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelBlue"/>
                                 <constraints>
+                                    <constraint firstItem="woD-OK-cUV" firstAttribute="top" secondItem="Hoa-Tr-ppv" secondAttribute="top" id="J00-tD-RS7"/>
                                     <constraint firstAttribute="width" constant="160" id="SBj-k2-8Na"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Tq-1N-c0C" secondAttribute="bottom" constant="9" id="YrW-Jd-ldQ"/>
+                                    <constraint firstItem="woD-OK-cUV" firstAttribute="centerX" secondItem="Hoa-Tr-ppv" secondAttribute="centerX" id="eHv-Ks-oOE"/>
                                     <constraint firstAttribute="height" constant="74" id="g0D-TV-7fn"/>
+                                    <constraint firstItem="2Tq-1N-c0C" firstAttribute="centerX" secondItem="woD-OK-cUV" secondAttribute="centerX" id="lco-6K-zA2"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -239,9 +266,12 @@
                             <constraint firstItem="KsM-ML-hhk" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wY7-zh-pSu" secondAttribute="trailing" constant="52" id="Ih1-ig-ucZ"/>
                             <constraint firstItem="QhT-km-ZSB" firstAttribute="top" secondItem="M38-D3-D1T" secondAttribute="top" id="JpF-7a-dJJ"/>
                             <constraint firstItem="pne-fb-yWh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KsM-ML-hhk" secondAttribute="leading" constant="52" id="P17-QR-ako"/>
+                            <constraint firstItem="YgN-Lf-PWV" firstAttribute="top" secondItem="Hoa-Tr-ppv" secondAttribute="bottom" constant="37" id="WtD-Ia-dEO"/>
                             <constraint firstItem="Hoa-Tr-ppv" firstAttribute="leading" secondItem="pne-fb-yWh" secondAttribute="trailing" constant="8" id="g1f-le-mDO"/>
                             <constraint firstItem="QhT-km-ZSB" firstAttribute="trailing" secondItem="M38-D3-D1T" secondAttribute="trailing" id="oAs-J7-qgg"/>
+                            <constraint firstItem="YgN-Lf-PWV" firstAttribute="leading" secondItem="KsM-ML-hhk" secondAttribute="leading" constant="20" id="pZw-yO-u2g"/>
                             <constraint firstItem="Hoa-Tr-ppv" firstAttribute="centerX" secondItem="uYZ-ye-9fs" secondAttribute="centerX" id="r8K-AU-Xip"/>
+                            <constraint firstItem="KsM-ML-hhk" firstAttribute="trailing" secondItem="YgN-Lf-PWV" secondAttribute="trailing" constant="20" id="tJG-Y0-s8L"/>
                             <constraint firstItem="wY7-zh-pSu" firstAttribute="top" secondItem="QhT-km-ZSB" secondAttribute="bottom" constant="27" id="ym1-Hr-kJM"/>
                         </constraints>
                     </view>
