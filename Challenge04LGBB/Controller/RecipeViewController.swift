@@ -11,6 +11,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     @IBOutlet weak var ProgressBarAux: UIStackView!
     var recipes : [Recipe] = []
     var xspace = 5
+    var xspaceaux = 5
     var analysis = ""
     var texto = ""
     
@@ -114,7 +115,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
                      ,UIImage(named: "Organizarnaforma.1")!
                      ,UIImage(named: "forno.1")!,
                      UIImage(named: "paodequeijo.1")!]
-                   ,CorDaTela: [UIColor(named: "Adulto_Blue")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Adulto_Blue")!],dicas: ["Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha.","Deixe sempre um pequeno espaço entre as massas , pode facilitar na hora de retirar os pães.","",""],CorDoFundoDatela: [UIColor(named: "LabelBlue")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelBlue")!],Etapas: [1,1,1,2,2,3,3,3,3],InstruçõesPorEtapa: [3,3,3,2,2,4,4,4,4])]
+                   ,CorDaTela: [UIColor(named: "Adulto_Blue")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Adulto_Blue")!],dicas: ["Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha.","Deixe sempre um pequeno espaço entre as massas , pode facilitar na hora de retirar os pães.","",""],CorDoFundoDatela: [UIColor(named: "LabelBlue")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelBlue")!],Etapas: [1,1,1,2,2,3,3,3,3],InstruçõesPorEtapa: [1,2,3,1,2,1,2,3,4],auxiliarInstrucoesPorEtapa: [3,3,3,2,2,4,4,4,4])]
         
         botaoir.backgroundColor = recipes[0].CorDaTela[count]
         botaovoltar.backgroundColor = recipes[0].CorDaTela[count]
@@ -138,16 +139,24 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         
         for i in 1...recipes[0].InstruçõesPorEtapa[count]{
             let view = UIView(frame: CGRect(x: xspace, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
-            
-            if i < progressBarCount + 2{
-                view.backgroundColor = recipes[0].CorDaTela[count]
-            } else {
-                view.backgroundColor = UIColor.lightGray
-            }
+            view.backgroundColor = recipes[0].CorDaTela[count]
             view.layer.cornerRadius = 10
+            view.layer.zPosition = 1
             progressBar.addSubview(view)
             xspace += 22
+            
         }
+        for i in 1...recipes[0].auxiliarInstrucoesPorEtapa[count]{
+            let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
+            view.backgroundColor = UIColor.systemGray
+            view.layer.cornerRadius = 10
+            view.layer.zPosition = 0
+            progressBar.addSubview(view)
+            xspaceaux += 22
+
+        }
+
+        
         
         sceneView.delegate = self
         guard ARFaceTrackingConfiguration.isSupported else {

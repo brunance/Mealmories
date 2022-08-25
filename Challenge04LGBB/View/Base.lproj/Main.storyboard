@@ -45,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-gz-ToW" userLabel="EtapaStackView">
-                                        <rect key="frame" x="21.5" y="68" width="371" height="39"/>
+                                        <rect key="frame" x="26" y="68" width="362" height="39"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-vX-Udj" userLabel="Voltar">
                                                 <rect key="frame" x="0.0" y="0.0" width="41" height="39"/>
@@ -59,7 +59,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etapa 1 de 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-ye-9fs">
-                                                <rect key="frame" x="106" y="0.0" width="159" height="39"/>
+                                                <rect key="frame" x="106" y="0.0" width="150" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="3lX-6q-z1g"/>
                                                 </constraints>
@@ -68,7 +68,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNm-zx-we6" userLabel="Config">
-                                                <rect key="frame" x="330" y="0.0" width="41" height="39"/>
+                                                <rect key="frame" x="321" y="0.0" width="41" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="57" id="gVL-Y2-fCQ"/>
                                                 </constraints>
@@ -100,7 +100,7 @@
                                 <rect key="frame" x="127" y="146" width="160" height="74"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turnos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woD-OK-cUV">
-                                        <rect key="frame" x="28.5" y="0.0" width="103" height="40"/>
+                                        <rect key="frame" x="27" y="0.0" width="106.5" height="54.5"/>
                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
