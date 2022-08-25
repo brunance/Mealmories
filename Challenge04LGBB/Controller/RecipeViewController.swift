@@ -12,6 +12,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     var recipes : [Recipe] = []
     var xspace = 5
     var analysis = ""
+    var texto = ""
     
     @IBOutlet weak var botaovoltar: UIButton!
     
@@ -59,6 +60,26 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry {
             faceGeometry.update(from: faceAnchor.geometry)
+            expression(anchor: faceAnchor)
+            
+            DispatchQueue.main.async {
+                self.texto = self.analysis
+                
+                if (self.texto == "You are blinking right." && count < self.recipes[0].numeroIntrucoes - 1){
+                    count += 1
+                    self.NextStep()
+                    print(count)
+                }
+                if(self.texto == "You are blinking left." && count != 0){
+                    count -= 1
+                    self.LastStep()
+                    print(count)
+                }
+                else{
+                    print("nao esta piscando")
+                }
+                
+            }
         }
     }
     
