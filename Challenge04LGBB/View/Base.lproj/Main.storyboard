@@ -44,56 +44,35 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhT-km-ZSB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-gz-ToW" userLabel="EtapaStackView">
-                                        <rect key="frame" x="26" y="68" width="362" height="39"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-vX-Udj" userLabel="Voltar">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="39"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="41" id="4jX-jg-9b8"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Seta 1" title=""/>
-                                                <connections>
-                                                    <segue destination="nXb-Ml-c2X" kind="presentation" modalPresentationStyle="fullScreen" id="DoW-HL-gnf"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etapa 1 de 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-ye-9fs">
-                                                <rect key="frame" x="106" y="0.0" width="150" height="39"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="3lX-6q-z1g"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="28"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNm-zx-we6" userLabel="Config">
-                                                <rect key="frame" x="321" y="0.0" width="41" height="39"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="57" id="gVL-Y2-fCQ"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Settings"/>
-                                                <connections>
-                                                    <segue destination="dGO-yq-PMp" kind="presentation" modalPresentationStyle="fullScreen" id="qLg-rD-iJS"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etapa 1 de 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-ye-9fs">
+                                        <rect key="frame" x="132" y="65" width="150" height="39"/>
                                         <constraints>
-                                            <constraint firstItem="uYZ-ye-9fs" firstAttribute="leading" secondItem="Ly4-vX-Udj" secondAttribute="trailing" constant="65" id="GpZ-kG-5KJ"/>
-                                            <constraint firstItem="RNm-zx-we6" firstAttribute="leading" secondItem="uYZ-ye-9fs" secondAttribute="trailing" constant="65" id="Yhf-Dz-LvG"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="3lX-6q-z1g"/>
+                                            <constraint firstAttribute="height" constant="39" id="afz-l7-oh1"/>
                                         </constraints>
-                                    </stackView>
+                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-vX-Udj" userLabel="Voltar">
+                                        <rect key="frame" x="20" y="61" width="57" height="47"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Seta 1" title=""/>
+                                        <connections>
+                                            <segue destination="nXb-Ml-c2X" kind="presentation" modalPresentationStyle="fullScreen" id="DoW-HL-gnf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="Adulto_Blue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="122" id="6Sj-rT-hCC"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eZT-gz-ToW" secondAttribute="trailing" constant="20" id="Bto-DX-VZ2"/>
-                                    <constraint firstItem="eZT-gz-ToW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QhT-km-ZSB" secondAttribute="leading" constant="20" id="Dbn-ct-Ycv"/>
-                                    <constraint firstAttribute="bottom" secondItem="eZT-gz-ToW" secondAttribute="bottom" constant="15" id="H1P-D5-p4i"/>
-                                    <constraint firstItem="eZT-gz-ToW" firstAttribute="top" secondItem="QhT-km-ZSB" secondAttribute="top" constant="68" id="QRm-mS-RtB"/>
-                                    <constraint firstItem="eZT-gz-ToW" firstAttribute="centerX" secondItem="QhT-km-ZSB" secondAttribute="centerX" id="ges-sR-F5G"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ly4-vX-Udj" secondAttribute="bottom" constant="14" id="AwV-Z4-j48"/>
+                                    <constraint firstAttribute="bottom" secondItem="uYZ-ye-9fs" secondAttribute="bottom" constant="18" id="gOU-Rf-25T"/>
+                                    <constraint firstItem="Ly4-vX-Udj" firstAttribute="leading" secondItem="QhT-km-ZSB" secondAttribute="leading" constant="20" id="rly-Fw-nmM"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="s93-fs-rjB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ly4-vX-Udj" secondAttribute="bottom" constant="14" id="sLn-Ko-glw"/>
+                                    <constraint firstItem="Ly4-vX-Udj" firstAttribute="centerY" secondItem="uYZ-ye-9fs" secondAttribute="centerY" id="xWx-Bf-Jdl"/>
+                                    <constraint firstItem="uYZ-ye-9fs" firstAttribute="centerX" secondItem="QhT-km-ZSB" secondAttribute="centerX" id="yJk-7V-dtm"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-Tr-ppv" userLabel="TurnoView">
@@ -316,7 +295,6 @@
                             <constraint firstItem="Hoa-Tr-ppv" firstAttribute="leading" secondItem="pne-fb-yWh" secondAttribute="trailing" constant="8" id="g1f-le-mDO"/>
                             <constraint firstItem="QhT-km-ZSB" firstAttribute="trailing" secondItem="M38-D3-D1T" secondAttribute="trailing" id="oAs-J7-qgg"/>
                             <constraint firstItem="YgN-Lf-PWV" firstAttribute="leading" secondItem="KsM-ML-hhk" secondAttribute="leading" constant="20" id="pZw-yO-u2g"/>
-                            <constraint firstItem="Hoa-Tr-ppv" firstAttribute="centerX" secondItem="uYZ-ye-9fs" secondAttribute="centerX" id="r8K-AU-Xip"/>
                             <constraint firstItem="KsM-ML-hhk" firstAttribute="trailing" secondItem="YgN-Lf-PWV" secondAttribute="trailing" constant="20" id="tJG-Y0-s8L"/>
                             <constraint firstItem="wY7-zh-pSu" firstAttribute="top" secondItem="QhT-km-ZSB" secondAttribute="bottom" constant="27" id="ym1-Hr-kJM"/>
                         </constraints>
@@ -345,23 +323,12 @@
             </objects>
             <point key="canvasLocation" x="2369.5652173913045" y="85.714285714285708"/>
         </scene>
-        <!--ConfigScreen-->
-        <scene sceneID="ELw-Sx-dRb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ConfigScreen" id="dGO-yq-PMp" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="HvY-eh-vjl"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nPl-uI-Yrc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2936" y="-149"/>
-        </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Dica" width="33" height="33"/>
         <image name="Seta 1" width="33" height="33"/>
         <image name="Seta 2" width="33" height="33"/>
-        <image name="Settings" width="33" height="33"/>
         <image name="secos.1" width="230" height="230"/>
         <namedColor name="Adulto_Blue">
             <color red="0.0" green="0.49803921568627452" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
