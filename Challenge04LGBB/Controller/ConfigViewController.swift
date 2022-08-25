@@ -27,6 +27,7 @@ class ConfigViewController: UIViewController {
             let defaults = UserDefaults.standard
             defaults.set(true, forKey: "Touch")
         }else {
+            UserKeys.StatusEye = false
             let defaults = UserDefaults.standard
             defaults.set(false, forKey: "Touch")
         }
