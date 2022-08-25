@@ -45,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-gz-ToW" userLabel="EtapaStackView">
-                                        <rect key="frame" x="26" y="68" width="362" height="39"/>
+                                        <rect key="frame" x="21.5" y="68" width="371" height="39"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-vX-Udj" userLabel="Voltar">
                                                 <rect key="frame" x="0.0" y="0.0" width="41" height="39"/>
@@ -58,8 +58,8 @@
                                                     <segue destination="nXb-Ml-c2X" kind="presentation" modalPresentationStyle="fullScreen" id="DoW-HL-gnf"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etapa 1 de 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-ye-9fs">
-                                                <rect key="frame" x="106" y="0.0" width="150" height="39"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etapa 1 de 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-ye-9fs">
+                                                <rect key="frame" x="106" y="0.0" width="159" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="3lX-6q-z1g"/>
                                                 </constraints>
@@ -68,7 +68,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNm-zx-we6" userLabel="Config">
-                                                <rect key="frame" x="321" y="0.0" width="41" height="39"/>
+                                                <rect key="frame" x="330" y="0.0" width="41" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="57" id="gVL-Y2-fCQ"/>
                                                 </constraints>
@@ -99,8 +99,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-Tr-ppv" userLabel="TurnoView">
                                 <rect key="frame" x="127" y="146" width="160" height="74"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turnos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woD-OK-cUV">
-                                        <rect key="frame" x="27" y="0.0" width="106.5" height="54.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turnos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woD-OK-cUV">
+                                        <rect key="frame" x="28.5" y="0.0" width="103" height="40"/>
                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -180,7 +180,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Lf-PWV" userLabel="TurnoView">
                                 <rect key="frame" x="20" y="245" width="374" height="592"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADULTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6u-Eg-cEd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADULTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6u-Eg-cEd">
                                         <rect key="frame" x="107" y="13" width="160" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="THl-dI-uTb"/>
@@ -273,6 +273,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-uS-8E7">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KsM-ML-hhk"/>
                         <color key="backgroundColor" name="CorDaview"/>
@@ -309,6 +313,7 @@
                         <outlet property="labelIntrucao" destination="czN-bv-CPP" id="Itu-e4-6Wd"/>
                         <outlet property="labelTurno" destination="f6u-Eg-cEd" id="iQ0-jg-He7"/>
                         <outlet property="progressBar" destination="2Tq-1N-c0C" id="kgL-Ll-pbi"/>
+                        <outlet property="sceneView" destination="DRE-uS-8E7" id="yhs-Og-bUr"/>
                         <outlet property="statusbar" destination="QhT-km-ZSB" id="LRm-MK-VO8"/>
                         <outlet property="viewTurno" destination="Hoa-Tr-ppv" id="RuT-uU-pVG"/>
                     </connections>
@@ -330,7 +335,7 @@
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="Back" width="33" height="33"/>
+        <image name="Back" width="32" height="33"/>
         <image name="Dica" width="33" height="33"/>
         <image name="Next" width="33" height="33"/>
         <image name="Settings" width="33" height="33"/>

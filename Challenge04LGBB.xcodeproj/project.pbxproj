@@ -20,6 +20,8 @@
 		51DA8E8828B6629200D81095 /* ChoosenRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DA8E8728B6629200D81095 /* ChoosenRecipe.storyboard */; };
 		6608015D28ABE785005FC8A0 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608015C28ABE785005FC8A0 /* RecipeView.swift */; };
 		6608016128ABEDB2005FC8A0 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */; };
+		666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B235628B6DDED00C6E62A /* ConfigViewController.swift */; };
+		666B235928B6F12600C6E62A /* UserKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B235828B6F12600C6E62A /* UserKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		51DA8E8728B6629200D81095 /* ChoosenRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosenRecipe.storyboard; sourceTree = "<group>"; };
 		6608015C28ABE785005FC8A0 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		666B235628B6DDED00C6E62A /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		666B235828B6F12600C6E62A /* UserKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */,
+				666B235628B6DDED00C6E62A /* ConfigViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			children = (
 				4FED12F528AA8A80002113D3 /* AppDelegate.swift */,
 				4FED12F728AA8A80002113D3 /* SceneDelegate.swift */,
+				666B235828B6F12600C6E62A /* UserKeys.swift */,
 				4F10029E28AD37970052D2B8 /* View */,
 				4F10029D28AD37740052D2B8 /* Controller */,
 				4F10029C28AD215B0052D2B8 /* Fonts */,
@@ -193,7 +199,9 @@
 			files = (
 				4FED12F628AA8A80002113D3 /* AppDelegate.swift in Sources */,
 				6608015D28ABE785005FC8A0 /* RecipeView.swift in Sources */,
+				666B235928B6F12600C6E62A /* UserKeys.swift in Sources */,
 				4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */,
+				666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */,
 				6608016128ABEDB2005FC8A0 /* RecipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,7 +341,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XKBJR2ZWTW;
+				DEVELOPMENT_TEAM = 2VBT66DD5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
