@@ -21,6 +21,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     @IBOutlet weak var fundoDalampada: UIView!
     @IBOutlet weak var botaoir: UIButton!
     
+    @IBOutlet weak var BotaoTerminarReceita: UIButton!
     @IBOutlet weak var progressBar: UIStackView!
     @IBOutlet weak var labelIntrucao: UILabel!
     @IBOutlet weak var imagemIntrucao: UIImageView!
@@ -137,7 +138,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         else{labelImagem.text = "Siga as instruções:"}
         
-        for i in 1...recipes[0].InstruçõesPorEtapa[count]{
+        for _ in 1...recipes[0].InstruçõesPorEtapa[count]{
             let view = UIView(frame: CGRect(x: xspace, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
             view.backgroundColor = recipes[0].CorDaTela[count]
             view.layer.cornerRadius = 10
@@ -146,7 +147,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             xspace += 22
             
         }
-        for i in 1...recipes[0].auxiliarInstrucoesPorEtapa[count]{
+        for _ in 1...recipes[0].auxiliarInstrucoesPorEtapa[count]{
             let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
             view.backgroundColor = UIColor.systemGray
             view.layer.cornerRadius = 10
