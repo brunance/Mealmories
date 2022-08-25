@@ -16,7 +16,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     @IBOutlet weak var botaovoltar: UIButton!
     
-  
+    
     @IBOutlet weak var fundoDalampada: UIView!
     @IBOutlet weak var botaoir: UIButton!
     
@@ -27,7 +27,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     @IBOutlet weak var labelImagem: UILabel!
     @IBOutlet weak var viewTurno: UIView!
     @IBOutlet weak var labelContagemTurno: UILabel!
-
+    
     @IBOutlet weak var statusbar: UIView!
     
     @IBOutlet weak var CorDoFundoDaTela: UIView!
@@ -38,65 +38,70 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     @IBOutlet weak var sceneView: ARSCNView!
     
     override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-           
-           let configuration = ARFaceTrackingConfiguration()
-           sceneView.session.run(configuration)
-           sceneView.preferredFramesPerSecond = 10
-           sceneView.isHidden = true
-       }
-       // MARK: - ARSCNViewDelegate
-       
-       func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-           let faceMesh = ARSCNFaceGeometry(device: sceneView.device!)
-           let node = SCNNode(geometry: faceMesh)
-           node.geometry?.firstMaterial?.fillMode = .lines
-           return node
-       }
-       
-       func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-           if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry {
-               faceGeometry.update(from: faceAnchor.geometry)
-               expression(anchor: faceAnchor)
-               
-               DispatchQueue.main.async {
-                   self.texto = self.analysis
-                   
-                   if (self.texto == "You are blinking right." && count < self.recipes[0].numeroIntrucoes - 1){
-                       if count < 9 {
-                           count += 1
-                       }
-                       self.NextStep()
-                       print(count)
-                   }
-                   if(self.texto == "You are blinking left." && count != 0){
-                       count -= 1
-                       self.LastStep()
-                       print(count)
-                   }
-                   else{
-                       print("nao esta piscando")
-                   }
-                   
-               }
-           }
-       }
-       
-       func expression(anchor: ARFaceAnchor) {
-           let eyeblinkright = anchor.blendShapes[.eyeBlinkRight]
-           let eyeblinkleft = anchor.blendShapes[.eyeBlinkLeft]
-           self.analysis = ""
-           
-           if eyeblinkright?.decimalValue ?? 0.0 > 0.7 {
-               self.analysis += "You are blinking left."
-           }
-           if eyeblinkleft?.decimalValue ?? 0.0 > 0.7 {
-               self.analysis += "You are blinking right."
-           }
-       }
+        super.viewWillAppear(animated)
+        
+        let configuration = ARFaceTrackingConfiguration()
+        sceneView.session.run(configuration)
+        sceneView.preferredFramesPerSecond = 10
+        sceneView.isHidden = true
+        
+        let defaults = UserDefaults.standard
+        eye = defaults.bool(forKey: "Touch")
+    }
+    // MARK: - ARSCNViewDelegate
+    
+    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+        let faceMesh = ARSCNFaceGeometry(device: sceneView.device!)
+        let node = SCNNode(geometry: faceMesh)
+        node.geometry?.firstMaterial?.fillMode = .lines
+        return node
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry {
+            faceGeometry.update(from: faceAnchor.geometry)
+            expression(anchor: faceAnchor)
+            
+            DispatchQueue.main.async {
+                if eye == true {
+                    self.texto = self.analysis
+                }
+                
+                if (self.texto == "You are blinking right." && count < self.recipes[0].numeroIntrucoes - 1){
+                    if count < 9 {
+                        count += 1
+                    }
+                    self.NextStep()
+                    print(count)
+                }
+                if(self.texto == "You are blinking left." && count != 0){
+                    count -= 1
+                    self.LastStep()
+                    print(count)
+                }
+                else{
+                    print("nao esta piscando")
+                }
+                
+            }
+        }
+    }
+    
+    func expression(anchor: ARFaceAnchor) {
+        let eyeblinkright = anchor.blendShapes[.eyeBlinkRight]
+        let eyeblinkleft = anchor.blendShapes[.eyeBlinkLeft]
+        self.analysis = ""
+        
+        if eyeblinkright?.decimalValue ?? 0.0 > 0.7 {
+            self.analysis += "You are blinking left."
+        }
+        if eyeblinkleft?.decimalValue ?? 0.0 > 0.7 {
+            self.analysis += "You are blinking right."
+        }
+    }
     
     override func viewDidLoad() {
-       
+        
         recipes = [
             Recipe(tituloReceita: "Pão de Queijo", numeroIntrucoes: 9, pessoaTurno: ["Adulto", "Criança", "Mix", "Adulto", "Mix", "Criança", "Mix", "Adulto", "Adulto"], descricaoReceita: ["Em uma vasilha, junte os ingredientes secos: polvilho doce, e parmesão", "Misture bem com uma colher ou com a mão!", "Adicione o creme de leite, aos poucos, misturando com as mãos até formar uma massa homogênea e firme.","Retire porções pequenas da massa", "Modele do formato que quiser, bolinhas, dadinhos, seja criativo!", "Unte uma fôrma com manteiga e trigo, papel manteiga ou spray de untar ", "Coloque uma ao lado da outra na fôrma grande untada", "Leve ao forno alto, preaquecido a 180°C , por 15 minutos ou até dourar.", "Retire e sirva em seguida."], numeroEtapas: 3,
                    imagemIntrucao:
@@ -149,19 +154,19 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             fatalError("Face tracking is not supported on this device")
         }
     }
-   
-   
+    
+    
     @IBAction func NextStep(_ sender: Any) {
         if count == recipes[0].numeroIntrucoes-1{
             count = recipes[0].numeroIntrucoes-1
         }
         else{
-        count += 1
+            count += 1
             progressBarCount += 1
             LastStep()
         }
         
-
+        
         
     }
     @IBAction func LastStep(_ sender: Any) {
@@ -169,11 +174,11 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             count = 0
         }
         else{
-        count -= 1
-        progressBarCount += 1
-        NextStep()
+            count -= 1
+            progressBarCount += 1
+            NextStep()
         }
-
+        
     }
     
     
@@ -181,13 +186,13 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
         
-
+        
         let transition = CATransition()
-            transition.duration = 0.4
-            transition.type = CATransitionType.reveal
-            transition.subtype = CATransitionSubtype.fromLeft
-            guard let window = view.window else { return }
-            window.layer.add(transition, forKey: kCATransition)
+        transition.duration = 0.4
+        transition.type = CATransitionType.reveal
+        transition.subtype = CATransitionSubtype.fromLeft
+        guard let window = view.window else { return }
+        window.layer.add(transition, forKey: kCATransition)
         newViewController.modalPresentationStyle = .fullScreen
         self.present(newViewController, animated: false, completion: nil)
     }
@@ -196,13 +201,13 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
         
-
+        
         let transition = CATransition()
-            transition.duration = 0.4
-            transition.type = CATransitionType.reveal
-            transition.subtype = CATransitionSubtype.fromRight
-            guard let window = view.window else { return }
-            window.layer.add(transition, forKey: kCATransition)
+        transition.duration = 0.4
+        transition.type = CATransitionType.reveal
+        transition.subtype = CATransitionSubtype.fromRight
+        guard let window = view.window else { return }
+        window.layer.add(transition, forKey: kCATransition)
         newViewController.modalPresentationStyle = .fullScreen
         self.present(newViewController, animated: false, completion: nil)
     }
