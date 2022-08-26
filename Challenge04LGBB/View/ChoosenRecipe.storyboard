@@ -19,15 +19,17 @@
         <!--Main-->
         <scene sceneID="yYz-m8-R0u">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="k0H-Kv-ks9" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" id="k0H-Kv-ks9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FPO-zW-7cq"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5P-4M-hTC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="669" y="17"/>
         </scene>
-        <!--View Controller-->
+        <!--Choosen Recipe View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ChoosenRecipeViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +40,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Para a tela de passo-a-passo"/>
                                 <connections>
-                                    <segue destination="k0H-Kv-ks9" kind="presentation" modalPresentationStyle="fullScreen" id="AqW-82-g5C"/>
+                                    <segue destination="k0H-Kv-ks9" kind="show" identifier="Recipe" id="AqW-82-g5C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X5-AK-laJ">
@@ -47,13 +49,16 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Settings"/>
                                 <connections>
-                                    <segue destination="lfX-SD-Q8k" kind="presentation" modalPresentationStyle="fullScreen" id="7M2-X6-fEn"/>
+                                    <segue destination="lfX-SD-Q8k" kind="presentation" identifier="Config" modalPresentationStyle="fullScreen" id="7M2-X6-fEn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="aj3-nP-hDa" id="hCb-jZ-1CV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
