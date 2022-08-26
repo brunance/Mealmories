@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Main-->
+        <!--ChoosenRecipe-->
         <scene sceneID="vcS-6m-xhp">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="tMa-Zc-PM1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ChoosenRecipe" id="tMa-Zc-PM1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sAd-FG-nPi"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9a-AO-JzP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -119,7 +119,7 @@
                                 <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="13"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buq-ym-mST" userLabel="SoundView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buq-ym-mST" userLabel="SoundView">
                                 <rect key="frame" x="20" y="322" width="374" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Efeito Sonoro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqQ-sd-6TU">

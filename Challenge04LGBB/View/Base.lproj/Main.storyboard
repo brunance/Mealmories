@@ -211,7 +211,7 @@
                                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" name="Adulto_Blue"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="52" id="h6x-ad-IMw"/>
                                             <constraint firstAttribute="height" constant="51" id="tJz-1V-lFa"/>
@@ -239,6 +239,9 @@
                                                 <integer key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="wpp-N7-6pB" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="f5t-sa-VjL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelBlue"/>
@@ -300,14 +303,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="BotaoTerminarReceita" destination="qhd-gs-qhb" id="MYd-Ai-HYU"/>
+                        <outlet property="BotaoTerminarReceita" destination="qhd-gs-qhb" id="UoQ-Ie-A7e"/>
                         <outlet property="CorDoFundoDaTela" destination="YgN-Lf-PWV" id="9BW-iI-ULe"/>
                         <outlet property="LabelDica" destination="0aP-jH-D7M" id="wQH-pV-eh4"/>
                         <outlet property="LampImage" destination="bHA-oc-nL9" id="Opg-0H-DKY"/>
                         <outlet property="ProgressBarAux" destination="Hyr-PI-j8o" id="sI7-Do-bWl"/>
                         <outlet property="botaoir" destination="wY7-zh-pSu" id="RAE-1s-HGR"/>
                         <outlet property="botaovoltar" destination="pne-fb-yWh" id="ivp-rQ-2Et"/>
-                        <outlet property="fundoDalampada" destination="302-pA-uD6" id="AkL-eY-4Vb"/>
                         <outlet property="imagemIntrucao" destination="sWO-ff-cJH" id="ha1-Lk-aQ7"/>
                         <outlet property="labelContagemTurno" destination="uYZ-ye-9fs" id="Iu1-sy-kJL"/>
                         <outlet property="labelImagem" destination="6V8-Vs-nYI" id="EnX-b5-8nI"/>
@@ -322,6 +324,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcj-Gk-wQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2369.5652173913045" y="85.714285714285708"/>
+        </scene>
+        <!--EndRecipe-->
+        <scene sceneID="aJd-8S-Akb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EndRecipe" id="wpp-N7-6pB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cjo-cZ-iw0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6v8-d4-NYY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2865" y="164"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
