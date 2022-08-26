@@ -61,6 +61,7 @@ extension CustomTransition: UIViewControllerAnimatedTransitioning {
                     
                     }, completion: { (success:Bool) in
                         transitionContext.completeTransition(success)
+                        self.circle.removeFromSuperview()
                 })
             }
             

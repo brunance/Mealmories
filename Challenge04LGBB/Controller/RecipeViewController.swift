@@ -245,4 +245,19 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         newViewController.modalPresentationStyle = .fullScreen
         self.present(newViewController, animated: false, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Back" {
+            let secondVC = segue.destination as! ChoosenRecipeViewController
+            
+            let transition = CATransition()
+            transition.duration = 0.15
+            transition.type = CATransitionType.moveIn
+            transition.subtype = CATransitionSubtype.fromLeft
+            guard let window = view.window else { return }
+            window.layer.add(transition, forKey: kCATransition)
+            secondVC.modalPresentationStyle = .fullScreen
+            secondVC.modalTransitionStyle = .crossDissolve
+        }
+    }
 }
