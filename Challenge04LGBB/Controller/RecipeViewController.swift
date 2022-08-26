@@ -17,11 +17,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     @IBOutlet weak var botaovoltar: UIButton!
     
+    @IBOutlet weak var BotaoTerminarReceita: UIButton!
     
-    @IBOutlet weak var fundoDalampada: UIView!
     @IBOutlet weak var botaoir: UIButton!
     
-    @IBOutlet weak var BotaoTerminarReceita: UIButton!
     @IBOutlet weak var progressBar: UIStackView!
     @IBOutlet weak var labelIntrucao: UILabel!
     @IBOutlet weak var imagemIntrucao: UIImageView!
@@ -118,6 +117,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
                      UIImage(named: "paodequeijo.1")!]
                    ,CorDaTela: [UIColor(named: "Adulto_Blue")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Adulto_Blue")!],dicas: ["Qualquer dos dois tipos de polvilhos são bem-vindos, variando de acordo com o gosto de quem manuseia a receita","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","","É necessário que o creme de leite seja adicionado aos poucos, para não perder o ponto da massa.","Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha.","Deixe sempre um pequeno espaço entre as massas , pode facilitar na hora de retirar os pães.","",""],CorDoFundoDatela: [UIColor(named: "LabelBlue")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelBlue")!],Etapas: [1,1,1,2,2,3,3,3,3],InstruçõesPorEtapa: [1,2,3,1,2,1,2,3,4],auxiliarInstrucoesPorEtapa: [3,3,3,2,2,4,4,4,4])]
         
+        if count == recipes[0].numeroIntrucoes-1{
+            BotaoTerminarReceita.isHidden = false
+        }
+        else{
+            BotaoTerminarReceita.isHidden = true
+        }
         botaoir.backgroundColor = recipes[0].CorDaTela[count]
         botaovoltar.backgroundColor = recipes[0].CorDaTela[count]
         viewTurno.backgroundColor = recipes[0].CorDoFundoDatela[count]
@@ -130,13 +135,32 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         imagemIntrucao.image = recipes[0].imagemIntrucao[count]
         if recipes[0].dicas[count] == ""{
             LampImage.isHidden = true
-            fundoDalampada.isHidden = true
+            
         }
-        fundoDalampada.backgroundColor = recipes[0].CorDaTela[count]
+        if count == 0 {
+            botaovoltar.isHidden = true
+        }
+        if count == recipes[0].numeroIntrucoes - 1 {
+            botaoir.isHidden = true
+            
+        }
+        
+        
         if recipes[0].pessoaTurno[count] == "Mix"{
             labelImagem.text = "Vocês podem fazer juntos essa etapa!!!"
+            LampImage.image = UIImage(named: "Dica - Magenta")
+            
         }
-        else{labelImagem.text = "Siga as instruções:"}
+        if recipes[0].pessoaTurno[count] == "Adulto"{
+            labelImagem.text = "Siga as Instruções:"
+            LampImage.image = UIImage(named: "Dica - Blue")
+        }
+        if recipes[0].pessoaTurno[count] == "Criança"{
+            labelImagem.text = "Siga as Instruções:"
+            LampImage.image = UIImage(named: "Dica - ORANGE")
+        }
+       
+        
         
         for _ in 1...recipes[0].InstruçõesPorEtapa[count]{
             let view = UIView(frame: CGRect(x: xspace, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
@@ -198,7 +222,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         
         
         let transition = CATransition()
-        transition.duration = 0.4
+        transition.duration = 0.1
         transition.type = CATransitionType.reveal
         transition.subtype = CATransitionSubtype.fromLeft
         guard let window = view.window else { return }
@@ -213,7 +237,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         
         
         let transition = CATransition()
-        transition.duration = 0.4
+        transition.duration = 0.1
         transition.type = CATransitionType.reveal
         transition.subtype = CATransitionSubtype.fromRight
         guard let window = view.window else { return }

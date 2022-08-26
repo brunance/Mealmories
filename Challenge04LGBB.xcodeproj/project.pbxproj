@@ -18,6 +18,7 @@
 		51862A8128AE90CE00C5F3AE /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029828AD21540052D2B8 /* Baloo2-Regular.ttf */; };
 		51DA8E8628B6627000D81095 /* ConfigScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DA8E8528B6627000D81095 /* ConfigScreen.storyboard */; };
 		51DA8E8828B6629200D81095 /* ChoosenRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DA8E8728B6629200D81095 /* ChoosenRecipe.storyboard */; };
+		51DA8E8A28B7D61100D81095 /* EndRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DA8E8928B7D61100D81095 /* EndRecipe.storyboard */; };
 		6608015D28ABE785005FC8A0 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608015C28ABE785005FC8A0 /* RecipeView.swift */; };
 		6608016128ABEDB2005FC8A0 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */; };
 		666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B235628B6DDED00C6E62A /* ConfigViewController.swift */; };
@@ -38,6 +39,7 @@
 		4FED130328AA8A83002113D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51DA8E8528B6627000D81095 /* ConfigScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigScreen.storyboard; sourceTree = "<group>"; };
 		51DA8E8728B6629200D81095 /* ChoosenRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosenRecipe.storyboard; sourceTree = "<group>"; };
+		51DA8E8928B7D61100D81095 /* EndRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EndRecipe.storyboard; sourceTree = "<group>"; };
 		6608015C28ABE785005FC8A0 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		666B235628B6DDED00C6E62A /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				4FED12FB28AA8A80002113D3 /* Main.storyboard */,
 				51DA8E8528B6627000D81095 /* ConfigScreen.storyboard */,
 				51DA8E8728B6629200D81095 /* ChoosenRecipe.storyboard */,
+				51DA8E8928B7D61100D81095 /* EndRecipe.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				51862A8128AE90CE00C5F3AE /* Baloo2-Regular.ttf in Resources */,
 				51DA8E8828B6629200D81095 /* ChoosenRecipe.storyboard in Resources */,
 				51DA8E8628B6627000D81095 /* ConfigScreen.storyboard in Resources */,
+				51DA8E8A28B7D61100D81095 /* EndRecipe.storyboard in Resources */,
 				51862A7E28AE90CE00C5F3AE /* Baloo2-SemiBold.ttf in Resources */,
 				51862A7D28AE90CE00C5F3AE /* Baloo2-Medium.ttf in Resources */,
 				51862A7F28AE90CE00C5F3AE /* Baloo2-ExtraBold.ttf in Resources */,
@@ -341,7 +345,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				DEVELOPMENT_TEAM = XKBJR2ZWTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";
@@ -355,7 +359,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunanin.Challenge04LGBB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Gabriel.Challenge04LGBB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
