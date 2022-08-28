@@ -223,7 +223,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         
         let transition = CATransition()
         transition.duration = 0.1
-        transition.type = CATransitionType.reveal
+        transition.type = CATransitionType.fade
         transition.subtype = CATransitionSubtype.fromLeft
         guard let window = view.window else { return }
         window.layer.add(transition, forKey: kCATransition)
@@ -238,7 +238,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         
         let transition = CATransition()
         transition.duration = 0.1
-        transition.type = CATransitionType.reveal
+        transition.type = CATransitionType.fade
         transition.subtype = CATransitionSubtype.fromRight
         guard let window = view.window else { return }
         window.layer.add(transition, forKey: kCATransition)
