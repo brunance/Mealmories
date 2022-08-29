@@ -11,6 +11,9 @@
         <array key="Baloo2-Bold.ttf">
             <string>Baloo2-Bold</string>
         </array>
+        <array key="Baloo2-SemiBold.ttf">
+            <string>Baloo2-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--ConfigScreen-->
@@ -66,7 +69,7 @@
                                                     <segue destination="lfX-SD-Q8k" kind="presentation" identifier="Config" modalPresentationStyle="fullScreen" id="7M2-X6-fEn"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nr7-3y-GTZ">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nr7-3y-GTZ" userLabel="Imagem">
                                                 <rect key="frame" x="20" y="102" width="374" height="374"/>
                                                 <color key="backgroundColor" red="0.99607843137254903" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -80,7 +83,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ov-Dq-3bS">
-                                                <rect key="frame" x="20" y="506" width="185" height="49"/>
+                                                <rect key="frame" x="20" y="506" width="185" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="qHe-R5-jkd"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -95,6 +101,102 @@
                                                     <segue destination="k0H-Kv-ks9" kind="show" identifier="Recipe" id="AqW-82-g5C"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvR-aW-oVy" userLabel="Timer">
+                                                <rect key="frame" x="20" y="561" width="80" height="80"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer-32px" translatesAutoresizingMaskIntoConstraints="NO" id="wnr-qN-vb4">
+                                                        <rect key="frame" x="24" y="8.5" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="ntc-D4-hQM"/>
+                                                            <constraint firstAttribute="height" constant="32" id="pXA-Rf-mdP"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-Mu-lPY">
+                                                        <rect key="frame" x="22" y="51.5" width="36" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.99607843137254903" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="wnr-qN-vb4" firstAttribute="centerX" secondItem="UvR-aW-oVy" secondAttribute="centerX" id="3jV-xc-Dyh"/>
+                                                    <constraint firstAttribute="width" constant="80" id="Xwb-3v-0Js"/>
+                                                    <constraint firstItem="wnr-qN-vb4" firstAttribute="top" secondItem="UvR-aW-oVy" secondAttribute="top" constant="8.5" id="bLF-NJ-9Xs"/>
+                                                    <constraint firstAttribute="height" constant="80" id="cfI-oM-1sU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="f6A-Mu-lPY" secondAttribute="bottom" constant="8.5" id="hh0-8n-4jh"/>
+                                                    <constraint firstItem="f6A-Mu-lPY" firstAttribute="centerX" secondItem="UvR-aW-oVy" secondAttribute="centerX" id="yaH-0l-m9G"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUr-xe-3fs" userLabel="Difficulty">
+                                                <rect key="frame" x="167" y="561" width="80" height="80"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="easy-32px" translatesAutoresizingMaskIntoConstraints="NO" id="4wD-sC-sYo">
+                                                        <rect key="frame" x="24" y="8.5" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="sEH-3m-5T9"/>
+                                                            <constraint firstAttribute="height" constant="32" id="xhV-IM-rmK"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fácil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWb-pM-Dpc">
+                                                        <rect key="frame" x="28" y="51.5" width="24.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.99607843139999996" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="OWb-pM-Dpc" firstAttribute="centerX" secondItem="OUr-xe-3fs" secondAttribute="centerX" id="0a9-me-Ojc"/>
+                                                    <constraint firstItem="4wD-sC-sYo" firstAttribute="centerX" secondItem="OUr-xe-3fs" secondAttribute="centerX" id="QEo-3a-rXa"/>
+                                                    <constraint firstAttribute="width" constant="80" id="mMz-mL-s8a"/>
+                                                    <constraint firstAttribute="bottom" secondItem="OWb-pM-Dpc" secondAttribute="bottom" constant="8.5" id="mht-An-x9K"/>
+                                                    <constraint firstItem="4wD-sC-sYo" firstAttribute="top" secondItem="OUr-xe-3fs" secondAttribute="top" constant="8.5" id="mo9-6H-D1y"/>
+                                                    <constraint firstAttribute="height" constant="80" id="riz-eW-qjx"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="531-YD-3GT" userLabel="Age">
+                                                <rect key="frame" x="314" y="561" width="80" height="80"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="age-32px" translatesAutoresizingMaskIntoConstraints="NO" id="6Qz-E5-dIX">
+                                                        <rect key="frame" x="24" y="8.5" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="AhT-eO-604"/>
+                                                            <constraint firstAttribute="width" constant="32" id="a36-gu-uhe"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 + anos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAm-cQ-6lm">
+                                                        <rect key="frame" x="18" y="51.5" width="44" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.99607843139999996" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="6Qz-E5-dIX" firstAttribute="top" secondItem="531-YD-3GT" secondAttribute="top" constant="8.5" id="5Nf-e3-0BP"/>
+                                                    <constraint firstItem="6Qz-E5-dIX" firstAttribute="centerX" secondItem="531-YD-3GT" secondAttribute="centerX" id="E23-HV-fBh"/>
+                                                    <constraint firstAttribute="height" constant="80" id="l7f-pa-Omw"/>
+                                                    <constraint firstItem="iAm-cQ-6lm" firstAttribute="centerX" secondItem="531-YD-3GT" secondAttribute="centerX" id="oNh-GW-S8u"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iAm-cQ-6lm" secondAttribute="bottom" constant="8.5" id="yQA-M3-nWH"/>
+                                                    <constraint firstAttribute="width" constant="80" id="zIc-G9-zSo"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -102,13 +204,19 @@
                                             <constraint firstItem="6ov-Dq-3bS" firstAttribute="top" secondItem="nr7-3y-GTZ" secondAttribute="bottom" constant="30" id="0Xx-8e-1lJ"/>
                                             <constraint firstAttribute="trailing" secondItem="nr7-3y-GTZ" secondAttribute="trailing" constant="20" id="4Ai-ZN-PKL"/>
                                             <constraint firstItem="1BP-c6-CeK" firstAttribute="top" secondItem="NNA-Xk-G1p" secondAttribute="top" constant="40" id="7JY-NH-rWm"/>
+                                            <constraint firstItem="531-YD-3GT" firstAttribute="top" secondItem="6ov-Dq-3bS" secondAttribute="bottom" constant="20" id="HBx-yr-0Wu"/>
                                             <constraint firstItem="nr7-3y-GTZ" firstAttribute="leading" secondItem="NNA-Xk-G1p" secondAttribute="leading" constant="20" id="KZm-Yw-Yar"/>
                                             <constraint firstAttribute="trailing" secondItem="6X5-AK-laJ" secondAttribute="trailing" constant="20" id="N3N-5W-qzI"/>
                                             <constraint firstItem="6ov-Dq-3bS" firstAttribute="leading" secondItem="NNA-Xk-G1p" secondAttribute="leading" constant="20" id="Oxq-y2-GHY"/>
+                                            <constraint firstAttribute="trailing" secondItem="531-YD-3GT" secondAttribute="trailing" constant="20" id="Ps6-O5-M5P"/>
                                             <constraint firstAttribute="height" constant="1300" id="dQP-pr-iE0"/>
                                             <constraint firstItem="1BP-c6-CeK" firstAttribute="leading" secondItem="NNA-Xk-G1p" secondAttribute="leading" constant="20" id="dog-kO-pTJ"/>
                                             <constraint firstItem="6X5-AK-laJ" firstAttribute="top" secondItem="NNA-Xk-G1p" secondAttribute="top" constant="40" id="ifn-dG-6bf"/>
+                                            <constraint firstItem="UvR-aW-oVy" firstAttribute="leading" secondItem="NNA-Xk-G1p" secondAttribute="leading" constant="20" id="m3X-cq-iXf"/>
+                                            <constraint firstItem="OUr-xe-3fs" firstAttribute="centerX" secondItem="NNA-Xk-G1p" secondAttribute="centerX" id="pUZ-kz-5XD"/>
                                             <constraint firstItem="nr7-3y-GTZ" firstAttribute="top" secondItem="1BP-c6-CeK" secondAttribute="bottom" constant="30" id="vvi-ke-mgw"/>
+                                            <constraint firstItem="UvR-aW-oVy" firstAttribute="top" secondItem="6ov-Dq-3bS" secondAttribute="bottom" constant="20" id="w3r-UL-sQe"/>
+                                            <constraint firstItem="OUr-xe-3fs" firstAttribute="top" secondItem="6ov-Dq-3bS" secondAttribute="bottom" constant="20" id="xTe-3l-rrm"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -141,7 +249,10 @@
     </scenes>
     <resources>
         <image name="Back" width="32" height="33"/>
+        <image name="age-32px" width="32" height="32"/>
+        <image name="easy-32px" width="32" height="32"/>
         <image name="settings-red" width="33" height="32"/>
+        <image name="timer-32px" width="33" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
