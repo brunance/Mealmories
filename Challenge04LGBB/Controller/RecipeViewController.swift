@@ -77,12 +77,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
                     if count < 9 {
                         count += 1
                     }
-                    self.NextStep()
+                    self.viewDidLoad()
                     print(count)
                 }
                 if(self.texto == "You are blinking left." && count != 0){
                     count -= 1
-                    self.LastStep()
+                    self.viewDidLoad()
                     print(count)
                 }
                 else{
@@ -109,70 +109,28 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     override func viewDidLoad() {
         
         recipes = getRecipes()
+        print("\n\n\n\n\n o count é \(count)")
+        updateData()
         
-        if count == recipes[0].numeroIntrucoes-1{
-            BotaoTerminarReceita.isHidden = false
-        }
-        else{
-            BotaoTerminarReceita.isHidden = true
-        }
-        botaoir.backgroundColor = recipes[0].CorDaTela[count]
-        botaovoltar.backgroundColor = recipes[0].CorDaTela[count]
-        viewTurno.backgroundColor = recipes[0].CorDoFundoDatela[count]
-        labelContagemTurno.text = "Etapa \(recipes[0].Etapas[count]) de \(recipes[0].numeroEtapas)"
-        CorDoFundoDaTela.backgroundColor = recipes[0].CorDoFundoDatela[count]
-        labelTurno.text = "\(recipes[0].pessoaTurno[count])"
-        labelIntrucao.text = "\(recipes[0].descricaoReceita[count])"
-        LabelDica.text = "\(recipes[0].dicas[count])"
-        statusbar.backgroundColor = recipes[0].CorDaTela[count]
-        imagemIntrucao.image = recipes[0].imagemIntrucao[count]
-        if recipes[0].dicas[count] == ""{
-            LampImage.isHidden = true
-            
-        }
-        if count == 0 {
-            botaovoltar.isHidden = true
-        }
-        if count == recipes[0].numeroIntrucoes - 1 {
-            botaoir.isHidden = true
-            
-        }
-        
-        
-        if recipes[0].pessoaTurno[count] == "Mix"{
-            labelImagem.text = "Vocês podem fazer juntos essa etapa!!!"
-            LampImage.image = UIImage(named: "Dica - Magenta")
-            
-        }
-        if recipes[0].pessoaTurno[count] == "Adulto"{
-            labelImagem.text = "Siga as Instruções:"
-            LampImage.image = UIImage(named: "Dica - Blue")
-        }
-        if recipes[0].pessoaTurno[count] == "Criança"{
-            labelImagem.text = "Siga as Instruções:"
-            LampImage.image = UIImage(named: "Dica - ORANGE")
-        }
-       
-        
-        
-        for _ in 1...recipes[0].InstruçõesPorEtapa[count]{
-            let view = UIView(frame: CGRect(x: xspace, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
-            view.backgroundColor = recipes[0].CorDaTela[count]
-            view.layer.cornerRadius = 10
-            view.layer.zPosition = 1
-            progressBar.addSubview(view)
-            xspace += 22
-            
-        }
-        for _ in 1...recipes[0].auxiliarInstrucoesPorEtapa[count]{
-            let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
-            view.backgroundColor = UIColor.systemGray
-            view.layer.cornerRadius = 10
-            view.layer.zPosition = 0
-            progressBar.addSubview(view)
-            xspaceaux += 22
-
-        }
+//     
+//        for _ in 1...count+1{
+//            let view = UIView(frame: CGRect(x: xspace, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
+//            view.backgroundColor = recipes[0].CorDaTela[count]
+//            view.layer.cornerRadius = 10
+//            view.layer.zPosition = 1
+//            progressBar.addSubview(view)
+//            xspace += 22
+//
+//        }
+////        for _ in 1...recipes[0].numeroIntrucoes{
+//            let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
+//            view.backgroundColor = UIColor.systemGray
+//            view.layer.cornerRadius = 10
+//            view.layer.zPosition = 0
+//            progressBar.addSubview(view)
+//            xspaceaux += 22
+//
+//        }
 
         
         
@@ -190,7 +148,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         else{
             count += 1
             progressBarCount += 1
-            LastStep()
+            viewDidLoad()
         }
         
         if sound == true {
@@ -232,7 +190,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         else{
             count -= 1
             progressBarCount += 1
-            NextStep()
+            viewDidLoad()
         }
         
         if sound == true {
@@ -267,36 +225,53 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         
     }
     
-    
-    func NextStep(){
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
+    func updateData(){
+        botaoir.backgroundColor = recipes[0].CorDaTela[count]
+        botaovoltar.backgroundColor = recipes[0].CorDaTela[count]
+        viewTurno.backgroundColor = recipes[0].CorDoFundoDatela[count]
+        labelContagemTurno.text = "Etapa \(recipes[0].Etapas[count]) de \(recipes[0].numeroEtapas)"
+        CorDoFundoDaTela.backgroundColor = recipes[0].CorDoFundoDatela[count]
+        labelTurno.text = "\(recipes[0].pessoaTurno[count])"
+        labelIntrucao.text = "\(recipes[0].descricaoReceita[count])"
+        LabelDica.text = "\(recipes[0].dicas[count])"
+        statusbar.backgroundColor = recipes[0].CorDaTela[count]
+        imagemIntrucao.image = recipes[0].imagemIntrucao[count]
+        
+        if count == recipes[0].numeroIntrucoes-1{
+            BotaoTerminarReceita.isHidden = false
+        }
+        else{
+            BotaoTerminarReceita.isHidden = true
+        }
+        if count == 0 {
+            botaovoltar.isHidden = true
+        }
+        else{botaovoltar.isHidden = false}
+        
+        if count == recipes[0].numeroIntrucoes - 1 {
+            botaoir.isHidden = true
+        }
+        else {botaoir.isHidden = false}
         
         
-        let transition = CATransition()
-        transition.duration = 0.1
-        transition.type = CATransitionType.fade
-        transition.subtype = CATransitionSubtype.fromLeft
-        guard let window = view.window else { return }
-        window.layer.add(transition, forKey: kCATransition)
-        newViewController.modalPresentationStyle = .fullScreen
-        self.present(newViewController, animated: false, completion: nil)
-    }
-    
-    func LastStep(){
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
-        
-        
-        let transition = CATransition()
-        transition.duration = 0.1
-        transition.type = CATransitionType.fade
-        transition.subtype = CATransitionSubtype.fromRight
-        guard let window = view.window else { return }
-        window.layer.add(transition, forKey: kCATransition)
-        newViewController.modalPresentationStyle = .fullScreen
-        self.present(newViewController, animated: false, completion: nil)
+        if recipes[0].pessoaTurno[count] == "Mix"{
+            labelImagem.text = "Vocês podem fazer juntos essa etapa!!!"
+            LampImage.image = UIImage(named: "Dica - Magenta")
+            
+        }
+        if recipes[0].pessoaTurno[count] == "Adulto"{
+            labelImagem.text = "Siga as Instruções:"
+            LampImage.image = UIImage(named: "Dica - Blue")
+        }
+        if recipes[0].pessoaTurno[count] == "Criança"{
+            labelImagem.text = "Siga as Instruções:"
+            LampImage.image = UIImage(named: "Dica - ORANGE")
+        }
+        if recipes[0].dicas[count] == "" {
+            LampImage.isHidden = true
+        }
+        else {LampImage.isHidden = false}
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
