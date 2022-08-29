@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "porções-3.svg",
+      "filename" : "age-32px.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "porções-4.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "porções.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

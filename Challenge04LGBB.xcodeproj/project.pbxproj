@@ -418,7 +418,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2VBT66DD5V;
+				DEVELOPMENT_TEAM = YP9Q3ST2DG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";
