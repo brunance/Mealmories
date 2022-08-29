@@ -89,7 +89,6 @@
 		4F10029E28AD37970052D2B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6608015C28ABE785005FC8A0 /* RecipeView.swift */,
 				4FED12FB28AA8A80002113D3 /* Main.storyboard */,
 				51DA8E8528B6627000D81095 /* ConfigScreen.storyboard */,
 				51DA8E8728B6629200D81095 /* ChosenRecipe.storyboard */,
@@ -121,6 +120,7 @@
 				4FED12F728AA8A80002113D3 /* SceneDelegate.swift */,
 				666B235828B6F12600C6E62A /* UserKeys.swift */,
 				660EB4A828B8F77F007D2425 /* CustomTransition.swift */,
+				51DA8E8B28BCFC2E00D81095 /* Model */,
 				4F10029E28AD37970052D2B8 /* View */,
 				4F10029D28AD37740052D2B8 /* Controller */,
 				4F10029C28AD215B0052D2B8 /* Fonts */,
@@ -128,6 +128,14 @@
 				4FED12FE28AA8A83002113D3 /* Assets.xcassets */,
 			);
 			path = Challenge04LGBB;
+			sourceTree = "<group>";
+		};
+		51DA8E8B28BCFC2E00D81095 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6608015C28ABE785005FC8A0 /* RecipeView.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,7 +365,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				DEVELOPMENT_TEAM = XKBJR2ZWTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";
@@ -371,7 +379,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Challenge04LGBB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Challenge04LBB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
