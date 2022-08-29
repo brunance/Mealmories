@@ -34,7 +34,7 @@ class ConfigViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let secondVC = segue.destination as! ChoosenRecipeViewController
+        let secondVC = segue.destination as! ChosenRecipeViewController
         
         let transition = CATransition()
         transition.duration = 0.3

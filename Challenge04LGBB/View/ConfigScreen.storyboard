@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--ChoosenRecipe-->
+        <!--ChosenRecipe-->
         <scene sceneID="vcS-6m-xhp">
             <objects>
-                <viewControllerPlaceholder storyboardName="ChoosenRecipe" id="tMa-Zc-PM1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ChosenRecipe" id="tMa-Zc-PM1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sAd-FG-nPi"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9a-AO-JzP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

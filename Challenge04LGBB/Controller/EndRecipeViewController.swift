@@ -19,7 +19,7 @@ class EndRecipeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Return" {
-            let secondVC = segue.destination as! ChoosenRecipeViewController
+            let secondVC = segue.destination as! ChosenRecipeViewController
             
             let transition = CATransition()
             transition.duration = 0.3

@@ -248,7 +248,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Back" {
-            let secondVC = segue.destination as! ChoosenRecipeViewController
+            let secondVC = segue.destination as! ChosenRecipeViewController
             
             let transition = CATransition()
             transition.duration = 0.15

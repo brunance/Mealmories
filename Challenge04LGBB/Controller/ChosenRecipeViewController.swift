@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ChoosenRecipeViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class ChosenRecipeViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var startButton : UIButton!
     

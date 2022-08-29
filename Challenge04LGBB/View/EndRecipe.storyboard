@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="52.901785714285715"/>
         </scene>
-        <!--ChoosenRecipe-->
+        <!--ChosenRecipe-->
         <scene sceneID="hke-NT-VPM">
             <objects>
-                <viewControllerPlaceholder storyboardName="ChoosenRecipe" id="Xjf-ta-Jcp" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ChosenRecipe" id="Xjf-ta-Jcp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4r-cu-UrT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="602" y="51"/>
