@@ -7,16 +7,21 @@
 
 import Foundation
 import UIKit
+import AVFoundation
+
+var soundEffect = false
 
 class ChosenRecipeViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var startButton : UIButton!
-    
+    var player : AVAudioPlayer?
     let transition = CustomTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = UserDefaults.standard
+        soundEffect = defaults.bool(forKey: "Sound")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,6 +40,38 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             window.layer.add(transition, forKey: kCATransition)
             secondVC.modalPresentationStyle = .fullScreen
             secondVC.modalTransitionStyle = .crossDissolve
+        }
+    }
+    
+    @IBAction func playSound(_ sender: Any){
+        if soundEffect == true {
+            if let player = player, player.isPlaying {
+                
+            } else {
+                
+                let urlString = Bundle.main.path(forResource: "iniciar-receita", ofType: "mp3")
+                
+                do {
+                    
+                    try? AVAudioSession.sharedInstance().setMode(.default)
+                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                    
+                    guard let urlString = urlString else {
+                        return
+                    }
+                    
+                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                    
+                    guard let player = player else {
+                        return
+                    }
+                    
+                    player.play()
+                }
+                catch {
+                    print("Something went wrong! :(")
+                }
+            }
         }
     }
     

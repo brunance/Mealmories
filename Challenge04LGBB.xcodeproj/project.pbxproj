@@ -24,6 +24,10 @@
 		660EB4A928B8F77F007D2425 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660EB4A828B8F77F007D2425 /* CustomTransition.swift */; };
 		660EB4AB28B8F7BE007D2425 /* ChosenRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */; };
 		660EB4AD28B90E6E007D2425 /* EndRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660EB4AC28B90E6E007D2425 /* EndRecipeViewController.swift */; };
+		665C691028BCF63900E9F1FA /* iniciar-receita.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665C690C28BCF63900E9F1FA /* iniciar-receita.mp3 */; };
+		665C691128BCF63900E9F1FA /* fim-receita.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665C690D28BCF63900E9F1FA /* fim-receita.mp3 */; };
+		665C691228BCF63900E9F1FA /* voltar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665C690E28BCF63900E9F1FA /* voltar.mp3 */; };
+		665C691328BCF63900E9F1FA /* passar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665C690F28BCF63900E9F1FA /* passar.mp3 */; };
 		666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B235628B6DDED00C6E62A /* ConfigViewController.swift */; };
 		666B235928B6F12600C6E62A /* UserKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B235828B6F12600C6E62A /* UserKeys.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +52,10 @@
 		660EB4A828B8F77F007D2425 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenRecipeViewController.swift; sourceTree = "<group>"; };
 		660EB4AC28B90E6E007D2425 /* EndRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndRecipeViewController.swift; sourceTree = "<group>"; };
+		665C690C28BCF63900E9F1FA /* iniciar-receita.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "iniciar-receita.mp3"; sourceTree = "<group>"; };
+		665C690D28BCF63900E9F1FA /* fim-receita.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fim-receita.mp3"; sourceTree = "<group>"; };
+		665C690E28BCF63900E9F1FA /* voltar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voltar.mp3; sourceTree = "<group>"; };
+		665C690F28BCF63900E9F1FA /* passar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = passar.mp3; sourceTree = "<group>"; };
 		666B235628B6DDED00C6E62A /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		666B235828B6F12600C6E62A /* UserKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,11 +131,23 @@
 				660EB4A828B8F77F007D2425 /* CustomTransition.swift */,
 				4F10029E28AD37970052D2B8 /* View */,
 				4F10029D28AD37740052D2B8 /* Controller */,
+				665C690B28BCF63900E9F1FA /* SoundEffects */,
 				4F10029C28AD215B0052D2B8 /* Fonts */,
 				4FED130328AA8A83002113D3 /* Info.plist */,
 				4FED12FE28AA8A83002113D3 /* Assets.xcassets */,
 			);
 			path = Challenge04LGBB;
+			sourceTree = "<group>";
+		};
+		665C690B28BCF63900E9F1FA /* SoundEffects */ = {
+			isa = PBXGroup;
+			children = (
+				665C690C28BCF63900E9F1FA /* iniciar-receita.mp3 */,
+				665C690D28BCF63900E9F1FA /* fim-receita.mp3 */,
+				665C690E28BCF63900E9F1FA /* voltar.mp3 */,
+				665C690F28BCF63900E9F1FA /* passar.mp3 */,
+			);
+			path = SoundEffects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				51862A8028AE90CE00C5F3AE /* Baloo2-Bold.ttf in Resources */,
+				665C691228BCF63900E9F1FA /* voltar.mp3 in Resources */,
 				4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */,
+				665C691028BCF63900E9F1FA /* iniciar-receita.mp3 in Resources */,
 				4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */,
 				51862A8128AE90CE00C5F3AE /* Baloo2-Regular.ttf in Resources */,
 				51DA8E8828B6629200D81095 /* ChosenRecipe.storyboard in Resources */,
@@ -200,6 +222,8 @@
 				51862A7E28AE90CE00C5F3AE /* Baloo2-SemiBold.ttf in Resources */,
 				51862A7D28AE90CE00C5F3AE /* Baloo2-Medium.ttf in Resources */,
 				51862A7F28AE90CE00C5F3AE /* Baloo2-ExtraBold.ttf in Resources */,
+				665C691328BCF63900E9F1FA /* passar.mp3 in Resources */,
+				665C691128BCF63900E9F1FA /* fim-receita.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +381,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				DEVELOPMENT_TEAM = 2VBT66DD5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";
@@ -386,7 +410,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				DEVELOPMENT_TEAM = 2VBT66DD5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";

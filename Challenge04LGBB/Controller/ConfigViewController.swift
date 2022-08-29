@@ -13,12 +13,14 @@ var teste = false
 class ConfigViewController: UIViewController {
     
     @IBOutlet weak var touch: UISwitch!
+    @IBOutlet weak var soundEffect: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let defaults = UserDefaults.standard
         touch.setOn(defaults.bool(forKey: "Touch"), animated: true)
+        soundEffect.setOn(defaults.bool(forKey: "Sound"), animated: true)
     }
     
     @IBAction func switchDidChange(_ sender: UISwitch){
@@ -32,6 +34,16 @@ class ConfigViewController: UIViewController {
         }
     }
     
+    @IBAction func soundSwitchDidChange(_ sender: Any) {
+        if soundEffect.isOn {
+            UserKeys.StatusSound = true
+            let defaults = UserDefaults.standard
+            defaults.set(true, forKey: "Sound")
+        }else {
+            let defaults = UserDefaults.standard
+            defaults.set(false, forKey: "Sound")
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let secondVC = segue.destination as! ChosenRecipeViewController
