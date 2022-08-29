@@ -10,4 +10,5 @@ import Foundation
 public class UserKeys {
     
     static var StatusEye: Bool = false
+    static var StatusSound: Bool = false
 }
