@@ -40,6 +40,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Para a tela de passo-a-passo"/>
                                 <connections>
+                                    <action selector="playSound:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BK4-4C-bEt"/>
                                     <segue destination="k0H-Kv-ks9" kind="show" identifier="Recipe" id="AqW-82-g5C"/>
                                 </connections>
                             </button>

@@ -1,10 +1,12 @@
 import Foundation
 import UIKit
 import ARKit
+import AVFoundation
 
 var count = 0
 var progressBarCount = 0
 var eye = false
+var sound = false
 
 class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
@@ -38,6 +40,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     @IBOutlet weak var sceneView: ARSCNView!
     
+    var player : AVAudioPlayer?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -48,6 +52,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         
         let defaults = UserDefaults.standard
         eye = defaults.bool(forKey: "Touch")
+        sound = defaults.bool(forKey: "Sound")
     }
     // MARK: - ARSCNViewDelegate
     
@@ -189,9 +194,38 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             LastStep()
         }
         
-        
+        if sound == true {
+            if let player = player, player.isPlaying {
+                
+            } else {
+                
+                let urlString = Bundle.main.path(forResource: "passar", ofType: "mp3")
+                
+                do {
+                    
+                    try? AVAudioSession.sharedInstance().setMode(.default)
+                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                    
+                    guard let urlString = urlString else {
+                        return
+                    }
+                    
+                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                    
+                    guard let player = player else {
+                        return
+                    }
+                    
+                    player.play()
+                }
+                catch {
+                    print("Something went wrong! :(")
+                }
+            }
+        }
         
     }
+    
     @IBAction func LastStep(_ sender: Any) {
         if count == 0{
             count = 0
@@ -200,6 +234,36 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             count -= 1
             progressBarCount += 1
             NextStep()
+        }
+        
+        if sound == true {
+            if let player = player, player.isPlaying {
+                
+            } else {
+                
+                let urlString = Bundle.main.path(forResource: "voltar", ofType: "mp3")
+                
+                do {
+                    
+                    try? AVAudioSession.sharedInstance().setMode(.default)
+                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                    
+                    guard let urlString = urlString else {
+                        return
+                    }
+                    
+                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                    
+                    guard let player = player else {
+                        return
+                    }
+                    
+                    player.play()
+                }
+                catch {
+                    print("Something went wrong! :(")
+                }
+            }
         }
         
     }
@@ -219,6 +283,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         newViewController.modalPresentationStyle = .fullScreen
         self.present(newViewController, animated: false, completion: nil)
     }
+    
     func LastStep(){
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -247,6 +312,38 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             window.layer.add(transition, forKey: kCATransition)
             secondVC.modalPresentationStyle = .fullScreen
             secondVC.modalTransitionStyle = .crossDissolve
+        }
+    }
+    
+    @IBAction func playSound(_ sender: Any) {
+        if sound == true {
+            if let player = player, player.isPlaying {
+                
+            } else {
+                
+                let urlString = Bundle.main.path(forResource: "fim-receita", ofType: "mp3")
+                
+                do {
+                    
+                    try? AVAudioSession.sharedInstance().setMode(.default)
+                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                    
+                    guard let urlString = urlString else {
+                        return
+                    }
+                    
+                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                    
+                    guard let player = player else {
+                        return
+                    }
+                    
+                    player.play()
+                }
+                catch {
+                    print("Something went wrong! :(")
+                }
+            }
         }
     }
 }

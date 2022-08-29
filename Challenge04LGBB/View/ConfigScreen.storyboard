@@ -119,7 +119,7 @@
                                 <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="13"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buq-ym-mST" userLabel="SoundView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buq-ym-mST" userLabel="SoundView">
                                 <rect key="frame" x="20" y="322" width="374" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Efeito Sonoro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqQ-sd-6TU">
@@ -137,6 +137,9 @@
                                             <constraint firstAttribute="height" constant="31" id="lXL-7z-9IN"/>
                                             <constraint firstAttribute="width" constant="49" id="wGH-fH-13b"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="soundSwitchDidChange:" destination="KJi-AQ-Sa0" eventType="valueChanged" id="C4J-Wf-aPz"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelMagenta"/>
@@ -174,6 +177,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="soundEffect" destination="S0x-Lb-gjn" id="CRs-LW-DxE"/>
                         <outlet property="touch" destination="K6B-Tf-lhv" id="ta8-s7-Md1"/>
                     </connections>
                 </viewController>
