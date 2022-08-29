@@ -114,7 +114,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
                     [UIImage(named: "secos.1")!
                      ,UIImage(named: "mistura.1")!
                      ,UIImage(named: "liquidoemistura.1")!
-                     ,UIImage(named: "porções")!
+                     ,UIImage(named: "porções.1")!
                      ,UIImage(named: "modelagem.1")!
                      ,UIImage(named: "untarforma.1")!
                      ,UIImage(named: "Organizarnaforma.1")!
