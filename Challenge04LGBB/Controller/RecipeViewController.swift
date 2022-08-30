@@ -113,26 +113,23 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         recipes = getRecipes()
         print("\n\n\n\n\n o count é \(count)")
         updateData()
-        
-//
-//        for _ in 1...9{
+//        
+//        for i in 1...recipes[0].InstruçõesPorEtapa[count]{
 //            let view = UIView(frame: CGRect(x: xspace, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
-//            view.backgroundColor = UIColor.gray
+//            view.backgroundColor = recipes[0].CorDaTela[count]
 //            view.layer.cornerRadius = 10
 //            view.layer.zPosition = 1
 //            progressBar.addSubview(view)
 //            xspace += 22
-//
 //        }
-//        for _ in 1...recipes[0].numeroIntrucoes{
-//            let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
-//            view.backgroundColor = UIColor.systemGray
-//            view.layer.cornerRadius = 10
-//            view.layer.zPosition = 0
-//            ProgressBarAux.addSubview(view)
-//            xspaceaux += 22
-//
-//        }
+        for i in 1...recipes[0].auxiliarInstrucoesPorEtapas[count]{
+            let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
+            view.backgroundColor = UIColor.systemGray
+            view.layer.cornerRadius = 10
+            view.layer.zPosition = 0
+            progressBar.addSubview(view)
+            xspaceaux += 22
+        }
 //
 //
 //
