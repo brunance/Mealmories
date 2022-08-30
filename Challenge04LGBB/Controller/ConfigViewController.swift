@@ -46,15 +46,17 @@ class ConfigViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let secondVC = segue.destination as! ChosenRecipeViewController
-        
-        let transition = CATransition()
-        transition.duration = 0.3
-        transition.type = CATransitionType.moveIn
-        transition.subtype = CATransitionSubtype.fromLeft
-        guard let window = view.window else { return }
-        window.layer.add(transition, forKey: kCATransition)
-        secondVC.modalPresentationStyle = .fullScreen
-        secondVC.modalTransitionStyle = .crossDissolve
+        if segue.identifier == "Choosen"{
+            let secondVC = segue.destination as! ChosenRecipeViewController
+            
+            let transition = CATransition()
+            transition.duration = 0.3
+            transition.type = CATransitionType.moveIn
+            transition.subtype = CATransitionSubtype.fromLeft
+            guard let window = view.window else { return }
+            window.layer.add(transition, forKey: kCATransition)
+            secondVC.modalPresentationStyle = .fullScreen
+            secondVC.modalTransitionStyle = .crossDissolve
+        }
     }
 }

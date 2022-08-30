@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Baloo2-Bold.ttf">
+            <string>Baloo2-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Forgot Recipe View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ForgotRecipeViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6We-jP-4fX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7E-sY-3am" userLabel="MainView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnZ-PP-asU">
+                                                <rect key="frame" x="20" y="40" width="301" height="35"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esqueceu os ingredientes? Relembre Aqui!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giz-9P-XhJ">
+                                                <rect key="frame" x="20" y="83" width="374" height="14"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="12"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="82" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bch-gj-vrQ">
+                                                <rect key="frame" x="20" y="100" width="374" height="240"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="4dh-bj-g5r"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="82" id="gic-db-xhe" customClass="TableIngredientCell" customModule="Challenge04LGBB" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="44.5" width="374" height="82"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gic-db-xhe" id="HFy-Ix-DOK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="82"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a6A-Fa-R1X">
+                                                                    <rect key="frame" x="0.0" y="9" width="347" height="64"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z2j-z4-YOa">
+                                                                            <rect key="frame" x="8" y="14" width="30" height="35"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredientes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVc-Lm-YH9">
+                                                                            <rect key="frame" x="46" y="7" width="301" height="50"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="14"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </view>
+                                                            </subviews>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="LabelCell" destination="tVc-Lm-YH9" id="dp9-lV-8LC"/>
+                                                            <outlet property="bgView" destination="a6A-Fa-R1X" id="6Sj-Xn-afw"/>
+                                                            <outlet property="imageCell" destination="z2j-z4-YOa" id="R9x-3b-6GJ"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etapas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHk-4v-efi">
+                                                <rect key="frame" x="20" y="348" width="301" height="35"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verifique o total de etapas para serem feitas!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pz-LZ-rbo">
+                                                <rect key="frame" x="20" y="384" width="374" height="14"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="12"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="82" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4sP-Ad-KqN" userLabel="TableEtapas">
+                                                <rect key="frame" x="20" y="406" width="374" height="240"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="6ea-97-TcK"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell2" rowHeight="82" id="sZt-e7-PRF" customClass="TableEtapasCell" customModule="Challenge04LGBB" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="44.5" width="374" height="82"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sZt-e7-PRF" id="u0d-Se-Bz7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="82"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jnI-M1-0gn">
+                                                                    <rect key="frame" x="0.0" y="9" width="347" height="64"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3C-WS-pRK">
+                                                                            <rect key="frame" x="8" y="14" width="30" height="35"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredientes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPP-ea-giP">
+                                                                            <rect key="frame" x="46" y="7" width="301" height="50"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="14"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </view>
+                                                            </subviews>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="backView" destination="jnI-M1-0gn" id="gpn-pJ-Yt4"/>
+                                                            <outlet property="imageEtapaCell" destination="O3C-WS-pRK" id="mhr-9y-dvp"/>
+                                                            <outlet property="labelEtapaCell" destination="vPP-ea-giP" id="9PB-3M-9b0"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="dnZ-PP-asU" firstAttribute="leading" secondItem="v7E-sY-3am" secondAttribute="leading" constant="20" id="0hU-We-VVZ"/>
+                                            <constraint firstItem="3pz-LZ-rbo" firstAttribute="top" secondItem="KHk-4v-efi" secondAttribute="bottom" constant="1" id="5ZQ-VF-DgB"/>
+                                            <constraint firstItem="bch-gj-vrQ" firstAttribute="leading" secondItem="v7E-sY-3am" secondAttribute="leading" constant="20" id="9LK-0S-83S"/>
+                                            <constraint firstAttribute="trailing" secondItem="KHk-4v-efi" secondAttribute="trailing" constant="93" id="DZS-33-jny"/>
+                                            <constraint firstItem="giz-9P-XhJ" firstAttribute="leading" secondItem="v7E-sY-3am" secondAttribute="leading" constant="20" id="GGq-lX-Zid"/>
+                                            <constraint firstItem="bch-gj-vrQ" firstAttribute="top" secondItem="giz-9P-XhJ" secondAttribute="bottom" constant="3" id="Ixf-wB-ajS"/>
+                                            <constraint firstAttribute="height" constant="800" id="Lcl-XF-nJA"/>
+                                            <constraint firstAttribute="trailing" secondItem="3pz-LZ-rbo" secondAttribute="trailing" constant="20" symbolic="YES" id="PYQ-wK-IQO"/>
+                                            <constraint firstItem="4sP-Ad-KqN" firstAttribute="leading" secondItem="v7E-sY-3am" secondAttribute="leading" constant="20" id="RPn-8Q-frp"/>
+                                            <constraint firstItem="KHk-4v-efi" firstAttribute="leading" secondItem="v7E-sY-3am" secondAttribute="leading" constant="20" id="U3E-4D-qbD"/>
+                                            <constraint firstItem="4sP-Ad-KqN" firstAttribute="top" secondItem="3pz-LZ-rbo" secondAttribute="bottom" constant="8" symbolic="YES" id="eIZ-fo-roo"/>
+                                            <constraint firstAttribute="trailing" secondItem="giz-9P-XhJ" secondAttribute="trailing" constant="20" id="hZS-1V-Dlh"/>
+                                            <constraint firstAttribute="trailing" secondItem="4sP-Ad-KqN" secondAttribute="trailing" constant="20" id="jce-58-DES"/>
+                                            <constraint firstItem="3pz-LZ-rbo" firstAttribute="leading" secondItem="v7E-sY-3am" secondAttribute="leading" constant="20" id="jfn-Ta-jaZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="bch-gj-vrQ" secondAttribute="trailing" constant="20" id="q9d-GW-SRU"/>
+                                            <constraint firstAttribute="trailing" secondItem="dnZ-PP-asU" secondAttribute="trailing" constant="93" id="qyn-hK-CmZ"/>
+                                            <constraint firstItem="dnZ-PP-asU" firstAttribute="top" secondItem="v7E-sY-3am" secondAttribute="top" constant="40" id="v9H-kk-43h"/>
+                                            <constraint firstItem="KHk-4v-efi" firstAttribute="top" secondItem="bch-gj-vrQ" secondAttribute="bottom" constant="8" symbolic="YES" id="vOU-y1-uOS"/>
+                                            <constraint firstItem="giz-9P-XhJ" firstAttribute="top" secondItem="dnZ-PP-asU" secondAttribute="bottom" constant="8" symbolic="YES" id="xJX-V7-E3R"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v7E-sY-3am" secondAttribute="trailing" id="5Kq-UZ-tHq"/>
+                                    <constraint firstAttribute="bottom" secondItem="v7E-sY-3am" secondAttribute="bottom" id="L3L-rT-Tz6"/>
+                                    <constraint firstItem="v7E-sY-3am" firstAttribute="leading" secondItem="6We-jP-4fX" secondAttribute="leading" id="mCH-Xv-x5a"/>
+                                    <constraint firstItem="v7E-sY-3am" firstAttribute="top" secondItem="6We-jP-4fX" secondAttribute="top" id="uY5-jV-DZ8"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6We-jP-4fX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="IUg-sg-Pd7"/>
+                            <constraint firstItem="6We-jP-4fX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ROC-sG-klP"/>
+                            <constraint firstAttribute="bottom" secondItem="6We-jP-4fX" secondAttribute="bottom" id="c0r-1a-tHn"/>
+                            <constraint firstItem="v7E-sY-3am" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="mwE-aW-8LQ"/>
+                            <constraint firstItem="6We-jP-4fX" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="zfg-KC-teb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableEtapas" destination="4sP-Ad-KqN" id="NCb-zd-KMW"/>
+                        <outlet property="tableEtapasHeight" destination="6ea-97-TcK" id="yjf-U8-4Wd"/>
+                        <outlet property="tableIngredients" destination="bch-gj-vrQ" id="Ne3-1s-nUM"/>
+                        <outlet property="tableIngredientsHeight" destination="4dh-bj-g5r" id="cWq-fx-U3E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="63.616071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
