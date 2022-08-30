@@ -29,9 +29,11 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     @IBOutlet weak var labelTurno: UILabel!
     @IBOutlet weak var labelImagem: UILabel!
     @IBOutlet weak var viewTurno: UIView!
-    @IBOutlet weak var labelContagemTurno: UILabel!
+    @IBOutlet weak var labelNomeDaReceita: UILabel!
     
-    @IBOutlet weak var statusbar: UIView!
+    @IBOutlet weak var labelEtapa: UILabel!
+    @IBOutlet weak var viewEtapa: UIView!
+    
     
     @IBOutlet weak var CorDoFundoDaTela: UIView!
     
@@ -42,69 +44,69 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     var player : AVAudioPlayer?
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let configuration = ARFaceTrackingConfiguration()
-        sceneView.session.run(configuration)
-        sceneView.preferredFramesPerSecond = 10
-        sceneView.isHidden = true
-        
-        let defaults = UserDefaults.standard
-        eye = defaults.bool(forKey: "Touch")
-        sound = defaults.bool(forKey: "Sound")
-    }
+//            override func viewWillAppear(_ animated: Bool) {
+//                super.viewWillAppear(animated)
+//
+//                let configuration = ARFaceTrackingConfiguration()
+//                sceneView.session.run(configuration)
+//                sceneView.preferredFramesPerSecond = 10
+//                sceneView.isHidden = true
+//
+//                let defaults = UserDefaults.standard
+//                eye = defaults.bool(forKey: "Touch")
+//                sound = defaults.bool(forKey: "Sound")
+//            }
     // MARK: - ARSCNViewDelegate
     
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let faceMesh = ARSCNFaceGeometry(device: sceneView.device!)
-        let node = SCNNode(geometry: faceMesh)
-        node.geometry?.firstMaterial?.fillMode = .lines
-        return node
-    }
+//    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+//        let faceMesh = ARSCNFaceGeometry(device: sceneView.device!)
+//        let node = SCNNode(geometry: faceMesh)
+//        node.geometry?.firstMaterial?.fillMode = .lines
+//        return node
+//    }
     
-    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry {
-            faceGeometry.update(from: faceAnchor.geometry)
-            expression(anchor: faceAnchor)
-            
-            DispatchQueue.main.async {
-                if eye == true {
-                    self.texto = self.analysis
-                }
-                
-                if (self.texto == "You are blinking right." && count < self.recipes[0].numeroIntrucoes - 1){
-                    if count < 9 {
-                        count += 1
-                    }
-                    self.viewDidLoad()
-                    print(count)
-                }
-                if(self.texto == "You are blinking left." && count != 0){
-                    count -= 1
-                    self.viewDidLoad()
-                    print(count)
-                }
-                else{
-                    print("nao esta piscando")
-                }
-                
-            }
-        }
-    }
-    
-    func expression(anchor: ARFaceAnchor) {
-        let eyeblinkright = anchor.blendShapes[.eyeBlinkRight]
-        let eyeblinkleft = anchor.blendShapes[.eyeBlinkLeft]
-        self.analysis = ""
-        
-        if eyeblinkright?.decimalValue ?? 0.0 > 0.7 {
-            self.analysis += "You are blinking left."
-        }
-        if eyeblinkleft?.decimalValue ?? 0.0 > 0.7 {
-            self.analysis += "You are blinking right."
-        }
-    }
+//    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+//        if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry {
+//            faceGeometry.update(from: faceAnchor.geometry)
+//            expression(anchor: faceAnchor)
+//
+//            DispatchQueue.main.async {
+//                if eye == true {
+//                    self.texto = self.analysis
+//                }
+//
+//                if (self.texto == "You are blinking right." && count < self.recipes[0].numeroIntrucoes - 1){
+//                    if count < 9 {
+//                        count += 1
+//                    }
+//                    self.viewDidLoad()
+//                    print(count)
+//                }
+//                if(self.texto == "You are blinking left." && count != 0){
+//                    count -= 1
+//                    self.viewDidLoad()
+//                    print(count)
+//                }
+//                else{
+//                    print("nao esta piscando")
+//                }
+//
+//            }
+//        }
+//    }
+//
+//    func expression(anchor: ARFaceAnchor) {
+//        let eyeblinkright = anchor.blendShapes[.eyeBlinkRight]
+//        let eyeblinkleft = anchor.blendShapes[.eyeBlinkLeft]
+//        self.analysis = ""
+//
+//        if eyeblinkright?.decimalValue ?? 0.0 > 0.7 {
+//            self.analysis += "You are blinking left."
+//        }
+//        if eyeblinkleft?.decimalValue ?? 0.0 > 0.7 {
+//            self.analysis += "You are blinking right."
+//        }
+//    }
     
     override func viewDidLoad() {
         
@@ -112,32 +114,32 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         print("\n\n\n\n\n o count é \(count)")
         updateData()
         
-//     
-//        for _ in 1...count+1{
+//
+//        for _ in 1...9{
 //            let view = UIView(frame: CGRect(x: xspace, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
-//            view.backgroundColor = recipes[0].CorDaTela[count]
+//            view.backgroundColor = UIColor.gray
 //            view.layer.cornerRadius = 10
 //            view.layer.zPosition = 1
 //            progressBar.addSubview(view)
 //            xspace += 22
 //
 //        }
-////        for _ in 1...recipes[0].numeroIntrucoes{
+//        for _ in 1...recipes[0].numeroIntrucoes{
 //            let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
 //            view.backgroundColor = UIColor.systemGray
 //            view.layer.cornerRadius = 10
 //            view.layer.zPosition = 0
-//            progressBar.addSubview(view)
+//            ProgressBarAux.addSubview(view)
 //            xspaceaux += 22
 //
 //        }
-
-        
-        
-        sceneView.delegate = self
-        guard ARFaceTrackingConfiguration.isSupported else {
-            fatalError("Face tracking is not supported on this device")
-        }
+//
+//
+//
+//        sceneView.delegate = self
+//        guard ARFaceTrackingConfiguration.isSupported else {
+//            fatalError("Face tracking is not supported on this device")
+//        }
     }
     
     
@@ -229,12 +231,13 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         botaoir.backgroundColor = recipes[0].CorDaTela[count]
         botaovoltar.backgroundColor = recipes[0].CorDaTela[count]
         viewTurno.backgroundColor = recipes[0].CorDoFundoDatela[count]
-        labelContagemTurno.text = "Etapa \(recipes[0].Etapas[count]) de \(recipes[0].numeroEtapas)"
+        labelNomeDaReceita.text = "\(recipes[0].tituloReceita)"
+        viewEtapa.backgroundColor = recipes[0].CorDasEtapas[count]
+        labelEtapa.text = "\(recipes[0].Etapa[count])"
         CorDoFundoDaTela.backgroundColor = recipes[0].CorDoFundoDatela[count]
         labelTurno.text = "\(recipes[0].pessoaTurno[count])"
         labelIntrucao.text = "\(recipes[0].descricaoReceita[count])"
         LabelDica.text = "\(recipes[0].dicas[count])"
-        statusbar.backgroundColor = recipes[0].CorDaTela[count]
         imagemIntrucao.image = recipes[0].imagemIntrucao[count]
         
         if count == recipes[0].numeroIntrucoes-1{
