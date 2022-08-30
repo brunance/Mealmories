@@ -28,8 +28,10 @@
 		665C691128BCF63900E9F1FA /* fim-receita.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665C690D28BCF63900E9F1FA /* fim-receita.mp3 */; };
 		665C691228BCF63900E9F1FA /* voltar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665C690E28BCF63900E9F1FA /* voltar.mp3 */; };
 		665C691328BCF63900E9F1FA /* passar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665C690F28BCF63900E9F1FA /* passar.mp3 */; };
+		665C691728BD096F00E9F1FA /* ForgotRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665C691628BD096F00E9F1FA /* ForgotRecipeViewController.swift */; };
 		666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B235628B6DDED00C6E62A /* ConfigViewController.swift */; };
 		666B235928B6F12600C6E62A /* UserKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B235828B6F12600C6E62A /* UserKeys.swift */; };
+		66D694CF28BE460100A95783 /* ForgetRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D694CE28BE460100A95783 /* ForgetRecipe.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,8 +58,10 @@
 		665C690D28BCF63900E9F1FA /* fim-receita.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fim-receita.mp3"; sourceTree = "<group>"; };
 		665C690E28BCF63900E9F1FA /* voltar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voltar.mp3; sourceTree = "<group>"; };
 		665C690F28BCF63900E9F1FA /* passar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = passar.mp3; sourceTree = "<group>"; };
+		665C691628BD096F00E9F1FA /* ForgotRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotRecipeViewController.swift; sourceTree = "<group>"; };
 		666B235628B6DDED00C6E62A /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		666B235828B6F12600C6E62A /* UserKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeys.swift; sourceTree = "<group>"; };
+		66D694CE28BE460100A95783 /* ForgetRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgetRecipe.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				666B235628B6DDED00C6E62A /* ConfigViewController.swift */,
 				660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */,
 				660EB4AC28B90E6E007D2425 /* EndRecipeViewController.swift */,
+				665C691628BD096F00E9F1FA /* ForgotRecipeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 				51DA8E8528B6627000D81095 /* ConfigScreen.storyboard */,
 				51DA8E8728B6629200D81095 /* ChosenRecipe.storyboard */,
 				51DA8E8928B7D61100D81095 /* EndRecipe.storyboard */,
+				66D694CE28BE460100A95783 /* ForgetRecipe.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 				51862A7D28AE90CE00C5F3AE /* Baloo2-Medium.ttf in Resources */,
 				51862A7F28AE90CE00C5F3AE /* Baloo2-ExtraBold.ttf in Resources */,
 				665C691328BCF63900E9F1FA /* passar.mp3 in Resources */,
+				66D694CF28BE460100A95783 /* ForgetRecipe.storyboard in Resources */,
 				665C691128BCF63900E9F1FA /* fim-receita.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +255,7 @@
 				666B235928B6F12600C6E62A /* UserKeys.swift in Sources */,
 				4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */,
 				660EB4AD28B90E6E007D2425 /* EndRecipeViewController.swift in Sources */,
+				665C691728BD096F00E9F1FA /* ForgotRecipeViewController.swift in Sources */,
 				666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */,
 				660EB4AB28B8F7BE007D2425 /* ChosenRecipeViewController.swift in Sources */,
 				6608016128ABEDB2005FC8A0 /* RecipeViewController.swift in Sources */,
@@ -395,7 +403,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = ForgotRecipe;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -424,7 +432,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = ForgotRecipe;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

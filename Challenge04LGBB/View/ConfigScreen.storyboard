@@ -48,7 +48,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Back"/>
                                         <connections>
-                                            <segue destination="tMa-Zc-PM1" kind="presentation" modalPresentationStyle="fullScreen" id="CAg-7l-MNw"/>
+                                            <segue destination="tMa-Zc-PM1" kind="presentation" identifier="Choosen" modalPresentationStyle="fullScreen" id="CAg-7l-MNw"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configurações" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntd-Hq-dif">
@@ -157,6 +157,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPY-o9-Uop">
+                                <rect key="frame" x="174" y="444" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="HVo-Ek-UPr" kind="presentation" modalPresentationStyle="fullScreen" id="i33-T6-cfj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZW0-XW-RXR"/>
                         <color key="backgroundColor" name="CorDaview"/>
@@ -184,6 +193,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6F-62-Tfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="16.741071428571427"/>
+        </scene>
+        <!--ForgetRecipe-->
+        <scene sceneID="XE3-p1-mQz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ForgetRecipe" id="HVo-Ek-UPr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIx-cy-TVD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="174"/>
         </scene>
     </scenes>
     <resources>
