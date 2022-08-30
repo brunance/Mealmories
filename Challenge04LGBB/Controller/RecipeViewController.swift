@@ -44,18 +44,25 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     var player : AVAudioPlayer?
     
-//            override func viewWillAppear(_ animated: Bool) {
-//                super.viewWillAppear(animated)
-//
+            override func viewWillAppear(_ animated: Bool) {
+                super.viewWillAppear(animated)
+                for i in 1...9{
+                    let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
+                    view.backgroundColor = UIColor.systemGray
+                    view.layer.cornerRadius = 10
+                    view.layer.zPosition = 0
+                    progressBar.addSubview(view)
+                    xspaceaux += 22
+                }
 //                let configuration = ARFaceTrackingConfiguration()
 //                sceneView.session.run(configuration)
 //                sceneView.preferredFramesPerSecond = 10
 //                sceneView.isHidden = true
-//
-//                let defaults = UserDefaults.standard
+
+                let defaults = UserDefaults.standard
 //                eye = defaults.bool(forKey: "Touch")
-//                sound = defaults.bool(forKey: "Sound")
-//            }
+                sound = defaults.bool(forKey: "Sound")
+            }
     // MARK: - ARSCNViewDelegate
     
 //    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
@@ -107,16 +114,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
 //            self.analysis += "You are blinking right."
 //        }
 //    }
-    override func viewWillAppear(_ animated: Bool) {
-        for i in 1...9{
-            let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
-            view.backgroundColor = UIColor.systemGray
-            view.layer.cornerRadius = 10
-            view.layer.zPosition = 0
-            progressBar.addSubview(view)
-            xspaceaux += 22
-        }
-    }
+    
     override func viewDidLoad() {
         
         recipes = getRecipes()
