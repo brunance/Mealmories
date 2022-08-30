@@ -18,11 +18,13 @@ class Recipe {
     var CorDaTela: [UIColor]
     var dicas: [String]
     var CorDoFundoDatela:[UIColor]
-    var Etapas:[Int]
+    var CorDasEtapas:[UIColor]
+    var Etapa:[String]
     var InstruçõesPorEtapa:[Int]
-    var auxiliarInstrucoesPorEtapa:[Int]
+    var auxiliarInstrucoesPorEtapas:[Int]
+
     
-    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String],CorDoFundoDatela: [UIColor],Etapas: [Int],InstruçõesPorEtapa: [Int],auxiliarInstrucoesPorEtapa: [Int]){
+    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String],CorDoFundoDatela: [UIColor],CorDasEtapas: [UIColor],Etapa:[String],InstruçõesPorEtapa:[Int],auxiliarInstrucoesPorEtapas:[Int]){
         self.tituloReceita = tituloReceita
         self.numeroIntrucoes = numeroIntrucoes
         self.pessoaTurno = pessoaTurno
@@ -32,9 +34,10 @@ class Recipe {
         self.CorDaTela = CorDaTela
         self.dicas = dicas
         self.CorDoFundoDatela = CorDoFundoDatela
-        self.Etapas = Etapas
+        self.CorDasEtapas = CorDasEtapas
+        self.Etapa = Etapa
         self.InstruçõesPorEtapa = InstruçõesPorEtapa
-        self.auxiliarInstrucoesPorEtapa = auxiliarInstrucoesPorEtapa
+        self.auxiliarInstrucoesPorEtapas = auxiliarInstrucoesPorEtapas
         
     }
     
@@ -48,9 +51,10 @@ class Recipe {
         self.CorDaTela = []
         self.dicas = []
         self.CorDoFundoDatela = []
-        self.Etapas = []
+        self.CorDasEtapas = []
+        self.Etapa = []
         self.InstruçõesPorEtapa = []
-        self.auxiliarInstrucoesPorEtapa = []
+        self.auxiliarInstrucoesPorEtapas = []
     }
 }
 func getRecipes() -> [Recipe]{
@@ -66,6 +70,6 @@ func getRecipes() -> [Recipe]{
                         ,UIImage(named: "Organizarnaforma.1")!
                         ,UIImage(named: "forno.1")!,
                         UIImage(named: "paodequeijo.1")!]
-                      ,CorDaTela: [UIColor(named: "Adulto_Blue")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Adulto_Blue")!],dicas: ["Qualquer tipo de polvilho é bem-vindo, variando de acordo com o seu gosto.","","Para não perder o ponto da massa, adicione creme de leite aos poucos.","","","Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha.","Deixe sempre um pequeno espaço entre as massas, pode facilitar na hora de retirar os pães.","",""],CorDoFundoDatela: [UIColor(named: "LabelBlue")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelBlue")!],Etapas: [1,1,1,2,2,3,3,3,3],InstruçõesPorEtapa: [1,2,3,1,2,1,2,3,4],auxiliarInstrucoesPorEtapa: [3,3,3,2,2,4,4,4,4])]
+                      ,CorDaTela: [UIColor(named: "Adulto_Blue")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Adulto_Blue")!],dicas: ["Qualquer tipo de polvilho é bem-vindo, variando de acordo com o seu gosto.","","Para não perder o ponto da massa, adicione creme de leite aos poucos.","","","Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha.","Deixe sempre um pequeno espaço entre as massas, pode facilitar na hora de retirar os pães.","",""],CorDoFundoDatela: [UIColor(named: "LabelBlue")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelBlue")!],CorDasEtapas: [UIColor(named: "Adulto_DarkBlue")!,UIColor(named: "Chield_DarkOrange")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Adulto_DarkBlue")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Chield_DarkOrange")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Adulto_DarkBlue")!,UIColor(named: "Adulto_DarkBlue")!],Etapa: ["Preparo da massa","Preparo da massa","Preparo da massa","Preparo das formas","Preparo das formas","Finalizar preparo","Finalizar preparo","Finalizar preparo","Finalizar preparo"],InstruçõesPorEtapa: [1,1,1,1,1,1,1,1,1],auxiliarInstrucoesPorEtapas: [1,2,3,4,5,6,7,8,9])]
     return recipes
 }
