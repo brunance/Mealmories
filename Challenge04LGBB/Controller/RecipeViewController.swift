@@ -16,7 +16,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     var xspaceaux = 5
     var analysis = ""
     var texto = ""
-    
+    var escolha : Int = 0
     @IBOutlet weak var botaovoltar: UIButton!
     
     @IBOutlet weak var BotaoTerminarReceita: UIButton!
@@ -118,7 +118,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     override func viewDidLoad() {
         
         recipes = getRecipes()
-        print("\n\n\n\n\n o count é \(count)")
+        print("a escolha e \(escolha)")
         updateData()
         xspace = 5
         for i in 1...recipes[0].auxiliarInstrucoesPorEtapas[count]{
@@ -276,7 +276,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Back" {
             let secondVC = segue.destination as! ChosenRecipeViewController
-            
+            secondVC.escolha = escolha
             let transition = CATransition()
             transition.duration = 0.15
             transition.type = CATransitionType.moveIn

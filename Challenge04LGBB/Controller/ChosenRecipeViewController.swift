@@ -16,10 +16,12 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     @IBOutlet weak var startButton : UIButton!
     var player : AVAudioPlayer?
     let transition = CustomTransition()
+    var escolha : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("isso é escolha:\(escolha)")
         let defaults = UserDefaults.standard
         soundEffect = defaults.bool(forKey: "Sound")
     }
@@ -29,6 +31,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             let secondVC = segue.destination as! RecipeViewController
             secondVC.transitioningDelegate = self
             secondVC.modalPresentationStyle = .custom
+            secondVC.escolha = escolha
         }else if segue.identifier == "Config"{
             let secondVC = segue.destination as! ConfigViewController
             
@@ -41,6 +44,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             secondVC.modalPresentationStyle = .fullScreen
             secondVC.modalTransitionStyle = .crossDissolve
         }
+        
     }
     
     @IBAction func playSound(_ sender: Any){

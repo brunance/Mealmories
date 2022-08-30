@@ -34,6 +34,14 @@
             </objects>
             <point key="canvasLocation" x="669" y="17"/>
         </scene>
+        <!--recipesScreen-->
+        <scene sceneID="iAe-K0-XHn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="recipesScreen" id="C77-sG-lMe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hm5-eo-WEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534" y="-57"/>
+        </scene>
         <!--Chosen Recipe View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -56,6 +64,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Back"/>
+                                                <connections>
+                                                    <segue destination="C77-sG-lMe" kind="presentation" modalPresentationStyle="fullScreen" id="XjP-bD-nKQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X5-AK-laJ" userLabel="ConfigButton">
                                                 <rect key="frame" x="362" y="40" width="32" height="32"/>
