@@ -82,7 +82,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
 //                    self.texto = self.analysis
 //                }
 //
-//                if (self.texto == "You are blinking right." && count < self.recipes[0].numeroIntrucoes - 1){
+//                if (self.texto == "You are blinking right." && count < self.recipes[escolha].numeroIntrucoes - 1){
 //                    if count < 9 {
 //                        count += 1
 //                    }
@@ -121,7 +121,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         print("a escolha e \(escolha)")
         updateData()
         xspace = 5
-        for i in 1...recipes[0].auxiliarInstrucoesPorEtapas[count]{
+        for i in 1...recipes[escolha].auxiliarInstrucoesPorEtapas[count]{
         let view = UIView(frame: CGRect(x: xspace, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
             view.backgroundColor = UIColor(named: "Mix_DarkMagenta")
         view.layer.cornerRadius = 10
@@ -140,8 +140,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     
     @IBAction func NextStep(_ sender: Any) {
-        if count == recipes[0].numeroIntrucoes-1{
-            count = recipes[0].numeroIntrucoes-1
+        if count == recipes[escolha].numeroIntrucoes-1{
+            count = recipes[escolha].numeroIntrucoes-1
         }
         else{
             count += 1
@@ -224,19 +224,19 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     }
     
     func updateData(){
-        botaoir.backgroundColor = recipes[0].CorDaTela[count]
-        botaovoltar.backgroundColor = recipes[0].CorDaTela[count]
-        viewTurno.backgroundColor = recipes[0].CorDoFundoDatela[count]
-        labelNomeDaReceita.text = "\(recipes[0].tituloReceita)"
-        viewEtapa.backgroundColor = recipes[0].CorDasEtapas[count]
-        labelEtapa.text = "\(recipes[0].Etapa[count])"
-        CorDoFundoDaTela.backgroundColor = recipes[0].CorDoFundoDatela[count]
-        labelTurno.text = "\(recipes[0].pessoaTurno[count])"
-        labelIntrucao.text = "\(recipes[0].descricaoReceita[count])"
-        LabelDica.text = "\(recipes[0].dicas[count])"
-        imagemIntrucao.image = recipes[0].imagemIntrucao[count]
+        botaoir.backgroundColor = recipes[escolha].CorDaTela[count]
+        botaovoltar.backgroundColor = recipes[escolha].CorDaTela[count]
+        viewTurno.backgroundColor = recipes[escolha].CorDoFundoDatela[count]
+        labelNomeDaReceita.text = "\(recipes[escolha].tituloReceita)"
+        viewEtapa.backgroundColor = recipes[escolha].CorDasEtapas[count]
+        labelEtapa.text = "\(recipes[escolha].Etapa[count])"
+        CorDoFundoDaTela.backgroundColor = recipes[escolha].CorDoFundoDatela[count]
+        labelTurno.text = "\(recipes[escolha].pessoaTurno[count])"
+        labelIntrucao.text = "\(recipes[escolha].descricaoReceita[count])"
+        LabelDica.text = "\(recipes[escolha].dicas[count])"
+        imagemIntrucao.image = recipes[escolha].imagemIntrucao[count]
         
-        if count == recipes[0].numeroIntrucoes-1{
+        if count == recipes[escolha].numeroIntrucoes-1{
             BotaoTerminarReceita.isHidden = false
         }
         else{
@@ -247,26 +247,26 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         else{botaovoltar.isHidden = false}
         
-        if count == recipes[0].numeroIntrucoes - 1 {
+        if count == recipes[escolha].numeroIntrucoes - 1 {
             botaoir.isHidden = true
         }
         else {botaoir.isHidden = false}
         
         
-        if recipes[0].pessoaTurno[count] == "Mix"{
+        if recipes[escolha].pessoaTurno[count] == "Mix"{
             labelImagem.text = "Vocês podem fazer juntos essa etapa!!!"
             LampImage.image = UIImage(named: "Dica - Magenta")
             
         }
-        if recipes[0].pessoaTurno[count] == "Adulto"{
+        if recipes[escolha].pessoaTurno[count] == "Adulto"{
             labelImagem.text = "Siga as Instruções:"
             LampImage.image = UIImage(named: "Dica - Blue")
         }
-        if recipes[0].pessoaTurno[count] == "Criança"{
+        if recipes[escolha].pessoaTurno[count] == "Criança"{
             labelImagem.text = "Siga as Instruções:"
             LampImage.image = UIImage(named: "Dica - ORANGE")
         }
-        if recipes[0].dicas[count] == "" {
+        if recipes[escolha].dicas[count] == "" {
             LampImage.isHidden = true
         }
         else {LampImage.isHidden = false}
