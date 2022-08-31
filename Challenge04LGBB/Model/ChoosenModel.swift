@@ -29,4 +29,9 @@ class ChosenRecipeModel {
         self.ingredientes = []
         self.etapas = []
     }
+    
+}
+func getChoosenRecipe() -> [ChosenRecipeModel]{
+    var ChosenRecipe : [ChosenRecipeModel] = []
+    return [ChosenRecipeModel(imagemReceita: UIImage(named: "imagePlaceholder")!, nomeDaReceita: "Pão de Queijo", tempoDePreparo: "30 min", dificuldade: "Facil", idadeRecomendada: 4, ingredientes: ["400g Polvilho doce ou de sua preferência","400g de queijo parmesão ralado","2 caixas de creme de leite (400g) (aproximadamente)","Para untar: manteiga e trigo, spray untador, papel manteiga ou óleo."], etapas: ["Preparo da Massa","Preparo das Formas","Finalizar Preparo"]),ChosenRecipeModel(imagemReceita: UIImage(named: "imagePlaceholder")!, nomeDaReceita: "Pipoca", tempoDePreparo: "10 min", dificuldade: "Facil", idadeRecomendada: 3, ingredientes: ["Pipoca","sal","manteiga","oleo"], etapas: ["juntar","Misturar"])]
 }
