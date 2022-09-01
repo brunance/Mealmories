@@ -209,6 +209,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Etapa 1 de 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYZ-ye-9fs">
                                 <rect key="frame" x="93" y="51" width="229" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -220,6 +221,16 @@
                                 <buttonConfiguration key="configuration" style="plain" image="Back" title=""/>
                                 <connections>
                                     <segue destination="nXb-Ml-c2X" kind="presentation" identifier="Back" modalPresentationStyle="fullScreen" id="DoW-HL-gnf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-TW-af3">
+                                <rect key="frame" x="342" y="53" width="45" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="questionmark.app.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="iaQ-Ti-H7E" kind="showDetail" id="Ezi-nz-JD3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -251,6 +262,16 @@
             </objects>
             <point key="canvasLocation" x="2369.5652173913045" y="85.714285714285708"/>
         </scene>
+        <!--ForgetRecipe-->
+        <scene sceneID="ScN-70-UqY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ForgetRecipe" id="iaQ-Ti-H7E" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Qci-oM-oou"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAL-Hh-aVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3001" y="-162"/>
+        </scene>
         <!--EndRecipe-->
         <scene sceneID="aJd-8S-Akb">
             <objects>
@@ -268,6 +289,7 @@
         <image name="Dica" width="33" height="33"/>
         <image name="Seta 1" width="33" height="33"/>
         <image name="Seta 2" width="33" height="33"/>
+        <image name="questionmark.app.fill" catalog="system" width="128" height="114"/>
         <image name="secos.1" width="230" height="230"/>
         <namedColor name="Adulto_Blue">
             <color red="0.0" green="0.49803921568627452" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -281,6 +303,9 @@
         <namedColor name="LabelBlue">
             <color red="0.90980392156862744" green="0.96470588235294119" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

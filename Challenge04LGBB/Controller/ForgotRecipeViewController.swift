@@ -18,8 +18,7 @@ class ForgotRecipeViewController: UIViewController {
     private var itemList1 : [String] = [String]()
     private var itemList2 : [String] = [String]()
     
-    private var ingredientes = ["400g Polvilho doce ou de sua preferência", "400g de queijo parmesão ralado", "2 caixas de creme de leite (400g) (aproximadamente)", "Para untar: manteiga e trigo, spray untador, papel manteiga ou óleo."]
-    private var etapas = ["Preparo da massa", "Preparo das formas", "Finalizar Receita"]
+    var choosenrecipe : [ChosenRecipeModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +44,12 @@ class ForgotRecipeViewController: UIViewController {
     }
     
     private func setTabeleViewData(){
-        for i in 0...ingredientes.count - 1 {
-            self.itemList1.append(ingredientes[i])
+        choosenrecipe = getChoosenRecipe()
+        for i in 0...choosenrecipe[0].ingredientes.count - 1 {
+            self.itemList1.append(choosenrecipe[0].ingredientes[i])
         }
-        for i in 0...etapas.count - 1 {
-            self.itemList2.append(etapas[i])
+        for i in 0...choosenrecipe[0].etapas.count - 1 {
+            self.itemList2.append(choosenrecipe[0].etapas[i])
         }
         
         self.tableIngredients.reloadData()
