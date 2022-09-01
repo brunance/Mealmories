@@ -3,10 +3,19 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Baloo2-Bold.ttf">
+            <string>Baloo2-Bold</string>
+        </array>
+        <array key="Baloo2-Regular.ttf">
+            <string>Baloo2-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Recipes View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -16,71 +25,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="YzP-QP-ve9">
-                                <rect key="frame" x="151.5" y="375.5" width="111.5" height="145"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7u-5e-vDg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biZ-kU-0me">
-                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Pão de queijo"/>
-                                        <connections>
-                                            <action selector="PaoDeQueijo:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HB5-oT-0TU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSJ-SV-1T8">
-                                        <rect key="frame" x="0.0" y="57" width="111.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Pipoca"/>
-                                        <connections>
-                                            <action selector="Pipoca:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="abH-Q2-gOC"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1M-ks-sKF">
-                                        <rect key="frame" x="0.0" y="114" width="111.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Misto quente"/>
-                                        <connections>
-                                            <action selector="MistoQuente:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8TI-Tk-JQU"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHv-2v-PSt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y9p-Ic-YAA">
+                                                <rect key="frame" x="71" y="867" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vamos Criar " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFt-pX-v86">
+                                                <rect key="frame" x="21" y="41" width="108" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvP-H6-gWn">
+                                                <rect key="frame" x="21" y="72" width="167" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
+                                                <color key="textColor" name="Mix_Magenta"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receitas em destaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axs-N1-jAw">
+                                                <rect key="frame" x="21" y="119" width="217" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-06-Op5" customClass="recipe">
+                                                <rect key="frame" x="21" y="180" width="360" height="292"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" name="Mix_Magenta"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1300" id="GIP-yT-xee"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sh3-wT-nZB">
-                                <rect key="frame" x="20" y="736" width="374" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Ir para receita escolhida"/>
-                                <connections>
-                                    <segue destination="Bxh-5Z-8dE" kind="presentation" identifier="chosen" modalPresentationStyle="fullScreen" id="N8F-2B-BEu"/>
-                                </connections>
-                            </button>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gHv-2v-PSt" secondAttribute="trailing" id="Mbh-j3-daL"/>
+                                    <constraint firstAttribute="bottom" secondItem="gHv-2v-PSt" secondAttribute="bottom" id="hdR-qF-a1T"/>
+                                    <constraint firstItem="gHv-2v-PSt" firstAttribute="top" secondItem="h7u-5e-vDg" secondAttribute="top" id="wPt-ep-nAQ"/>
+                                    <constraint firstItem="gHv-2v-PSt" firstAttribute="leading" secondItem="h7u-5e-vDg" secondAttribute="leading" id="xPc-Wu-JHe"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YzP-QP-ve9" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UXG-dm-WM1"/>
-                            <constraint firstItem="YzP-QP-ve9" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ymr-ab-JE0"/>
+                            <constraint firstItem="h7u-5e-vDg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="K5Y-Sc-o2c"/>
+                            <constraint firstAttribute="bottom" secondItem="h7u-5e-vDg" secondAttribute="bottom" id="k6V-Jo-aQ2"/>
+                            <constraint firstItem="h7u-5e-vDg" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="mGV-VU-mL4"/>
+                            <constraint firstItem="h7u-5e-vDg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rZ0-KK-ifc"/>
+                            <constraint firstItem="gHv-2v-PSt" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="scj-sL-jjJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="FundoCards" destination="Lxk-06-Op5" id="zwQ-V5-Nrt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="92.410714285714278"/>
-        </scene>
-        <!--ChosenRecipe-->
-        <scene sceneID="GUH-sI-xRb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ChosenRecipe" id="Bxh-5Z-8dE" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="T9E-wI-AMj"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u6H-24-yCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="611" y="289"/>
+            <point key="canvasLocation" x="-4.3478260869565224" y="103.79464285714285"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="Mix_Magenta">
+            <color red="0.97647058823529409" green="0.38039215686274508" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
