@@ -1,15 +1,7 @@
-//
-//  ForgotRecipeViewController.swift
-//  Challenge04LGBB
-//
-//  Created by Luciano Uchoa on 29/08/22.
-//
-
 import Foundation
 import UIKit
 
 class ForgotRecipeViewController: UIViewController {
-    
     @IBOutlet weak var tableIngredients: UITableView!
     @IBOutlet weak var tableIngredientsHeight: NSLayoutConstraint!
     @IBOutlet weak var tableEtapas: UITableView!
@@ -19,9 +11,11 @@ class ForgotRecipeViewController: UIViewController {
     private var itemList2 : [String] = [String]()
     
     var choosenrecipe : [ChosenRecipeModel] = []
-    
+    var escolha : Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("olha a escolha\(escolha)")
         self.setTableView()
     }
 
@@ -45,11 +39,11 @@ class ForgotRecipeViewController: UIViewController {
     
     private func setTabeleViewData(){
         choosenrecipe = getChoosenRecipe()
-        for i in 0...choosenrecipe[0].ingredientes.count - 1 {
-            self.itemList1.append(choosenrecipe[0].ingredientes[i])
+        for i in 0...choosenrecipe[escolha].ingredientes.count - 1 {
+            self.itemList1.append(choosenrecipe[escolha].ingredientes[i])
         }
-        for i in 0...choosenrecipe[0].etapas.count - 1 {
-            self.itemList2.append(choosenrecipe[0].etapas[i])
+        for i in 0...choosenrecipe[escolha].etapas.count - 1 {
+            self.itemList2.append(choosenrecipe[escolha].etapas[i])
         }
         
         self.tableIngredients.reloadData()

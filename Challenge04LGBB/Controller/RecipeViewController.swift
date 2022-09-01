@@ -286,6 +286,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             secondVC.modalPresentationStyle = .fullScreen
             secondVC.modalTransitionStyle = .crossDissolve
         }
+        if segue.identifier == "ForgotRecipe"{
+            let secondVC = segue.destination as!ForgotRecipeViewController
+            secondVC.escolha = escolha
+        }
     }
     
     @IBAction func playSound(_ sender: Any) {
