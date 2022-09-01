@@ -157,6 +157,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iU-Vn-dLa">
+                                <rect key="frame" x="174" y="644" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="xD6-U4-P5a" kind="presentation" modalPresentationStyle="fullScreen" id="8nE-Vf-DP8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZW0-XW-RXR"/>
                         <color key="backgroundColor" name="CorDaview"/>
@@ -184,6 +193,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6F-62-Tfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="16.741071428571427"/>
+        </scene>
+        <!--EndRecipe-->
+        <scene sceneID="qCo-KT-ojV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EndRecipe" id="xD6-U4-P5a" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f64-Kh-OCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="151"/>
         </scene>
     </scenes>
     <resources>
