@@ -230,7 +230,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="questionmark.app.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="iaQ-Ti-H7E" kind="showDetail" id="Ezi-nz-JD3"/>
+                                    <segue destination="iaQ-Ti-H7E" kind="showDetail" identifier="ForgotRecipe" id="Ezi-nz-JD3"/>
                                 </connections>
                             </button>
                         </subviews>
