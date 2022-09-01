@@ -2,6 +2,8 @@ import Foundation
 import UIKit
 
 class RecipesViewController : UIViewController{
+  
+    @IBOutlet weak var FundoCards: UIView!
     var escolha : Int = -1
     override func viewDidLoad() {
         super.viewDidLoad()
