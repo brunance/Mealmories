@@ -37,95 +37,142 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHv-2v-PSt">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vamos Criar " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFt-pX-v86">
-                                                <rect key="frame" x="21" y="41" width="108" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos Criar " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFt-pX-v86">
+                                                <rect key="frame" x="20" y="40" width="107.5" height="32.5"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvP-H6-gWn">
-                                                <rect key="frame" x="21" y="72" width="167" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvP-H6-gWn">
+                                                <rect key="frame" x="20" y="72" width="167" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="39" id="4mE-GO-PH6"/>
+                                                    <constraint firstAttribute="width" constant="167" id="xz8-Bc-Yaf"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
                                                 <color key="textColor" name="Mix_Magenta"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receitas em destaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axs-N1-jAw">
-                                                <rect key="frame" x="21" y="119" width="217" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receitas em destaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axs-N1-jAw">
+                                                <rect key="frame" x="20" y="121" width="217" height="36"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-06-Op5" customClass="recipe">
-                                                <rect key="frame" x="21" y="179" width="360" height="362"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-06-Op5" customClass="recipe">
+                                                <rect key="frame" x="20" y="179" width="374" height="445"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paodequeijo.1" translatesAutoresizingMaskIntoConstraints="NO" id="MFF-Qi-k8q">
-                                                        <rect key="frame" x="0.0" y="8" width="360" height="228"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                                    </imageView>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l8c-9I-SqE">
-                                                        <rect key="frame" x="0.0" y="226" width="360" height="136"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpG-ha-IZz">
+                                                        <rect key="frame" x="7" y="16.5" width="360" height="412"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbM-FJ-dRC">
-                                                                <rect key="frame" x="8" y="8" width="136" height="36"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Por Isabelle Colares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDW-Ne-LYO">
-                                                                <rect key="frame" x="8" y="35" width="131" height="25"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="15"/>
-                                                                <color key="textColor" systemColor="systemGrayColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timer-32px" translatesAutoresizingMaskIntoConstraints="NO" id="cRT-tn-NS2">
-                                                                <rect key="frame" x="8" y="85" width="37" height="35"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paodequeijo.1" translatesAutoresizingMaskIntoConstraints="NO" id="MFF-Qi-k8q">
+                                                                <rect key="frame" x="55" y="0.0" width="250" height="250"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="250" id="4AR-Ao-pAG"/>
+                                                                    <constraint firstAttribute="width" constant="250" id="nbT-kR-YLG"/>
+                                                                </constraints>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="easy-32px" translatesAutoresizingMaskIntoConstraints="NO" id="K3f-QE-khs">
-                                                                <rect key="frame" x="112" y="85" width="37" height="35"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            </imageView>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="age-32px" translatesAutoresizingMaskIntoConstraints="NO" id="9kv-Tv-khS">
-                                                                <rect key="frame" x="245" y="85" width="37" height="35"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c76-mQ-LoN">
-                                                                <rect key="frame" x="52" y="92" width="36" height="20"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="idade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Br-F6-jyq">
-                                                                <rect key="frame" x="290" y="92" width="62" height="20"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dificuldade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fm9-CO-36o">
-                                                                <rect key="frame" x="157" y="92" width="61" height="20"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8c-9I-SqE">
+                                                                <rect key="frame" x="0.0" y="289" width="360" height="123"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbM-FJ-dRC">
+                                                                        <rect key="frame" x="15" y="15" width="136" height="28"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="28" id="TOS-We-bW6"/>
+                                                                            <constraint firstAttribute="width" constant="136" id="k6a-B2-RXK"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por Isabelle Colares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDW-Ne-LYO">
+                                                                        <rect key="frame" x="15" y="43" width="131" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="131" id="Xhp-sS-Qgi"/>
+                                                                            <constraint firstAttribute="height" constant="20" id="r2W-Zn-SxT"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="15"/>
+                                                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer-32px" translatesAutoresizingMaskIntoConstraints="NO" id="cRT-tn-NS2">
+                                                                        <rect key="frame" x="15" y="76" width="32" height="32"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="32" id="JVJ-Ap-sHq"/>
+                                                                            <constraint firstAttribute="height" constant="32" id="bmG-0q-GcG"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="age-32px" translatesAutoresizingMaskIntoConstraints="NO" id="9kv-Tv-khS">
+                                                                        <rect key="frame" x="269" y="76" width="32" height="32"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="32" id="6K6-NI-kjY"/>
+                                                                            <constraint firstAttribute="width" constant="32" id="qoF-F2-8yD"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c76-mQ-LoN">
+                                                                        <rect key="frame" x="62" y="82" width="36" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="idade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Br-F6-jyq">
+                                                                        <rect key="frame" x="316" y="76" width="29" height="32"/>
+                                                                        <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="easy-32px" translatesAutoresizingMaskIntoConstraints="NO" id="K3f-QE-khs">
+                                                                        <rect key="frame" x="126" y="76" width="32" height="32"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="32" id="4Gy-T9-V6o"/>
+                                                                            <constraint firstAttribute="height" constant="32" id="etc-eO-6YA"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Dificuldade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fm9-CO-36o">
+                                                                        <rect key="frame" x="173" y="82" width="61" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="61" id="0tR-rx-4wT"/>
+                                                                            <constraint firstAttribute="height" constant="20" id="Vo7-mS-tzw"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="LabelMagenta"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="1Br-F6-jyq" firstAttribute="centerY" secondItem="9kv-Tv-khS" secondAttribute="centerY" id="003-q1-WiB"/>
+                                                                    <constraint firstAttribute="height" constant="123" id="5Qc-nW-dtA"/>
+                                                                    <constraint firstItem="K3f-QE-khs" firstAttribute="centerY" secondItem="cRT-tn-NS2" secondAttribute="centerY" id="67w-UX-qdX"/>
+                                                                    <constraint firstItem="c76-mQ-LoN" firstAttribute="leading" secondItem="cRT-tn-NS2" secondAttribute="trailing" constant="15" id="7Ro-hx-m3A"/>
+                                                                    <constraint firstItem="fm9-CO-36o" firstAttribute="centerY" secondItem="K3f-QE-khs" secondAttribute="centerY" id="9KV-vH-TN2"/>
+                                                                    <constraint firstItem="fm9-CO-36o" firstAttribute="leading" secondItem="K3f-QE-khs" secondAttribute="trailing" constant="15" id="AHm-HU-XrF"/>
+                                                                    <constraint firstItem="9kv-Tv-khS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fm9-CO-36o" secondAttribute="trailing" constant="35" id="EsL-Lq-CJW"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="1Br-F6-jyq" secondAttribute="trailing" constant="15" id="HcM-fZ-gn0"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="1Br-F6-jyq" secondAttribute="bottom" constant="15" id="QA5-92-9AL"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="cRT-tn-NS2" secondAttribute="bottom" constant="15" id="Ssq-Jc-Eai"/>
+                                                                    <constraint firstItem="zbM-FJ-dRC" firstAttribute="top" secondItem="l8c-9I-SqE" secondAttribute="top" constant="15" id="UL5-TL-yde"/>
+                                                                    <constraint firstItem="1Br-F6-jyq" firstAttribute="leading" secondItem="9kv-Tv-khS" secondAttribute="trailing" constant="15" id="W9G-un-vCe"/>
+                                                                    <constraint firstItem="K3f-QE-khs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c76-mQ-LoN" secondAttribute="trailing" constant="28" id="Weh-qM-VdK"/>
+                                                                    <constraint firstItem="9kv-Tv-khS" firstAttribute="centerY" secondItem="fm9-CO-36o" secondAttribute="centerY" id="Ydd-8G-hAM"/>
+                                                                    <constraint firstItem="zbM-FJ-dRC" firstAttribute="leading" secondItem="l8c-9I-SqE" secondAttribute="leading" constant="15" id="ZHN-bG-0Xb"/>
+                                                                    <constraint firstItem="FDW-Ne-LYO" firstAttribute="leading" secondItem="l8c-9I-SqE" secondAttribute="leading" constant="15" id="bu9-iU-gho"/>
+                                                                    <constraint firstItem="cRT-tn-NS2" firstAttribute="leading" secondItem="l8c-9I-SqE" secondAttribute="leading" constant="15" id="lZB-Ir-e8z"/>
+                                                                    <constraint firstItem="FDW-Ne-LYO" firstAttribute="top" secondItem="zbM-FJ-dRC" secondAttribute="bottom" id="rmx-xx-h1M"/>
+                                                                    <constraint firstItem="c76-mQ-LoN" firstAttribute="centerY" secondItem="cRT-tn-NS2" secondAttribute="centerY" id="zjb-Ml-4p3"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="LabelMagenta"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpG-ha-IZz">
-                                                        <rect key="frame" x="0.0" y="8" width="360" height="346"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstItem="MFF-Qi-k8q" firstAttribute="centerX" secondItem="jpG-ha-IZz" secondAttribute="centerX" id="414-ei-MuZ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="l8c-9I-SqE" secondAttribute="trailing" id="au7-X0-g6c"/>
+                                                            <constraint firstItem="MFF-Qi-k8q" firstAttribute="top" secondItem="jpG-ha-IZz" secondAttribute="top" id="avt-lY-nlv"/>
+                                                            <constraint firstItem="l8c-9I-SqE" firstAttribute="leading" secondItem="jpG-ha-IZz" secondAttribute="leading" id="jly-lx-lHM"/>
+                                                            <constraint firstAttribute="bottom" secondItem="l8c-9I-SqE" secondAttribute="bottom" id="vTh-4c-AxV"/>
+                                                        </constraints>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="e5I-pz-GW6" appends="YES" id="xX5-I9-xfW"/>
                                                         </connections>
@@ -133,6 +180,14 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="374" id="8Gi-7x-vzw"/>
+                                                    <constraint firstAttribute="height" constant="445" id="NRI-e0-wei"/>
+                                                    <constraint firstItem="jpG-ha-IZz" firstAttribute="width" secondItem="Lxk-06-Op5" secondAttribute="width" multiplier="0.962567" id="WtA-SJ-QcQ"/>
+                                                    <constraint firstItem="jpG-ha-IZz" firstAttribute="centerY" secondItem="Lxk-06-Op5" secondAttribute="centerY" id="pL7-6u-bvm"/>
+                                                    <constraint firstItem="jpG-ha-IZz" firstAttribute="height" secondItem="Lxk-06-Op5" secondAttribute="height" multiplier="0.925134" id="qVh-7m-R8s"/>
+                                                    <constraint firstItem="jpG-ha-IZz" firstAttribute="centerX" secondItem="Lxk-06-Op5" secondAttribute="centerX" id="qm6-FV-NiR"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <integer key="value" value="15"/>
@@ -143,13 +198,6 @@
                                                 <rect key="frame" x="129" y="-40" width="329" height="218"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receitas Rapidas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0x-eN-oBv">
-                                                <rect key="frame" x="21" y="571" width="185" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
-                                                <color key="textColor" name="Mix_Magenta"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="F1W-3H-fB2">
                                                 <rect key="frame" x="21" y="600" width="360" height="438"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -233,10 +281,26 @@
                                                 </prototypes>
                                                 <sections/>
                                             </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receitas Rapidas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0x-eN-oBv">
+                                                <rect key="frame" x="115" y="603" width="185" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
+                                                <color key="textColor" name="Mix_Magenta"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="Lxk-06-Op5" firstAttribute="leading" secondItem="gHv-2v-PSt" secondAttribute="leading" constant="20" id="6Jv-3g-tDo"/>
                                             <constraint firstAttribute="height" constant="1300" id="GIP-yT-xee"/>
+                                            <constraint firstItem="Lxk-06-Op5" firstAttribute="top" secondItem="Axs-N1-jAw" secondAttribute="bottom" constant="22" id="MUK-hW-J3I"/>
+                                            <constraint firstItem="Axs-N1-jAw" firstAttribute="leading" secondItem="gHv-2v-PSt" secondAttribute="leading" constant="20" id="PIp-pY-MLi"/>
+                                            <constraint firstItem="YFt-pX-v86" firstAttribute="leading" secondItem="gHv-2v-PSt" secondAttribute="leading" constant="20" id="T0f-lX-UlQ"/>
+                                            <constraint firstItem="Axs-N1-jAw" firstAttribute="top" secondItem="NvP-H6-gWn" secondAttribute="bottom" constant="10" id="eNm-qg-MxY"/>
+                                            <constraint firstItem="NvP-H6-gWn" firstAttribute="leading" secondItem="gHv-2v-PSt" secondAttribute="leading" constant="20" id="eTB-rA-OV8"/>
+                                            <constraint firstItem="NvP-H6-gWn" firstAttribute="top" secondItem="YFt-pX-v86" secondAttribute="bottom" constant="-0.5" id="hcO-sA-1hK"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lxk-06-Op5" secondAttribute="trailing" constant="20" id="tgm-MH-b68"/>
+                                            <constraint firstItem="YFt-pX-v86" firstAttribute="top" secondItem="gHv-2v-PSt" secondAttribute="top" constant="40" id="xmL-Pe-KCE"/>
                                         </constraints>
                                     </view>
                                 </subviews>
