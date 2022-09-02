@@ -73,7 +73,12 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
         self.present(newViewController, animated: false, completion: nil)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 144
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        escolha = indexPath.row
+        print(escolha)
+        PassingToChoosenRecipe()
     }
    
 
