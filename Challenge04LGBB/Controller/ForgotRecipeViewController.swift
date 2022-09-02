@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 class ForgotRecipeViewController: UIViewController {
+    
     @IBOutlet weak var tableIngredients: UITableView!
     @IBOutlet weak var tableIngredientsHeight: NSLayoutConstraint!
     @IBOutlet weak var tableEtapas: UITableView!
