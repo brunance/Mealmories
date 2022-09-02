@@ -1,7 +1,9 @@
 import Foundation
 import UIKit
 
-class RecipesViewController : UIViewController{
+class RecipesViewController : UIViewController,UITableViewDataSource,UITableViewDelegate{
+ 
+    
     @IBOutlet weak var confete: UIImageView!
     //Outlets da receita de destaque
     @IBOutlet weak var FundoCards: UIView!
@@ -10,9 +12,16 @@ class RecipesViewController : UIViewController{
     @IBOutlet weak var AgeCard: UILabel!
     @IBOutlet weak var NameCard: UILabel!
     @IBOutlet weak var ImageCard: UIImageView!
+    
+    //Outlets das Receitas Rapidas
+    @IBOutlet weak var tablleViewReceitasRapidas: UITableView!
+    
     var escolha : Int = -1
     override func viewDidLoad() {
         super.viewDidLoad()
+        tablleViewReceitasRapidas.dataSource = self
+        tablleViewReceitasRapidas.delegate = self
+       
         FundoCards.layer.borderColor = UIColor(named: "Mix_Magenta")!.cgColor
         FundoCards.layer.borderWidth = 3
         confete.layer.opacity = 0.4
@@ -31,12 +40,41 @@ class RecipesViewController : UIViewController{
   
     @IBAction func ClickReceitaDestaque(_ sender: Any) {
         escolha = 0
+        PassingToChoosenRecipe()
         
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let escolha = escolha
-        let destination = segue.destination as! ChosenRecipeViewController
-        destination.escolha = escolha
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let recipes = getChoosenRecipe()
+        return recipes.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let recipes = getChoosenRecipe()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RecipesTableViewCell
+        cell.ImageTabbleView.image = recipes[indexPath.row].imagemReceita
+        cell.nameTableView.text = "\(recipes[indexPath.row].nomeDaReceita)"
+        cell.AgeTableView.text = "+\(recipes[indexPath.row].idadeRecomendada) anos"
+        cell.dificultyTableView.text = "\(recipes[indexPath.row].dificuldade)"
+        cell.timeTableView.text = "\(recipes[indexPath.row].tempoDePreparo)"
+        return cell
+    }
+    
+    func PassingToChoosenRecipe() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "ChosenRecipe", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChosenRecipe") as! ChosenRecipeViewController
+        
+        let transition = CATransition()
+        transition.type = CATransitionType.fade
+        
+        let escolha = escolha
+        newViewController.escolha = escolha
+        
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: false, completion: nil)
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+   
+
 }

@@ -45,7 +45,7 @@
         <!--Chosen Recipe View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ChosenRecipeViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChosenRecipe" id="Y6W-OH-hqX" customClass="ChosenRecipeViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +94,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ov-Dq-3bS">
-                                                <rect key="frame" x="20" y="506" width="189.5" height="35"/>
+                                                <rect key="frame" x="20" y="506" width="184.5" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="qHe-R5-jkd"/>
                                                 </constraints>
@@ -113,7 +113,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-Mu-lPY">
-                                                        <rect key="frame" x="22" y="57.5" width="36" height="14"/>
+                                                        <rect key="frame" x="22" y="52" width="36" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -145,7 +145,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fácil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWb-pM-Dpc">
-                                                        <rect key="frame" x="27.5" y="57.5" width="25.5" height="14"/>
+                                                        <rect key="frame" x="28" y="52" width="24.5" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -177,7 +177,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 + anos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAm-cQ-6lm">
-                                                        <rect key="frame" x="16.5" y="57.5" width="47" height="14"/>
+                                                        <rect key="frame" x="18" y="52" width="44" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -209,7 +209,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R20-B8-fUg">
-                                                <rect key="frame" x="20" y="671" width="121.5" height="35"/>
+                                                <rect key="frame" x="20" y="671" width="126.5" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="rx1-YM-3Ea"/>
                                                 </constraints>
