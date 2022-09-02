@@ -65,7 +65,7 @@ func getRecipes() -> [Recipe]{
                        [UIImage(named: "secos.1")!
                         ,UIImage(named: "mistura.1")!
                         ,UIImage(named: "liquidoemistura.1")!
-                        ,UIImage(named: "porções.1")!
+                        ,UIImage(named: "porcoes.1")!
                         ,UIImage(named: "modelagem.1")!
                         ,UIImage(named: "untarforma.1")!
                         ,UIImage(named: "Organizarnaforma.1")!
