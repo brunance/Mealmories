@@ -68,13 +68,21 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChosenRecipe") as! ChosenRecipeViewController
         
         let transition = CATransition()
-        transition.type = CATransitionType.
+        transition.type = CATransitionType.moveIn
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.duration = 0.3
+        guard let window = view.window else { return }
+        window.layer.add(transition, forKey: kCATransition)
+        
+        
+        
         
         let escolha = escolha
         newViewController.escolha = escolha
         
+        newViewController.modalTransitionStyle = .crossDissolve
         newViewController.modalPresentationStyle = .fullScreen
-        self.present(newViewController, animated: false, completion: nil)
+        self.present(newViewController, animated: true, completion: nil)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
