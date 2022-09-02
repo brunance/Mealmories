@@ -18,6 +18,12 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     @IBOutlet weak var tableEtapas: UITableView!
     @IBOutlet weak var tableEtapasHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var ImagemReceitaEscolhida: UIImageView!
+    @IBOutlet weak var nomeReceitaEscolhida: UILabel!
+    @IBOutlet weak var tempoReceitaEscolhida: UILabel!
+    @IBOutlet weak var dificultyReceitaEscolhida: UILabel!
+    @IBOutlet weak var AgeReceitaEscolhida: UILabel!
+    
     var itemList1 : [String] = [String]()
     var itemList2 : [String] = [String]()
     var choosenrecipe : [ChosenRecipeModel] = []
@@ -30,7 +36,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        SetChoosenRecipe()
         print("isso é escolha:\(escolha)")
         let defaults = UserDefaults.standard
         soundEffect = defaults.bool(forKey: "Sound")
@@ -88,6 +94,18 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             secondVC.modalPresentationStyle = .fullScreen
             secondVC.modalTransitionStyle = .crossDissolve
         }
+        else if segue.identifier == "Back"{
+            let secondVC = segue.destination as! RecipesViewController
+            
+            let transition = CATransition()
+            transition.duration = 0.3
+            transition.type = CATransitionType.moveIn
+            transition.subtype = CATransitionSubtype.fromLeft
+            guard let window = view.window else { return }
+            window.layer.add(transition, forKey: kCATransition)
+            secondVC.modalPresentationStyle = .fullScreen
+            secondVC.modalTransitionStyle = .crossDissolve
+        }
         
     }
     
@@ -129,6 +147,14 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         transition.circleColor = UIColor(named: "CorDaview")!
         
         return transition
+    }
+    func SetChoosenRecipe()  {
+        let chossenRecipe = getChoosenRecipe()
+        ImagemReceitaEscolhida.image = chossenRecipe[escolha].imagemReceita
+        nomeReceitaEscolhida.text = "\(chossenRecipe[escolha].nomeDaReceita)"
+        tempoReceitaEscolhida.text = "\(chossenRecipe[escolha].tempoDePreparo)"
+        dificultyReceitaEscolhida.text = "\(chossenRecipe[escolha].dificuldade)"
+        AgeReceitaEscolhida.text = "+ \(chossenRecipe[escolha].idadeRecomendada) anos"
     }
     
     
