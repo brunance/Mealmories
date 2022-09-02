@@ -17,11 +17,13 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
     @IBOutlet weak var tablleViewReceitasRapidas: UITableView!
     
     var escolha : Int = -1
+   
+    let randomInt = Int.random(in: 0..<2)
+    // 2 é o numero total de receitas
     override func viewDidLoad() {
         super.viewDidLoad()
         tablleViewReceitasRapidas.dataSource = self
         tablleViewReceitasRapidas.delegate = self
-       
         FundoCards.layer.borderColor = UIColor(named: "Mix_Magenta")!.cgColor
         FundoCards.layer.borderWidth = 3
         confete.layer.opacity = 0.4
@@ -29,17 +31,19 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
     }
     
     func SetReceitaDestaque() {
+        
        var receitaDeDestaque =  getChoosenRecipe()
-        TimeCard.text = "\(receitaDeDestaque[0].tempoDePreparo)"
-        difficultyCard.text = "\(receitaDeDestaque[0].dificuldade)"
-        AgeCard.text = "+\(receitaDeDestaque[0].idadeRecomendada) anos"
-        NameCard.text = "\(receitaDeDestaque[0].nomeDaReceita)"
-        ImageCard.image = receitaDeDestaque[0].imagemReceita
+       
+        TimeCard.text = "\(receitaDeDestaque[randomInt].tempoDePreparo)"
+        difficultyCard.text = "\(receitaDeDestaque[randomInt].dificuldade)"
+        AgeCard.text = "+\(receitaDeDestaque[randomInt].idadeRecomendada) anos"
+        NameCard.text = "\(receitaDeDestaque[randomInt].nomeDaReceita)"
+        ImageCard.image = receitaDeDestaque[randomInt].imagemReceita
         
     }
   
     @IBAction func ClickReceitaDestaque(_ sender: Any) {
-        escolha = 0
+        escolha = randomInt
         PassingToChoosenRecipe()
         
     }
@@ -64,13 +68,21 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChosenRecipe") as! ChosenRecipeViewController
         
         let transition = CATransition()
-        transition.type = CATransitionType.fade
+        transition.type = CATransitionType.moveIn
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.duration = 0.3
+        guard let window = view.window else { return }
+        window.layer.add(transition, forKey: kCATransition)
+        
+        
+        
         
         let escolha = escolha
         newViewController.escolha = escolha
         
+        newViewController.modalTransitionStyle = .crossDissolve
         newViewController.modalPresentationStyle = .fullScreen
-        self.present(newViewController, animated: false, completion: nil)
+        self.present(newViewController, animated: true, completion: nil)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
