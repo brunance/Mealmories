@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H8W-hs-pNf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WN3-Ie-LiG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -23,213 +23,116 @@
             <point key="canvasLocation" x="2672" y="72"/>
         </scene>
         <!--End Recipe View Controller-->
-        <scene sceneID="hrK-Lq-T2M">
+        <scene sceneID="IZh-Pn-TSz">
             <objects>
-                <viewController id="H8W-hs-pNf" customClass="EndRecipeViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fcg-mP-tmq">
+                <viewController id="WN3-Ie-LiG" customClass="EndRecipeViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dux-gE-VPe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQi-OI-Lgh">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAc-eo-FBE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="724"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RT3-1D-v33">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h17-1n-MiA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receita concluída com sucesso!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgX-0u-v3P">
-                                                <rect key="frame" x="20" y="267" width="374" height="58"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registre suas Mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-yo-ZIj">
+                                                <rect key="frame" x="20" y="413" width="374" height="26"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registre a sua primeira vez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBD-7M-CPJ">
-                                                <rect key="frame" x="21" y="691" width="374" height="25"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvT-cq-Y8b" userLabel="Aprendizado Geral">
-                                                <rect key="frame" x="20" y="503" width="373" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEc-4E-sUQ">
+                                                <rect key="frame" x="20" y="50" width="374" height="328"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Estrela" translatesAutoresizingMaskIntoConstraints="NO" id="zBo-yd-7Bb">
-                                                        <rect key="frame" x="0.0" y="5" width="32" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ao fazer cálculos, leitura e explicação das comidas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-n2-lCj">
-                                                        <rect key="frame" x="40" y="20" width="330" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="12"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjV-c0-nc3">
+                                                        <rect key="frame" x="20" y="20" width="334" height="29"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aprendizado Geral" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSI-Jl-JgA">
-                                                        <rect key="frame" x="40" y="0.0" width="229" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="15"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Medalha" translatesAutoresizingMaskIntoConstraints="NO" id="zb0-a3-5oF">
+                                                        <rect key="frame" x="20" y="69" width="334" height="160"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receita Concluída:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-am-477">
+                                                        <rect key="frame" x="20" y="249" width="334" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
                                                         <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cheese Bread" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZR-Uh-86L">
+                                                        <rect key="frame" x="20" y="273" width="334" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
+                                                        <color key="textColor" name="Mix_LightMagenta"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="LabelMagenta"/>
+                                                <constraints>
+                                                    <constraint firstItem="CBY-am-477" firstAttribute="leading" secondItem="xEc-4E-sUQ" secondAttribute="leading" constant="20" id="3oX-Q7-rcK"/>
+                                                    <constraint firstItem="xjV-c0-nc3" firstAttribute="top" secondItem="xEc-4E-sUQ" secondAttribute="top" constant="20" id="7k7-en-Ibg"/>
+                                                    <constraint firstItem="IZR-Uh-86L" firstAttribute="top" secondItem="CBY-am-477" secondAttribute="bottom" constant="0.5" id="EFy-Rw-NB5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IZR-Uh-86L" secondAttribute="trailing" constant="20" id="EQN-4x-gla"/>
+                                                    <constraint firstItem="zb0-a3-5oF" firstAttribute="trailing" secondItem="xjV-c0-nc3" secondAttribute="trailing" id="Ev2-gv-glz"/>
+                                                    <constraint firstItem="zb0-a3-5oF" firstAttribute="leading" secondItem="xjV-c0-nc3" secondAttribute="leading" id="FsA-ct-QjZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zb0-a3-5oF" secondAttribute="bottom" constant="99" id="Fsv-E6-GjG"/>
+                                                    <constraint firstItem="IZR-Uh-86L" firstAttribute="leading" secondItem="xEc-4E-sUQ" secondAttribute="leading" constant="20" id="Qaz-Zi-cqr"/>
+                                                    <constraint firstItem="CBY-am-477" firstAttribute="top" secondItem="zb0-a3-5oF" secondAttribute="bottom" constant="20" id="QgC-cQ-j0G"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xjV-c0-nc3" secondAttribute="trailing" constant="20" id="YsJ-H7-zxN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CBY-am-477" secondAttribute="trailing" constant="20" id="gBj-Gb-SAk"/>
+                                                    <constraint firstItem="xjV-c0-nc3" firstAttribute="leading" secondItem="xEc-4E-sUQ" secondAttribute="leading" constant="20" id="kzB-pV-9l2"/>
+                                                    <constraint firstItem="zb0-a3-5oF" firstAttribute="top" secondItem="xjV-c0-nc3" secondAttribute="bottom" constant="20" id="nhh-ji-lWe"/>
+                                                    <constraint firstAttribute="bottom" secondItem="IZR-Uh-86L" secondAttribute="bottom" constant="25" id="tGW-iw-zcg"/>
+                                                    <constraint firstItem="zb0-a3-5oF" firstAttribute="centerY" secondItem="xEc-4E-sUQ" secondAttribute="centerY" constant="-15" id="zqm-fV-DyO"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lembre-se de tirar uma foto quando o prato estiver pronto e registre essas mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufo-ek-5zU">
-                                                <rect key="frame" x="20" y="713" width="374" height="53"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lembre-se de tirar uma foto quando o prato estiver pronto e registre essas mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK3-rx-rUD">
+                                                <rect key="frame" x="20" y="437" width="374" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="ejG-3o-mqh"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FOh-Rr-2LK" userLabel="Cooperacao">
-                                                <rect key="frame" x="20" y="389" width="373" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Estrela" translatesAutoresizingMaskIntoConstraints="NO" id="s71-pn-czK">
-                                                        <rect key="frame" x="0.0" y="5" width="32" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ao ajudar na compra e organização dos ingredientes " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMU-1X-2F3">
-                                                        <rect key="frame" x="40" y="20" width="330" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cooperação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5q-zd-khf">
-                                                        <rect key="frame" x="40" y="0.0" width="229" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="15"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cozinhar em conjunto trabalha várias habilidades!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjP-x3-G9L">
-                                                <rect key="frame" x="19" y="355" width="374" height="26"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parabéns!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zN4-Qh-d9r">
-                                                <rect key="frame" x="20" y="8" width="374" height="58"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="36"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lw9-G3-Ujq" userLabel="Relação Saudável com a comida">
-                                                <rect key="frame" x="20" y="560" width="373" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Estrela" translatesAutoresizingMaskIntoConstraints="NO" id="fAm-VJ-frx">
-                                                        <rect key="frame" x="0.0" y="5" width="32" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Com o tato e olfato cria-se uma associação positiva " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY2-Qh-PEn">
-                                                        <rect key="frame" x="40" y="20" width="330" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Relação saudável com a família" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBK-Pc-dN8">
-                                                        <rect key="frame" x="40" y="0.0" width="229" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="15"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Medalha" translatesAutoresizingMaskIntoConstraints="NO" id="o4k-lu-lxK">
-                                                <rect key="frame" x="19" y="74" width="374" height="185"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Benefícios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSH-L4-d17">
-                                                <rect key="frame" x="20" y="333" width="374" height="25"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUh-0l-ms5" userLabel="Lembranças Familiares">
-                                                <rect key="frame" x="20" y="617" width="373" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Estrela" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-08-vRs">
-                                                        <rect key="frame" x="0.0" y="5" width="32" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Com o simples ato de cozinhar, cria-se boas memórias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-m7-P0C">
-                                                        <rect key="frame" x="40" y="20" width="330" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lembranças Familiares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLl-vd-oyK">
-                                                        <rect key="frame" x="40" y="0.0" width="229" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="15"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pGK-wb-Oj3" userLabel="Responsabilidade">
-                                                <rect key="frame" x="20" y="446" width="373" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Estrela" translatesAutoresizingMaskIntoConstraints="NO" id="tro-27-E0r">
-                                                        <rect key="frame" x="0.0" y="5" width="32" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ao cumprir funções importantes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8j-VA-noH">
-                                                        <rect key="frame" x="40" y="20" width="330" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Responsabilidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAq-e7-QnU">
-                                                        <rect key="frame" x="40" y="0.0" width="229" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="15"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="800" id="xHH-Eo-eOw"/>
+                                            <constraint firstItem="YK3-rx-rUD" firstAttribute="trailing" secondItem="ULe-yo-ZIj" secondAttribute="trailing" id="BdX-XP-5PH"/>
+                                            <constraint firstItem="xEc-4E-sUQ" firstAttribute="top" secondItem="h17-1n-MiA" secondAttribute="top" constant="50" id="CxY-Me-y6a"/>
+                                            <constraint firstItem="xEc-4E-sUQ" firstAttribute="centerX" secondItem="h17-1n-MiA" secondAttribute="centerX" id="Lc1-p5-Lrp"/>
+                                            <constraint firstItem="ULe-yo-ZIj" firstAttribute="top" secondItem="xEc-4E-sUQ" secondAttribute="bottom" constant="35" id="LhU-lb-eWq"/>
+                                            <constraint firstAttribute="trailing" secondItem="ULe-yo-ZIj" secondAttribute="trailing" constant="20" id="RKX-N9-Dep"/>
+                                            <constraint firstItem="YK3-rx-rUD" firstAttribute="top" secondItem="ULe-yo-ZIj" secondAttribute="bottom" constant="-2" id="Tr9-hS-D6n"/>
+                                            <constraint firstAttribute="height" constant="600" id="VEz-Fw-EJg"/>
+                                            <constraint firstItem="xEc-4E-sUQ" firstAttribute="leading" secondItem="h17-1n-MiA" secondAttribute="leading" constant="20" id="Vye-PI-dHM"/>
+                                            <constraint firstItem="YK3-rx-rUD" firstAttribute="centerX" secondItem="ULe-yo-ZIj" secondAttribute="centerX" id="WeD-9w-X0N"/>
+                                            <constraint firstItem="ULe-yo-ZIj" firstAttribute="leading" secondItem="h17-1n-MiA" secondAttribute="leading" constant="20" id="cgg-yu-jub"/>
+                                            <constraint firstAttribute="trailing" secondItem="xEc-4E-sUQ" secondAttribute="trailing" constant="20" id="eN3-Xx-u4d"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="RT3-1D-v33" firstAttribute="top" secondItem="wEt-G3-zph" secondAttribute="top" id="77o-hx-KIC"/>
-                                    <constraint firstItem="RT3-1D-v33" firstAttribute="width" secondItem="CX1-g7-kcH" secondAttribute="width" id="NLS-LR-wPL"/>
-                                    <constraint firstItem="RT3-1D-v33" firstAttribute="leading" secondItem="wEt-G3-zph" secondAttribute="leading" id="Um0-uT-lk9"/>
-                                    <constraint firstItem="RT3-1D-v33" firstAttribute="bottom" secondItem="wEt-G3-zph" secondAttribute="bottom" id="ef6-R2-f5p"/>
-                                    <constraint firstItem="RT3-1D-v33" firstAttribute="trailing" secondItem="wEt-G3-zph" secondAttribute="trailing" id="ypM-Xr-yZc"/>
+                                    <constraint firstItem="h17-1n-MiA" firstAttribute="leading" secondItem="7UV-iM-VCH" secondAttribute="leading" id="4w2-2l-8E6"/>
+                                    <constraint firstItem="h17-1n-MiA" firstAttribute="trailing" secondItem="7UV-iM-VCH" secondAttribute="trailing" id="67n-u6-HIl"/>
+                                    <constraint firstItem="h17-1n-MiA" firstAttribute="bottom" secondItem="7UV-iM-VCH" secondAttribute="bottom" id="GdP-pN-MqZ"/>
+                                    <constraint firstItem="h17-1n-MiA" firstAttribute="top" secondItem="7UV-iM-VCH" secondAttribute="top" id="Z8l-3I-HDa"/>
+                                    <constraint firstItem="h17-1n-MiA" firstAttribute="width" secondItem="wAq-yG-6Ch" secondAttribute="width" id="dvH-PO-sHw"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="wEt-G3-zph"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="CX1-g7-kcH"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="7UV-iM-VCH"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wAq-yG-6Ch"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NK7-e3-V7M">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MO-Jw-M2u">
                                 <rect key="frame" x="20" y="805" width="374" height="57"/>
                                 <color key="backgroundColor" name="Mix_Magenta"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="t3t-8u-O8Q"/>
+                                    <constraint firstAttribute="height" constant="57" id="wKN-T0-2ie"/>
                                 </constraints>
                                 <color key="tintColor" name="LabelBlue"/>
                                 <state key="normal" title="Button"/>
@@ -240,33 +143,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Xjf-ta-Jcp" kind="presentation" modalPresentationStyle="fullScreen" id="tCP-sC-r5f"/>
+                                    <segue destination="Xjf-ta-Jcp" kind="presentation" modalPresentationStyle="fullScreen" id="I7z-us-UFa"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="WPp-hb-LGS"/>
+                        <viewLayoutGuide key="safeArea" id="CR3-B7-G0f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NK7-e3-V7M" firstAttribute="leading" secondItem="fcg-mP-tmq" secondAttribute="leadingMargin" id="0U6-Us-GVc"/>
-                            <constraint firstItem="NK7-e3-V7M" firstAttribute="bottom" secondItem="WPp-hb-LGS" secondAttribute="bottom" id="1WC-vh-nOR"/>
-                            <constraint firstItem="GQi-OI-Lgh" firstAttribute="leading" secondItem="fcg-mP-tmq" secondAttribute="leading" id="4mq-Nw-a2q"/>
-                            <constraint firstItem="NK7-e3-V7M" firstAttribute="trailing" secondItem="fcg-mP-tmq" secondAttribute="trailingMargin" id="FZI-wO-NJQ"/>
-                            <constraint firstItem="NK7-e3-V7M" firstAttribute="centerX" secondItem="GQi-OI-Lgh" secondAttribute="centerX" id="lDx-TD-xhD"/>
-                            <constraint firstItem="GQi-OI-Lgh" firstAttribute="top" secondItem="WPp-hb-LGS" secondAttribute="top" id="noE-nk-g7i"/>
-                            <constraint firstItem="NK7-e3-V7M" firstAttribute="top" secondItem="GQi-OI-Lgh" secondAttribute="bottom" constant="37" id="wsF-N2-FYB"/>
+                            <constraint firstItem="1MO-Jw-M2u" firstAttribute="centerX" secondItem="cAc-eo-FBE" secondAttribute="centerX" id="0ba-d4-e9a"/>
+                            <constraint firstItem="cAc-eo-FBE" firstAttribute="top" secondItem="CR3-B7-G0f" secondAttribute="top" id="NUH-OA-2qY"/>
+                            <constraint firstItem="cAc-eo-FBE" firstAttribute="leading" secondItem="Dux-gE-VPe" secondAttribute="leading" id="bDO-b0-b5j"/>
+                            <constraint firstItem="1MO-Jw-M2u" firstAttribute="bottom" secondItem="CR3-B7-G0f" secondAttribute="bottom" id="bvh-wf-RKf"/>
+                            <constraint firstItem="1MO-Jw-M2u" firstAttribute="top" secondItem="cAc-eo-FBE" secondAttribute="bottom" constant="37" id="eFw-VF-jgl"/>
+                            <constraint firstItem="1MO-Jw-M2u" firstAttribute="leading" secondItem="Dux-gE-VPe" secondAttribute="leadingMargin" id="xKY-IE-Hj1"/>
+                            <constraint firstItem="1MO-Jw-M2u" firstAttribute="trailing" secondItem="Dux-gE-VPe" secondAttribute="trailingMargin" id="xgP-dy-mVk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelDesbloqueio" destination="IZR-Uh-86L" id="VPZ-8c-WKn"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sth-md-JDy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zTO-F7-6vQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847.826086956522" y="50.892857142857139"/>
+            <point key="canvasLocation" x="1933" y="72"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Estrela" width="32" height="32"/>
         <image name="Medalha" width="350" height="160"/>
         <namedColor name="LabelBlue">
             <color red="0.90980392156862744" green="0.96470588235294119" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelMagenta">
+            <color red="0.99607843137254903" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mix_LightMagenta">
+            <color red="0.42699998617172241" green="0.090000003576278687" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Mix_Magenta">
             <color red="0.97647058823529409" green="0.38039215686274508" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
