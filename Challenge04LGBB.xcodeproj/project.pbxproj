@@ -14,7 +14,6 @@
 		515AA40128BEBAA700F903BE /* recipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515AA40028BEBAA700F903BE /* recipesViewController.swift */; };
 		515AA40328BEBE1D00F903BE /* recipesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515AA40228BEBE1D00F903BE /* recipesScreen.storyboard */; };
 		5165C1BF28BFA61900F5F1CF /* ChoosenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5165C1BE28BFA61900F5F1CF /* ChoosenModel.swift */; };
-		517650E128C184DB0059A30D /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 517650E028C184DB0059A30D /* View.xib */; };
 		51862A7D28AE90CE00C5F3AE /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029728AD21540052D2B8 /* Baloo2-Medium.ttf */; };
 		51862A7E28AE90CE00C5F3AE /* Baloo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029A28AD21540052D2B8 /* Baloo2-SemiBold.ttf */; };
 		51862A7F28AE90CE00C5F3AE /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029B28AD21540052D2B8 /* Baloo2-ExtraBold.ttf */; };
@@ -54,7 +53,6 @@
 		515AA40028BEBAA700F903BE /* recipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipesViewController.swift; sourceTree = "<group>"; };
 		515AA40228BEBE1D00F903BE /* recipesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = recipesScreen.storyboard; sourceTree = "<group>"; };
 		5165C1BE28BFA61900F5F1CF /* ChoosenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenModel.swift; sourceTree = "<group>"; };
-		517650E028C184DB0059A30D /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		51DA8E8528B6627000D81095 /* ConfigScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigScreen.storyboard; sourceTree = "<group>"; };
 		51DA8E8728B6629200D81095 /* ChosenRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChosenRecipe.storyboard; sourceTree = "<group>"; };
 		51DA8E8928B7D61100D81095 /* EndRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EndRecipe.storyboard; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				4FED12FB28AA8A80002113D3 /* Main.storyboard */,
 				51DA8E8528B6627000D81095 /* ConfigScreen.storyboard */,
 				515AA40228BEBE1D00F903BE /* recipesScreen.storyboard */,
-				517650E028C184DB0059A30D /* View.xib */,
 				51DA8E8728B6629200D81095 /* ChosenRecipe.storyboard */,
 				51DA8E8928B7D61100D81095 /* EndRecipe.storyboard */,
 				66D694CE28BE460100A95783 /* ForgetRecipe.storyboard */,
@@ -247,7 +244,6 @@
 				51862A8128AE90CE00C5F3AE /* Baloo2-Regular.ttf in Resources */,
 				51DA8E8828B6629200D81095 /* ChosenRecipe.storyboard in Resources */,
 				51DA8E8628B6627000D81095 /* ConfigScreen.storyboard in Resources */,
-				517650E128C184DB0059A30D /* View.xib in Resources */,
 				51DA8E8A28B7D61100D81095 /* EndRecipe.storyboard in Resources */,
 				51862A7E28AE90CE00C5F3AE /* Baloo2-SemiBold.ttf in Resources */,
 				515AA40328BEBE1D00F903BE /* recipesScreen.storyboard in Resources */,
