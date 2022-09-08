@@ -11,12 +11,10 @@ import UIKit
 class EndRecipeViewController: UIViewController {
     
     @IBOutlet weak var endButton: UIButton!
-    @IBOutlet weak var labelDesbloqueio: UILabel!
-    var escolha = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabel()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,10 +30,5 @@ class EndRecipeViewController: UIViewController {
             secondVC.modalPresentationStyle = .fullScreen
             secondVC.modalTransitionStyle = .crossDissolve
         }
-    }
-    
-    func setupLabel() {
-        let receita = getRecipes()
-        labelDesbloqueio.text = receita[escolha].tituloReceita
     }
 }

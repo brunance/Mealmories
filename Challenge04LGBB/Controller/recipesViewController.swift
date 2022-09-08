@@ -32,7 +32,7 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
     
     func SetReceitaDestaque() {
         
-        let receitaDeDestaque =  getChoosenRecipe()
+       var receitaDeDestaque =  getChoosenRecipe()
        
         TimeCard.text = "\(receitaDeDestaque[randomInt].tempoDePreparo)"
         difficultyCard.text = "\(receitaDeDestaque[randomInt].dificuldade)"

@@ -240,11 +240,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             let secondVC = segue.destination as!ForgotRecipeViewController
             secondVC.escolha = escolha
         }
-        if segue.identifier == "End" {
-            let seconVC = segue.destination as! EndRecipeViewController
-            seconVC.escolha = escolha
-            count = 0
-        }
     }
     
     @IBAction func playSound(_ sender: Any) {
