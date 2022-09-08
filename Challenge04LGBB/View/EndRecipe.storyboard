@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--ChosenRecipe-->
+        <!--recipesScreen-->
         <scene sceneID="hke-NT-VPM">
             <objects>
-                <viewControllerPlaceholder storyboardName="ChosenRecipe" id="Xjf-ta-Jcp" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="recipesScreen" id="Xjf-ta-Jcp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4r-cu-UrT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2672" y="72"/>

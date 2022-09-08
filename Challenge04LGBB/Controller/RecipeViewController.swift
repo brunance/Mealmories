@@ -86,10 +86,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
 //                    if count < 9 {
 //                        count += 1
 //                    }
+//                    self.play(tiposom: "passar")
 //                    self.viewDidLoad()
 //                    print(count)
 //                }
 //                if(self.texto == "You are blinking left." && count != 0){
+//                    self.play(tiposom: "voltar")
 //                    count -= 1
 //                    self.viewDidLoad()
 //                    print(count)
@@ -150,33 +152,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         
         if sound == true {
-            if let player = player, player.isPlaying {
-                
-            } else {
-                
-                let urlString = Bundle.main.path(forResource: "passar", ofType: "mp3")
-                
-                do {
-                    
-                    try? AVAudioSession.sharedInstance().setMode(.default)
-                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                    
-                    guard let urlString = urlString else {
-                        return
-                    }
-                    
-                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-                    
-                    guard let player = player else {
-                        return
-                    }
-                    
-                    player.play()
-                }
-                catch {
-                    print("Something went wrong! :(")
-                }
-            }
+            play(tiposom: "passar")
         }
         
     }
@@ -192,33 +168,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         
         if sound == true {
-            if let player = player, player.isPlaying {
-                
-            } else {
-                
-                let urlString = Bundle.main.path(forResource: "voltar", ofType: "mp3")
-                
-                do {
-                    
-                    try? AVAudioSession.sharedInstance().setMode(.default)
-                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                    
-                    guard let urlString = urlString else {
-                        return
-                    }
-                    
-                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-                    
-                    guard let player = player else {
-                        return
-                    }
-                    
-                    player.play()
-                }
-                catch {
-                    print("Something went wrong! :(")
-                }
-            }
+            play(tiposom: "voltar")
         }
         
     }
@@ -294,33 +244,33 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     @IBAction func playSound(_ sender: Any) {
         if sound == true {
-            if let player = player, player.isPlaying {
-                
-            } else {
-                
-                let urlString = Bundle.main.path(forResource: "fim-receita", ofType: "mp3")
-                
-                do {
-                    
-                    try? AVAudioSession.sharedInstance().setMode(.default)
-                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                    
-                    guard let urlString = urlString else {
-                        return
-                    }
-                    
-                    player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-                    
-                    guard let player = player else {
-                        return
-                    }
-                    
-                    player.play()
-                }
-                catch {
-                    print("Something went wrong! :(")
-                }
+            play(tiposom: "fim-receita")
+        }
+    }
+    
+    func play(tiposom : String) {
+        
+        let urlString = Bundle.main.path(forResource: tiposom, ofType: "mp3")
+        
+        do {
+            
+            try? AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            
+            guard let urlString = urlString else {
+                return
             }
+            
+            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+            
+            guard let player = player else {
+                return
+            }
+            
+            player.play()
+        }
+        catch {
+            print("Something went wrong! :(")
         }
     }
 }
