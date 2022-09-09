@@ -246,7 +246,35 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
     }
-   
+    @IBAction func goright(_ sender: Any) {
+        if count == recipes[escolha].numeroIntrucoes-1{
+            count = recipes[escolha].numeroIntrucoes-1
+        }
+        else{
+            count += 1
+            progressBarCount += 1
+            viewDidLoad()
+        }
+        
+        if sound == true {
+            play(tiposom: "passar")
+        }
+    }
+    
+    @IBAction func goleft(_ sender: Any) {
+        if count == 0{
+            count = 0
+        }
+        else{
+            count -= 1
+            progressBarCount += 1
+            viewDidLoad()
+        }
+        
+        if sound == true {
+            play(tiposom: "voltar")
+        }
+    }
     @IBAction func ForgetRecipeButton(_ sender: Any) {
         navigation(destino: "ForgotRecipe")
     }

@@ -194,6 +194,24 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secos.1" translatesAutoresizingMaskIntoConstraints="NO" id="sWO-ff-cJH">
                                         <rect key="frame" x="93.5" y="125" width="187" height="249.5"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-zg-T6I">
+                                        <rect key="frame" x="21" y="121" width="65" height="243"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="DCi-dG-aEn" appends="YES" id="wbk-Gf-bQS"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-ZI-EZT">
+                                        <rect key="frame" x="289" y="121" width="62" height="243"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="hqf-Y1-6Rk" appends="YES" id="anL-ES-idz"/>
+                                        </connections>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelBlue"/>
                                 <constraints>
@@ -292,6 +310,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcj-Gk-wQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="DCi-dG-aEn">
+                    <connections>
+                        <action selector="goleft:" destination="0BQ-UW-R7E" id="fJD-nh-ItI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hqf-Y1-6Rk">
+                    <connections>
+                        <action selector="goright:" destination="0BQ-UW-R7E" id="K9N-Va-5Ep"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3279.7101449275365" y="85.714285714285708"/>
         </scene>
