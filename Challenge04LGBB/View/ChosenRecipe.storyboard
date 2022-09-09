@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-P4-tZT">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-P4-tZT">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNA-Xk-G1p" userLabel="RecipeView">
@@ -361,18 +361,24 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="fns-oe-04J" firstAttribute="bottom" secondItem="NNA-Xk-G1p" secondAttribute="bottom" id="9pa-pd-tFF"/>
                                     <constraint firstAttribute="bottom" secondItem="NNA-Xk-G1p" secondAttribute="bottom" id="Jn6-Zd-czI"/>
+                                    <constraint firstItem="NNA-Xk-G1p" firstAttribute="width" secondItem="cBC-3A-z4G" secondAttribute="width" id="V3r-8A-jev"/>
+                                    <constraint firstItem="fns-oe-04J" firstAttribute="trailing" secondItem="NNA-Xk-G1p" secondAttribute="trailing" id="VhK-S7-3FJ"/>
                                     <constraint firstItem="NNA-Xk-G1p" firstAttribute="top" secondItem="iVs-P4-tZT" secondAttribute="top" id="YM0-ox-EQb"/>
+                                    <constraint firstItem="NNA-Xk-G1p" firstAttribute="top" secondItem="fns-oe-04J" secondAttribute="top" id="cLB-lT-9HA"/>
                                     <constraint firstItem="NNA-Xk-G1p" firstAttribute="leading" secondItem="iVs-P4-tZT" secondAttribute="leading" id="eR1-zm-SRq"/>
                                     <constraint firstAttribute="trailing" secondItem="NNA-Xk-G1p" secondAttribute="trailing" id="j4i-9e-oOA"/>
+                                    <constraint firstItem="NNA-Xk-G1p" firstAttribute="leading" secondItem="fns-oe-04J" secondAttribute="leading" id="mXG-vw-3Xc"/>
                                 </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="fns-oe-04J"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="cBC-3A-z4G"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="iVs-P4-tZT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ar4-AT-AGI"/>
-                            <constraint firstItem="NNA-Xk-G1p" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="BjF-zJ-5aV"/>
                             <constraint firstItem="iVs-P4-tZT" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hgl-Sb-c60"/>
                             <constraint firstAttribute="bottom" secondItem="iVs-P4-tZT" secondAttribute="bottom" id="oxV-GC-2C9"/>
                             <constraint firstItem="iVs-P4-tZT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rkQ-ke-ZCA"/>
