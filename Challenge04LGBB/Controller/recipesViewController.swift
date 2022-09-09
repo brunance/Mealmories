@@ -69,6 +69,7 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
         cell.AgeTableView.text = "+\(recipes[indexPath.row].idadeRecomendada) anos"
         cell.dificultyTableView.text = "\(recipes[indexPath.row].dificuldade)"
         cell.timeTableView.text = "\(recipes[indexPath.row].tempoDePreparo)"
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -88,7 +89,6 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         escolha = indexPath.row
-        print(escolha)
         navigation()
     }
    
