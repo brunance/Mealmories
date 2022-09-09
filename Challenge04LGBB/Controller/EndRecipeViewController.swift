@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class EndRecipeViewController: UIViewController {
     
@@ -19,23 +20,20 @@ class EndRecipeViewController: UIViewController {
         setupLabel()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Return" {
-            let secondVC = segue.destination as! ChosenRecipeViewController
-            
-            let transition = CATransition()
-            transition.duration = 0.3
-            transition.type = CATransitionType.moveIn
-            transition.subtype = CATransitionSubtype.fromLeft
-            guard let window = view.window else { return }
-            window.layer.add(transition, forKey: kCATransition)
-            secondVC.modalPresentationStyle = .fullScreen
-            secondVC.modalTransitionStyle = .crossDissolve
-        }
-    }
+
     
     func setupLabel(){
         let receitas = getRecipes()
         labelDesbloqueio.text = receitas[escolha].tituloReceita
     }
+  
+    @IBAction func BackTorecipesScreen(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "recipesScreen", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! RecipesViewController
+        
+      
+        
+        self.navigationController?.pushViewController(newViewController, animated: true)
+    }
+
 }
