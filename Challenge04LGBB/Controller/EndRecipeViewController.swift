@@ -20,20 +20,16 @@ class EndRecipeViewController: UIViewController {
         setupLabel()
     }
     
-
-    
     func setupLabel(){
         let receitas = getRecipes()
         labelDesbloqueio.text = receitas[escolha].tituloReceita
     }
-  
+    
     @IBAction func BackTorecipesScreen(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "recipesScreen", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! RecipesViewController
-        
-      
+        let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
         
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
-
+    
 }

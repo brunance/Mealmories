@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ov-Dq-3bS">
-                                                <rect key="frame" x="20" y="492" width="184.5" height="35"/>
+                                                <rect key="frame" x="20" y="492" width="189.5" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="qHe-R5-jkd"/>
                                                 </constraints>
@@ -54,7 +54,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6A-Mu-lPY">
-                                                        <rect key="frame" x="22" y="52" width="36" height="19.5"/>
+                                                        <rect key="frame" x="22" y="57.5" width="36" height="14"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -86,7 +86,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fácil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWb-pM-Dpc">
-                                                        <rect key="frame" x="28" y="52" width="24.5" height="19.5"/>
+                                                        <rect key="frame" x="27.5" y="57.5" width="25.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -118,7 +118,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 + anos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAm-cQ-6lm">
-                                                        <rect key="frame" x="18" y="52" width="44" height="19.5"/>
+                                                        <rect key="frame" x="16.5" y="57.5" width="47" height="14"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -140,7 +140,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ingredientes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R20-B8-fUg">
-                                                <rect key="frame" x="20" y="657" width="126.5" height="35"/>
+                                                <rect key="frame" x="20" y="657" width="121.5" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="rx1-YM-3Ea"/>
                                                 </constraints>
@@ -166,11 +166,11 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVc-1D-lLA">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDO-8j-LxM">
-                                                                            <rect key="frame" x="50" y="7.5" width="328" height="50"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDO-8j-LxM">
+                                                                            <rect key="frame" x="50" y="0.0" width="318" height="65"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="fXj-l4-GKA"/>
-                                                                                <constraint firstAttribute="height" constant="50" id="qjd-6p-dfL"/>
+                                                                                <constraint firstAttribute="width" constant="318" id="fXj-l4-GKA"/>
+                                                                                <constraint firstAttribute="height" constant="65" id="qjd-6p-dfL"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="14"/>
                                                                             <nil key="highlightedColor"/>
@@ -235,7 +235,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvq-Hp-p4N">
-                                                                            <rect key="frame" x="50" y="21.5" width="324" height="22.5"/>
+                                                                            <rect key="frame" x="50" y="24.5" width="324" height="16.5"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="324" id="Uk4-QT-P22"/>
                                                                             </constraints>
@@ -295,7 +295,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Etapas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szb-IX-H4N">
-                                                <rect key="frame" x="20" y="962" width="67.5" height="35.5"/>
+                                                <rect key="frame" x="20" y="962" width="68.5" height="35.5"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

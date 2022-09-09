@@ -38,9 +38,9 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         super.viewDidLoad()
         BackBarButton()
         self.navigationController?.isNavigationBarHidden = false
-       
+        
         SetChoosenRecipe()
-       
+        
         let defaults = UserDefaults.standard
         soundEffect = defaults.bool(forKey: "Sound")
         self.setTableView()
@@ -78,7 +78,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         self.tableIngredients.invalidateIntrinsicContentSize()
         self.tableEtapas.invalidateIntrinsicContentSize()
     }
-   
+    
     @IBAction func configbutton(_ sender: Any) {
         navigation(destino: "Config")
     }
@@ -141,7 +141,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         }
     }
     
-   
+    
     func SetChoosenRecipe()  {
         let chossenRecipe = getChoosenRecipe()
         ImagemReceitaEscolhida.image = chossenRecipe[escolha].imagemReceita
@@ -191,7 +191,6 @@ extension ChosenRecipeViewController: UITableViewDataSource, UITableViewDelegate
             
             cell.LabelCell.text = self.itemList1[indexPath.item]
             cell.bgView.backgroundColor = UIColor(named: "LabelMagenta")
-            cell.bgView.layer.cornerRadius = 10
             cell.imageCell.image = UIImage(named: "ingrediente")
             
             return cell
@@ -202,7 +201,6 @@ extension ChosenRecipeViewController: UITableViewDataSource, UITableViewDelegate
             
             cell.labelEtapaCell.text = self.itemList2[indexPath.item]
             cell.backView.backgroundColor = UIColor(named: "LabelOrange")
-            cell.backView.layer.cornerRadius = 10
             cell.imageEtapaCell.image = UIImage(named: "Numero \(indexPath.item + 1)")
             
             return cell

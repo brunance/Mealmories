@@ -1,8 +1,8 @@
 import Foundation
 import UIKit
 
-class RecipesViewController : UIViewController,UITableViewDataSource,UITableViewDelegate{
- 
+class ListRecipesViewController : UIViewController,UITableViewDataSource,UITableViewDelegate{
+    
     
     @IBOutlet weak var confete: UIImageView!
     //Outlets da receita de destaque
@@ -17,7 +17,7 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
     @IBOutlet weak var tablleViewReceitasRapidas: UITableView!
     
     var escolha : Int = -1
-   
+    
     let randomInt = Int.random(in: 0..<2)
     // 2 é o numero total de receitas
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
-
+        
     }
     func BackBarButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -41,8 +41,8 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
     
     func SetReceitaDestaque() {
         
-       var receitaDeDestaque =  getChoosenRecipe()
-       
+        let receitaDeDestaque =  getChoosenRecipe()
+        
         TimeCard.text = "\(receitaDeDestaque[randomInt].tempoDePreparo)"
         difficultyCard.text = "\(receitaDeDestaque[randomInt].dificuldade)"
         AgeCard.text = "+\(receitaDeDestaque[randomInt].idadeRecomendada) anos"
@@ -50,7 +50,7 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
         ImageCard.image = receitaDeDestaque[randomInt].imagemReceita
         
     }
-  
+    
     @IBAction func ClickReceitaDestaque(_ sender: Any) {
         escolha = randomInt
         navigation()
@@ -82,7 +82,7 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
         
         self.navigationController?.pushViewController(newViewController, animated: true)
         
-       
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
@@ -91,6 +91,6 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
         escolha = indexPath.row
         navigation()
     }
-   
-
+    
+    
 }
