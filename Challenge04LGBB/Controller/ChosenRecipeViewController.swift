@@ -36,8 +36,11 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        BackBarButton()
+        self.navigationController?.isNavigationBarHidden = false
+       
         SetChoosenRecipe()
-        print("isso é escolha:\(escolha)")
+       
         let defaults = UserDefaults.standard
         soundEffect = defaults.bool(forKey: "Sound")
         self.setTableView()
@@ -75,41 +78,38 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         self.tableIngredients.invalidateIntrinsicContentSize()
         self.tableEtapas.invalidateIntrinsicContentSize()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Recipe" {
-            let secondVC = segue.destination as! RecipeViewController
-            secondVC.transitioningDelegate = self
-            secondVC.modalPresentationStyle = .custom
-            secondVC.escolha = escolha
-        }else if segue.identifier == "Config"{
-            let secondVC = segue.destination as! ConfigViewController
+   
+    @IBAction func configbutton(_ sender: Any) {
+        navigation(destino: "Config")
+    }
+    func BackBarButton(){
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    func navigation(destino:String){
+        if destino == "Recipe" {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
             
-            let transition = CATransition()
-            transition.duration = 0.3
-            transition.type = CATransitionType.moveIn
-            transition.subtype = CATransitionSubtype.fromRight
-            guard let window = view.window else { return }
-            window.layer.add(transition, forKey: kCATransition)
-            secondVC.modalPresentationStyle = .fullScreen
-            secondVC.modalTransitionStyle = .crossDissolve
+            let escolha = escolha
+            newViewController.escolha = escolha
+            
+            self.navigationController?.pushViewController(newViewController, animated: true)
+            
         }
-        else if segue.identifier == "Back"{
-            let secondVC = segue.destination as! RecipesViewController
+        if destino == "Config" {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "ConfigScreen", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ConfigScreen") as! ConfigViewController
             
-            let transition = CATransition()
-            transition.duration = 0.3
-            transition.type = CATransitionType.moveIn
-            transition.subtype = CATransitionSubtype.fromLeft
-            guard let window = view.window else { return }
-            window.layer.add(transition, forKey: kCATransition)
-            secondVC.modalPresentationStyle = .fullScreen
-            secondVC.modalTransitionStyle = .crossDissolve
+            self.navigationController?.pushViewController(newViewController, animated: true)
+            
         }
         
     }
     
+    
+    
     @IBAction func playSound(_ sender: Any){
+        navigation(destino: "Recipe")
         if soundEffect == true {
             if let player = player, player.isPlaying {
                 
@@ -141,13 +141,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         }
     }
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .present
-        transition.startingPoint = startButton.center
-        transition.circleColor = UIColor(named: "CorDaview")!
-        
-        return transition
-    }
+   
     func SetChoosenRecipe()  {
         let chossenRecipe = getChoosenRecipe()
         ImagemReceitaEscolhida.image = chossenRecipe[escolha].imagemReceita

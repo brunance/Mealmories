@@ -22,12 +22,21 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
     // 2 é o numero total de receitas
     override func viewDidLoad() {
         super.viewDidLoad()
+        BackBarButton()
         tablleViewReceitasRapidas.dataSource = self
         tablleViewReceitasRapidas.delegate = self
         FundoCards.layer.borderColor = UIColor(named: "Mix_Magenta")!.cgColor
         FundoCards.layer.borderWidth = 3
         confete.layer.opacity = 0.4
         SetReceitaDestaque()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+
+    }
+    func BackBarButton(){
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     func SetReceitaDestaque() {
@@ -44,7 +53,7 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
   
     @IBAction func ClickReceitaDestaque(_ sender: Any) {
         escolha = randomInt
-        PassingToChoosenRecipe()
+        navigation()
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,26 +72,16 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
         return cell
     }
     
-    func PassingToChoosenRecipe() {
+    func navigation() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "ChosenRecipe", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChosenRecipe") as! ChosenRecipeViewController
-        
-        let transition = CATransition()
-        transition.type = CATransitionType.moveIn
-        transition.subtype = CATransitionSubtype.fromRight
-        transition.duration = 0.3
-        guard let window = view.window else { return }
-        window.layer.add(transition, forKey: kCATransition)
-        
-        
-        
         
         let escolha = escolha
         newViewController.escolha = escolha
         
-        newViewController.modalTransitionStyle = .crossDissolve
-        newViewController.modalPresentationStyle = .fullScreen
-        self.present(newViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(newViewController, animated: true)
+        
+       
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
@@ -90,7 +89,7 @@ class RecipesViewController : UIViewController,UITableViewDataSource,UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         escolha = indexPath.row
         print(escolha)
-        PassingToChoosenRecipe()
+        navigation()
     }
    
 

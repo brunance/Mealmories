@@ -29,7 +29,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     @IBOutlet weak var labelTurno: UILabel!
     @IBOutlet weak var labelImagem: UILabel!
     @IBOutlet weak var viewTurno: UIView!
-    @IBOutlet weak var labelNomeDaReceita: UILabel!
     
     @IBOutlet weak var labelEtapa: UILabel!
     @IBOutlet weak var viewEtapa: UIView!
@@ -42,6 +41,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     @IBOutlet weak var sceneView: ARSCNView!
     
+    @IBOutlet weak var TituloDaReceita: UINavigationItem!
     var player : AVAudioPlayer?
     
             override func viewWillAppear(_ animated: Bool) {
@@ -118,7 +118,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
 //    }
     
     override func viewDidLoad() {
-        
+        BackBarButton()
         recipes = getRecipes()
         print("a escolha e \(escolha)")
         updateData()
@@ -172,12 +172,15 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         
     }
+    func BackBarButton(){
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
     
     func updateData(){
+        TituloDaReceita.title = "\(recipes[escolha].tituloReceita)"
         botaoir.backgroundColor = recipes[escolha].CorDaTela[count]
         botaovoltar.backgroundColor = recipes[escolha].CorDaTela[count]
         viewTurno.backgroundColor = recipes[escolha].CorDoFundoDatela[count]
-        labelNomeDaReceita.text = "\(recipes[escolha].tituloReceita)"
         viewEtapa.backgroundColor = recipes[escolha].CorDasEtapas[count]
         labelEtapa.text = "\(recipes[escolha].Etapa[count])"
         CorDoFundoDaTela.backgroundColor = recipes[escolha].CorDoFundoDatela[count]
@@ -222,31 +225,34 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         else {LampImage.isHidden = false}
        
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Back" {
-            let secondVC = segue.destination as! ChosenRecipeViewController
-            secondVC.escolha = escolha
-            let transition = CATransition()
-            transition.duration = 0.15
-            transition.type = CATransitionType.moveIn
-            transition.subtype = CATransitionSubtype.fromLeft
-            guard let window = view.window else { return }
-            window.layer.add(transition, forKey: kCATransition)
-            secondVC.modalPresentationStyle = .fullScreen
-            secondVC.modalTransitionStyle = .crossDissolve
+    func navigation(destino:String){
+        if destino == "ForgotRecipe"{
+            let storyBoard: UIStoryboard = UIStoryboard(name: "ForgetRecipe", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ForgetRecipe") as! ForgotRecipeViewController
+            
+            let escolha = escolha
+            newViewController.escolha = escolha
+            
+            self.present(newViewController, animated:true, completion:nil)
+
         }
-        if segue.identifier == "ForgotRecipe"{
-            let secondVC = segue.destination as!ForgotRecipeViewController
-            secondVC.escolha = escolha
+        if destino == "End"{
+            let storyBoard: UIStoryboard = UIStoryboard(name: "EndRecipe", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "EndRecipe") as! EndRecipeViewController
+            
+            let escolha = escolha
+            newViewController.escolha = escolha
+            navigationController?.modalPresentationStyle = .formSheet
+            self.navigationController?.pushViewController(newViewController, animated: true)
         }
-        if segue.identifier == "End" {
-            let secondVC = segue.destination as! EndRecipeViewController
-            secondVC.escolha = escolha
-        }
+    }
+   
+    @IBAction func ForgetRecipeButton(_ sender: Any) {
+        navigation(destino: "ForgotRecipe")
     }
     
     @IBAction func playSound(_ sender: Any) {
+        navigation(destino: "End")
         if sound == true {
             play(tiposom: "fim-receita")
         }
