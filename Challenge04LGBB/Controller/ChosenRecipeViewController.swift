@@ -36,6 +36,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AppDelegate.AppUtility.lockOrientation(.all)
         BackBarButton()
         self.navigationController?.isNavigationBarHidden = false
         

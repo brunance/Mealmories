@@ -22,6 +22,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     // 2 é o numero total de receitas
     override func viewDidLoad() {
         super.viewDidLoad()
+        AppDelegate.AppUtility.lockOrientation(.all)
         BackBarButton()
         tablleViewReceitasRapidas.dataSource = self
         tablleViewReceitasRapidas.delegate = self

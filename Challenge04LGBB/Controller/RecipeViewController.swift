@@ -38,6 +38,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        AppDelegate.AppUtility.lockOrientation(.portrait)
         for _ in 1...9{
             let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
             view.backgroundColor = UIColor.systemGray
@@ -170,6 +171,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     func BackBarButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.rightBarButtonItem?.isAccessibilityElement = true
+        self.navigationItem.rightBarButtonItem?.accessibilityLabel = "Botão para mostrar a lista de ingredientes e etapas da receita"
     }
     
     func updateData(){
@@ -286,6 +289,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     @IBAction func ForgetRecipeButton(_ sender: Any) {
         navigation(destino: "ForgotRecipe")
+        
     }
     
     @IBAction func playSound(_ sender: Any) {

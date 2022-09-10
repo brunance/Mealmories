@@ -16,6 +16,7 @@ class ForgotRecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AppDelegate.AppUtility.lockOrientation(.portrait)
         print("olha a escolha\(escolha)")
         self.setTableView()
     }
