@@ -44,10 +44,10 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         
         let receitaDeDestaque =  getChoosenRecipe()
         
-        TimeCard.text = "\(receitaDeDestaque[randomInt].tempoDePreparo)"
-        difficultyCard.text = "\(receitaDeDestaque[randomInt].dificuldade)"
-        AgeCard.text = "+\(receitaDeDestaque[randomInt].idadeRecomendada) anos"
-        NameCard.text = "\(receitaDeDestaque[randomInt].nomeDaReceita)"
+        TimeCard.text = "\(receitaDeDestaque[randomInt].tempoDePreparo)".localize()
+        difficultyCard.text = "\(receitaDeDestaque[randomInt].dificuldade)".localize()
+        AgeCard.text = "+\(receitaDeDestaque[randomInt].idadeRecomendada) anos".localize()
+        NameCard.text = "\(receitaDeDestaque[randomInt].nomeDaReceita)".localize()
         ImageCard.image = receitaDeDestaque[randomInt].imagemReceita
         ImageCard.isAccessibilityElement = true
         ImageCard.accessibilityLabel = "Imagem da receita em destaque, \(receitaDeDestaque[randomInt].nomeDaReceita)"
@@ -67,10 +67,10 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         let recipes = getChoosenRecipe()
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RecipesTableViewCell
         cell.ImageTabbleView.image = recipes[indexPath.row].imagemReceita
-        cell.nameTableView.text = "\(recipes[indexPath.row].nomeDaReceita)"
-        cell.AgeTableView.text = "+\(recipes[indexPath.row].idadeRecomendada) anos"
-        cell.dificultyTableView.text = "\(recipes[indexPath.row].dificuldade)"
-        cell.timeTableView.text = "\(recipes[indexPath.row].tempoDePreparo)"
+        cell.nameTableView.text = "\(recipes[indexPath.row].nomeDaReceita)".localize()
+        cell.AgeTableView.text = "+\(recipes[indexPath.row].idadeRecomendada) anos".localize()
+        cell.dificultyTableView.text = "\(recipes[indexPath.row].dificuldade)".localize()
+        cell.timeTableView.text = "\(recipes[indexPath.row].tempoDePreparo)".localize()
         cell.selectionStyle = .none
         return cell
     }
@@ -96,3 +96,5 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     
     
 }
+
+

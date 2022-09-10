@@ -89,7 +89,7 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
         if tableView == self.tableIngredients{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableIngredientCell
             
-            cell.LabelCell.text = self.itemList1[indexPath.item]
+            cell.LabelCell.text = self.itemList1[indexPath.item].localize()
             cell.bgView.backgroundColor = UIColor(named: "LabelMagenta")
             cell.imageCell.image = UIImage(named: "ingrediente")
             
@@ -99,7 +99,7 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
         if tableView == self.tableEtapas{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! TableEtapasCell
             
-            cell.labelEtapaCell.text = self.itemList2[indexPath.item]
+            cell.labelEtapaCell.text = self.itemList2[indexPath.item].localize()
             cell.backView.backgroundColor = UIColor(named: "LabelOrange")
             cell.imageEtapaCell.image = UIImage(named: "Numero \(indexPath.item + 1)")
             
@@ -109,3 +109,5 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
         return cell!
     }
 }
+
+

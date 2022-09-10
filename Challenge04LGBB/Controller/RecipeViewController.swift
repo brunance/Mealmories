@@ -3,7 +3,6 @@ import UIKit
 import ARKit
 import AVFoundation
 
-var count = 0
 var progressBarCount = 0
 var eye = false
 var sound = false
@@ -35,7 +34,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     var analysis = ""
     var texto = ""
     var escolha : Int = 0
-    
+    var count : Int = 0
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         AppDelegate.AppUtility.lockOrientation(.portrait)
@@ -133,7 +133,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        count = 0
     }
     
     @IBAction func NextStep(_ sender: Any) {
@@ -175,16 +174,16 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     }
     
     func updateData(){
-        TituloDaReceita.title = "\(recipes[escolha].tituloReceita)"
+        TituloDaReceita.title = "\(recipes[escolha].tituloReceita)".localize()
         botaoir.backgroundColor = recipes[escolha].CorDaTela[count]
         botaovoltar.backgroundColor = recipes[escolha].CorDaTela[count]
         viewTurno.backgroundColor = recipes[escolha].CorDoFundoDatela[count]
         viewEtapa.backgroundColor = recipes[escolha].CorDasEtapas[count]
-        labelEtapa.text = "\(recipes[escolha].Etapa[count])"
+        labelEtapa.text = "\(recipes[escolha].Etapa[count])".localize()
         CorDoFundoDaTela.backgroundColor = recipes[escolha].CorDoFundoDatela[count]
-        labelTurno.text = "\(recipes[escolha].pessoaTurno[count])"
-        labelIntrucao.text = "\(recipes[escolha].descricaoReceita[count])"
-        LabelDica.text = "\(recipes[escolha].dicas[count])"
+        labelTurno.text = "\(recipes[escolha].pessoaTurno[count])".localize()
+        labelIntrucao.text = "\(recipes[escolha].descricaoReceita[count])".localize()
+        LabelDica.text = "\(recipes[escolha].dicas[count])".localize()
         imagemIntrucao.image = recipes[escolha].imagemIntrucao[count]
         imagemIntrucao.isAccessibilityElement = true
         imagemIntrucao.accessibilityLabel = "Imagem que resume a intrução da etapa atual da receita"
@@ -217,17 +216,17 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         
         if recipes[escolha].pessoaTurno[count] == "Mix"{
-            labelImagem.text = "Vocês podem fazer essa etapa juntos!!!"
+            labelImagem.text = "Vocês podem fazer essa etapa juntos!!!".localize()
             LampImage.image = UIImage(named: "Dica - Magenta")
         }
         
         if recipes[escolha].pessoaTurno[count] == "Adulto"{
-            labelImagem.text = "Siga as instruções abaixo:"
+            labelImagem.text = "Siga as instruções abaixo:".localize()
             LampImage.image = UIImage(named: "Dica - Blue")
         }
         
         if recipes[escolha].pessoaTurno[count] == "Criança"{
-            labelImagem.text = "Siga as instruções abaixo:"
+            labelImagem.text = "Siga as instruções abaixo:".localize()
             LampImage.image = UIImage(named: "Dica - ORANGE")
         }
         
@@ -331,3 +330,5 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
     }
 }
+
+

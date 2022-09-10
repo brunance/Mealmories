@@ -12,16 +12,12 @@
 		4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FB28AA8A80002113D3 /* Main.storyboard */; };
 		4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FE28AA8A83002113D3 /* Assets.xcassets */; };
 		515AA40128BEBAA700F903BE /* ListRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515AA40028BEBAA700F903BE /* ListRecipesViewController.swift */; };
-		515AA40328BEBE1D00F903BE /* ListRecipesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515AA40228BEBE1D00F903BE /* ListRecipesScreen.storyboard */; };
 		5165C1BF28BFA61900F5F1CF /* ChoosenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5165C1BE28BFA61900F5F1CF /* ChoosenModel.swift */; };
 		51862A7D28AE90CE00C5F3AE /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029728AD21540052D2B8 /* Baloo2-Medium.ttf */; };
 		51862A7E28AE90CE00C5F3AE /* Baloo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029A28AD21540052D2B8 /* Baloo2-SemiBold.ttf */; };
 		51862A7F28AE90CE00C5F3AE /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029B28AD21540052D2B8 /* Baloo2-ExtraBold.ttf */; };
 		51862A8028AE90CE00C5F3AE /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029928AD21540052D2B8 /* Baloo2-Bold.ttf */; };
 		51862A8128AE90CE00C5F3AE /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029828AD21540052D2B8 /* Baloo2-Regular.ttf */; };
-		51DA8E8628B6627000D81095 /* ConfigScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DA8E8528B6627000D81095 /* ConfigScreen.storyboard */; };
-		51DA8E8828B6629200D81095 /* ChosenRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DA8E8728B6629200D81095 /* ChosenRecipe.storyboard */; };
-		51DA8E8A28B7D61100D81095 /* EndRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DA8E8928B7D61100D81095 /* EndRecipe.storyboard */; };
 		51FAF0C228C1A99500C66619 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FAF0C128C1A99400C66619 /* RecipesTableViewCell.swift */; };
 		6608015D28ABE785005FC8A0 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608015C28ABE785005FC8A0 /* RecipeView.swift */; };
 		6608016128ABEDB2005FC8A0 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */; };
@@ -35,7 +31,13 @@
 		665C691728BD096F00E9F1FA /* ForgotRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665C691628BD096F00E9F1FA /* ForgotRecipeViewController.swift */; };
 		666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B235628B6DDED00C6E62A /* ConfigViewController.swift */; };
 		666B235928B6F12600C6E62A /* UserKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666B235828B6F12600C6E62A /* UserKeys.swift */; };
-		66D694CF28BE460100A95783 /* ForgetRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D694CE28BE460100A95783 /* ForgetRecipe.storyboard */; };
+		66AAE5AE28CC1A0B00915D62 /* EndRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */; };
+		66AAE5B528CC1C4A00915D62 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66AAE5B728CC1C4A00915D62 /* Localizable.strings */; };
+		66AAE5BB28CC224700915D62 /* Localize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AAE5BA28CC224700915D62 /* Localize+Extension.swift */; };
+		66AAE5BD28CC2A3900915D62 /* ForgetRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */; };
+		66AAE5C228CC2CAA00915D62 /* ChosenRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AAE5C428CC2CAA00915D62 /* ChosenRecipe.storyboard */; };
+		66AAE5C728CC2EC900915D62 /* ListRecipesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AAE5C928CC2EC900915D62 /* ListRecipesScreen.storyboard */; };
+		66AAE5CC28CC2FBA00915D62 /* ConfigScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AAE5CE28CC2FBA00915D62 /* ConfigScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,11 +53,7 @@
 		4FED12FE28AA8A83002113D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FED130328AA8A83002113D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515AA40028BEBAA700F903BE /* ListRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRecipesViewController.swift; sourceTree = "<group>"; };
-		515AA40228BEBE1D00F903BE /* ListRecipesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListRecipesScreen.storyboard; sourceTree = "<group>"; };
 		5165C1BE28BFA61900F5F1CF /* ChoosenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenModel.swift; sourceTree = "<group>"; };
-		51DA8E8528B6627000D81095 /* ConfigScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigScreen.storyboard; sourceTree = "<group>"; };
-		51DA8E8728B6629200D81095 /* ChosenRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChosenRecipe.storyboard; sourceTree = "<group>"; };
-		51DA8E8928B7D61100D81095 /* EndRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EndRecipe.storyboard; sourceTree = "<group>"; };
 		51FAF0C128C1A99400C66619 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		6608015C28ABE785005FC8A0 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +67,19 @@
 		665C691628BD096F00E9F1FA /* ForgotRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotRecipeViewController.swift; sourceTree = "<group>"; };
 		666B235628B6DDED00C6E62A /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		666B235828B6F12600C6E62A /* UserKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeys.swift; sourceTree = "<group>"; };
-		66D694CE28BE460100A95783 /* ForgetRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgetRecipe.storyboard; sourceTree = "<group>"; };
+		66AAE5AF28CC1A0B00915D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EndRecipe.storyboard; sourceTree = "<group>"; };
+		66AAE5B228CC1A1100915D62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EndRecipe.strings; sourceTree = "<group>"; };
+		66AAE5B628CC1C4A00915D62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		66AAE5B928CC1E8900915D62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		66AAE5BA28CC224700915D62 /* Localize+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localize+Extension.swift"; sourceTree = "<group>"; };
+		66AAE5BE28CC2A3900915D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ForgetRecipe.storyboard; sourceTree = "<group>"; };
+		66AAE5C128CC2A3C00915D62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ForgetRecipe.strings; sourceTree = "<group>"; };
+		66AAE5C328CC2CAA00915D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChosenRecipe.storyboard; sourceTree = "<group>"; };
+		66AAE5C628CC2CAC00915D62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ChosenRecipe.strings; sourceTree = "<group>"; };
+		66AAE5C828CC2EC900915D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ListRecipesScreen.storyboard; sourceTree = "<group>"; };
+		66AAE5CB28CC2ECA00915D62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ListRecipesScreen.strings; sourceTree = "<group>"; };
+		66AAE5CD28CC2FBA00915D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ConfigScreen.storyboard; sourceTree = "<group>"; };
+		66AAE5D028CC2FBD00915D62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ConfigScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				4FED12FB28AA8A80002113D3 /* Main.storyboard */,
-				51DA8E8528B6627000D81095 /* ConfigScreen.storyboard */,
-				515AA40228BEBE1D00F903BE /* ListRecipesScreen.storyboard */,
-				51DA8E8728B6629200D81095 /* ChosenRecipe.storyboard */,
-				51DA8E8928B7D61100D81095 /* EndRecipe.storyboard */,
-				66D694CE28BE460100A95783 /* ForgetRecipe.storyboard */,
+				66AAE5CE28CC2FBA00915D62 /* ConfigScreen.storyboard */,
+				66AAE5C928CC2EC900915D62 /* ListRecipesScreen.storyboard */,
+				66AAE5C428CC2CAA00915D62 /* ChosenRecipe.storyboard */,
+				66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */,
+				66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,11 +154,13 @@
 				4FED12F528AA8A80002113D3 /* AppDelegate.swift */,
 				4FED12F728AA8A80002113D3 /* SceneDelegate.swift */,
 				666B235828B6F12600C6E62A /* UserKeys.swift */,
+				66AAE5BC28CC2A1900915D62 /* Extensions */,
 				5152407228BD004200211C6E /* Model */,
 				4F10029E28AD37970052D2B8 /* View */,
 				4F10029D28AD37740052D2B8 /* Controller */,
 				665C690B28BCF63900E9F1FA /* SoundEffects */,
 				66AAE5A928CBF21800915D62 /* CustomTransition */,
+				66AAE5D128CC304C00915D62 /* Localização */,
 				4F10029C28AD215B0052D2B8 /* Fonts */,
 				4FED130328AA8A83002113D3 /* Info.plist */,
 				4FED12FE28AA8A83002113D3 /* Assets.xcassets */,
@@ -182,6 +194,23 @@
 				660EB4A828B8F77F007D2425 /* CustomTransition.swift */,
 			);
 			path = CustomTransition;
+			sourceTree = "<group>";
+		};
+		66AAE5BC28CC2A1900915D62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66AAE5BA28CC224700915D62 /* Localize+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		66AAE5D128CC304C00915D62 /* Localização */ = {
+			isa = PBXGroup;
+			children = (
+				66AAE5B728CC1C4A00915D62 /* Localizable.strings */,
+			);
+			name = "Localização";
+			path = "Localização";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,21 +273,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66AAE5B528CC1C4A00915D62 /* Localizable.strings in Resources */,
 				51862A8028AE90CE00C5F3AE /* Baloo2-Bold.ttf in Resources */,
 				665C691228BCF63900E9F1FA /* voltar.mp3 in Resources */,
 				4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */,
 				665C691028BCF63900E9F1FA /* iniciar-receita.mp3 in Resources */,
 				4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */,
 				51862A8128AE90CE00C5F3AE /* Baloo2-Regular.ttf in Resources */,
-				51DA8E8828B6629200D81095 /* ChosenRecipe.storyboard in Resources */,
-				51DA8E8628B6627000D81095 /* ConfigScreen.storyboard in Resources */,
-				51DA8E8A28B7D61100D81095 /* EndRecipe.storyboard in Resources */,
+				66AAE5C228CC2CAA00915D62 /* ChosenRecipe.storyboard in Resources */,
+				66AAE5CC28CC2FBA00915D62 /* ConfigScreen.storyboard in Resources */,
+				66AAE5AE28CC1A0B00915D62 /* EndRecipe.storyboard in Resources */,
 				51862A7E28AE90CE00C5F3AE /* Baloo2-SemiBold.ttf in Resources */,
-				515AA40328BEBE1D00F903BE /* ListRecipesScreen.storyboard in Resources */,
+				66AAE5C728CC2EC900915D62 /* ListRecipesScreen.storyboard in Resources */,
 				51862A7D28AE90CE00C5F3AE /* Baloo2-Medium.ttf in Resources */,
 				51862A7F28AE90CE00C5F3AE /* Baloo2-ExtraBold.ttf in Resources */,
 				665C691328BCF63900E9F1FA /* passar.mp3 in Resources */,
-				66D694CF28BE460100A95783 /* ForgetRecipe.storyboard in Resources */,
+				66AAE5BD28CC2A3900915D62 /* ForgetRecipe.storyboard in Resources */,
 				665C691128BCF63900E9F1FA /* fim-receita.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +304,7 @@
 				660EB4A928B8F77F007D2425 /* CustomTransition.swift in Sources */,
 				6608015D28ABE785005FC8A0 /* RecipeView.swift in Sources */,
 				666B235928B6F12600C6E62A /* UserKeys.swift in Sources */,
+				66AAE5BB28CC224700915D62 /* Localize+Extension.swift in Sources */,
 				4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */,
 				5165C1BF28BFA61900F5F1CF /* ChoosenModel.swift in Sources */,
 				660EB4AD28B90E6E007D2425 /* EndRecipeViewController.swift in Sources */,
@@ -293,8 +324,62 @@
 			isa = PBXVariantGroup;
 			children = (
 				4FED12FC28AA8A80002113D3 /* Base */,
+				66AAE5B928CC1E8900915D62 /* en */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66AAE5AF28CC1A0B00915D62 /* Base */,
+				66AAE5B228CC1A1100915D62 /* en */,
+			);
+			name = EndRecipe.storyboard;
+			sourceTree = "<group>";
+		};
+		66AAE5B728CC1C4A00915D62 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66AAE5B628CC1C4A00915D62 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66AAE5BE28CC2A3900915D62 /* Base */,
+				66AAE5C128CC2A3C00915D62 /* en */,
+			);
+			name = ForgetRecipe.storyboard;
+			sourceTree = "<group>";
+		};
+		66AAE5C428CC2CAA00915D62 /* ChosenRecipe.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66AAE5C328CC2CAA00915D62 /* Base */,
+				66AAE5C628CC2CAC00915D62 /* en */,
+			);
+			name = ChosenRecipe.storyboard;
+			sourceTree = "<group>";
+		};
+		66AAE5C928CC2EC900915D62 /* ListRecipesScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66AAE5C828CC2EC900915D62 /* Base */,
+				66AAE5CB28CC2ECA00915D62 /* en */,
+			);
+			name = ListRecipesScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		66AAE5CE28CC2FBA00915D62 /* ConfigScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66AAE5CD28CC2FBA00915D62 /* Base */,
+				66AAE5D028CC2FBD00915D62 /* en */,
+			);
+			name = ConfigScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

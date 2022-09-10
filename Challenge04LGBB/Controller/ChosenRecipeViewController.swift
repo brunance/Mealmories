@@ -33,6 +33,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     var player : AVAudioPlayer?
     let transition = CustomTransition()
     var escolha : Int = 0
+    var count : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +95,8 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             
             let escolha = escolha
             newViewController.escolha = escolha
-            
+            let count = count
+            newViewController.count = 0
             self.navigationController?.pushViewController(newViewController, animated: true)
             
         }
@@ -149,13 +151,13 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         ImagemReceitaEscolhida.image = chossenRecipe[escolha].imagemReceita
         ImagemReceitaEscolhida.isAccessibilityElement = true
         ImagemReceitaEscolhida.accessibilityLabel = "Imagem da Receita Escolhida, \(chossenRecipe[escolha].nomeDaReceita)"
-        nomeReceitaEscolhida.text = "\(chossenRecipe[escolha].nomeDaReceita)"
+        nomeReceitaEscolhida.text = "\(chossenRecipe[escolha].nomeDaReceita)".localize()
         nomeReceitaEscolhida.accessibilityLabel = "Nome da Receita Escolhida, \(chossenRecipe[escolha].nomeDaReceita)"
-        tempoReceitaEscolhida.text = "\(chossenRecipe[escolha].tempoDePreparo)"
+        tempoReceitaEscolhida.text = "\(chossenRecipe[escolha].tempoDePreparo)".localize()
         tempoReceitaEscolhida.accessibilityLabel = "Tempo estimado de duração da receita escolhida, \(chossenRecipe[escolha].tempoDePreparo)"
-        dificultyReceitaEscolhida.text = "\(chossenRecipe[escolha].dificuldade)"
+        dificultyReceitaEscolhida.text = "\(chossenRecipe[escolha].dificuldade)".localize()
         dificultyReceitaEscolhida.accessibilityLabel = "Dificuldade da receita escolhida, \(chossenRecipe[escolha].dificuldade)"
-        AgeReceitaEscolhida.text = "+ \(chossenRecipe[escolha].idadeRecomendada) anos"
+        AgeReceitaEscolhida.text = "+ \(chossenRecipe[escolha].idadeRecomendada) anos".localize()
         AgeReceitaEscolhida.accessibilityLabel = "Faixa etária da receita escolhida, \(chossenRecipe[escolha].idadeRecomendada) anos ou mais"
     }
     
@@ -197,7 +199,7 @@ extension ChosenRecipeViewController: UITableViewDataSource, UITableViewDelegate
         if tableView == self.tableIngredients{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableIngredientCell
             
-            cell.LabelCell.text = self.itemList1[indexPath.item]
+            cell.LabelCell.text = self.itemList1[indexPath.item].localize()
             cell.bgView.backgroundColor = UIColor(named: "LabelMagenta")
             cell.imageCell.image = UIImage(named: "ingrediente")
             
@@ -207,7 +209,7 @@ extension ChosenRecipeViewController: UITableViewDataSource, UITableViewDelegate
         if tableView == self.tableEtapas{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! TableEtapasCell
             
-            cell.labelEtapaCell.text = self.itemList2[indexPath.item]
+            cell.labelEtapaCell.text = self.itemList2[indexPath.item].localize()
             cell.backView.backgroundColor = UIColor(named: "LabelOrange")
             cell.imageEtapaCell.image = UIImage(named: "Numero \(indexPath.item + 1)")
             
@@ -217,3 +219,5 @@ extension ChosenRecipeViewController: UITableViewDataSource, UITableViewDelegate
         return cell!
     }
 }
+
+
