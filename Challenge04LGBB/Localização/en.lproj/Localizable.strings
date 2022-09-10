@@ -20,6 +20,8 @@
 //Idades
 "+ 4 anos" = "+4 years old";
 "+ 3 anos" = "+3 years old";
+"+4 anos" = "+4 years";
+"+3 anos" = "+3 years";
 
 //Label embaixo do Turno
 "Siga as instruções abaixo:" = "Follow the instructions bellow:";
