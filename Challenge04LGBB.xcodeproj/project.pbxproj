@@ -67,6 +67,13 @@
 		665C691628BD096F00E9F1FA /* ForgotRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotRecipeViewController.swift; sourceTree = "<group>"; };
 		666B235628B6DDED00C6E62A /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		666B235828B6F12600C6E62A /* UserKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKeys.swift; sourceTree = "<group>"; };
+		6672B73828CCB4C600549199 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		6672B73928CCB4C600549199 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/ConfigScreen.strings"; sourceTree = "<group>"; };
+		6672B73A28CCB4C600549199 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/ListRecipesScreen.strings"; sourceTree = "<group>"; };
+		6672B73B28CCB4C700549199 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/ChosenRecipe.strings"; sourceTree = "<group>"; };
+		6672B73C28CCB4C700549199 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/EndRecipe.strings"; sourceTree = "<group>"; };
+		6672B73D28CCB4C700549199 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/ForgetRecipe.strings"; sourceTree = "<group>"; };
+		6672B73F28CCB5A500549199 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		66AAE5AF28CC1A0B00915D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EndRecipe.storyboard; sourceTree = "<group>"; };
 		66AAE5B228CC1A1100915D62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EndRecipe.strings; sourceTree = "<group>"; };
 		66AAE5B628CC1C4A00915D62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -160,7 +167,7 @@
 				4F10029D28AD37740052D2B8 /* Controller */,
 				665C690B28BCF63900E9F1FA /* SoundEffects */,
 				66AAE5A928CBF21800915D62 /* CustomTransition */,
-				66AAE5D128CC304C00915D62 /* Localização */,
+				66AAE5D128CC304C00915D62 /* Localization */,
 				4F10029C28AD215B0052D2B8 /* Fonts */,
 				4FED130328AA8A83002113D3 /* Info.plist */,
 				4FED12FE28AA8A83002113D3 /* Assets.xcassets */,
@@ -204,12 +211,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		66AAE5D128CC304C00915D62 /* Localização */ = {
+		66AAE5D128CC304C00915D62 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
 				66AAE5B728CC1C4A00915D62 /* Localizable.strings */,
 			);
-			name = "Localização";
+			name = Localization;
 			path = "Localização";
 			sourceTree = "<group>";
 		};
@@ -255,6 +262,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 4FED12E928AA8A80002113D3;
 			packageReferences = (
@@ -325,6 +333,7 @@
 			children = (
 				4FED12FC28AA8A80002113D3 /* Base */,
 				66AAE5B928CC1E8900915D62 /* en */,
+				6672B73828CCB4C600549199 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -334,6 +343,7 @@
 			children = (
 				66AAE5AF28CC1A0B00915D62 /* Base */,
 				66AAE5B228CC1A1100915D62 /* en */,
+				6672B73C28CCB4C700549199 /* pt-BR */,
 			);
 			name = EndRecipe.storyboard;
 			sourceTree = "<group>";
@@ -342,6 +352,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				66AAE5B628CC1C4A00915D62 /* en */,
+				6672B73F28CCB5A500549199 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -351,6 +362,7 @@
 			children = (
 				66AAE5BE28CC2A3900915D62 /* Base */,
 				66AAE5C128CC2A3C00915D62 /* en */,
+				6672B73D28CCB4C700549199 /* pt-BR */,
 			);
 			name = ForgetRecipe.storyboard;
 			sourceTree = "<group>";
@@ -360,6 +372,7 @@
 			children = (
 				66AAE5C328CC2CAA00915D62 /* Base */,
 				66AAE5C628CC2CAC00915D62 /* en */,
+				6672B73B28CCB4C700549199 /* pt-BR */,
 			);
 			name = ChosenRecipe.storyboard;
 			sourceTree = "<group>";
@@ -369,6 +382,7 @@
 			children = (
 				66AAE5C828CC2EC900915D62 /* Base */,
 				66AAE5CB28CC2ECA00915D62 /* en */,
+				6672B73A28CCB4C600549199 /* pt-BR */,
 			);
 			name = ListRecipesScreen.storyboard;
 			sourceTree = "<group>";
@@ -378,6 +392,7 @@
 			children = (
 				66AAE5CD28CC2FBA00915D62 /* Base */,
 				66AAE5D028CC2FBD00915D62 /* en */,
+				6672B73928CCB4C600549199 /* pt-BR */,
 			);
 			name = ConfigScreen.storyboard;
 			sourceTree = "<group>";
@@ -389,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -449,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
