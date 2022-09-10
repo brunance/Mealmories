@@ -18,7 +18,7 @@ class EndRecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        AppDelegate.AppUtility.lockOrientation(.all)
+        AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
         setupLabel()
     }
     
