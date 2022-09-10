@@ -88,7 +88,7 @@ func getRecipes() -> [Recipe]{
                       imagemIntrucao:
                         [UIImage(named: "age-32px")!,UIImage(named: "age-32px")!,UIImage(named: "age-32px")!,UIImage(named: "age-32px")!,UIImage(named: "age-32px")!,UIImage(named: "age-32px")!]
                       ,CorDaTela: [UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!],
-                      dicas: ["Esqueceu a quantidade? Verifique-a no ícone de cima da tela!","Esqueceu a quantidade? Verifique-a no ícone de cima da tela!","","","",""],
+                      dicas: ["Esqueceu a quantidade? Verifique-a no ícone do canto superior direito da tela!","Esqueceu a quantidade? Verifique-a no ícone do canto superior direito da tela!","","","",""],
                       CorDoFundoDatela: [UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!],
                       CorDasEtapas: [UIColor(named: "Child_DarkOrange")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Child_DarkOrange")!,UIColor(named: "Adulto_DarkBlue")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Adulto_DarkBlue")!],
                       Etapa: ["Juntar","Juntar","Cobrir","Cobrir","Micro-ondas","Micro-ondas"],

@@ -127,10 +127,10 @@
                                         <rect key="frame" x="244" y="17.5" width="115" height="28"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparo da receita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-Tx-UpE">
-                                                <rect key="frame" x="11.5" y="6" width="92" height="16"/>
+                                                <rect key="frame" x="0.0" y="6" width="115" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="54h-Iu-Fx9"/>
-                                                    <constraint firstAttribute="width" constant="92" id="uq8-6J-IZJ"/>
+                                                    <constraint firstAttribute="width" constant="115" id="uq8-6J-IZJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

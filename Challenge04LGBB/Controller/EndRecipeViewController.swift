@@ -11,6 +11,7 @@ import AVFoundation
 
 class EndRecipeViewController: UIViewController {
     
+    @IBOutlet weak var ImageMedalha: UIImageView!
     @IBOutlet weak var endButton: UIButton!
     @IBOutlet weak var labelDesbloqueio: UILabel!
     var escolha = 0
@@ -24,6 +25,8 @@ class EndRecipeViewController: UIViewController {
     func setupLabel(){
         let receitas = getRecipes()
         labelDesbloqueio.text = receitas[escolha].tituloReceita
+        ImageMedalha.isAccessibilityElement = true
+        ImageMedalha.accessibilityLabel = "Imagem da medalha ganha por terminar a receita!"
     }
     
     @IBAction func BackTorecipesScreen(_ sender: Any) {

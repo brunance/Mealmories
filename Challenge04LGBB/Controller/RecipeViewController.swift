@@ -113,7 +113,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     override func viewDidLoad() {
         BackBarButton()
         recipes = getRecipes()
-        print("a escolha e \(escolha)")
         updateData()
         xspace = 5
         for _ in 1...recipes[escolha].auxiliarInstrucoesPorEtapas[count]{
@@ -187,10 +186,15 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         labelIntrucao.text = "\(recipes[escolha].descricaoReceita[count])"
         LabelDica.text = "\(recipes[escolha].dicas[count])"
         imagemIntrucao.image = recipes[escolha].imagemIntrucao[count]
-        
+        imagemIntrucao.isAccessibilityElement = true
+        imagemIntrucao.accessibilityLabel = "Imagem que resume a intrução da etapa atual da receita"
+        LampImage.isAccessibilityElement = true
+        LampImage.accessibilityLabel = "Icone de dicas com texto ao lado direito"
         if count == recipes[escolha].numeroIntrucoes-1{
             BotaoTerminarReceita.isHidden = false
             BotaoTerminarReceita.backgroundColor = recipes[escolha].CorDaTela[count]
+            BotaoTerminarReceita.isAccessibilityElement = true
+            BotaoTerminarReceita.accessibilityLabel = "Botão para terminar a receita, É hora de comer!"
         }
         else{
             BotaoTerminarReceita.isHidden = true
@@ -200,14 +204,16 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             botaovoltar.isHidden = true
         }else{
             botaovoltar.isHidden = false
-            
+            botaovoltar.isAccessibilityElement = true
+            botaovoltar.accessibilityLabel = "Botão para voltar uma etapa da receita"
         }
         
         if count == recipes[escolha].numeroIntrucoes - 1 {
             botaoir.isHidden = true
         }else {
             botaoir.isHidden = false
-            
+            botaoir.isAccessibilityElement = true
+            botaoir.accessibilityLabel = "Botão para avançar uma etapa da receita"
         }
         
         if recipes[escolha].pessoaTurno[count] == "Mix"{
@@ -216,12 +222,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         
         if recipes[escolha].pessoaTurno[count] == "Adulto"{
-            labelImagem.text = "Siga as Instruções:"
+            labelImagem.text = "Siga as instruções abaixo:"
             LampImage.image = UIImage(named: "Dica - Blue")
         }
         
         if recipes[escolha].pessoaTurno[count] == "Criança"{
-            labelImagem.text = "Siga as Instruções:"
+            labelImagem.text = "Siga as instruções abaixo:"
             LampImage.image = UIImage(named: "Dica - ORANGE")
         }
         

@@ -39,7 +39,8 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         AppDelegate.AppUtility.lockOrientation(.all)
         BackBarButton()
         self.navigationController?.isNavigationBarHidden = false
-        
+        self.navigationItem.rightBarButtonItem?.isAccessibilityElement = true
+        self.navigationItem.rightBarButtonItem?.accessibilityLabel = "Botão de configurações de som e interação sem toque"
         SetChoosenRecipe()
         
         let defaults = UserDefaults.standard
@@ -146,10 +147,16 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     func SetChoosenRecipe()  {
         let chossenRecipe = getChoosenRecipe()
         ImagemReceitaEscolhida.image = chossenRecipe[escolha].imagemReceita
+        ImagemReceitaEscolhida.isAccessibilityElement = true
+        ImagemReceitaEscolhida.accessibilityLabel = "Imagem da Receita Escolhida, \(chossenRecipe[escolha].nomeDaReceita)"
         nomeReceitaEscolhida.text = "\(chossenRecipe[escolha].nomeDaReceita)"
+        nomeReceitaEscolhida.accessibilityLabel = "Nome da Receita Escolhida, \(chossenRecipe[escolha].nomeDaReceita)"
         tempoReceitaEscolhida.text = "\(chossenRecipe[escolha].tempoDePreparo)"
+        tempoReceitaEscolhida.accessibilityLabel = "Tempo estimado de duração da receita escolhida, \(chossenRecipe[escolha].tempoDePreparo)"
         dificultyReceitaEscolhida.text = "\(chossenRecipe[escolha].dificuldade)"
+        dificultyReceitaEscolhida.accessibilityLabel = "Dificuldade da receita escolhida, \(chossenRecipe[escolha].dificuldade)"
         AgeReceitaEscolhida.text = "+ \(chossenRecipe[escolha].idadeRecomendada) anos"
+        AgeReceitaEscolhida.accessibilityLabel = "Faixa etária da receita escolhida, \(chossenRecipe[escolha].idadeRecomendada) anos ou mais"
     }
     
     

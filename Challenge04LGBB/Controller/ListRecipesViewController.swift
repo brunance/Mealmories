@@ -49,7 +49,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         AgeCard.text = "+\(receitaDeDestaque[randomInt].idadeRecomendada) anos"
         NameCard.text = "\(receitaDeDestaque[randomInt].nomeDaReceita)"
         ImageCard.image = receitaDeDestaque[randomInt].imagemReceita
-        
+        ImageCard.isAccessibilityElement = true
+        ImageCard.accessibilityLabel = "Imagem da receita em destaque, \(receitaDeDestaque[randomInt].nomeDaReceita)"
     }
     
     @IBAction func ClickReceitaDestaque(_ sender: Any) {

@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMi-fN-Xh8" userLabel="TouchView">
                                 <rect key="frame" x="20" y="128" width="374" height="55"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touchless Interaction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-jW-tIw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interação sem toque" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-jW-tIw">
                                         <rect key="frame" x="10" y="12" width="165" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="165" id="bFZ-2H-6XB"/>
@@ -62,22 +62,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habilita a troca de instruções por meio de interações sem toque (Touchless Interactions), como piscar e mexer os lábios." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvq-dy-iuL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvq-dy-iuL">
                                 <rect key="frame" x="37" y="193" width="340" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="DT1-N7-nG4"/>
                                     <constraint firstAttribute="width" constant="340" id="dVT-Pz-QVS"/>
                                 </constraints>
+                                <string key="text">Habilita a troca de instruções por meio de interações sem toque (Touchless Interactions), com o uso do piscar dos olhos em suas respectivas direções</string>
                                 <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="13"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buq-ym-mST" userLabel="SoundView">
                                 <rect key="frame" x="20" y="298" width="374" height="55"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Efeito Sonoro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqQ-sd-6TU">
-                                        <rect key="frame" x="10" y="12" width="105" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Efeitos Sonoros" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqQ-sd-6TU">
+                                        <rect key="frame" x="10" y="12" width="178" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="105" id="gaI-CL-wnY"/>
+                                            <constraint firstAttribute="width" constant="178" id="gaI-CL-wnY"/>
                                             <constraint firstAttribute="height" constant="31" id="hLB-L5-Q8t"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
@@ -109,6 +110,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habilite ou Desabilite os efeitos sonoros." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je1-Ts-nQu">
+                                <rect key="frame" x="37" y="361" width="340" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="JUC-IJ-hQW"/>
+                                    <constraint firstAttribute="width" constant="340" id="xcW-RF-ava"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZW0-XW-RXR"/>
                         <color key="backgroundColor" name="CorDaview"/>
@@ -118,6 +128,8 @@
                             <constraint firstItem="fMi-fN-Xh8" firstAttribute="top" secondItem="ZW0-XW-RXR" secondAttribute="top" constant="40" id="Pci-vG-Jhd"/>
                             <constraint firstItem="buq-ym-mST" firstAttribute="leading" secondItem="ZW0-XW-RXR" secondAttribute="leading" constant="20" id="RNk-Ic-1et"/>
                             <constraint firstItem="ZW0-XW-RXR" firstAttribute="trailing" secondItem="Pvq-dy-iuL" secondAttribute="trailing" constant="37" id="TIs-nE-MVh"/>
+                            <constraint firstItem="je1-Ts-nQu" firstAttribute="leading" secondItem="Pvq-dy-iuL" secondAttribute="leading" id="UcC-Yr-seO"/>
+                            <constraint firstItem="je1-Ts-nQu" firstAttribute="top" secondItem="buq-ym-mST" secondAttribute="bottom" constant="8" symbolic="YES" id="dNF-Jk-tu3"/>
                             <constraint firstItem="fMi-fN-Xh8" firstAttribute="leading" secondItem="ZW0-XW-RXR" secondAttribute="leading" constant="20" id="fbU-Zv-T8E"/>
                             <constraint firstItem="Pvq-dy-iuL" firstAttribute="top" secondItem="fMi-fN-Xh8" secondAttribute="bottom" constant="10" id="gZ0-G9-bMk"/>
                             <constraint firstItem="ZW0-XW-RXR" firstAttribute="trailing" secondItem="buq-ym-mST" secondAttribute="trailing" constant="20" id="jqe-kd-eip"/>
