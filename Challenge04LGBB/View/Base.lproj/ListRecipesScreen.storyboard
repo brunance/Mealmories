@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHv-2v-PSt">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confete" translatesAutoresizingMaskIntoConstraints="NO" id="My5-cT-MKU">
                                                 <rect key="frame" x="129" y="-40" width="329" height="218"/>
@@ -361,7 +361,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="My5-cT-MKU" secondAttribute="trailing" constant="-44" id="5Ph-n3-yBV"/>
                                             <constraint firstItem="NvP-H6-gWn" firstAttribute="leading" secondItem="gHv-2v-PSt" secondAttribute="leading" constant="20" id="74F-MZ-SG2"/>
-                                            <constraint firstAttribute="height" constant="1300" id="GIP-yT-xee"/>
+                                            <constraint firstAttribute="height" constant="1000" id="GIP-yT-xee"/>
                                             <constraint firstAttribute="trailing" secondItem="Lxk-06-Op5" secondAttribute="trailing" constant="20" id="GsK-bo-Ada"/>
                                             <constraint firstItem="Lxk-06-Op5" firstAttribute="top" secondItem="My5-cT-MKU" secondAttribute="bottom" id="I5i-0w-BC8"/>
                                             <constraint firstItem="F1W-3H-fB2" firstAttribute="top" secondItem="h0x-eN-oBv" secondAttribute="bottom" constant="12" id="KEt-9r-hPi"/>

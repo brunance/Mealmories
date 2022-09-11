@@ -57,6 +57,13 @@
 		51FAF0C128C1A99400C66619 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		6608015C28ABE785005FC8A0 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		66097CE628CD8E8900A9B6BA /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
+		66097CE728CD8E8900A9B6BA /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/ConfigScreen.strings; sourceTree = "<group>"; };
+		66097CE828CD8E8900A9B6BA /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/ListRecipesScreen.strings; sourceTree = "<group>"; };
+		66097CE928CD8E8900A9B6BA /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/ChosenRecipe.strings; sourceTree = "<group>"; };
+		66097CEA28CD8E8900A9B6BA /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/EndRecipe.strings; sourceTree = "<group>"; };
+		66097CEB28CD8E8900A9B6BA /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/ForgetRecipe.strings; sourceTree = "<group>"; };
+		66097CEC28CD8E8900A9B6BA /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
 		660EB4A828B8F77F007D2425 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenRecipeViewController.swift; sourceTree = "<group>"; };
 		660EB4AC28B90E6E007D2425 /* EndRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndRecipeViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +270,7 @@
 				en,
 				Base,
 				"pt-BR",
+				he,
 			);
 			mainGroup = 4FED12E928AA8A80002113D3;
 			packageReferences = (
@@ -334,6 +342,7 @@
 				4FED12FC28AA8A80002113D3 /* Base */,
 				66AAE5B928CC1E8900915D62 /* en */,
 				6672B73828CCB4C600549199 /* pt-BR */,
+				66097CE628CD8E8900A9B6BA /* he */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -344,6 +353,7 @@
 				66AAE5AF28CC1A0B00915D62 /* Base */,
 				66AAE5B228CC1A1100915D62 /* en */,
 				6672B73C28CCB4C700549199 /* pt-BR */,
+				66097CEA28CD8E8900A9B6BA /* he */,
 			);
 			name = EndRecipe.storyboard;
 			sourceTree = "<group>";
@@ -353,6 +363,7 @@
 			children = (
 				66AAE5B628CC1C4A00915D62 /* en */,
 				6672B73F28CCB5A500549199 /* pt-BR */,
+				66097CEC28CD8E8900A9B6BA /* he */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -363,6 +374,7 @@
 				66AAE5BE28CC2A3900915D62 /* Base */,
 				66AAE5C128CC2A3C00915D62 /* en */,
 				6672B73D28CCB4C700549199 /* pt-BR */,
+				66097CEB28CD8E8900A9B6BA /* he */,
 			);
 			name = ForgetRecipe.storyboard;
 			sourceTree = "<group>";
@@ -373,6 +385,7 @@
 				66AAE5C328CC2CAA00915D62 /* Base */,
 				66AAE5C628CC2CAC00915D62 /* en */,
 				6672B73B28CCB4C700549199 /* pt-BR */,
+				66097CE928CD8E8900A9B6BA /* he */,
 			);
 			name = ChosenRecipe.storyboard;
 			sourceTree = "<group>";
@@ -383,6 +396,7 @@
 				66AAE5C828CC2EC900915D62 /* Base */,
 				66AAE5CB28CC2ECA00915D62 /* en */,
 				6672B73A28CCB4C600549199 /* pt-BR */,
+				66097CE828CD8E8900A9B6BA /* he */,
 			);
 			name = ListRecipesScreen.storyboard;
 			sourceTree = "<group>";
@@ -393,6 +407,7 @@
 				66AAE5CD28CC2FBA00915D62 /* Base */,
 				66AAE5D028CC2FBD00915D62 /* en */,
 				6672B73928CCB4C600549199 /* pt-BR */,
+				66097CE728CD8E8900A9B6BA /* he */,
 			);
 			name = ConfigScreen.storyboard;
 			sourceTree = "<group>";
