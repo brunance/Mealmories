@@ -24,6 +24,7 @@
 		660EB4A928B8F77F007D2425 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660EB4A828B8F77F007D2425 /* CustomTransition.swift */; };
 		660EB4AB28B8F7BE007D2425 /* ChosenRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */; };
 		660EB4AD28B90E6E007D2425 /* EndRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660EB4AC28B90E6E007D2425 /* EndRecipeViewController.swift */; };
+		663CCA5328CF8C72000D5B47 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */; };
 		665C691028BCF63900E9F1FA /* iniciar-receita.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665C690C28BCF63900E9F1FA /* iniciar-receita.mp3 */; };
 		665C691128BCF63900E9F1FA /* fim-receita.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665C690D28BCF63900E9F1FA /* fim-receita.mp3 */; };
 		665C691228BCF63900E9F1FA /* voltar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 665C690E28BCF63900E9F1FA /* voltar.mp3 */; };
@@ -67,6 +68,7 @@
 		660EB4A828B8F77F007D2425 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenRecipeViewController.swift; sourceTree = "<group>"; };
 		660EB4AC28B90E6E007D2425 /* EndRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndRecipeViewController.swift; sourceTree = "<group>"; };
+		663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		665C690C28BCF63900E9F1FA /* iniciar-receita.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "iniciar-receita.mp3"; sourceTree = "<group>"; };
 		665C690D28BCF63900E9F1FA /* fim-receita.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fim-receita.mp3"; sourceTree = "<group>"; };
 		665C690E28BCF63900E9F1FA /* voltar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voltar.mp3; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				66AAE5C428CC2CAA00915D62 /* ChosenRecipe.storyboard */,
 				66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */,
 				66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */,
+				663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				51862A8128AE90CE00C5F3AE /* Baloo2-Regular.ttf in Resources */,
 				66AAE5C228CC2CAA00915D62 /* ChosenRecipe.storyboard in Resources */,
 				66AAE5CC28CC2FBA00915D62 /* ConfigScreen.storyboard in Resources */,
+				663CCA5328CF8C72000D5B47 /* Launch Screen.storyboard in Resources */,
 				66AAE5AE28CC1A0B00915D62 /* EndRecipe.storyboard in Resources */,
 				51862A7E28AE90CE00C5F3AE /* Baloo2-SemiBold.ttf in Resources */,
 				66AAE5C728CC2EC900915D62 /* ListRecipesScreen.storyboard in Resources */,
@@ -544,7 +548,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Mealmories!";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIMainStoryboardFile = ListRecipesScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -574,7 +578,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Mealmories!";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIMainStoryboardFile = ListRecipesScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
