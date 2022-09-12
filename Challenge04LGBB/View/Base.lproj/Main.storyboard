@@ -44,28 +44,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyr-PI-j8o">
-                                        <rect key="frame" x="8" y="30" width="123" height="20"/>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MYZ-DJ-dAd" customClass="ProgressBar" customModule="Challenge04LGBB" customModuleProvider="target">
+                                        <rect key="frame" x="112" y="45" width="150" height="10"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="123" id="Ub4-CR-U3h"/>
-                                            <constraint firstAttribute="height" constant="20" id="fLv-IG-sly"/>
+                                            <constraint firstAttribute="width" constant="150" id="AHA-UU-WwM"/>
+                                            <constraint firstAttribute="height" constant="10" id="F0R-PB-9hY"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tq-1N-c0C">
-                                        <rect key="frame" x="8" y="30" width="123" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="4LT-Pc-YMj"/>
-                                            <constraint firstAttribute="width" constant="123" id="suc-IN-xyu"/>
-                                        </constraints>
-                                    </stackView>
+                                    </progressView>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelBlue"/>
                                 <constraints>
-                                    <constraint firstItem="Hyr-PI-j8o" firstAttribute="top" secondItem="Hoa-Tr-ppv" secondAttribute="top" constant="30" id="Nic-3o-I9T"/>
-                                    <constraint firstItem="2Tq-1N-c0C" firstAttribute="leading" secondItem="Hoa-Tr-ppv" secondAttribute="leading" constant="8" id="Pzj-eu-Wl1"/>
-                                    <constraint firstItem="Hyr-PI-j8o" firstAttribute="leading" secondItem="Hoa-Tr-ppv" secondAttribute="leading" constant="8" id="QJ3-F1-sVB"/>
+                                    <constraint firstItem="MYZ-DJ-dAd" firstAttribute="centerX" secondItem="woD-OK-cUV" secondAttribute="centerX" id="5Zd-VO-DFz"/>
+                                    <constraint firstItem="MYZ-DJ-dAd" firstAttribute="top" secondItem="woD-OK-cUV" secondAttribute="bottom" constant="8" symbolic="YES" id="FQO-9G-5J7"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="UE6-9b-Ml2"/>
-                                    <constraint firstItem="2Tq-1N-c0C" firstAttribute="top" secondItem="Hoa-Tr-ppv" secondAttribute="top" constant="30" id="Unp-WM-NE0"/>
                                     <constraint firstItem="woD-OK-cUV" firstAttribute="top" secondItem="Hoa-Tr-ppv" secondAttribute="top" constant="12" id="fmV-7a-zEz"/>
                                     <constraint firstItem="woD-OK-cUV" firstAttribute="centerX" secondItem="Hoa-Tr-ppv" secondAttribute="centerX" id="l2O-9V-KDx"/>
                                     <constraint firstAttribute="height" constant="70" id="roQ-O9-DUz"/>
@@ -295,7 +287,6 @@
                         <outlet property="CorDoFundoDaTela" destination="YgN-Lf-PWV" id="9BW-iI-ULe"/>
                         <outlet property="LabelDica" destination="0aP-jH-D7M" id="wQH-pV-eh4"/>
                         <outlet property="LampImage" destination="bHA-oc-nL9" id="Opg-0H-DKY"/>
-                        <outlet property="ProgressBarAux" destination="Hyr-PI-j8o" id="sI7-Do-bWl"/>
                         <outlet property="TituloDaReceita" destination="CCX-UK-0q2" id="iWA-qN-eO1"/>
                         <outlet property="botaoir" destination="wY7-zh-pSu" id="RAE-1s-HGR"/>
                         <outlet property="botaovoltar" destination="pne-fb-yWh" id="ivp-rQ-2Et"/>
@@ -304,7 +295,7 @@
                         <outlet property="labelImagem" destination="6V8-Vs-nYI" id="EnX-b5-8nI"/>
                         <outlet property="labelIntrucao" destination="czN-bv-CPP" id="Itu-e4-6Wd"/>
                         <outlet property="labelTurno" destination="f6u-Eg-cEd" id="iQ0-jg-He7"/>
-                        <outlet property="progressBar" destination="2Tq-1N-c0C" id="kgL-Ll-pbi"/>
+                        <outlet property="progressBar" destination="MYZ-DJ-dAd" id="zTf-76-fXb"/>
                         <outlet property="sceneView" destination="DRE-uS-8E7" id="yhs-Og-bUr"/>
                         <outlet property="viewEtapa" destination="8TL-DF-4ma" id="kQH-ri-1B7"/>
                         <outlet property="viewTurno" destination="Hoa-Tr-ppv" id="RuT-uU-pVG"/>
