@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "paodequeijo.1.svg",
+      "filename" : "paodequeijo.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "paodequeijo.1-1.svg",
+      "filename" : "paodequeijo-1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "paodequeijo.1-2.svg",
+      "filename" : "paodequeijo-2.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "secos.1.svg",
+      "filename" : "secos.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "secos.1-1.svg",
+      "filename" : "secos-1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "secos.1-2.svg",
+      "filename" : "secos-2.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
