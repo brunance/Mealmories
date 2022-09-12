@@ -1,0 +1,85 @@
+/* 
+  Localizable.strings
+  Challenge04LGBB
+
+  Created by Luciano Uchoa on 09/09/22.
+  
+*/
+
+//Titulo-Receitas
+"Pão de Queijo" = "Cheese Bread";
+"Pipoca" = "Popcorn";
+
+//Tipo de Turnos
+"Adulto" = "Adult";
+"Criança" = "Kid";
+
+//Dificuldades
+"Fácil" = "Easy";
+
+//Idades
+"+ 4 anos" = "+4 years old";
+"+ 3 anos" = "+3 years old";
+"+4 anos" = "+4 years";
+"+3 anos" = "+3 years";
+
+//Label embaixo do Turno
+"Siga as instruções abaixo:" = "Follow the instructions bellow:";
+"Vocês podem fazer essa etapa juntos!!!" = "You can do this step together!!!";
+
+//Ingredientes - Pão de Queijo
+
+"400g de polvilho doce ou de sua preferência" = "400g of sweet sprinkle or your choice";
+"400g de queijo parmesão ralado" = "400g grated Parmesan cheese";
+"2 caixas de creme de leite (400g)" = "2 boxes of sour cream (400g)";
+"Para untar: manteiga e trigo, spray untador, papel manteiga ou óleo." = "To grease: butter and wheat, greaser spray, parchment paper or oil.";
+
+//Descricao das Etapas - Pão de Queijo
+
+"Em uma vasilha, junte os ingredientes secos: polvilho doce, e parmesão." = "In a bowl, combine the dry ingredients: sweet sprinkle, and parmesan.";
+"Misture bem com uma colher ou com a mão!" = "Mix well with a spoon or by hand!";
+"Adicione o creme de leite, misturando com as mãos até formar uma massa homogênea e firme." = "Add the milk cream, mixing with your hands until it forms a homogeneous and firm mass.";
+"Retire porções pequenas da massa." = "Remove small portions of the dough.";
+"Modele do formato que quiser, bolinhas, dadinhos, seja criativo!" = "Model any shape you want, polka dots, dices, be creative!";
+"Unte uma fôrma com manteiga e trigo, papel manteiga ou spray de untar." = "Grease a pan with butter and wheat, parchment paper or grease spray.";
+"Coloque as massas modeladas ao lado da outra na fôrma untada." = "Place the modeled doughs next to each other in the greased form.";
+"Leve ao forno alto, preaquecido a 180°C , por 15 minutos ou até dourar." = "Bake in a high oven, preheated to 356°F, for 15 minutes or until golden.";
+"Retire e sirva em seguida." = "Remove and serve.";
+
+//Dicas - Pão de Queijo
+
+"Qualquer tipo de polvilho é bem-vindo, variando de acordo com o seu gosto." = "Any type of sprinkle is welcome, depending on your taste.";
+"Para não perder o ponto da massa, adicione creme de leite aos poucos." = "In order not to lose the point of the dough, add the milk cream little by little.";
+"Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha." = "There may be adult help in the orientation, but it is interesting for the child to do it alone.";
+"Deixe sempre um pequeno espaço entre as massas, pode facilitar na hora de retirar os pães." = "Always leave a small space between the doughs, it can make it easier when removing the buns.";
+
+//Etapas - Pão de Queijo
+
+"Preparo da massa" = "Dough preparation";
+"Preparo das formas" = "Form preparation";
+"Finalizar preparo" = "Finish preparation";
+
+//Ingredientes - Pipoca
+"4 colheres (sopa) de milho para pipoca" = "4 tablespoons of corn for popcorn";
+"4 colheres (sopa) de água" = "4 tablespoons of water";
+"1 colher (chá) de sal" = "1 teaspoon of salt";
+"Plástico Filme" = "Plastic Film";
+
+//Descrição das Etapas - Pipoca
+
+"Em uma tigela de vidro, adicione o milho para pipoca e sal." = "In a glass bowl, add the corn and salt.";
+"Adicione as colheres de água e misture" = "Add the spoons of water and mix";
+"Cubra com um filme plástico" = "Cover with plastic wrap";
+"Faça 4 furos com garfo" = "Drill 4 holes with fork";
+"Coloque por 4 minutos no microondas" = "Put it in the microwave for 4 minutes";
+"Retire a pipoca do microondas" = "Remove popcorn from microwave";
+
+//Dicas - Pipoca
+
+"Esqueceu a quantidade? Verifique-a no ícone do canto superior direito da tela!" = "Forgot the amount? Check it in the icon in the upper right corner of the screen!";
+
+//Etapas - Pipoca
+
+"Juntar" = "Gather";
+"Cobrir" = "Cover Up";
+"Microondas" = "Microwave";

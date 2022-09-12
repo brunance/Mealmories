@@ -17,7 +17,7 @@ class ConfigViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
         let defaults = UserDefaults.standard
         touch.setOn(defaults.bool(forKey: "Touch"), animated: true)
         soundEffect.setOn(defaults.bool(forKey: "Sound"), animated: true)
@@ -46,3 +46,4 @@ class ConfigViewController: UIViewController {
     }
   
 }
+

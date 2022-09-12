@@ -13,13 +13,13 @@ class ForgotRecipeViewController: UIViewController {
     
     var choosenrecipe : [ChosenRecipeModel] = []
     var escolha : Int = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("olha a escolha\(escolha)")
+        AppDelegate.AppUtility.lockOrientation(.portrait)
         self.setTableView()
     }
-
+    
     private func setTableView(){
         self.tableIngredients.delegate = self
         self.tableIngredients.dataSource = self
@@ -89,9 +89,8 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
         if tableView == self.tableIngredients{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableIngredientCell
             
-            cell.LabelCell.text = self.itemList1[indexPath.item]
+            cell.LabelCell.text = self.itemList1[indexPath.item].localize()
             cell.bgView.backgroundColor = UIColor(named: "LabelMagenta")
-            cell.bgView.layer.cornerRadius = 10
             cell.imageCell.image = UIImage(named: "ingrediente")
             
             return cell
@@ -100,9 +99,8 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
         if tableView == self.tableEtapas{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! TableEtapasCell
             
-            cell.labelEtapaCell.text = self.itemList2[indexPath.item]
+            cell.labelEtapaCell.text = self.itemList2[indexPath.item].localize()
             cell.backView.backgroundColor = UIColor(named: "LabelOrange")
-            cell.backView.layer.cornerRadius = 10
             cell.imageEtapaCell.image = UIImage(named: "Numero \(indexPath.item + 1)")
             
             return cell
@@ -111,3 +109,5 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
         return cell!
     }
 }
+
+
