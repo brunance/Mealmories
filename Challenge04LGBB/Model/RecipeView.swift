@@ -20,11 +20,10 @@ class Recipe {
     var CorDoFundoDatela:[UIColor]
     var CorDasEtapas:[UIColor]
     var Etapa:[String]
-    var InstruçõesPorEtapa:[Int]
-    var auxiliarInstrucoesPorEtapas:[Int]
+    var progressBar : [Float]
     
     
-    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String],CorDoFundoDatela: [UIColor],CorDasEtapas: [UIColor],Etapa:[String],InstruçõesPorEtapa:[Int],auxiliarInstrucoesPorEtapas:[Int]){
+    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String],CorDoFundoDatela: [UIColor],CorDasEtapas: [UIColor],Etapa:[String],progressBar:[Float]){
         self.tituloReceita = tituloReceita
         self.numeroIntrucoes = numeroIntrucoes
         self.pessoaTurno = pessoaTurno
@@ -36,8 +35,8 @@ class Recipe {
         self.CorDoFundoDatela = CorDoFundoDatela
         self.CorDasEtapas = CorDasEtapas
         self.Etapa = Etapa
-        self.InstruçõesPorEtapa = InstruçõesPorEtapa
-        self.auxiliarInstrucoesPorEtapas = auxiliarInstrucoesPorEtapas
+        self.progressBar = progressBar
+       
         
     }
     
@@ -53,8 +52,7 @@ class Recipe {
         self.CorDoFundoDatela = []
         self.CorDasEtapas = []
         self.Etapa = []
-        self.InstruçõesPorEtapa = []
-        self.auxiliarInstrucoesPorEtapas = []
+        self.progressBar = []
     }
 }
 
@@ -78,9 +76,7 @@ func getRecipes() -> [Recipe]{
                       dicas: ["Qualquer tipo de polvilho é bem-vindo, variando de acordo com o seu gosto.","","Para não perder o ponto da massa, adicione creme de leite aos poucos.","","","Pode haver ajuda do adulto na orientação, mas é interessante que a criança faça sozinha.","Deixe sempre um pequeno espaço entre as massas, pode facilitar na hora de retirar os pães.","",""],
                       CorDoFundoDatela: [UIColor(named: "LabelBlue")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelBlue")!],
                       CorDasEtapas: [UIColor(named: "Adulto_DarkBlue")!,UIColor(named: "Child_DarkOrange")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Adulto_DarkBlue")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Child_DarkOrange")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Adulto_DarkBlue")!,UIColor(named: "Adulto_DarkBlue")!],
-                      Etapa: ["Preparo da massa","Preparo da massa","Preparo da massa","Preparo das formas","Preparo das formas","Finalizar preparo","Finalizar preparo","Finalizar preparo","Finalizar preparo"],
-                      InstruçõesPorEtapa: [1,1,1,1,1,1,1,1,1],
-                      auxiliarInstrucoesPorEtapas: [1,2,3,4,5,6,7,8,9]),
+                      Etapa: ["Preparo da massa","Preparo da massa","Preparo da massa","Preparo das formas","Preparo das formas","Finalizar preparo","Finalizar preparo","Finalizar preparo","Finalizar preparo"], progressBar: [0.1111,0.2222,0.3333,0.4444,0.5555,0.6666,0.7777,0.8888,0.9999]),
                
                Recipe(tituloReceita: "Pipoca",
                       numeroIntrucoes: 6,
@@ -92,9 +88,7 @@ func getRecipes() -> [Recipe]{
                       dicas: ["Esqueceu a quantidade? Verifique-a no ícone do canto superior direito da tela!","Esqueceu a quantidade? Verifique-a no ícone do canto superior direito da tela!","","","",""],
                       CorDoFundoDatela: [UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!],
                       CorDasEtapas: [UIColor(named: "Child_DarkOrange")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Child_DarkOrange")!,UIColor(named: "Adulto_DarkBlue")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Adulto_DarkBlue")!],
-                      Etapa: ["Juntar","Juntar","Cobrir","Cobrir","Microondas","Microondas"],
-                      InstruçõesPorEtapa: [1,1,1,1,1,1],
-                      auxiliarInstrucoesPorEtapas: [1,2,3,4,5,6])]
+                      Etapa: ["Juntar","Juntar","Cobrir","Cobrir","Microondas","Microondas"], progressBar:[0.1666,0.3333,0.4999,0.6656,0.8322,1])]
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
     return recipes
 }

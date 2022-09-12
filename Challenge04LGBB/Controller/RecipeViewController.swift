@@ -3,17 +3,15 @@ import UIKit
 import ARKit
 import AVFoundation
 
-var progressBarCount = 0
 var eye = false
 var sound = false
 
 class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
-    @IBOutlet weak var ProgressBarAux: UIStackView!
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var botaovoltar: UIButton!
     @IBOutlet weak var BotaoTerminarReceita: UIButton!
     @IBOutlet weak var botaoir: UIButton!
-    @IBOutlet weak var progressBar: UIStackView!
     @IBOutlet weak var labelIntrucao: UILabel!
     @IBOutlet weak var imagemIntrucao: UIImageView!
     @IBOutlet weak var labelTurno: UILabel!
@@ -35,18 +33,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     var texto = ""
     var escolha : Int = 0
     var count : Int = 0
-
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+
         AppDelegate.AppUtility.lockOrientation(.portrait)
-        for _ in 1...9{
-            let view = UIView(frame: CGRect(x: xspaceaux, y: Int(ProgressBarAux.frame.height)/2, width: 20, height: 20))
-            view.backgroundColor = UIColor.systemGray
-            view.layer.cornerRadius = 10
-            view.layer.zPosition = 0
-            progressBar.addSubview(view)
-            xspaceaux += 22
-        }
+     
         //                let configuration = ARFaceTrackingConfiguration()
         //                sceneView.session.run(configuration)
         //                sceneView.preferredFramesPerSecond = 10
@@ -113,35 +103,26 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     override func viewDidLoad() {
         BackBarButton()
         recipes = getRecipes()
+
         updateData()
-        xspace = 5
-        for _ in 1...recipes[escolha].auxiliarInstrucoesPorEtapas[count]{
-            let view = UIView(frame: CGRect(x: xspace, y: Int(progressBar.frame.height)/2, width: 20, height: 20))
-            view.backgroundColor = UIColor(named: "Mix_DarkMagenta")
-            view.layer.cornerRadius = 10
-            view.layer.zPosition = 1
-            progressBar.addSubview(view)
-            xspace += 22
-        }
+     
         
         //        sceneView.delegate = self
         //        guard ARFaceTrackingConfiguration.isSupported else {
         //            fatalError("Face tracking is not supported on this device")
         //        }
     }
+   
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-    }
+   
     
     @IBAction func NextStep(_ sender: Any) {
         if count == recipes[escolha].numeroIntrucoes-1{
             count = recipes[escolha].numeroIntrucoes-1
         }
         else{
+            
             count += 1
-            progressBarCount += 1
             viewDidLoad()
         }
         
@@ -157,7 +138,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         else{
             count -= 1
-            progressBarCount += 1
             viewDidLoad()
         }
         
@@ -174,6 +154,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     }
     
     func updateData(){
+        progressBar.progress = recipes[escolha].progressBar[count]
+        progressBar.progressTintColor = recipes[escolha].CorDaTela[count]
         TituloDaReceita.title = "\(recipes[escolha].tituloReceita)".localize()
         botaoir.backgroundColor = recipes[escolha].CorDaTela[count]
         botaovoltar.backgroundColor = recipes[escolha].CorDaTela[count]
@@ -201,6 +183,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         
         if count == 0 {
             botaovoltar.isHidden = true
+            
         }else{
             botaovoltar.isHidden = false
             botaovoltar.isAccessibilityElement = true
@@ -268,7 +251,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         else{
             count += 1
-            progressBarCount += 1
+           
             viewDidLoad()
         }
         
@@ -283,7 +266,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         else{
             count -= 1
-            progressBarCount += 1
+           
             viewDidLoad()
         }
         
