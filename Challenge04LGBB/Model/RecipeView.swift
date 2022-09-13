@@ -83,7 +83,7 @@ func getRecipes() -> [Recipe]{
                       pessoaTurno: ["Criança", "Mix", "Criança","Adulto", "Mix", "Adulto"],
                       descricaoReceita: ["Em uma tigela de vidro, adicione o milho para pipoca e sal.", "Adicione as colheres de água e misture", "Cubra com um filme plástico", "Faça 4 furos com garfo", "Coloque por 4 minutos no microondas", "Retire a pipoca do microondas"], numeroEtapas: 2,
                       imagemIntrucao:
-                        [UIImage(named: "age-32px")!,UIImage(named: "age-32px")!,UIImage(named: "age-32px")!,UIImage(named: "age-32px")!,UIImage(named: "age-32px")!,UIImage(named: "age-32px")!]
+                        [UIImage(named: "pipocasecos")!,UIImage(named: "pipoca.agua")!,UIImage(named: "pipoca.plastico")!,UIImage(named: "pipoca.furos")!,UIImage(named: "pipoca.microondas")!,UIImage(named: "pipoca")!]
                       ,CorDaTela: [UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!],
                       dicas: ["Esqueceu a quantidade? Verifique-a no ícone do canto superior direito da tela!","Esqueceu a quantidade? Verifique-a no ícone do canto superior direito da tela!","","","",""],
                       CorDoFundoDatela: [UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!],
