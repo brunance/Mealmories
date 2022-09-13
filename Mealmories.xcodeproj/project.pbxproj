@@ -48,7 +48,7 @@
 		4F10029928AD21540052D2B8 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
 		4F10029A28AD21540052D2B8 /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
 		4F10029B28AD21540052D2B8 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
-		4FED12F228AA8A80002113D3 /* Challenge04LGBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge04LGBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FED12F228AA8A80002113D3 /* Mealmories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealmories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FED12F528AA8A80002113D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FED12F728AA8A80002113D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4FED12FC28AA8A80002113D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		4FED12F328AA8A80002113D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4FED12F228AA8A80002113D3 /* Challenge04LGBB.app */,
+				4FED12F228AA8A80002113D3 /* Mealmories.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,9 +236,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4FED12F128AA8A80002113D3 /* Challenge04LGBB */ = {
+		4FED12F128AA8A80002113D3 /* Mealmories */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4FED130628AA8A83002113D3 /* Build configuration list for PBXNativeTarget "Challenge04LGBB" */;
+			buildConfigurationList = 4FED130628AA8A83002113D3 /* Build configuration list for PBXNativeTarget "Mealmories" */;
 			buildPhases = (
 				4FED12EE28AA8A80002113D3 /* Sources */,
 				4FED12EF28AA8A80002113D3 /* Frameworks */,
@@ -248,9 +248,9 @@
 			);
 			dependencies = (
 			);
-			name = Challenge04LGBB;
+			name = Mealmories;
 			productName = Challenge04LGBB;
-			productReference = 4FED12F228AA8A80002113D3 /* Challenge04LGBB.app */;
+			productReference = 4FED12F228AA8A80002113D3 /* Mealmories.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -268,7 +268,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4FED12ED28AA8A80002113D3 /* Build configuration list for PBXProject "Challenge04LGBB" */;
+			buildConfigurationList = 4FED12ED28AA8A80002113D3 /* Build configuration list for PBXProject "Mealmories" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -285,7 +285,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4FED12F128AA8A80002113D3 /* Challenge04LGBB */,
+				4FED12F128AA8A80002113D3 /* Mealmories */,
 			);
 		};
 /* End PBXProject section */
@@ -546,7 +546,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XKBJR2ZWTW;
+				DEVELOPMENT_TEAM = 2VBT66DD5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mealmories!";
@@ -561,7 +561,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Challenge04LGBBbb;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mealmories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -591,7 +591,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Challenge04LGBB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mealmories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -602,7 +602,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4FED12ED28AA8A80002113D3 /* Build configuration list for PBXProject "Challenge04LGBB" */ = {
+		4FED12ED28AA8A80002113D3 /* Build configuration list for PBXProject "Mealmories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4FED130428AA8A83002113D3 /* Debug */,
@@ -611,7 +611,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4FED130628AA8A83002113D3 /* Build configuration list for PBXNativeTarget "Challenge04LGBB" */ = {
+		4FED130628AA8A83002113D3 /* Build configuration list for PBXNativeTarget "Mealmories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4FED130728AA8A83002113D3 /* Debug */,
