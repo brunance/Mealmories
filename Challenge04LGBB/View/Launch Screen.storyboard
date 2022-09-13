@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="CorDaview"/>
                         <constraints>
                             <constraint firstItem="l8Q-L2-D0F" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="87" id="1eA-rF-rFx"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="l8Q-L2-D0F" secondAttribute="trailing" constant="87" id="8by-CX-jba"/>
@@ -36,5 +37,8 @@
     </scenes>
     <resources>
         <image name="logotipo.horizontal" width="532.260009765625" height="117.86000061035156"/>
+        <namedColor name="CorDaview">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

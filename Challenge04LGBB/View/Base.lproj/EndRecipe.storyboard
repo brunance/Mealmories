@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -29,7 +28,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registre suas Mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-yo-ZIj">
-                                                <rect key="frame" x="20" y="413" width="374" height="35.5"/>
+                                                <rect key="frame" x="20" y="413" width="374" height="26"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -46,13 +45,13 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward.pipoca" translatesAutoresizingMaskIntoConstraints="NO" id="zb0-a3-5oF">
                                                         <rect key="frame" x="20" y="69" width="334" height="160"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Receita Concluída:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-am-477">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receita Concluída:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-am-477">
                                                         <rect key="frame" x="20" y="249" width="334" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" text="Cheese Bread" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZR-Uh-86L">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cheese Bread" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZR-Uh-86L">
                                                         <rect key="frame" x="20" y="273" width="334" height="30"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
                                                         <color key="textColor" name="Mix_LightMagenta"/>
@@ -84,7 +83,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lembre-se de tirar uma foto quando o prato estiver pronto e registre essas mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK3-rx-rUD">
-                                                <rect key="frame" x="20" y="446.5" width="374" height="56"/>
+                                                <rect key="frame" x="20" y="437" width="374" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="ejG-3o-mqh"/>
                                                 </constraints>
@@ -93,7 +92,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="CorDaview"/>
                                         <constraints>
                                             <constraint firstItem="YK3-rx-rUD" firstAttribute="trailing" secondItem="ULe-yo-ZIj" secondAttribute="trailing" id="BdX-XP-5PH"/>
                                             <constraint firstItem="xEc-4E-sUQ" firstAttribute="top" secondItem="h17-1n-MiA" secondAttribute="top" constant="50" id="CxY-Me-y6a"/>
@@ -109,7 +108,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="CorDaview"/>
                                 <constraints>
                                     <constraint firstItem="h17-1n-MiA" firstAttribute="leading" secondItem="7UV-iM-VCH" secondAttribute="leading" id="4w2-2l-8E6"/>
                                     <constraint firstItem="h17-1n-MiA" firstAttribute="trailing" secondItem="7UV-iM-VCH" secondAttribute="trailing" id="67n-u6-HIl"/>
@@ -126,7 +125,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="wKN-T0-2ie"/>
                                 </constraints>
-                                <color key="tintColor" name="LabelBlue"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Explorar mais receitas">
                                     <fontDescription key="titleFontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
@@ -142,7 +141,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CR3-B7-G0f"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="CorDaview"/>
                         <constraints>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="centerX" secondItem="cAc-eo-FBE" secondAttribute="centerX" id="0ba-d4-e9a"/>
                             <constraint firstItem="cAc-eo-FBE" firstAttribute="top" secondItem="CR3-B7-G0f" secondAttribute="top" id="NUH-OA-2qY"/>
@@ -184,8 +183,8 @@
     </scenes>
     <resources>
         <image name="reward.pipoca" width="350" height="160"/>
-        <namedColor name="LabelBlue">
-            <color red="0.90980392156862744" green="0.96470588235294119" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="CorDaview">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LabelMagenta">
             <color red="0.99607843137254903" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -196,8 +195,5 @@
         <namedColor name="Mix_Magenta">
             <color red="0.97647058823529409" green="0.38039215686274508" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
