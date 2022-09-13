@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nk6-mH-vQE">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -11,48 +11,51 @@
         <array key="Baloo2-Bold.ttf">
             <string>Baloo2-Bold</string>
         </array>
+        <array key="Baloo2-Regular.ttf">
+            <string>Baloo2-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--End Recipe View Controller-->
         <scene sceneID="IZh-Pn-TSz">
             <objects>
-                <viewController storyboardIdentifier="EndRecipe" id="WN3-Ie-LiG" customClass="EndRecipeViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndRecipe" id="WN3-Ie-LiG" customClass="EndRecipeViewController" customModule="Mealmories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dux-gE-VPe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAc-eo-FBE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="680"/>
+                                <rect key="frame" x="0.0" y="44" width="896" height="255"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h17-1n-MiA">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="896" height="600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registre suas Mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-yo-ZIj">
-                                                <rect key="frame" x="20" y="413" width="374" height="26"/>
+                                                <rect key="frame" x="64" y="413" width="768" height="36"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEc-4E-sUQ">
-                                                <rect key="frame" x="20" y="50" width="374" height="328"/>
+                                                <rect key="frame" x="64" y="50" width="768" height="328"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjV-c0-nc3">
-                                                        <rect key="frame" x="20" y="20" width="334" height="29"/>
+                                                        <rect key="frame" x="20" y="20" width="728" height="29"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward.pipoca" translatesAutoresizingMaskIntoConstraints="NO" id="zb0-a3-5oF">
-                                                        <rect key="frame" x="20" y="69" width="334" height="160"/>
+                                                        <rect key="frame" x="20" y="69" width="728" height="160"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receita Concluída:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-am-477">
-                                                        <rect key="frame" x="20" y="249" width="334" height="23.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Receita Concluída:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-am-477">
+                                                        <rect key="frame" x="20" y="249" width="728" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cheese Bread" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZR-Uh-86L">
-                                                        <rect key="frame" x="20" y="273" width="334" height="30"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" text="Cheese Bread" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZR-Uh-86L">
+                                                        <rect key="frame" x="20" y="273" width="728" height="30"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
                                                         <color key="textColor" name="Mix_LightMagenta"/>
                                                         <nil key="highlightedColor"/>
@@ -83,11 +86,11 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lembre-se de tirar uma foto quando o prato estiver pronto e registre essas mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK3-rx-rUD">
-                                                <rect key="frame" x="20" y="437" width="374" height="56"/>
+                                                <rect key="frame" x="64" y="447" width="768" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="ejG-3o-mqh"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -98,13 +101,9 @@
                                             <constraint firstItem="xEc-4E-sUQ" firstAttribute="top" secondItem="h17-1n-MiA" secondAttribute="top" constant="50" id="CxY-Me-y6a"/>
                                             <constraint firstItem="xEc-4E-sUQ" firstAttribute="centerX" secondItem="h17-1n-MiA" secondAttribute="centerX" id="Lc1-p5-Lrp"/>
                                             <constraint firstItem="ULe-yo-ZIj" firstAttribute="top" secondItem="xEc-4E-sUQ" secondAttribute="bottom" constant="35" id="LhU-lb-eWq"/>
-                                            <constraint firstAttribute="trailing" secondItem="ULe-yo-ZIj" secondAttribute="trailing" constant="20" id="RKX-N9-Dep"/>
                                             <constraint firstItem="YK3-rx-rUD" firstAttribute="top" secondItem="ULe-yo-ZIj" secondAttribute="bottom" constant="-2" id="Tr9-hS-D6n"/>
                                             <constraint firstAttribute="height" constant="600" id="VEz-Fw-EJg"/>
-                                            <constraint firstItem="xEc-4E-sUQ" firstAttribute="leading" secondItem="h17-1n-MiA" secondAttribute="leading" constant="20" id="Vye-PI-dHM"/>
                                             <constraint firstItem="YK3-rx-rUD" firstAttribute="centerX" secondItem="ULe-yo-ZIj" secondAttribute="centerX" id="WeD-9w-X0N"/>
-                                            <constraint firstItem="ULe-yo-ZIj" firstAttribute="leading" secondItem="h17-1n-MiA" secondAttribute="leading" constant="20" id="cgg-yu-jub"/>
-                                            <constraint firstAttribute="trailing" secondItem="xEc-4E-sUQ" secondAttribute="trailing" constant="20" id="eN3-Xx-u4d"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -120,7 +119,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="wAq-yG-6Ch"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MO-Jw-M2u">
-                                <rect key="frame" x="20" y="805" width="374" height="57"/>
+                                <rect key="frame" x="60" y="336" width="776" height="57"/>
                                 <color key="backgroundColor" name="Mix_Magenta"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="wKN-T0-2ie"/>
@@ -144,10 +143,14 @@
                         <color key="backgroundColor" name="CorDaview"/>
                         <constraints>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="centerX" secondItem="cAc-eo-FBE" secondAttribute="centerX" id="0ba-d4-e9a"/>
+                            <constraint firstItem="CR3-B7-G0f" firstAttribute="trailing" secondItem="xEc-4E-sUQ" secondAttribute="trailing" constant="20" id="5Md-uJ-Fu0"/>
+                            <constraint firstItem="ULe-yo-ZIj" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="6i6-6F-M5N"/>
                             <constraint firstItem="cAc-eo-FBE" firstAttribute="top" secondItem="CR3-B7-G0f" secondAttribute="top" id="NUH-OA-2qY"/>
                             <constraint firstItem="cAc-eo-FBE" firstAttribute="leading" secondItem="Dux-gE-VPe" secondAttribute="leading" id="bDO-b0-b5j"/>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="bottom" secondItem="CR3-B7-G0f" secondAttribute="bottom" id="bvh-wf-RKf"/>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="top" secondItem="cAc-eo-FBE" secondAttribute="bottom" constant="37" id="eFw-VF-jgl"/>
+                            <constraint firstItem="xEc-4E-sUQ" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="qZp-U1-Jht"/>
+                            <constraint firstItem="CR3-B7-G0f" firstAttribute="trailing" secondItem="ULe-yo-ZIj" secondAttribute="trailing" constant="20" id="rql-iS-92f"/>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="leading" secondItem="Dux-gE-VPe" secondAttribute="leadingMargin" id="xKY-IE-Hj1"/>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="trailing" secondItem="Dux-gE-VPe" secondAttribute="trailingMargin" id="xgP-dy-mVk"/>
                         </constraints>
@@ -160,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTO-F7-6vQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2842.0289855072465" y="71.651785714285708"/>
+            <point key="canvasLocation" x="2841.9642857142858" y="71.014492753623188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CvA-O5-ctE">
@@ -168,7 +171,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nk6-mH-vQE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YRs-zv-YBn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

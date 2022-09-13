@@ -1,13 +1,13 @@
 {
   "images" : [
     {
-      "filename" : "appicon-20@2x.png",
+      "filename" : "app.icon@4x-20@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "appicon-20@3x.png",
+      "filename" : "app.icon@4x-20@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
@@ -19,31 +19,31 @@
       "size" : "29x29"
     },
     {
-      "filename" : "appicon-29@2x.png",
+      "filename" : "app.icon@4x-29@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "appicon-29@3x.png",
+      "filename" : "app.icon@4x-29@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "appicon-40@2x.png",
+      "filename" : "app.icon@4x-40@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "appicon-40@3x.png",
+      "filename" : "app.icon@4x-40@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "57.png",
+      "filename" : "appicon.figma-1.png",
       "idiom" : "iphone",
       "scale" : "1x",
       "size" : "57x57"
@@ -55,13 +55,13 @@
       "size" : "57x57"
     },
     {
-      "filename" : "appicon-60@2x.png",
+      "filename" : "app.icon@4x-60@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "appicon-60@3x.png",
+      "filename" : "app.icon@4x-60@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -121,7 +121,7 @@
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "appstore.png",
+      "filename" : "appicon.figma.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
@@ -155,6 +155,11 @@
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
+    },
+    {
+      "filename" : "app.icon@4x-1024.png",
+      "idiom" : "mac",
+      "size" : "1024x1024"
     }
   ],
   "info" : {
