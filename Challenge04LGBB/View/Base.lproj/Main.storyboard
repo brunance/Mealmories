@@ -26,7 +26,7 @@
         <!--Title-->
         <scene sceneID="bzl-U3-bYt">
             <objects>
-                <viewController storyboardIdentifier="Main" id="0BQ-UW-R7E" customClass="RecipeViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="0BQ-UW-R7E" customClass="RecipeViewController" customModule="Mealmories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M38-D3-D1T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MYZ-DJ-dAd" customClass="ProgressBar" customModule="Challenge04LGBB" customModuleProvider="target">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MYZ-DJ-dAd" customClass="ProgressBar" customModule="Mealmories" customModuleProvider="target">
                                         <rect key="frame" x="112" y="45" width="150" height="10"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -138,7 +138,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
-                                                <integer key="value" value="10"/>
+                                                <integer key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
