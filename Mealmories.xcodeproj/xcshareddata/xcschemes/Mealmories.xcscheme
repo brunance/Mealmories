@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4FED12F128AA8A80002113D3"
-               BuildableName = "Challenge04LGBB.app"
+               BuildableName = "Mealmories.app"
                BlueprintName = "Mealmories"
                ReferencedContainer = "container:Mealmories.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4FED12F128AA8A80002113D3"
-            BuildableName = "Challenge04LGBB.app"
+            BuildableName = "Mealmories.app"
             BlueprintName = "Mealmories"
             ReferencedContainer = "container:Mealmories.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4FED12F128AA8A80002113D3"
-            BuildableName = "Challenge04LGBB.app"
+            BuildableName = "Mealmories.app"
             BlueprintName = "Mealmories"
             ReferencedContainer = "container:Mealmories.xcodeproj">
          </BuildableReference>
