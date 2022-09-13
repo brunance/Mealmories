@@ -128,7 +128,9 @@
                                 </constraints>
                                 <color key="tintColor" name="LabelBlue"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Explorar mais receitas"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Explorar mais receitas">
+                                    <fontDescription key="titleFontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
+                                </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="10"/>
