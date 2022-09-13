@@ -127,9 +127,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             viewDidLoad()
         }
         
-        if sound == true {
             play(tiposom: "passar")
-        }
+        
         
     }
     
@@ -142,9 +141,9 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             viewDidLoad()
         }
         
-        if sound == true {
+        
             play(tiposom: "voltar")
-        }
+        
         
     }
     
@@ -258,9 +257,9 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             viewDidLoad()
         }
         
-        if sound == true {
+     
             play(tiposom: "passar")
-        }
+        
     }
     
     @IBAction func goleft(_ sender: Any) {
@@ -273,9 +272,9 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             viewDidLoad()
         }
         
-        if sound == true {
+       
             play(tiposom: "voltar")
-        }
+        
     }
     
     @IBAction func ForgetRecipeButton(_ sender: Any) {
@@ -285,13 +284,13 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     @IBAction func playSound(_ sender: Any) {
         navigation(destino: "End")
-        if sound == true {
+      
             play(tiposom: "fim-receita")
-        }
+        
     }
     
     func play(tiposom : String) {
-        
+        if sound == true{
         let urlString = Bundle.main.path(forResource: tiposom, ofType: "mp3")
         
         do {
@@ -313,6 +312,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         catch {
             print("Something went wrong! :(")
+            }
         }
     }
 }
