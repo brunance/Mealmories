@@ -248,17 +248,16 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     }
     
     @IBAction func goright(_ sender: Any) {
+        
         if count == recipes[escolha].numeroIntrucoes-1{
             count = recipes[escolha].numeroIntrucoes-1
+            
         }
         else{
             count += 1
-            
+            play(tiposom: "passar")
             viewDidLoad()
         }
-        
-     
-            play(tiposom: "passar")
         
     }
     
@@ -268,12 +267,9 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         else{
             count -= 1
-            
+            play(tiposom: "voltar")
             viewDidLoad()
         }
-        
-       
-            play(tiposom: "voltar")
         
     }
     
