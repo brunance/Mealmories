@@ -40,7 +40,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
      
                         let configuration = ARFaceTrackingConfiguration()
                         sceneView.session.run(configuration)
-                        sceneView.preferredFramesPerSecond = 1
+                        sceneView.preferredFramesPerSecond = 5
                         sceneView.isHidden = true
         
         let defaults = UserDefaults.standard
