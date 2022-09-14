@@ -38,68 +38,68 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         
         AppDelegate.AppUtility.lockOrientation(.portrait)
         
-        let configuration = ARFaceTrackingConfiguration()
-        sceneView.session.run(configuration)
-        sceneView.preferredFramesPerSecond = 5
-        sceneView.isHidden = true
+//        let configuration = ARFaceTrackingConfiguration()
+//        sceneView.session.run(configuration)
+//        sceneView.preferredFramesPerSecond = 5
+//        sceneView.isHidden = true
         
         let defaults = UserDefaults.standard
         eye = defaults.bool(forKey: "Touch")
         sound = defaults.bool(forKey: "Sound")
     }
-    // MARK: - ARSCNViewDelegate
+//    // MARK: - ARSCNViewDelegate
+//
+//    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+//        let faceMesh = ARSCNFaceGeometry(device: sceneView.device!)
+//        let node = SCNNode(geometry: faceMesh)
+//        node.geometry?.firstMaterial?.fillMode = .lines
+//        return node
+//    }
+//
+//    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+//        if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry {
+//            faceGeometry.update(from: faceAnchor.geometry)
+//            expression(anchor: faceAnchor)
+//
+//            DispatchQueue.main.async {
+//                if eye == true {
+//                    self.texto = self.analysis
+//                }
+//
+//                if (self.texto == "You are blinking right." && self.count < self.recipes[self.escolha].numeroIntrucoes - 1){
+//                    if self.count < 9 {
+//                        self.count += 1
+//                    }
+//                    self.play(tiposom: "passar")
+//                    self.viewDidLoad()
+//                    print(self.count)
+//                }
+//                if(self.texto == "You are blinking left." && self.count != 0){
+//                    self.play(tiposom: "voltar")
+//                    self.count -= 1
+//                    self.viewDidLoad()
+//                    print(self.count)
+//                }
+//
+//
+//            }
+//        }
+//    }
     
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let faceMesh = ARSCNFaceGeometry(device: sceneView.device!)
-        let node = SCNNode(geometry: faceMesh)
-        node.geometry?.firstMaterial?.fillMode = .lines
-        return node
-    }
-    
-    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry {
-            faceGeometry.update(from: faceAnchor.geometry)
-            expression(anchor: faceAnchor)
-            
-            DispatchQueue.main.async {
-                if eye == true {
-                    self.texto = self.analysis
-                }
-                
-                if (self.texto == "You are blinking right." && self.count < self.recipes[self.escolha].numeroIntrucoes - 1){
-                    if self.count < 9 {
-                        self.count += 1
-                    }
-                    self.play(tiposom: "passar")
-                    self.viewDidLoad()
-                    print(self.count)
-                }
-                if(self.texto == "You are blinking left." && self.count != 0){
-                    self.play(tiposom: "voltar")
-                    self.count -= 1
-                    self.viewDidLoad()
-                    print(self.count)
-                }
-                
-                
-            }
-        }
-    }
-    
-    func expression(anchor: ARFaceAnchor) {
-        let eyeblinkright = anchor.blendShapes[.eyeBlinkRight]
-        let eyeblinkleft = anchor.blendShapes[.eyeBlinkLeft]
-        let mouthLeft = anchor.blendShapes[.mouthRight]
-        let mouthRight = anchor.blendShapes[.mouthLeft]
-        self.analysis = ""
-        
-        if eyeblinkright?.decimalValue ?? 0.0 > 0.7 ||  mouthLeft?.decimalValue ?? 0.0 > 0.7{
-            self.analysis += "You are blinking left."
-        }
-        if eyeblinkleft?.decimalValue ?? 0.0 > 0.7 || mouthRight?.decimalValue ?? 0.0 > 0.7{
-            self.analysis += "You are blinking right."
-        }
-    }
+//    func expression(anchor: ARFaceAnchor) {
+//        let eyeblinkright = anchor.blendShapes[.eyeBlinkRight]
+//        let eyeblinkleft = anchor.blendShapes[.eyeBlinkLeft]
+//        let mouthLeft = anchor.blendShapes[.mouthRight]
+//        let mouthRight = anchor.blendShapes[.mouthLeft]
+//        self.analysis = ""
+//
+//        if eyeblinkright?.decimalValue ?? 0.0 > 0.7 ||  mouthLeft?.decimalValue ?? 0.0 > 0.7{
+//            self.analysis += "You are blinking left."
+//        }
+//        if eyeblinkleft?.decimalValue ?? 0.0 > 0.7 || mouthRight?.decimalValue ?? 0.0 > 0.7{
+//            self.analysis += "You are blinking right."
+//        }
+//    }
     
     override func viewDidLoad() {
         BackBarButton()
@@ -108,10 +108,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         updateData()
         
         
-        sceneView.delegate = self
-        guard ARFaceTrackingConfiguration.isSupported else {
-            fatalError("Face tracking is not supported on this device")
-        }
+//        sceneView.delegate = self
+//        guard ARFaceTrackingConfiguration.isSupported else {
+//            fatalError("Face tracking is not supported on this device")
+//        }
     }
     
     
