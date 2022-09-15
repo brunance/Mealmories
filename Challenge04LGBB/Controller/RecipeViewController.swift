@@ -38,68 +38,72 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         
         AppDelegate.AppUtility.lockOrientation(.portrait)
         
-//        let configuration = ARFaceTrackingConfiguration()
-//        sceneView.session.run(configuration)
-//        sceneView.preferredFramesPerSecond = 5
-//        sceneView.isHidden = true
-        
         let defaults = UserDefaults.standard
         eye = defaults.bool(forKey: "Touch")
         sound = defaults.bool(forKey: "Sound")
+        
+        let configuration = ARFaceTrackingConfiguration()
+        
+        if eye == true {
+            sceneView.session.run(configuration)
+            sceneView.preferredFramesPerSecond = 5
+            sceneView.isHidden = false
+        }
+        
     }
-//    // MARK: - ARSCNViewDelegate
-//
-//    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-//        let faceMesh = ARSCNFaceGeometry(device: sceneView.device!)
-//        let node = SCNNode(geometry: faceMesh)
-//        node.geometry?.firstMaterial?.fillMode = .lines
-//        return node
-//    }
-//
-//    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-//        if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry {
-//            faceGeometry.update(from: faceAnchor.geometry)
-//            expression(anchor: faceAnchor)
-//
-//            DispatchQueue.main.async {
-//                if eye == true {
-//                    self.texto = self.analysis
-//                }
-//
-//                if (self.texto == "You are blinking right." && self.count < self.recipes[self.escolha].numeroIntrucoes - 1){
-//                    if self.count < 9 {
-//                        self.count += 1
-//                    }
-//                    self.play(tiposom: "passar")
-//                    self.viewDidLoad()
-//                    print(self.count)
-//                }
-//                if(self.texto == "You are blinking left." && self.count != 0){
-//                    self.play(tiposom: "voltar")
-//                    self.count -= 1
-//                    self.viewDidLoad()
-//                    print(self.count)
-//                }
-//
-//
-//            }
-//        }
-//    }
+    // MARK: - ARSCNViewDelegate
     
-//    func expression(anchor: ARFaceAnchor) {
-//        let eyeblinkright = anchor.blendShapes[.eyeBlinkRight]
-//        let eyeblinkleft = anchor.blendShapes[.eyeBlinkLeft]
-//        let mouthLeft = anchor.blendShapes[.mouthRight]
-//        let mouthRight = anchor.blendShapes[.mouthLeft]
-//        self.analysis = ""
-//
-//        if eyeblinkright?.decimalValue ?? 0.0 > 0.7 ||  mouthLeft?.decimalValue ?? 0.0 > 0.7{
-//            self.analysis += "You are blinking left."
-//        }
-//        if eyeblinkleft?.decimalValue ?? 0.0 > 0.7 || mouthRight?.decimalValue ?? 0.0 > 0.7{
-//            self.analysis += "You are blinking right."
-//        }
-//    }
+    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+        let faceMesh = ARSCNFaceGeometry(device: sceneView.device!)
+        let node = SCNNode(geometry: faceMesh)
+        node.geometry?.firstMaterial?.fillMode = .lines
+        return node
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry {
+            faceGeometry.update(from: faceAnchor.geometry)
+            expression(anchor: faceAnchor)
+            
+            DispatchQueue.main.async {
+                if eye == true {
+                    self.texto = self.analysis
+                }
+                
+                if (self.texto == "You are blinking right." && self.count < self.recipes[self.escolha].numeroIntrucoes - 1){
+                    if self.count < 9 {
+                        self.count += 1
+                    }
+                    self.play(tiposom: "passar")
+                    self.viewDidLoad()
+                    print(self.count)
+                }
+                if(self.texto == "You are blinking left." && self.count != 0){
+                    self.play(tiposom: "voltar")
+                    self.count -= 1
+                    self.viewDidLoad()
+                    print(self.count)
+                }
+                
+                
+            }
+        }
+    }
+    
+    func expression(anchor: ARFaceAnchor) {
+        let eyeblinkright = anchor.blendShapes[.eyeBlinkRight]
+        let eyeblinkleft = anchor.blendShapes[.eyeBlinkLeft]
+        let mouthLeft = anchor.blendShapes[.mouthRight]
+        let mouthRight = anchor.blendShapes[.mouthLeft]
+        self.analysis = ""
+        
+        if eyeblinkright?.decimalValue ?? 0.0 > 0.7 ||  mouthLeft?.decimalValue ?? 0.0 > 0.7{
+            self.analysis += "You are blinking left."
+        }
+        if eyeblinkleft?.decimalValue ?? 0.0 > 0.7 || mouthRight?.decimalValue ?? 0.0 > 0.7{
+            self.analysis += "You are blinking right."
+        }
+    }
     
     override func viewDidLoad() {
         BackBarButton()
@@ -108,10 +112,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         updateData()
         
         
-//        sceneView.delegate = self
-//        guard ARFaceTrackingConfiguration.isSupported else {
-//            fatalError("Face tracking is not supported on this device")
-//        }
+        sceneView.delegate = self
+        
     }
     
     
@@ -127,7 +129,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             viewDidLoad()
         }
         
-            play(tiposom: "passar")
+        play(tiposom: "passar")
         
         
     }
@@ -142,7 +144,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         }
         
         
-            play(tiposom: "voltar")
+        play(tiposom: "voltar")
         
         
     }
@@ -280,34 +282,34 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     
     @IBAction func playSound(_ sender: Any) {
         navigation(destino: "End")
-      
-            play(tiposom: "fim-receita")
+        
+        play(tiposom: "fim-receita")
         
     }
     
     func play(tiposom : String) {
         if sound == true{
-        let urlString = Bundle.main.path(forResource: tiposom, ofType: "mp3")
-        
-        do {
+            let urlString = Bundle.main.path(forResource: tiposom, ofType: "mp3")
             
-            try? AVAudioSession.sharedInstance().setMode(.default)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-            
-            guard let urlString = urlString else {
-                return
+            do {
+                
+                try? AVAudioSession.sharedInstance().setMode(.default)
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                guard let urlString = urlString else {
+                    return
+                }
+                
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                
+                guard let player = player else {
+                    return
+                }
+                
+                player.play()
             }
-            
-            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-            
-            guard let player = player else {
-                return
-            }
-            
-            player.play()
-        }
-        catch {
-            print("Something went wrong! :(")
+            catch {
+                print("Something went wrong! :(")
             }
         }
     }
