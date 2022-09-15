@@ -6,7 +6,7 @@
 "Dyx-54-8Vf.title" = "Settings";
 
 /* Class = "UILabel"; text = "Habilita a troca de instruções por meio de interações sem toque (Touchless Interactions), com o uso do piscar dos olhos em suas respectivas direções"; ObjectID = "Pvq-dy-iuL"; */
-"Pvq-dy-iuL.text" = "Enable the exchange of instructions through Touchless Interactions, using the blink of the eyes in their respective directions";
+"Pvq-dy-iuL.text" = "Enable the exchange of instructions through Touchless Interactions, using the blink of the eyes in their respective directions.";
 
 /* Class = "UILabel"; text = "Interação sem toque"; ObjectID = "fOS-jW-tIw"; */
 "fOS-jW-tIw.text" = "Touchless Interaction";

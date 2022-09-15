@@ -550,7 +550,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mealmories!";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Detects facial gestures to transition between turns.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIMainStoryboardFile = ListRecipesScreen;
@@ -580,7 +580,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mealmories!";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs your permission to use AR Features";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Detects facial gestures to transition between turns.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIMainStoryboardFile = ListRecipesScreen;

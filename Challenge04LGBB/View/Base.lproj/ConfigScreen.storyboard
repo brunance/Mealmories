@@ -19,7 +19,7 @@
         <!--Configurações-->
         <scene sceneID="nGD-Q4-yBO">
             <objects>
-                <viewController storyboardIdentifier="ConfigScreen" id="KJi-AQ-Sa0" customClass="ConfigViewController" customModule="Challenge04LGBB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfigScreen" id="KJi-AQ-Sa0" customClass="ConfigViewController" customModule="Mealmories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iEa-j8-dLY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,7 @@
                                                         </constraints>
                                                         <connections>
                                                             <action selector="switchDidChange:" destination="KJi-AQ-Sa0" eventType="valueChanged" id="aLi-af-28g"/>
+                                                            <action selector="touchswitch:" destination="KJi-AQ-Sa0" eventType="valueChanged" id="ett-r0-eJG"/>
                                                         </connections>
                                                     </switch>
                                                 </subviews>
@@ -74,7 +75,7 @@
                                                     <constraint firstAttribute="height" constant="65" id="DT1-N7-nG4"/>
                                                     <constraint firstAttribute="width" constant="340" id="dVT-Pz-QVS"/>
                                                 </constraints>
-                                                <string key="text">Habilita a troca de instruções por meio de interações sem toque (Touchless Interactions), com o uso do piscar dos olhos em suas respectivas direções</string>
+                                                <string key="text">Habilita a troca de instruções por meio de interações sem toque (Touchless Interactions), com o uso do piscar dos olhos em suas respectivas direções.</string>
                                                 <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="13"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
