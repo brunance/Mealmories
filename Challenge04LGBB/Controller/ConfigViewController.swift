@@ -29,18 +29,14 @@ class ConfigViewController: UIViewController {
         pedirPermissao()
     }
     @IBAction func switchDidChange(_ sender: UISwitch){
-        if touch.isOn && autorizacao == true {
+        if touch.isOn == true {
             UserKeys.StatusEye = true
             let defaults = UserDefaults.standard
             defaults.set(true, forKey: "Touch")
-        }else {
-            
+        }
+        else{
             let defaults = UserDefaults.standard
             defaults.set(false, forKey: "Touch")
-            if count > 0{
-                self.presentCameraSettings()
-            }
-            count += 1
         }
     }
     func presentCameraSettings() {
@@ -62,7 +58,13 @@ class ConfigViewController: UIViewController {
                  autorizacao = true
              } else {
                  DispatchQueue.main.async{
-                     self.touch.setOn(false, animated: true)
+                     self.touch.setOn(false, animated: false)
+                     let defaults = UserDefaults.standard
+                     defaults.set(false, forKey: "Touch")
+                     if count > 0{
+                         self.presentCameraSettings()
+                     }
+                     count += 1
                  }
              }
          }
