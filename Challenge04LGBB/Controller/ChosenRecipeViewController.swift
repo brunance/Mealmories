@@ -49,7 +49,8 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        print("papa Som:\(UserKeys.StatusSound)")
+        print("papa Olho:\(UserKeys.StatusEye)")
         let defaults = UserDefaults.standard
         soundEffect = defaults.bool(forKey: "Sound")
     }

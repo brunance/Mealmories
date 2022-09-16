@@ -47,7 +47,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         if eye == true {
             sceneView.session.run(configuration)
             sceneView.preferredFramesPerSecond = 5
-            sceneView.isHidden = true
+            sceneView.isHidden = false
         }
         
     }
