@@ -9,10 +9,10 @@ class IsInitialUser : UIViewController{
     }
     override func viewDidAppear(_ animated: Bool) {
         if LandscapeManager.shared.isFirstLaunch{
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Onboard", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Onboard") as! OnBoardVc
-            
-            self.navigationController?.pushViewController(newViewController, animated: false)
+            let newViewController = OnBoardVc()
+            newViewController.modalPresentationStyle = .fullScreen
+            self.present(newViewController, animated:true, completion:nil)
+
             
             LandscapeManager.shared.isFirstLaunch = true
         }
