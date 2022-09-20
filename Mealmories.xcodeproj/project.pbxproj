@@ -11,6 +11,10 @@
 		4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED12F728AA8A80002113D3 /* SceneDelegate.swift */; };
 		4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FB28AA8A80002113D3 /* Main.storyboard */; };
 		4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FE28AA8A83002113D3 /* Assets.xcassets */; };
+		513F103D28D9F939000C8CFC /* IsInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F103C28D9F939000C8CFC /* IsInitialVC.swift */; };
+		513F103F28D9F95E000C8CFC /* IsInitialuser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */; };
+		513F104128D9FE53000C8CFC /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513F104028D9FE53000C8CFC /* Onboard.storyboard */; };
+		513F104328D9FF91000C8CFC /* OnBoardVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F104228D9FF91000C8CFC /* OnBoardVc.swift */; };
 		515AA40128BEBAA700F903BE /* ListRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515AA40028BEBAA700F903BE /* ListRecipesViewController.swift */; };
 		5165C1BF28BFA61900F5F1CF /* ChoosenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5165C1BE28BFA61900F5F1CF /* ChoosenModel.swift */; };
 		51862A7D28AE90CE00C5F3AE /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029728AD21540052D2B8 /* Baloo2-Medium.ttf */; };
@@ -54,6 +58,10 @@
 		4FED12FC28AA8A80002113D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FED12FE28AA8A83002113D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FED130328AA8A83002113D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		513F103C28D9F939000C8CFC /* IsInitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsInitialVC.swift; sourceTree = "<group>"; };
+		513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IsInitialuser.storyboard; sourceTree = "<group>"; };
+		513F104028D9FE53000C8CFC /* Onboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboard.storyboard; sourceTree = "<group>"; };
+		513F104228D9FF91000C8CFC /* OnBoardVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardVc.swift; sourceTree = "<group>"; };
 		515AA40028BEBAA700F903BE /* ListRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRecipesViewController.swift; sourceTree = "<group>"; };
 		5165C1BE28BFA61900F5F1CF /* ChoosenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenModel.swift; sourceTree = "<group>"; };
 		51A0099C28CF8682005A4465 /* ProgressBarClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarClass.swift; sourceTree = "<group>"; };
@@ -128,6 +136,8 @@
 			children = (
 				6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */,
 				515AA40028BEBAA700F903BE /* ListRecipesViewController.swift */,
+				513F104228D9FF91000C8CFC /* OnBoardVc.swift */,
+				513F103C28D9F939000C8CFC /* IsInitialVC.swift */,
 				51FAF0C128C1A99400C66619 /* RecipesTableViewCell.swift */,
 				666B235628B6DDED00C6E62A /* ConfigViewController.swift */,
 				660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */,
@@ -143,6 +153,8 @@
 				4FED12FB28AA8A80002113D3 /* Main.storyboard */,
 				66AAE5CE28CC2FBA00915D62 /* ConfigScreen.storyboard */,
 				66AAE5C928CC2EC900915D62 /* ListRecipesScreen.storyboard */,
+				513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */,
+				513F104028D9FE53000C8CFC /* Onboard.storyboard */,
 				66AAE5C428CC2CAA00915D62 /* ChosenRecipe.storyboard */,
 				66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */,
 				66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */,
@@ -304,6 +316,7 @@
 				51862A8128AE90CE00C5F3AE /* Baloo2-Regular.ttf in Resources */,
 				66AAE5C228CC2CAA00915D62 /* ChosenRecipe.storyboard in Resources */,
 				66AAE5CC28CC2FBA00915D62 /* ConfigScreen.storyboard in Resources */,
+				513F103F28D9F95E000C8CFC /* IsInitialuser.storyboard in Resources */,
 				663CCA5328CF8C72000D5B47 /* Launch Screen.storyboard in Resources */,
 				66AAE5AE28CC1A0B00915D62 /* EndRecipe.storyboard in Resources */,
 				51862A7E28AE90CE00C5F3AE /* Baloo2-SemiBold.ttf in Resources */,
@@ -312,6 +325,7 @@
 				51862A7F28AE90CE00C5F3AE /* Baloo2-ExtraBold.ttf in Resources */,
 				665C691328BCF63900E9F1FA /* passar.mp3 in Resources */,
 				66AAE5BD28CC2A3900915D62 /* ForgetRecipe.storyboard in Resources */,
+				513F104128D9FE53000C8CFC /* Onboard.storyboard in Resources */,
 				665C691128BCF63900E9F1FA /* fim-receita.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,9 +348,11 @@
 				665C691728BD096F00E9F1FA /* ForgotRecipeViewController.swift in Sources */,
 				666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */,
 				51FAF0C228C1A99500C66619 /* RecipesTableViewCell.swift in Sources */,
+				513F103D28D9F939000C8CFC /* IsInitialVC.swift in Sources */,
 				515AA40128BEBAA700F903BE /* ListRecipesViewController.swift in Sources */,
 				660EB4AB28B8F7BE007D2425 /* ChosenRecipeViewController.swift in Sources */,
 				6608016128ABEDB2005FC8A0 /* RecipeViewController.swift in Sources */,
+				513F104328D9FF91000C8CFC /* OnBoardVc.swift in Sources */,
 				51A0099D28CF8682005A4465 /* ProgressBarClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
