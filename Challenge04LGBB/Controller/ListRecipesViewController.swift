@@ -33,11 +33,19 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
-        
+        self.navigationController?.isNavigationBarHidden = false
+        let appearence = UINavigationBarAppearance()
+        appearence.configureWithTransparentBackground()
+        appearence.shadowColor = .clear
+        appearence.backgroundColor = .clear
+        appearence.backgroundImage = nil
+        appearence.shadowImage = nil
+        self.navigationController?.navigationBar.standardAppearance = appearence
+
     }
     func BackBarButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.setHidesBackButton(true, animated: false)
     }
     
     func SetReceitaDestaque() {
@@ -55,9 +63,14 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     
     @IBAction func ClickReceitaDestaque(_ sender: Any) {
         escolha = randomInt
-        navigation()
+        navigation(destino: "Chosen")
         
     }
+    
+    @IBAction func ConfigButton(_ sender: Any) {
+        navigation(destino: "Config")
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let recipes = getChoosenRecipe()
         return recipes.count
@@ -75,15 +88,23 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         return cell
     }
     
-    func navigation() {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "ChosenRecipe", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChosenRecipe") as! ChosenRecipeViewController
+    func navigation(destino: String) {
+        if destino == "Chosen" {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "ChosenRecipe", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChosenRecipe") as! ChosenRecipeViewController
+            
+            let escolha = escolha
+            newViewController.escolha = escolha
+            
+            self.navigationController?.pushViewController(newViewController, animated: true)
+        }
         
-        let escolha = escolha
-        newViewController.escolha = escolha
-        
-        self.navigationController?.pushViewController(newViewController, animated: true)
-        
+        if destino == "Config" {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "ConfigScreen", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ConfigScreen") as! ConfigViewController
+            
+            self.navigationController?.pushViewController(newViewController, animated: true)
+        }
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -91,7 +112,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         escolha = indexPath.row
-        navigation()
+        navigation(destino: "Chosen")
     }
     
     

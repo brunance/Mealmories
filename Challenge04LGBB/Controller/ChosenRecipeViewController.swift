@@ -91,9 +91,11 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     @IBAction func configbutton(_ sender: Any) {
         navigation(destino: "Config")
     }
+    
     func BackBarButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
+    
     func navigation(destino:String){
         if destino == "Recipe" {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
