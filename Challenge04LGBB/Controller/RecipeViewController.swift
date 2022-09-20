@@ -6,7 +6,7 @@ import AVFoundation
 var eye = false
 var sound = false
 
-class RecipeViewController: UIViewController, ARSCNViewDelegate{
+class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationControllerDelegate {
     
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var botaovoltar: UIButton!
@@ -24,6 +24,14 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
     @IBOutlet weak var LabelDica: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var TituloDaReceita: UINavigationItem!
+    @IBOutlet weak var imageTake: UIImageView!
+    @IBOutlet weak var botaoFoto: UIButton!
+    var imagePicker: UIImagePickerController!
+
+    enum ImageSource {
+        case photoLibrary
+        case camera
+    }
     
     var player : AVAudioPlayer?
     var recipes : [Recipe] = []
@@ -174,6 +182,11 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
         imagemIntrucao.accessibilityLabel = "Imagem que resume a intrução da etapa atual da receita"
         LampImage.isAccessibilityElement = true
         LampImage.accessibilityLabel = "Icone de dicas com texto ao lado direito"
+        botaoFoto.backgroundColor = recipes[escolha].CorDaTela[count]
+        botaoFoto.layer.cornerRadius = 0.5 * botaoFoto.bounds.size.width
+        botaoFoto.clipsToBounds = true
+        botaoFoto.isAccessibilityElement = true
+        botaoFoto.accessibilityLabel = "Botão para tirar foto"
         
         if count == recipes[escolha].numeroIntrucoes-1{
             BotaoTerminarReceita.isHidden = false
@@ -313,6 +326,64 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate{
             }
         }
     }
+    
+    //MARK: - Take image
+    @IBAction func takePhoto(_ sender: UIButton) {
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            selectImageFrom(.photoLibrary)
+            return
+        }
+        selectImageFrom(.camera)
+    }
+
+    func selectImageFrom(_ source: ImageSource){
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        switch source {
+        case .camera:
+            imagePicker.sourceType = .camera
+        case .photoLibrary:
+            imagePicker.sourceType = .photoLibrary
+        }
+        present(imagePicker, animated: true, completion: nil)
+    }
+
+    //MARK: - Saving Image here
+    func save(_ sender: AnyObject) {
+        guard let selectedImage = imageTake.image else {
+            print("Image not found!")
+            return
+        }
+        UIImageWriteToSavedPhotosAlbum(selectedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+
+    //MARK: - Add image to Library
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            showAlertWith(title: "Save error", message: error.localizedDescription)
+        } else {
+            showAlertWith(title: "Saved!", message: "Your image has been saved to your photos.")
+        }
+    }
+
+    func showAlertWith(title: String, message: String){
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
 }
 
+extension RecipeViewController: UIImagePickerControllerDelegate{
+
+   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+       imagePicker.dismiss(animated: true, completion: nil)
+       guard let selectedImage = info[.originalImage] as? UIImage else {
+           print("Image not found!")
+           return
+       }
+       imageTake.image = selectedImage
+       save(self)
+   }
+}
 
