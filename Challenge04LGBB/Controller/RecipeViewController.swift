@@ -119,7 +119,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         
         updateData()
         
-        
+        BotaoTerminarReceita.layer.cornerRadius = 20
         sceneView.delegate = self
         
     }
@@ -190,6 +190,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         
         if count == recipes[escolha].numeroIntrucoes-1{
             BotaoTerminarReceita.isHidden = false
+            BotaoTerminarReceita.layer.cornerRadius = 550
             BotaoTerminarReceita.backgroundColor = recipes[escolha].CorDaTela[count]
             BotaoTerminarReceita.isAccessibilityElement = true
             BotaoTerminarReceita.accessibilityLabel = "Botão para terminar a receita, É hora de comer!"

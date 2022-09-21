@@ -43,7 +43,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         self.navigationItem.rightBarButtonItem?.isAccessibilityElement = true
         self.navigationItem.rightBarButtonItem?.accessibilityLabel = "Botão de configurações de som e interação sem toque"
         SetChoosenRecipe()
-        
+        startButton.layer.cornerRadius = 20
         self.setTableView()
     }
     

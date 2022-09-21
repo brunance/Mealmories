@@ -142,7 +142,7 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="7UV-iM-VCH"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="wAq-yG-6Ch"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MO-Jw-M2u">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MO-Jw-M2u">
                                 <rect key="frame" x="20" y="805" width="374" height="57"/>
                                 <color key="backgroundColor" name="Mix_Magenta"/>
                                 <constraints>
@@ -155,7 +155,7 @@
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
