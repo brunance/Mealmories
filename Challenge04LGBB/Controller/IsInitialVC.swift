@@ -5,22 +5,23 @@ import UIKit
 class IsInitialUser : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
     }
     override func viewDidAppear(_ animated: Bool) {
         if LandscapeManager.shared.isFirstLaunch{
-            let newViewController = OnBoardVc()
+            var newViewController = ViewController()
+            newViewController = ViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: .none)
             newViewController.modalPresentationStyle = .fullScreen
             self.present(newViewController, animated:true, completion:nil)
-
+            
             
             LandscapeManager.shared.isFirstLaunch = true
         }
         else{
-        
+
             let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
-            
+
             self.navigationController?.pushViewController(newViewController, animated: false)        }
     }
     class LandscapeManager {
@@ -34,3 +35,6 @@ class IsInitialUser : UIViewController{
         }
     }
 }
+
+
+

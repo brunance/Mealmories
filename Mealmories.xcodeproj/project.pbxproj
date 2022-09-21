@@ -13,7 +13,6 @@
 		4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FE28AA8A83002113D3 /* Assets.xcassets */; };
 		513F103D28D9F939000C8CFC /* IsInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F103C28D9F939000C8CFC /* IsInitialVC.swift */; };
 		513F103F28D9F95E000C8CFC /* IsInitialuser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */; };
-		513F104128D9FE53000C8CFC /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513F104028D9FE53000C8CFC /* Onboard.storyboard */; };
 		513F104328D9FF91000C8CFC /* OnBoardVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F104228D9FF91000C8CFC /* OnBoardVc.swift */; };
 		515AA40128BEBAA700F903BE /* ListRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515AA40028BEBAA700F903BE /* ListRecipesViewController.swift */; };
 		5165C1BF28BFA61900F5F1CF /* ChoosenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5165C1BE28BFA61900F5F1CF /* ChoosenModel.swift */; };
@@ -60,7 +59,6 @@
 		4FED130328AA8A83002113D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		513F103C28D9F939000C8CFC /* IsInitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsInitialVC.swift; sourceTree = "<group>"; };
 		513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IsInitialuser.storyboard; sourceTree = "<group>"; };
-		513F104028D9FE53000C8CFC /* Onboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboard.storyboard; sourceTree = "<group>"; };
 		513F104228D9FF91000C8CFC /* OnBoardVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardVc.swift; sourceTree = "<group>"; };
 		515AA40028BEBAA700F903BE /* ListRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRecipesViewController.swift; sourceTree = "<group>"; };
 		5165C1BE28BFA61900F5F1CF /* ChoosenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenModel.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				66AAE5CE28CC2FBA00915D62 /* ConfigScreen.storyboard */,
 				66AAE5C928CC2EC900915D62 /* ListRecipesScreen.storyboard */,
 				513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */,
-				513F104028D9FE53000C8CFC /* Onboard.storyboard */,
 				66AAE5C428CC2CAA00915D62 /* ChosenRecipe.storyboard */,
 				66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */,
 				66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */,
@@ -325,7 +322,6 @@
 				51862A7F28AE90CE00C5F3AE /* Baloo2-ExtraBold.ttf in Resources */,
 				665C691328BCF63900E9F1FA /* passar.mp3 in Resources */,
 				66AAE5BD28CC2A3900915D62 /* ForgetRecipe.storyboard in Resources */,
-				513F104128D9FE53000C8CFC /* Onboard.storyboard in Resources */,
 				665C691128BCF63900E9F1FA /* fim-receita.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

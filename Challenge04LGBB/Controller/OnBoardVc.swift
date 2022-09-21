@@ -1,37 +1,37 @@
 
 
-import Foundation
+//
+//  ViewController.swift
+//  SimpleOnboardingDemo
+//
+//  Created by jrasmusson on 2021-01-08.
+//
+
 import UIKit
 
+class ViewController: UIPageViewController {
+   
 
-import UIKit
-
-/*
- Simple example of UIPageViewController.
-*/
-
-class OnBoardVc: UIPageViewController {
-    
     var pages = [UIViewController]()
     let pageControl = UIPageControl() // external - not part of underlying pages
     let initialPage = 0
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+     
         setup()
         style()
         layout()
     }
 }
 
-extension OnBoardVc {
+extension ViewController {
     
     func setup() {
         dataSource = self
         delegate = self
         pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
-        
+
         // create an array of viewController
         let page1 = ViewController1()
         let page2 = ViewController2()
@@ -67,7 +67,7 @@ extension OnBoardVc {
 
 // MARK: - Actions
 
-extension OnBoardVc {
+extension ViewController {
     
     // How we change page when pageControl tapped.
     // Note - Can only skip ahead on page at a time.
@@ -78,7 +78,7 @@ extension OnBoardVc {
 
 // MARK: - DataSources
 
-extension OnBoardVc: UIPageViewControllerDataSource {
+extension ViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
@@ -105,8 +105,8 @@ extension OnBoardVc: UIPageViewControllerDataSource {
 
 // MARK: - Delegates
 
-extension OnBoardVc: UIPageViewControllerDelegate {
-
+extension ViewController: UIPageViewControllerDelegate {
+    
     // How we keep our pageControl in sync with viewControllers
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
@@ -121,7 +121,6 @@ extension OnBoardVc: UIPageViewControllerDelegate {
 
 class ViewController1: UIViewController {
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         view.backgroundColor = .systemRed
     }
