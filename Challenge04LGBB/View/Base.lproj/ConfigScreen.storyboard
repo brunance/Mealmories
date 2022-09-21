@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXm-SK-Dmr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMi-fN-Xh8" userLabel="TouchView">
                                                 <rect key="frame" x="20" y="45" width="374" height="55"/>
@@ -129,20 +129,73 @@
                                                 <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="13"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sod-yR-GxB" userLabel="HapticView">
+                                                <rect key="frame" x="20" y="315" width="374" height="55"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Háptica" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-Ll-UvA">
+                                                        <rect key="frame" x="10" y="12" width="178" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="178" id="Htv-N4-yzf"/>
+                                                            <constraint firstAttribute="height" constant="31" id="T7b-VY-RyN"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0lp-Wy-f7H">
+                                                        <rect key="frame" x="315" y="12" width="51" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="31" id="OTQ-dp-VbF"/>
+                                                            <constraint firstAttribute="width" constant="49" id="h4O-YZ-j0i"/>
+                                                        </constraints>
+                                                        <color key="onTintColor" name="Mix_Magenta"/>
+                                                        <connections>
+                                                            <action selector="hapticSwitchChange:" destination="KJi-AQ-Sa0" eventType="valueChanged" id="eTl-Ue-fMg"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" name="LabelMagenta"/>
+                                                <constraints>
+                                                    <constraint firstItem="c2e-Ll-UvA" firstAttribute="leading" secondItem="Sod-yR-GxB" secondAttribute="leading" constant="10" id="Otv-cf-e5G"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0lp-Wy-f7H" secondAttribute="trailing" constant="10" id="YZf-sP-cjJ"/>
+                                                    <constraint firstAttribute="height" constant="55" id="eoI-az-Etx"/>
+                                                    <constraint firstItem="c2e-Ll-UvA" firstAttribute="centerY" secondItem="Sod-yR-GxB" secondAttribute="centerY" id="f9w-Oq-9h1"/>
+                                                    <constraint firstItem="0lp-Wy-f7H" firstAttribute="centerY" secondItem="Sod-yR-GxB" secondAttribute="centerY" id="kPR-EH-eCj"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="sIK-I0-17G"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habilite ou Desabilite o efeito háptico ao apertar os botões." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQG-ba-nCs">
+                                                <rect key="frame" x="32" y="391" width="340" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="UR0-zS-pVI"/>
+                                                    <constraint firstAttribute="width" constant="340" id="flK-p3-40w"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="13"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" name="CorDaview"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Pvq-dy-iuL" secondAttribute="trailing" constant="40" id="3wB-Zh-8hW"/>
                                             <constraint firstAttribute="trailing" secondItem="fMi-fN-Xh8" secondAttribute="trailing" constant="20" id="4hl-yY-Jnp"/>
-                                            <constraint firstAttribute="height" constant="400" id="BUS-oR-EGx"/>
+                                            <constraint firstAttribute="height" constant="500" id="BUS-oR-EGx"/>
                                             <constraint firstItem="fMi-fN-Xh8" firstAttribute="leading" secondItem="buq-ym-mST" secondAttribute="leading" id="Cqp-zy-5sF"/>
                                             <constraint firstItem="je1-Ts-nQu" firstAttribute="leading" secondItem="ZXm-SK-Dmr" secondAttribute="leading" constant="32" id="EKr-RK-0v4"/>
                                             <constraint firstItem="je1-Ts-nQu" firstAttribute="top" secondItem="buq-ym-mST" secondAttribute="bottom" constant="8" symbolic="YES" id="Gb8-Nq-Bad"/>
                                             <constraint firstItem="fMi-fN-Xh8" firstAttribute="centerX" secondItem="ZXm-SK-Dmr" secondAttribute="centerX" id="J2r-o6-JlX"/>
+                                            <constraint firstItem="Sod-yR-GxB" firstAttribute="leading" secondItem="buq-ym-mST" secondAttribute="leading" id="LB8-85-vT5"/>
                                             <constraint firstItem="Pvq-dy-iuL" firstAttribute="leading" secondItem="ZXm-SK-Dmr" secondAttribute="leading" constant="34" id="LLm-qQ-hGQ"/>
+                                            <constraint firstItem="XQG-ba-nCs" firstAttribute="leading" secondItem="je1-Ts-nQu" secondAttribute="leading" id="QHp-hi-eTm"/>
                                             <constraint firstItem="Pvq-dy-iuL" firstAttribute="top" secondItem="fMi-fN-Xh8" secondAttribute="bottom" constant="10" id="YQq-DA-x0l"/>
                                             <constraint firstItem="buq-ym-mST" firstAttribute="top" secondItem="Pvq-dy-iuL" secondAttribute="bottom" constant="19" id="YWs-0B-iCu"/>
+                                            <constraint firstItem="Sod-yR-GxB" firstAttribute="trailing" secondItem="buq-ym-mST" secondAttribute="trailing" id="aQI-Nx-FfV"/>
+                                            <constraint firstItem="XQG-ba-nCs" firstAttribute="top" secondItem="Sod-yR-GxB" secondAttribute="bottom" constant="21" id="ccM-8A-asB"/>
                                             <constraint firstItem="fMi-fN-Xh8" firstAttribute="trailing" secondItem="buq-ym-mST" secondAttribute="trailing" id="pNs-O5-QKY"/>
+                                            <constraint firstItem="Sod-yR-GxB" firstAttribute="top" secondItem="je1-Ts-nQu" secondAttribute="bottom" constant="15" id="xdS-Vo-ZQz"/>
                                             <constraint firstItem="fMi-fN-Xh8" firstAttribute="leading" secondItem="ZXm-SK-Dmr" secondAttribute="leading" constant="20" id="xyD-Mb-X5K"/>
                                             <constraint firstItem="fMi-fN-Xh8" firstAttribute="top" secondItem="ZXm-SK-Dmr" secondAttribute="top" constant="45" id="yrI-1C-Xuj"/>
                                         </constraints>
@@ -175,6 +228,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Configurações" id="Dyx-54-8Vf"/>
                     <connections>
+                        <outlet property="haptic" destination="0lp-Wy-f7H" id="KA1-3E-n89"/>
                         <outlet property="soundEffect" destination="S0x-Lb-gjn" id="CRs-LW-DxE"/>
                         <outlet property="touch" destination="K6B-Tf-lhv" id="ta8-s7-Md1"/>
                     </connections>

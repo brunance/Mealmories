@@ -26,11 +26,16 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
+        
         setupLabel()
         imageTake.layer.cornerRadius = 10
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
+    }
     func setupLabel(){
         let receitas = getRecipes()
         ImageMedalha.image = receitas[escolha].medalha
@@ -54,6 +59,10 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
             return
         }
         selectImageFrom(.camera)
+        if haptic == true {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+        }
     }
 
     func selectImageFrom(_ source: ImageSource){
