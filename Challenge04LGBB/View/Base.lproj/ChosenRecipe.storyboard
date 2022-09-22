@@ -362,9 +362,9 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="cBC-3A-z4G"/>
                             </scrollView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aj3-nP-hDa" userLabel="StartButton">
-                                <rect key="frame" x="20" y="770" width="374" height="72"/>
+                                <rect key="frame" x="20" y="785" width="374" height="57"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="SEk-r1-32R"/>
+                                    <constraint firstAttribute="height" constant="57" id="SEk-r1-32R"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -373,6 +373,11 @@
                                     <fontDescription key="titleFontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
                                     <color key="baseBackgroundColor" name="Mix_Magenta"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="playSound:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BK4-4C-bEt"/>
                                 </connections>
