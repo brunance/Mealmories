@@ -16,7 +16,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>IsInitialuser</string>
+					<string>ListRecipesScreen</string>
 				</dict>
 			</array>
 		</dict>

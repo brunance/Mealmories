@@ -37,18 +37,19 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
+        
         BackBarButton()
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.rightBarButtonItem?.isAccessibilityElement = true
         self.navigationItem.rightBarButtonItem?.accessibilityLabel = "Botão de configurações de som e interação sem toque"
         SetChoosenRecipe()
-        
+        startButton.layer.cornerRadius = 20
         self.setTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
         print("papa Som:\(UserKeys.StatusSound)")
         print("papa Olho:\(UserKeys.StatusEye)")
         let defaults = UserDefaults.standard
@@ -122,6 +123,10 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     
     @IBAction func playSound(_ sender: Any){
         navigation(destino: "Recipe")
+        if haptic == true {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+        }
         if soundEffect == true {
             if let player = player, player.isPlaying {
                 

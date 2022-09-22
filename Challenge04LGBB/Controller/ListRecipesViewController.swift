@@ -22,7 +22,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     // 2 é o numero total de receitas
     override func viewDidLoad() {
         super.viewDidLoad()
-        AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
+        
         BackBarButton()
         tablleViewReceitasRapidas.dataSource = self
         tablleViewReceitasRapidas.delegate = self
@@ -33,6 +33,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
         self.navigationController?.isNavigationBarHidden = false
         let appearence = UINavigationBarAppearance()
         appearence.configureWithTransparentBackground()

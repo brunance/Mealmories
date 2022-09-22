@@ -16,13 +16,20 @@ class ConfigViewController: UIViewController {
     
     @IBOutlet weak var touch: UISwitch!
     @IBOutlet weak var soundEffect: UISwitch!
+    @IBOutlet weak var haptic: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
+        
         let defaults = UserDefaults.standard
         touch.setOn(defaults.bool(forKey: "Touch"), animated: true)
         soundEffect.setOn(defaults.bool(forKey: "Sound"), animated: true)
+        haptic.setOn(defaults.bool(forKey: "Haptic"), animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
     }
     
     @IBAction func touchswitch(_ sender: Any) {
@@ -39,6 +46,7 @@ class ConfigViewController: UIViewController {
             defaults.set(false, forKey: "Touch")
         }
     }
+    
     func presentCameraSettings() {
             let alertController = UIAlertController(title: "Permission Required", message: "You need camera permission to use Touchless Interaction", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Cancel", style: .default))
@@ -80,6 +88,17 @@ class ConfigViewController: UIViewController {
             defaults.set(false, forKey: "Sound")
         }
     }
-  
+    
+    @IBAction func hapticSwitchChange(_ sender: Any) {
+        if haptic.isOn {
+            UserKeys.StatusSound = true
+            let defaults = UserDefaults.standard
+            defaults.set(true, forKey: "Haptic")
+        }else {
+            let defaults = UserDefaults.standard
+            defaults.set(false, forKey: "Haptic")
+        }
+    }
+    
 }
 

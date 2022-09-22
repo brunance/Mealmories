@@ -5,6 +5,7 @@ import AVFoundation
 
 var eye = false
 var sound = false
+var haptic = false
 
 class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationControllerDelegate {
     
@@ -49,6 +50,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         let defaults = UserDefaults.standard
         eye = defaults.bool(forKey: "Touch")
         sound = defaults.bool(forKey: "Sound")
+        haptic = defaults.bool(forKey: "Haptic")
         
         let configuration = ARFaceTrackingConfiguration()
         
@@ -119,7 +121,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         
         updateData()
         
-        
+        BotaoTerminarReceita.layer.cornerRadius = 20
         sceneView.delegate = self
         
     }
@@ -138,8 +140,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         }
         
         play(tiposom: "passar")
-        
-        
+        if haptic == true {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+        }
     }
     
     @IBAction func LastStep(_ sender: Any) {
@@ -153,7 +157,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         
         
         play(tiposom: "voltar")
-        
+        if haptic == true {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+        }
         
     }
     
@@ -190,6 +197,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         
         if count == recipes[escolha].numeroIntrucoes-1{
             BotaoTerminarReceita.isHidden = false
+            BotaoTerminarReceita.layer.cornerRadius = 550
             BotaoTerminarReceita.backgroundColor = recipes[escolha].CorDaTela[count]
             BotaoTerminarReceita.isAccessibilityElement = true
             BotaoTerminarReceita.accessibilityLabel = "Botão para terminar a receita, É hora de comer!"
@@ -271,6 +279,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         else{
             count += 1
             play(tiposom: "passar")
+            if haptic == true {
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.success)
+            }
             viewDidLoad()
         }
         
@@ -283,6 +295,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         else{
             count -= 1
             play(tiposom: "voltar")
+            if haptic == true {
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.success)
+            }
             viewDidLoad()
         }
         
@@ -295,7 +311,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     
     @IBAction func playSound(_ sender: Any) {
         navigation(destino: "End")
-        
+        if haptic == true {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
+        }
         play(tiposom: "fim-receita")
         
     }
@@ -334,6 +353,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             return
         }
         selectImageFrom(.camera)
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
     }
 
     func selectImageFrom(_ source: ImageSource){
