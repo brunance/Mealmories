@@ -257,9 +257,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk8-2Y-0fh">
-                                <rect key="frame" x="168" y="773" width="67" height="69"/>
+                                <rect key="frame" x="215.5" y="773" width="69" height="69"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="Ze8-Z5-Hox"/>
+                                    <constraint firstAttribute="width" constant="69" id="LhA-Oa-l2g"/>
                                     <constraint firstAttribute="height" constant="69" id="inW-f5-Myh"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -281,10 +281,10 @@
                             <constraint firstItem="pne-fb-yWh" firstAttribute="leading" secondItem="KsM-ML-hhk" secondAttribute="leading" constant="20" id="Iaa-eh-01R"/>
                             <constraint firstItem="Hoa-Tr-ppv" firstAttribute="top" secondItem="KsM-ML-hhk" secondAttribute="top" constant="20" id="J4n-QH-xtm"/>
                             <constraint firstItem="YgN-Lf-PWV" firstAttribute="top" secondItem="Hoa-Tr-ppv" secondAttribute="bottom" constant="20" id="Lk2-VO-gx4"/>
-                            <constraint firstItem="qk8-2Y-0fh" firstAttribute="leading" secondItem="pne-fb-yWh" secondAttribute="trailing" constant="81" id="UsJ-9n-MaE"/>
                             <constraint firstItem="KsM-ML-hhk" firstAttribute="trailing" secondItem="wY7-zh-pSu" secondAttribute="trailing" constant="20" id="aRY-Zk-2Bf"/>
                             <constraint firstItem="Hoa-Tr-ppv" firstAttribute="leading" secondItem="KsM-ML-hhk" secondAttribute="leading" constant="20" id="g20-FC-Z6i"/>
                             <constraint firstItem="KsM-ML-hhk" firstAttribute="trailing" secondItem="Hoa-Tr-ppv" secondAttribute="trailing" constant="20" id="hr0-ic-Dse"/>
+                            <constraint firstItem="qk8-2Y-0fh" firstAttribute="centerX" secondItem="KsM-ML-hhk" secondAttribute="centerX" id="iUk-Vw-tdn"/>
                             <constraint firstItem="KsM-ML-hhk" firstAttribute="bottom" secondItem="pne-fb-yWh" secondAttribute="bottom" constant="20" id="mGy-Qx-cJr"/>
                             <constraint firstItem="qk8-2Y-0fh" firstAttribute="top" secondItem="YgN-Lf-PWV" secondAttribute="bottom" constant="20" id="p7r-gQ-dNV"/>
                             <constraint firstItem="pne-fb-yWh" firstAttribute="top" secondItem="YgN-Lf-PWV" secondAttribute="bottom" constant="20" id="s1s-3c-IUy"/>

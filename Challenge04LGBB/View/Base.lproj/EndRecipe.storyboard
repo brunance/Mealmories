@@ -26,13 +26,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAc-eo-FBE">
-                                <rect key="frame" x="0.0" y="92" width="414" height="676"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="673"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h17-1n-MiA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registre suas Mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-yo-ZIj">
-                                                <rect key="frame" x="20" y="413" width="374" height="26"/>
+                                                <rect key="frame" x="20" y="413" width="374" height="35.5"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -49,13 +49,13 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward.pipoca" translatesAutoresizingMaskIntoConstraints="NO" id="zb0-a3-5oF">
                                                         <rect key="frame" x="20" y="69" width="334" height="160"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receita Concluída:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-am-477">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Receita Concluída:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-am-477">
                                                         <rect key="frame" x="20" y="249" width="334" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cheese Bread" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZR-Uh-86L">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" text="Cheese Bread" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZR-Uh-86L">
                                                         <rect key="frame" x="20" y="273" width="334" height="30"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
                                                         <color key="textColor" name="Mix_LightMagenta"/>
@@ -87,7 +87,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lembre-se de tirar uma foto quando o prato estiver pronto e registre essas mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK3-rx-rUD">
-                                                <rect key="frame" x="20" y="437" width="374" height="56"/>
+                                                <rect key="frame" x="20" y="446.5" width="374" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="ejG-3o-mqh"/>
                                                 </constraints>
@@ -96,13 +96,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGG-tl-yel">
-                                                <rect key="frame" x="20" y="521" width="374" height="350"/>
+                                                <rect key="frame" x="20" y="530.5" width="374" height="340.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="eW5-4o-EzI">
-                                                        <rect key="frame" x="127" y="79" width="120" height="100"/>
+                                                        <rect key="frame" x="127" y="79" width="120" height="90.5"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique aqui para registrar o resultado!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmV-j4-Mcc">
-                                                        <rect key="frame" x="20" y="207" width="334" height="23.5"/>
+                                                        <rect key="frame" x="20" y="197.5" width="334" height="23.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="23.5" id="qRL-9d-U3b"/>
                                                         </constraints>
@@ -124,7 +124,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="996-w9-6dY">
-                                                <rect key="frame" x="20" y="521" width="374" height="350"/>
+                                                <rect key="frame" x="20" y="530.5" width="374" height="340.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
@@ -132,7 +132,7 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KD7-Wl-lLe">
-                                                <rect key="frame" x="20" y="521" width="374" height="350"/>
+                                                <rect key="frame" x="20" y="530.5" width="374" height="340.5"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="CorDaview"/>
@@ -171,7 +171,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="wAq-yG-6Ch"/>
                             </scrollView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MO-Jw-M2u">
-                                <rect key="frame" x="20" y="805" width="374" height="57"/>
+                                <rect key="frame" x="20" y="785" width="374" height="57"/>
                                 <color key="backgroundColor" name="Mix_Magenta"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="wKN-T0-2ie"/>
@@ -201,9 +201,9 @@
                             <constraint firstItem="cAc-eo-FBE" firstAttribute="top" secondItem="CR3-B7-G0f" secondAttribute="top" id="NUH-OA-2qY"/>
                             <constraint firstItem="996-w9-6dY" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="OCC-WG-7aH"/>
                             <constraint firstItem="CR3-B7-G0f" firstAttribute="trailing" secondItem="KD7-Wl-lLe" secondAttribute="trailing" constant="20" id="RCL-7q-tM4"/>
+                            <constraint firstItem="CR3-B7-G0f" firstAttribute="bottom" secondItem="1MO-Jw-M2u" secondAttribute="bottom" constant="20" id="YZu-1G-KSz"/>
                             <constraint firstItem="cAc-eo-FBE" firstAttribute="leading" secondItem="Dux-gE-VPe" secondAttribute="leading" id="bDO-b0-b5j"/>
-                            <constraint firstItem="1MO-Jw-M2u" firstAttribute="bottom" secondItem="CR3-B7-G0f" secondAttribute="bottom" id="bvh-wf-RKf"/>
-                            <constraint firstItem="1MO-Jw-M2u" firstAttribute="top" secondItem="cAc-eo-FBE" secondAttribute="bottom" constant="37" id="eFw-VF-jgl"/>
+                            <constraint firstItem="1MO-Jw-M2u" firstAttribute="top" secondItem="cAc-eo-FBE" secondAttribute="bottom" constant="20" id="eFw-VF-jgl"/>
                             <constraint firstItem="KD7-Wl-lLe" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="hWW-vo-pAZ"/>
                             <constraint firstItem="CR3-B7-G0f" firstAttribute="trailing" secondItem="996-w9-6dY" secondAttribute="trailing" constant="20" id="mXe-kg-YkL"/>
                             <constraint firstItem="xEc-4E-sUQ" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="qZp-U1-Jht"/>
