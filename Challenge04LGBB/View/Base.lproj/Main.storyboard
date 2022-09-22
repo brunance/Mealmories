@@ -264,7 +264,7 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" image="Camera">
+                                <buttonConfiguration key="configuration" style="tinted" image="camera 1">
                                     <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -359,10 +359,10 @@
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="Camera" width="33" height="33"/>
         <image name="Dica - Blue" width="32" height="33"/>
         <image name="Seta 1" width="33" height="33"/>
         <image name="Seta 2" width="33" height="33"/>
+        <image name="camera 1" width="32" height="32"/>
         <image name="duvida-32px" width="32" height="32"/>
         <image name="secos.1" width="230" height="230"/>
         <namedColor name="Adulto_Blue">

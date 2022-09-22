@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Camera.svg",
+      "filename" : "camera 1.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Camera 1.svg",
+      "filename" : "camera 2.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Camera 2.svg",
+      "filename" : "camera 3.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
