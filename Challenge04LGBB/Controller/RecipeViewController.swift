@@ -382,9 +382,9 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
-            showAlertWith(title: "Save error", message: error.localizedDescription)
+            showAlertWith(title: "Falha ao salvar foto", message: error.localizedDescription)
         } else {
-            showAlertWith(title: "Saved!", message: "Your image has been saved to your photos.")
+            showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
         }
     }
 
