@@ -15,11 +15,12 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     @IBOutlet weak var endButton: UIButton!
     @IBOutlet weak var labelDesbloqueio: UILabel!
     @IBOutlet weak var CameraButton: UIButton!
+    @IBOutlet weak var ImagePlaceholder: UIView!
     @IBOutlet weak var imageTake: UIImageView!
     var imagePicker: UIImagePickerController!
     var escolha = 0
     
-    let confetti = classyConfetti()
+//    let confetti = classyConfetti()
     
     enum ImageSource {
         case photoLibrary
@@ -35,8 +36,8 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        confetti.emit(in: view, with: .fromCenter)
-        
+//        confetti.emit(in: view, with: .fromCenter)
+        ImagePlaceholder.layer.cornerRadius = 10
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
     }
     func setupLabel(){
@@ -89,6 +90,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         UIImageWriteToSavedPhotosAlbum(selectedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         imageTake.isHidden = false
         CameraButton.isHidden = true
+        ImagePlaceholder.isHidden = true
     }
 
     //MARK: - Add image to Library

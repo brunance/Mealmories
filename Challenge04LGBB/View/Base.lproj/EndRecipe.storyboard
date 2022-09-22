@@ -95,7 +95,35 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="996-w9-6dY">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGG-tl-yel">
+                                                <rect key="frame" x="20" y="521" width="374" height="350"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="eW5-4o-EzI">
+                                                        <rect key="frame" x="127" y="79" width="120" height="100"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique aqui para registrar o resultado!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmV-j4-Mcc">
+                                                        <rect key="frame" x="20" y="207" width="334" height="23.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="23.5" id="qRL-9d-U3b"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="15"/>
+                                                        <color key="textColor" name="Mix_LightMagenta"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="LabelMagenta"/>
+                                                <constraints>
+                                                    <constraint firstItem="kmV-j4-Mcc" firstAttribute="top" secondItem="eW5-4o-EzI" secondAttribute="bottom" constant="28" id="0Rq-Qc-iue"/>
+                                                    <constraint firstItem="eW5-4o-EzI" firstAttribute="leading" secondItem="fGG-tl-yel" secondAttribute="leading" constant="127" id="1Nn-ks-wLc"/>
+                                                    <constraint firstItem="kmV-j4-Mcc" firstAttribute="centerX" secondItem="fGG-tl-yel" secondAttribute="centerX" id="Bkf-eA-gij"/>
+                                                    <constraint firstItem="eW5-4o-EzI" firstAttribute="top" secondItem="fGG-tl-yel" secondAttribute="top" constant="79" id="GLJ-4l-yTr"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eW5-4o-EzI" secondAttribute="trailing" constant="127" id="Rht-bP-Gae"/>
+                                                    <constraint firstItem="kmV-j4-Mcc" firstAttribute="centerX" secondItem="eW5-4o-EzI" secondAttribute="centerX" id="V0H-PW-ZKg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="kmV-j4-Mcc" secondAttribute="bottom" constant="119.5" id="ZPD-xe-NUQ"/>
+                                                    <constraint firstItem="kmV-j4-Mcc" firstAttribute="leading" secondItem="fGG-tl-yel" secondAttribute="leading" constant="20" id="uSb-dh-2EE"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="996-w9-6dY">
                                                 <rect key="frame" x="20" y="521" width="374" height="350"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -103,31 +131,31 @@
                                                     <action selector="takePhoto:" destination="WN3-Ie-LiG" eventType="touchUpInside" id="ELS-xt-oDZ"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Media com texto" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-67-suh">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KD7-Wl-lLe">
                                                 <rect key="frame" x="20" y="521" width="374" height="350"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="350" id="6QX-jg-OG2"/>
-                                                </constraints>
-                                                <variation key="heightClass=regular-widthClass=compact" image="Media com texto_Ipad"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="CorDaview"/>
                                         <constraints>
-                                            <constraint firstItem="ldu-67-suh" firstAttribute="top" secondItem="YK3-rx-rUD" secondAttribute="bottom" constant="28" id="ABC-Aj-aXH"/>
+                                            <constraint firstItem="fGG-tl-yel" firstAttribute="top" secondItem="YK3-rx-rUD" secondAttribute="bottom" constant="28" id="0N9-US-pVp"/>
                                             <constraint firstItem="YK3-rx-rUD" firstAttribute="trailing" secondItem="ULe-yo-ZIj" secondAttribute="trailing" id="BdX-XP-5PH"/>
                                             <constraint firstItem="xEc-4E-sUQ" firstAttribute="top" secondItem="h17-1n-MiA" secondAttribute="top" constant="50" id="CxY-Me-y6a"/>
-                                            <constraint firstAttribute="trailing" secondItem="ldu-67-suh" secondAttribute="trailing" constant="20" symbolic="YES" id="Dfn-Ms-AuI"/>
+                                            <constraint firstItem="KD7-Wl-lLe" firstAttribute="top" secondItem="YK3-rx-rUD" secondAttribute="bottom" constant="28" id="LCj-zk-yDL"/>
                                             <constraint firstItem="xEc-4E-sUQ" firstAttribute="centerX" secondItem="h17-1n-MiA" secondAttribute="centerX" id="Lc1-p5-Lrp"/>
                                             <constraint firstItem="ULe-yo-ZIj" firstAttribute="top" secondItem="xEc-4E-sUQ" secondAttribute="bottom" constant="35" id="LhU-lb-eWq"/>
+                                            <constraint firstAttribute="trailing" secondItem="fGG-tl-yel" secondAttribute="trailing" constant="20" symbolic="YES" id="OUu-g1-nbJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="fGG-tl-yel" secondAttribute="bottom" constant="29" id="Sbi-Bg-Vb1"/>
                                             <constraint firstItem="YK3-rx-rUD" firstAttribute="top" secondItem="ULe-yo-ZIj" secondAttribute="bottom" constant="-2" id="Tr9-hS-D6n"/>
                                             <constraint firstAttribute="height" constant="900" id="VEz-Fw-EJg"/>
                                             <constraint firstItem="YK3-rx-rUD" firstAttribute="centerX" secondItem="ULe-yo-ZIj" secondAttribute="centerX" id="WeD-9w-X0N"/>
                                             <constraint firstAttribute="bottom" secondItem="996-w9-6dY" secondAttribute="bottom" constant="29" id="XXW-OL-Fb7"/>
+                                            <constraint firstItem="fGG-tl-yel" firstAttribute="leading" secondItem="h17-1n-MiA" secondAttribute="leading" constant="20" symbolic="YES" id="Xj3-f7-O6A"/>
+                                            <constraint firstItem="KD7-Wl-lLe" firstAttribute="leading" secondItem="h17-1n-MiA" secondAttribute="leading" constant="20" symbolic="YES" id="aZX-Rf-uso"/>
                                             <constraint firstItem="996-w9-6dY" firstAttribute="top" secondItem="YK3-rx-rUD" secondAttribute="bottom" constant="28" id="ayz-YH-M4p"/>
-                                            <constraint firstItem="ldu-67-suh" firstAttribute="leading" secondItem="h17-1n-MiA" secondAttribute="leading" constant="20" symbolic="YES" id="mhX-tV-OKs"/>
+                                            <constraint firstAttribute="bottom" secondItem="KD7-Wl-lLe" secondAttribute="bottom" constant="29" id="kGc-r4-ftz"/>
                                             <constraint firstItem="996-w9-6dY" firstAttribute="leading" secondItem="h17-1n-MiA" secondAttribute="leading" constant="20" symbolic="YES" id="nT8-n3-r1C"/>
-                                            <constraint firstAttribute="bottom" secondItem="ldu-67-suh" secondAttribute="bottom" constant="29" id="oFk-hH-gVm"/>
                                             <constraint firstAttribute="trailing" secondItem="996-w9-6dY" secondAttribute="trailing" constant="20" symbolic="YES" id="tNT-vq-yNY"/>
+                                            <constraint firstAttribute="trailing" secondItem="KD7-Wl-lLe" secondAttribute="trailing" constant="20" symbolic="YES" id="xse-ym-dcF"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -167,18 +195,20 @@
                         <color key="backgroundColor" name="CorDaview"/>
                         <constraints>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="centerX" secondItem="cAc-eo-FBE" secondAttribute="centerX" id="0ba-d4-e9a"/>
-                            <constraint firstItem="CR3-B7-G0f" firstAttribute="trailing" secondItem="ldu-67-suh" secondAttribute="trailing" constant="20" id="4Vm-UU-lJe"/>
                             <constraint firstItem="CR3-B7-G0f" firstAttribute="trailing" secondItem="xEc-4E-sUQ" secondAttribute="trailing" constant="20" id="5Md-uJ-Fu0"/>
                             <constraint firstItem="ULe-yo-ZIj" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="6i6-6F-M5N"/>
+                            <constraint firstItem="CR3-B7-G0f" firstAttribute="trailing" secondItem="fGG-tl-yel" secondAttribute="trailing" constant="20" id="GQK-EJ-jni"/>
                             <constraint firstItem="cAc-eo-FBE" firstAttribute="top" secondItem="CR3-B7-G0f" secondAttribute="top" id="NUH-OA-2qY"/>
                             <constraint firstItem="996-w9-6dY" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="OCC-WG-7aH"/>
-                            <constraint firstItem="ldu-67-suh" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="X74-st-0Js"/>
+                            <constraint firstItem="CR3-B7-G0f" firstAttribute="trailing" secondItem="KD7-Wl-lLe" secondAttribute="trailing" constant="20" id="RCL-7q-tM4"/>
                             <constraint firstItem="cAc-eo-FBE" firstAttribute="leading" secondItem="Dux-gE-VPe" secondAttribute="leading" id="bDO-b0-b5j"/>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="bottom" secondItem="CR3-B7-G0f" secondAttribute="bottom" id="bvh-wf-RKf"/>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="top" secondItem="cAc-eo-FBE" secondAttribute="bottom" constant="37" id="eFw-VF-jgl"/>
+                            <constraint firstItem="KD7-Wl-lLe" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="hWW-vo-pAZ"/>
                             <constraint firstItem="CR3-B7-G0f" firstAttribute="trailing" secondItem="996-w9-6dY" secondAttribute="trailing" constant="20" id="mXe-kg-YkL"/>
                             <constraint firstItem="xEc-4E-sUQ" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="qZp-U1-Jht"/>
                             <constraint firstItem="CR3-B7-G0f" firstAttribute="trailing" secondItem="ULe-yo-ZIj" secondAttribute="trailing" constant="20" id="rql-iS-92f"/>
+                            <constraint firstItem="fGG-tl-yel" firstAttribute="leading" secondItem="CR3-B7-G0f" secondAttribute="leading" constant="20" id="tAB-sO-ohv"/>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="leading" secondItem="Dux-gE-VPe" secondAttribute="leadingMargin" id="xKY-IE-Hj1"/>
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="trailing" secondItem="Dux-gE-VPe" secondAttribute="trailingMargin" id="xgP-dy-mVk"/>
                         </constraints>
@@ -187,7 +217,8 @@
                     <connections>
                         <outlet property="CameraButton" destination="996-w9-6dY" id="fe2-Kh-cTn"/>
                         <outlet property="ImageMedalha" destination="zb0-a3-5oF" id="foc-WA-HbE"/>
-                        <outlet property="imageTake" destination="ldu-67-suh" id="5oY-bA-aW4"/>
+                        <outlet property="ImagePlaceholder" destination="fGG-tl-yel" id="Z6q-A4-Loe"/>
+                        <outlet property="imageTake" destination="KD7-Wl-lLe" id="JcK-1v-z3G"/>
                         <outlet property="labelDesbloqueio" destination="IZR-Uh-86L" id="VPZ-8c-WKn"/>
                     </connections>
                 </viewController>
@@ -215,8 +246,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Media com texto" width="350" height="351"/>
-        <image name="Media com texto_Ipad" width="803" height="351"/>
+        <image name="Camera" width="120" height="102"/>
         <image name="reward.pipoca" width="350" height="160"/>
         <namedColor name="CorDaview">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
