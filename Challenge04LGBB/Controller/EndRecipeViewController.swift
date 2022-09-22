@@ -19,6 +19,8 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     var imagePicker: UIImagePickerController!
     var escolha = 0
     
+    let confetti = classyConfetti()
+    
     enum ImageSource {
         case photoLibrary
         case camera
@@ -33,6 +35,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        confetti.emit(in: view, with: .fromCenter)
         
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
     }
