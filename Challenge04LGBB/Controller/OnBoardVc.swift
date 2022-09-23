@@ -222,6 +222,7 @@ class Page1: UIViewController {
         super.viewDidLoad()
         confeteAmarelo.layer.zPosition = 0
         botao1.layer.zPosition = 1
+        confeteAmarelo.layer.opacity = 0.5
     }
 
    
@@ -242,6 +243,7 @@ class Page2: UIViewController {
         super.viewDidLoad()
        
         confeteVermelho.layer.zPosition = 0
+        confeteVermelho.layer.opacity = 0.5
         b2.layer.zPosition = 1
     }
     
@@ -257,13 +259,14 @@ class Page3: UIViewController {
     }
    
     override func viewWillAppear(_ animated: Bool) {
-        confeteAzul.layer.zPosition = 0
-
+    
         confeteAzul.isHidden = false
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         b3.layer.zPosition = 1
+        confeteAzul.layer.zPosition = 0
+        confeteAzul.layer.opacity = 0.5
     }
     
     @IBAction func gotoApp(_ sender: Any) {
