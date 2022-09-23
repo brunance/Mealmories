@@ -11,7 +11,7 @@
 		4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED12F728AA8A80002113D3 /* SceneDelegate.swift */; };
 		4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FB28AA8A80002113D3 /* Main.storyboard */; };
 		4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FE28AA8A83002113D3 /* Assets.xcassets */; };
-		511625B928DB5A2700CB2842 /* OnBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511625B828DB5A2700CB2842 /* OnBoard.storyboard */; };
+		511625BC28DE476A00CB2842 /* OnBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511625BE28DE476A00CB2842 /* OnBoard.storyboard */; };
 		513F103D28D9F939000C8CFC /* IsInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F103C28D9F939000C8CFC /* IsInitialVC.swift */; };
 		513F103F28D9F95E000C8CFC /* IsInitialuser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */; };
 		513F104328D9FF91000C8CFC /* OnBoardVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F104228D9FF91000C8CFC /* OnBoardVc.swift */; };
@@ -59,7 +59,10 @@
 		4FED12FC28AA8A80002113D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FED12FE28AA8A83002113D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FED130328AA8A83002113D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		511625B828DB5A2700CB2842 /* OnBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoard.storyboard; sourceTree = "<group>"; };
+		511625BD28DE476A00CB2842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OnBoard.storyboard; sourceTree = "<group>"; };
+		511625C028DE476C00CB2842 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OnBoard.strings; sourceTree = "<group>"; };
+		511625C428DE476E00CB2842 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/OnBoard.strings"; sourceTree = "<group>"; };
+		511625C528DE477A00CB2842 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/OnBoard.strings; sourceTree = "<group>"; };
 		513F103C28D9F939000C8CFC /* IsInitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsInitialVC.swift; sourceTree = "<group>"; };
 		513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IsInitialuser.storyboard; sourceTree = "<group>"; };
 		513F104228D9FF91000C8CFC /* OnBoardVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardVc.swift; sourceTree = "<group>"; };
@@ -157,7 +160,7 @@
 				66AAE5C928CC2EC900915D62 /* ListRecipesScreen.storyboard */,
 				513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */,
 				66AAE5C428CC2CAA00915D62 /* ChosenRecipe.storyboard */,
-				511625B828DB5A2700CB2842 /* OnBoard.storyboard */,
+				511625BE28DE476A00CB2842 /* OnBoard.storyboard */,
 				66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */,
 				66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */,
 				663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */,
@@ -316,7 +319,7 @@
 				4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */,
 				665C691028BCF63900E9F1FA /* iniciar-receita.mp3 in Resources */,
 				4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */,
-				511625B928DB5A2700CB2842 /* OnBoard.storyboard in Resources */,
+				511625BC28DE476A00CB2842 /* OnBoard.storyboard in Resources */,
 				51862A8128AE90CE00C5F3AE /* Baloo2-Regular.ttf in Resources */,
 				66AAE5C228CC2CAA00915D62 /* ChosenRecipe.storyboard in Resources */,
 				66AAE5CC28CC2FBA00915D62 /* ConfigScreen.storyboard in Resources */,
@@ -373,6 +376,17 @@
 				66097CE628CD8E8900A9B6BA /* he */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		511625BE28DE476A00CB2842 /* OnBoard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				511625BD28DE476A00CB2842 /* Base */,
+				511625C028DE476C00CB2842 /* en */,
+				511625C428DE476E00CB2842 /* pt-BR */,
+				511625C528DE477A00CB2842 /* he */,
+			);
+			name = OnBoard.storyboard;
 			sourceTree = "<group>";
 		};
 		66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */ = {
