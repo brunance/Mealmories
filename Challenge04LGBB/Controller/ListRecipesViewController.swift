@@ -23,6 +23,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.tintColor = UIColor.label
+        
         BackBarButton()
         tablleViewReceitasRapidas.dataSource = self
         tablleViewReceitasRapidas.delegate = self
