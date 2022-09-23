@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 var soundEffect = false
+var hapticEffect = false
 
 class ChosenRecipeViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
@@ -54,6 +55,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         print("papa Olho:\(UserKeys.StatusEye)")
         let defaults = UserDefaults.standard
         soundEffect = defaults.bool(forKey: "Sound")
+        hapticEffect = defaults.bool(forKey: "Haptic")
     }
     
     private func setTableView(){
@@ -123,7 +125,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     
     @IBAction func playSound(_ sender: Any){
         navigation(destino: "Recipe")
-        if haptic == true {
+        if hapticEffect == true {
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.success)
         }
