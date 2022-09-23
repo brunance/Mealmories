@@ -12,7 +12,6 @@
 		4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FB28AA8A80002113D3 /* Main.storyboard */; };
 		4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FE28AA8A83002113D3 /* Assets.xcassets */; };
 		511625B928DB5A2700CB2842 /* OnBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511625B828DB5A2700CB2842 /* OnBoard.storyboard */; };
-		511625BB28DB632D00CB2842 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511625BA28DB632D00CB2842 /* File.swift */; };
 		513F103D28D9F939000C8CFC /* IsInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F103C28D9F939000C8CFC /* IsInitialVC.swift */; };
 		513F103F28D9F95E000C8CFC /* IsInitialuser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */; };
 		513F104328D9FF91000C8CFC /* OnBoardVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F104228D9FF91000C8CFC /* OnBoardVc.swift */; };
@@ -61,7 +60,6 @@
 		4FED12FE28AA8A83002113D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FED130328AA8A83002113D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		511625B828DB5A2700CB2842 /* OnBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoard.storyboard; sourceTree = "<group>"; };
-		511625BA28DB632D00CB2842 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		513F103C28D9F939000C8CFC /* IsInitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsInitialVC.swift; sourceTree = "<group>"; };
 		513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IsInitialuser.storyboard; sourceTree = "<group>"; };
 		513F104228D9FF91000C8CFC /* OnBoardVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardVc.swift; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 				4FED12FB28AA8A80002113D3 /* Main.storyboard */,
 				66AAE5CE28CC2FBA00915D62 /* ConfigScreen.storyboard */,
 				66AAE5C928CC2EC900915D62 /* ListRecipesScreen.storyboard */,
-				511625BA28DB632D00CB2842 /* File.swift */,
 				513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */,
 				66AAE5C428CC2CAA00915D62 /* ChosenRecipe.storyboard */,
 				511625B828DB5A2700CB2842 /* OnBoard.storyboard */,
@@ -350,7 +347,6 @@
 				66AAE5BB28CC224700915D62 /* Localize+Extension.swift in Sources */,
 				4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */,
 				5165C1BF28BFA61900F5F1CF /* ChoosenModel.swift in Sources */,
-				511625BB28DB632D00CB2842 /* File.swift in Sources */,
 				660EB4AD28B90E6E007D2425 /* EndRecipeViewController.swift in Sources */,
 				665C691728BD096F00E9F1FA /* ForgotRecipeViewController.swift in Sources */,
 				666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */,
@@ -570,7 +566,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2VBT66DD5V;
+				DEVELOPMENT_TEAM = XKBJR2ZWTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mealmories!";
@@ -587,7 +583,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MealmoriesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MealmoriesAppg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -602,7 +598,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2VBT66DD5V;
+				DEVELOPMENT_TEAM = XKBJR2ZWTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mealmories!";
@@ -619,7 +615,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MealmoriesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MealmoriesAppg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
