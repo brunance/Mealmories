@@ -12,11 +12,14 @@ class ViewController: UIPageViewController {
     let nextButton = UIButton()
     let skipButton = UIButton()
     
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(.portrait)
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = UIColor(named: "CorDaview")
         setup()
         style()
         layout()
@@ -57,12 +60,12 @@ extension ViewController {
         pageControl.currentPage = initialPage
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.setTitleColor(.blue, for: .normal)
+        nextButton.setTitleColor(.clear, for: .normal)
         nextButton.setTitle("Next", for: .normal)
         nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .primaryActionTriggered)
         
         skipButton.translatesAutoresizingMaskIntoConstraints = false
-        skipButton.setTitleColor(.blue, for: .normal)
+        skipButton.setTitleColor(.clear, for: .normal)
         skipButton.setTitle("Skip", for: .normal)
         skipButton.addTarget(self, action: #selector(skipTapped(_:)), for: .primaryActionTriggered)
        
@@ -142,8 +145,7 @@ extension ViewController: UIPageViewControllerDataSource {
      
        
         if currentIndex == 0 {
-            
-            return pages.last
+            return nil
         } else {
             return pages[currentIndex - 1]
         }
@@ -157,12 +159,11 @@ extension ViewController: UIPageViewControllerDataSource {
         }
         if currentIndex < pages.count - 1 {
             return pages[currentIndex + 1]
-            nextButton.isEnabled = true
         }
         
         else {
             nextButton.isEnabled = true
-            return pages.first
+            return nil
         }
         
     }
@@ -210,7 +211,7 @@ class Page1: UIViewController {
     @IBOutlet weak var confeteAmarelo: UIImageView!
     @IBOutlet weak var botao1: UIButton!
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         confeteAmarelo.isHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -231,7 +232,7 @@ class Page2: UIViewController {
     @IBOutlet weak var b2: UIButton!
     @IBOutlet weak var confeteVermelho: UIImageView!
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         confeteVermelho.isHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -250,15 +251,18 @@ class Page3: UIViewController {
     @IBOutlet weak var confeteAzul: UIImageView!
     @IBOutlet weak var b3: UIButton!
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         confeteAzul.isHidden = true
+        
     }
+   
     override func viewWillAppear(_ animated: Bool) {
+        confeteAzul.layer.zPosition = 0
+
         confeteAzul.isHidden = false
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        confeteAzul.layer.zPosition = 0
         b3.layer.zPosition = 1
     }
     
