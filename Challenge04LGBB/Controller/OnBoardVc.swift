@@ -4,17 +4,19 @@ import UIKit
 let storyBoard: UIStoryboard = UIStoryboard(name: "OnBoard", bundle: nil)
 
 class ViewController: UIPageViewController {
-   
+
    
     var pages = [UIViewController]()
     let pageControl = UIPageControl() // external - not part of underlying pages
     let initialPage = 0
     let nextButton = UIButton()
     let skipButton = UIButton()
-
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setup()
         style()
         layout()
@@ -55,12 +57,12 @@ extension ViewController {
         pageControl.currentPage = initialPage
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.setTitleColor(.clear, for: .normal)
+        nextButton.setTitleColor(.blue, for: .normal)
         nextButton.setTitle("Next", for: .normal)
         nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .primaryActionTriggered)
         
         skipButton.translatesAutoresizingMaskIntoConstraints = false
-        skipButton.setTitleColor(.clear, for: .normal)
+        skipButton.setTitleColor(.blue, for: .normal)
         skipButton.setTitle("Skip", for: .normal)
         skipButton.addTarget(self, action: #selector(skipTapped(_:)), for: .primaryActionTriggered)
        
@@ -75,20 +77,18 @@ extension ViewController {
         
         NSLayoutConstraint.activate([
             
+           
+            
             pageControl.widthAnchor.constraint(equalTo: view.widthAnchor),
-            pageControl.heightAnchor.constraint(equalToConstant: 40),
-            view.bottomAnchor.constraint(equalToSystemSpacingBelow: pageControl.bottomAnchor, multiplier: 1),
+            pageControl.heightAnchor.constraint(equalToConstant: 20),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: pageControl.bottomAnchor, multiplier:8),
             
             nextButton.widthAnchor.constraint(equalToConstant: 70),
             nextButton.heightAnchor.constraint(equalToConstant: 55),
             nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 300),
             nextButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 728),
             
-//            nextButton.widthAnchor.constraint(equalToConstant: 70),
-//            nextButton.heightAnchor.constraint(equalToConstant: 55),
-//            nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 300),
-//            nextButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 728),
-//
+
             skipButton.widthAnchor.constraint(equalToConstant: 70),
             skipButton.heightAnchor.constraint(equalToConstant: 55),
             skipButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -116,6 +116,7 @@ extension ViewController {
     @objc func nextTapped(_ sender: UIButton) {
         pageControl.currentPage += 1
         goToNextPage()
+     
        
     }
 }
@@ -124,8 +125,7 @@ extension ViewController {
 
 extension ViewController {
     
-    // How we change page when pageControl tapped.
-    // Note - Can only skip ahead on page at a time.
+   
     @objc func pageControlTapped(_ sender: UIPageControl) {
         setViewControllers([pages[sender.currentPage]], direction: .forward, animated: true, completion: nil)
     }
@@ -137,9 +137,12 @@ extension ViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
+       
         guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
-        
+     
+       
         if currentIndex == 0 {
+            
             return pages.last
         } else {
             return pages[currentIndex - 1]
@@ -149,13 +152,19 @@ extension ViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
-
+        if currentIndex == 1{
+            nextButton.isEnabled = false
+        }
         if currentIndex < pages.count - 1 {
             return pages[currentIndex + 1]
+            nextButton.isEnabled = true
         }
+        
         else {
+            nextButton.isEnabled = true
             return pages.first
         }
+        
     }
 }
 
@@ -198,25 +207,68 @@ extension UIPageViewController {
 
 class Page1: UIViewController {
     
-   
+    @IBOutlet weak var confeteAmarelo: UIImageView!
+    @IBOutlet weak var botao1: UIButton!
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        confeteAmarelo.isHidden = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        confeteAmarelo.isHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        confeteAmarelo.layer.zPosition = 0
+        botao1.layer.zPosition = 1
     }
 
+   
 }
 
 class Page2: UIViewController {
+    
+    @IBOutlet weak var b2: UIButton!
+    @IBOutlet weak var confeteVermelho: UIImageView!
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        confeteVermelho.isHidden = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        confeteVermelho.isHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        confeteVermelho.layer.zPosition = 0
+        b2.layer.zPosition = 1
     }
     
 }
 
 class Page3: UIViewController {
+    @IBOutlet weak var confeteAzul: UIImageView!
+    @IBOutlet weak var b3: UIButton!
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        confeteAzul.isHidden = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        confeteAzul.isHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        confeteAzul.layer.zPosition = 0
+        b3.layer.zPosition = 1
     }
+    
+    @IBAction func gotoApp(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
+        let targetNavigationController = UINavigationController(rootViewController: newViewController)
+        targetNavigationController.modalPresentationStyle = .fullScreen
+        
+        self.present(targetNavigationController, animated: true, completion: nil)
+    }
+    
 }

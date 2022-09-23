@@ -12,8 +12,8 @@
         <array key="Baloo2-Bold.ttf">
             <string>Baloo2-Bold</string>
         </array>
-        <array key="Baloo2-Regular.ttf">
-            <string>Baloo2-Regular</string>
+        <array key="Baloo2-SemiBold.ttf">
+            <string>Baloo2-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -52,10 +52,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você enconta a receita mais apropriada para fazer pela duração, nível e faixa etária infantil!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHU-it-w2l">
-                                <rect key="frame" x="16" y="543" width="329" height="54"/>
+                                <rect key="frame" x="16" y="543" width="374" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="17"/>
+                                <color key="textColor" name="Mealmories_Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJa-y1-qj5">
@@ -71,14 +71,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="confete.amarelo" translatesAutoresizingMaskIntoConstraints="NO" id="C91-5W-9pQ">
+                                <rect key="frame" x="-130" y="634" width="294" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="CorDaview"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wyQ-OI-gb6"/>
+                    <connections>
+                        <outlet property="botao1" destination="Zm7-fv-9vI" id="lY0-e6-BDm"/>
+                        <outlet property="confeteAmarelo" destination="C91-5W-9pQ" id="uco-9g-35B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="56.92307692307692" y="-23.459715639810426"/>
+            <point key="canvasLocation" x="986.15384615384608" y="-23.459715639810426"/>
         </scene>
         <!--Page2-->
         <scene sceneID="jxV-2O-z95">
@@ -100,10 +109,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estimule cooperação na cozinha por meio de turnos e instruções." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKc-AG-6bd">
-                                <rect key="frame" x="16" y="533" width="358" height="54"/>
+                                <rect key="frame" x="16" y="533" width="358" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="17"/>
+                                <color key="textColor" name="Mealmories_Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkB-W7-dVI">
@@ -134,14 +143,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="confete" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-c6-cHk">
+                                <rect key="frame" x="-130" y="634" width="349" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CLy-BP-ivP"/>
                         <color key="backgroundColor" name="CorDaview"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nCS-SL-Ptq"/>
+                    <connections>
+                        <outlet property="b2" destination="XkB-W7-dVI" id="0Nb-90-AKW"/>
+                        <outlet property="confeteVermelho" destination="GIf-c6-cHk" id="FxS-Tt-AH7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHw-ii-lIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796.92307692307691" y="-23.459715639810426"/>
+            <point key="canvasLocation" x="2655.3846153846152" y="-23.459715639810426"/>
         </scene>
         <!--Page3-->
         <scene sceneID="5D0-gV-ixw">
@@ -163,19 +181,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Capture momentos mais inesperados ou divertidos sem sair do App!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlC-63-IfU">
-                                <rect key="frame" x="18" y="534" width="336" height="54"/>
+                                <rect key="frame" x="18" y="534" width="336" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="17"/>
+                                <color key="textColor" name="Mealmories_Gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg7-T8-k4e">
-                                <rect key="frame" x="18" y="717" width="94" height="52"/>
+                                <rect key="frame" x="18" y="739" width="336" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Adulto_Blue"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Pular">
+                                <buttonConfiguration key="configuration" style="plain" title="Vamos Cozinhar!">
                                     <fontDescription key="titleFontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
@@ -183,32 +201,34 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="gotoApp:" destination="5XF-6g-9oU" eventType="touchUpInside" id="Hxb-l3-643"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2U-gI-gJn">
-                                <rect key="frame" x="323" y="717" width="51" height="52"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="confete.azul" translatesAutoresizingMaskIntoConstraints="NO" id="Xkj-ie-Ewq">
+                                <rect key="frame" x="-130" y="634" width="349" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Adulto_Blue"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Seta 2"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="heT-AN-Q3H"/>
                         <color key="backgroundColor" name="CorDaview"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rTe-nZ-6L7"/>
+                    <connections>
+                        <outlet property="b3" destination="tg7-T8-k4e" id="8XZ-nb-ouY"/>
+                        <outlet property="confeteAzul" destination="Xkj-ie-Ewq" id="4pb-z9-JX3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8t1-PS-88C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1533.8461538461538" y="-23.459715639810426"/>
+            <point key="canvasLocation" x="4475.3846153846152" y="-23.459715639810426"/>
         </scene>
     </scenes>
     <resources>
         <image name="Seta 2" width="33" height="33"/>
+        <image name="confete" width="221" height="213"/>
+        <image name="confete.amarelo" width="221" height="213"/>
+        <image name="confete.azul" width="221" height="213"/>
         <image name="ob.1" width="350" height="350"/>
         <image name="ob.2" width="350" height="350"/>
         <image name="ob.3" width="350" height="350"/>
@@ -220,6 +240,9 @@
         </namedColor>
         <namedColor name="CorDaview">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mealmories_Gray">
+            <color red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Mix_Magenta">
             <color red="0.97647058823529409" green="0.38039215686274508" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

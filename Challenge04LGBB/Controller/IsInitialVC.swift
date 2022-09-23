@@ -22,9 +22,9 @@ class IsInitialUser : UIViewController{
             newViewController = ViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: .none)
             newViewController.modalPresentationStyle = .fullScreen
             self.present(newViewController, animated:true, completion:nil)
-            
-            
-            LandscapeManager.shared.isFirstLaunch = true
+
+
+//            LandscapeManager.shared.isFirstLaunch = true
 //            let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
 //            let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
 //
