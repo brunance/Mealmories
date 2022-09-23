@@ -18,8 +18,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     @IBOutlet weak var labelTurno: UILabel!
     @IBOutlet weak var labelImagem: UILabel!
     @IBOutlet weak var viewTurno: UIView!
-    @IBOutlet weak var labelEtapa: UILabel!
-    @IBOutlet weak var viewEtapa: UIView!
+    @IBOutlet weak var imagemTurno: UIImageView!
     @IBOutlet weak var CorDoFundoDaTela: UIView!
     @IBOutlet weak var LampImage: UIImageView!
     @IBOutlet weak var LabelDica: UILabel!
@@ -178,8 +177,13 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         botaoir.backgroundColor = recipes[escolha].CorDaTela[count]
         botaovoltar.backgroundColor = recipes[escolha].CorDaTela[count]
         viewTurno.backgroundColor = recipes[escolha].CorDoFundoDatela[count]
-        viewEtapa.backgroundColor = recipes[escolha].CorDasEtapas[count]
-        labelEtapa.text = "\(recipes[escolha].Etapa[count])".localize()
+        if recipes[escolha].pessoaTurno[count] == "Adulto" {
+            imagemTurno.image = UIImage(named: "turno.adulto")
+        }else if recipes[escolha].pessoaTurno[count] == "Criança" {
+            imagemTurno.image = UIImage(named: "turno.child")
+        }else {
+            imagemTurno.image = UIImage(named: "turno.mix")
+        }
         CorDoFundoDaTela.backgroundColor = recipes[escolha].CorDoFundoDatela[count]
         labelTurno.text = "\(recipes[escolha].pessoaTurno[count])".localize()
         labelIntrucao.text = "\(recipes[escolha].descricaoReceita[count])".localize()
