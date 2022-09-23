@@ -58,6 +58,7 @@ extension ViewController {
         pageControl.pageIndicatorTintColor = .systemGray2
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = initialPage
+       
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.setTitleColor(.clear, for: .normal)
@@ -89,14 +90,14 @@ extension ViewController {
             nextButton.widthAnchor.constraint(equalToConstant: 70),
             nextButton.heightAnchor.constraint(equalToConstant: 55),
             nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 300),
-            nextButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 728),
+            nextButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 650),
             
 
             skipButton.widthAnchor.constraint(equalToConstant: 70),
             skipButton.heightAnchor.constraint(equalToConstant: 55),
             skipButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             skipButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -293),
-            skipButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 728),
+            skipButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 650),
             
             
             
@@ -143,7 +144,10 @@ extension ViewController: UIPageViewControllerDataSource {
        
         guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
      
-       
+//        if currentIndex == 0 {pageControl.backgroundColor = UIColor.red}
+//        if currentIndex == 1 {pageControl.backgroundColor = UIColor.blue}
+//        if currentIndex == 2 {pageControl.backgroundColor = UIColor.green}
+        
         if currentIndex == 0 {
             return nil
         } else {
