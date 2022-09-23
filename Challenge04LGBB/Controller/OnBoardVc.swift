@@ -31,11 +31,13 @@ extension ViewController {
         dataSource = self
         delegate = self
         pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
-
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "OnBoard", bundle: nil)
+        
         // create an array of viewController
-        let page1 = ViewController1()
-        let page2 = ViewController2()
-        let page3 = ViewController3()
+        let page1 = storyBoard.instantiateViewController(withIdentifier: "Page1") as! Page1
+        let page2 = storyBoard.instantiateViewController(withIdentifier: "Page2") as! Page2
+        let page3 = storyBoard.instantiateViewController(withIdentifier: "Page3") as! Page3
 
         pages.append(page1)
         pages.append(page2)
@@ -119,23 +121,20 @@ extension ViewController: UIPageViewControllerDelegate {
 
 // MARK: - ViewControllers
 
-class ViewController1: UIViewController {
+class Page1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemRed
     }
 }
 
-class ViewController2: UIViewController {
+class Page2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGreen
     }
 }
 
-class ViewController3: UIViewController {
+class Page3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
     }
 }
