@@ -99,7 +99,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
             // we got back an error!
             showAlertWith(title: "Save error", message: error.localizedDescription)
         } else {
-            showAlertWith(title: "Saved!", message: "Your image has been saved to your photos.")
+            showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
         }
     }
 
