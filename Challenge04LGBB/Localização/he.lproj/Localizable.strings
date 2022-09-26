@@ -6,9 +6,11 @@
   
 */
 
-"Foto Salva!" = "התמונה נשמרה";
-"A sua foto foi salva em sua galeria com sucesso!." = "התמונה שלך נשמרה בגלריה שלך בהצלחה!.";
-;"שמירת התמונה נכשלה" = "Falha ao salvar foto"
+"Settings" = "הגדרות";;
+"Cancel" = = "ביטול";
+"Permission Required" = "דרושה רשות";
+"To save images, you need to enable permission in settings" = "כדי לשמור תמונות, עליך להפעיל הרשאה בהגדרות";
+
 //Titulo-Receitas
 "Pão de Queijo" = "לחם גבינה";
 "Pipoca" = "פופקורן";

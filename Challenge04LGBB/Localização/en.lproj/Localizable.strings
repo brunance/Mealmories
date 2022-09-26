@@ -5,10 +5,10 @@
   Created by Luciano Uchoa on 09/09/22.
   
 */
-
-"Foto Salva!" = "Photo Saved";
-"A sua foto foi salva em sua galeria com sucesso!." = "Your photo has been saved to your gallery successfully!.";
-"Falha ao salvar foto" = "Failed to save photo";
+"Ajustes" == "Settings";
+"Cancelar" == "Cancel";
+"Permissão Necessária" = "Permission Required";
+"Para salvar as fotos, é necessário habilitar a permissão nos Ajustes" = "To save photos, you need to enable permission in Settings";
 
 //Titulo-Receitas
 "Pão de Queijo" = "Cheese Bread";

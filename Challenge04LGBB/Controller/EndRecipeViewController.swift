@@ -109,10 +109,9 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         if let error = error {
             // we got back an error!
             showAlertWith(title: "Save error", message: error.localizedDescription)
-        } else {
-            showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
         }
     }
+    
     @IBAction func sharePhoto(_ sender: Any) {
         
         let renderer = UIGraphicsImageRenderer(size: MedalhaView.bounds.size)

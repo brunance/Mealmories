@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 import ARKit
 import AVFoundation
+import PhotosUI
 
 var eye = false
 var sound = false
@@ -351,20 +352,20 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     @IBAction func takePhoto(_ sender: UIButton) {
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
             if response {
-                autorizacao = true
+                DispatchQueue.main.async {
+                    guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+                        self.selectImageFrom(.photoLibrary)
+                        return
+                    }
+                    self.selectImageFrom(.camera)
+                    if haptic == true {
+                        let generator = UINotificationFeedbackGenerator()
+                        generator.notificationOccurred(.warning)
+                    }
+                }
             }
         }
-        if autorizacao == true {
-            guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-                selectImageFrom(.photoLibrary)
-                return
-            }
-            selectImageFrom(.camera)
-            if haptic == true {
-                let generator = UINotificationFeedbackGenerator()
-                generator.notificationOccurred(.warning)
-            }
-        }
+        
     }
     
     func selectImageFrom(_ source: ImageSource){
@@ -390,11 +391,21 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     
     //MARK: - Add image to Library
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        if let error = error {
-            // we got back an error!
-            showAlertWith(title: "Falha ao salvar foto".localize(), message: error.localizedDescription)
-        } else {
-            showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
+        PHPhotoLibrary.requestAuthorization(for: .addOnly) { [unowned self] (status) in
+            DispatchQueue.main.async { [unowned self] in
+                let alertController = UIAlertController(title: "Permissão Necessária".localize(), message: "Para salvar as fotos, é necessário habilitar a permissão nos Ajustes".localize(), preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Ajustes".localize(), style: .cancel) { _ in
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(url, options: [:] , completionHandler: {
+                            _ in
+                        })
+                    }
+                })
+                alertController.addAction(UIAlertAction(title: "Cancelar".localize(), style: .default))
+                
+                
+                present(alertController, animated: true)
+            }
         }
     }
     
