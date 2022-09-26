@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import AVFoundation
 
+
 class EndRecipeViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var ImageMedalha: UIImageView!
@@ -40,6 +41,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         ImagePlaceholder.layer.cornerRadius = 10
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
     }
+    
     func setupLabel(){
         let receitas = getRecipes()
         ImageMedalha.image = receitas[escolha].medalha
@@ -58,14 +60,21 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     //MARK: - Take image
     @IBAction func takePhoto(_ sender: UIButton) {
-        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-            selectImageFrom(.photoLibrary)
-            return
-        }
-        selectImageFrom(.camera)
-        if haptic == true {
-            let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(.success)
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+             if response {
+                 autorizacao = true
+             }
+         }
+        if autorizacao == true {
+            guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+                selectImageFrom(.photoLibrary)
+                return
+            }
+            selectImageFrom(.camera)
+            if haptic == true {
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.warning)
+            }
         }
     }
 
@@ -99,7 +108,10 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
             // we got back an error!
             showAlertWith(title: "Save error", message: error.localizedDescription)
         } else {
-            showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
+            if salvou == true{
+                showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
+                salvou = true
+            }
         }
     }
 

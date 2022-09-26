@@ -6,6 +6,7 @@ import AVFoundation
 var eye = false
 var sound = false
 var haptic = false
+var salvou = false
 
 class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationControllerDelegate {
     
@@ -124,9 +125,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         sceneView.delegate = self
         
     }
-    
-    
-    
     
     @IBAction func NextStep(_ sender: Any) {
         if count == recipes[escolha].numeroIntrucoes-1{
@@ -352,13 +350,22 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     
     //MARK: - Take image
     @IBAction func takePhoto(_ sender: UIButton) {
-        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-            selectImageFrom(.photoLibrary)
-            return
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+             if response {
+                 autorizacao = true
+             }
+         }
+        if autorizacao == true {
+            guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+                selectImageFrom(.photoLibrary)
+                return
+            }
+            selectImageFrom(.camera)
+            if haptic == true {
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.warning)
+            }
         }
-        selectImageFrom(.camera)
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.warning)
     }
 
     func selectImageFrom(_ source: ImageSource){
@@ -386,9 +393,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
-            showAlertWith(title: "Falha ao salvar foto", message: error.localizedDescription)
+            showAlertWith(title: "Falha ao salvar foto".localize(), message: error.localizedDescription)
         } else {
-            showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
+            if salvou == false {
+                showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
+                salvou = true
+            }
         }
     }
 
