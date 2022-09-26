@@ -28,6 +28,20 @@ class TimerController: UIViewController {
         startTime = userDefaults.object(forKey: START_TIME_KEY) as? Date
         stopTime = userDefaults.object(forKey: STOP_TIME_KEY) as? Date
         timerCounting = userDefaults.bool(forKey: COUNTING_KEY)
+        
+        if timerCounting{
+            startTimer()
+        }
+        else{
+            stopTimer()
+            if let start = startTime{
+                if let stop = stopTime{
+                    let time = calcRestartTime(start: start, stop: stop)
+                    let diff = Date().timeIntervalSince(time)
+                    setTimeLabel(Int(diff))
+                }
+            }
+        }
     }
     
     @IBAction func startStopAction(_ sender: Any) {
@@ -36,15 +50,28 @@ class TimerController: UIViewController {
             stopTimer()
         }
         else{
+            if let stop = stopTime{
+                let restartTime = calcRestartTime(start: startTime!, stop: stop)
+                setStopTime(date: nil)
+                setStartTime(date: restartTime)
+            }
+            else{
+                setStartTime(date: Date())
+            }
             startTimer()
         }
+    }
+    
+    func calcRestartTime(start: Date, stop: Date) -> Date{
+        let diff = start.timeIntervalSince(stop)
+        return Date().addingTimeInterval(diff)
     }
     
     func startTimer(){
         scheduledTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(refreshValue), userInfo: nil, repeats: true)
         setTimerCounting(true)
         startStopButton.setTitle("STOP", for: .normal)
-        startStopButton.setTitleColor(UIColor.red, for: .normal)
+//        startStopButton.setTitleColor(UIColor.red, for: .normal)
     }
     
     @objc func refreshValue(){
@@ -52,10 +79,34 @@ class TimerController: UIViewController {
             let diff = Date().timeIntervalSince(start)
             setTimeLabel(Int(diff))
         }
+        else{
+            stopTimer()
+            setTimeLabel(0)
+        }
     }
     
     func setTimeLabel(_ val: Int){
+        let time = secondsToHoursMinutesSeconds(val)
+        let timeString = makeTimeString(hour: time.0, min: time.1, sec: time.2)
+        timeLabel.text = timeString
+    }
+    
+    func secondsToHoursMinutesSeconds(_ ms: Int) -> (Int, Int, Int){
+        let hour = ms / 3600
+        let min = (ms % 3600) / 60
+        let sec = (ms % 3600) % 60
+        return(hour, min, sec)
+    }
+    
+    func makeTimeString(hour: Int, min: Int, sec:Int) -> String{
+        var timeString = ""
+        timeString += String(format: "%02d", hour)
+        timeString += ":"
+        timeString += String(format: "%02d", min)
+        timeString += ":"
+        timeString += String(format: "%02d", sec)
         
+        return timeString
     }
     
     func stopTimer(){
@@ -64,10 +115,14 @@ class TimerController: UIViewController {
         }
         setTimerCounting(false)
         startStopButton.setTitle("START", for: .normal)
-        startStopButton.setTitleColor(UIColor.red, for: .normal)
+//        startStopButton.setTitleColor(UIColor.red, for: .normal)
     }
     
     @IBAction func resetAction(_ sender: Any) {
+        setStopTime(date: nil)
+        setStartTime(date: nil)
+        timeLabel.text = makeTimeString(hour: 0, min: 0, sec: 0)
+        stopTimer()
     }
     
     func setStartTime(date: Date?){

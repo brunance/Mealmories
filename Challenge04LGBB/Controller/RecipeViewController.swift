@@ -270,6 +270,13 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             navigationController?.modalPresentationStyle = .formSheet
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
+        
+        if destino == "Timer"{
+            let storyBoard: UIStoryboard = UIStoryboard(name: "TimerScreen", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "TimerStoryboard") as! TimerController
+            
+            self.navigationController?.pushViewController(newViewController, animated: true)
+        }
     }
     
     @IBAction func goright(_ sender: Any) {
@@ -407,7 +414,14 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
     }
+    
+    
+    @IBAction func timerButton(_ sender: Any) {
+        navigation(destino: "Timer")
+    }
 }
+
+
 
 extension RecipeViewController: UIImagePickerControllerDelegate{
 
