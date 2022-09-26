@@ -21,7 +21,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     var imagePicker: UIImagePickerController!
     var escolha = 0
     
-//    let confetti = classyConfetti()
+    //    let confetti = classyConfetti()
     
     enum ImageSource {
         case photoLibrary
@@ -35,11 +35,31 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         imageTake.layer.cornerRadius = 10
     }
     
+    @IBAction func ShareButton(_ sender: Any) {
+        navigation(Destino: "Modelo")
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        confetti.emit(in: view, with: .fromCenter)
+        //        confetti.emit(in: view, with: .fromCenter)
         ImagePlaceholder.layer.cornerRadius = 10
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
+    }
+    func navigation(Destino:String){
+        if(Destino == "Home"){
+            let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
+            
+            self.navigationController?.pushViewController(newViewController, animated: true)
+        }
+        if(Destino == "Modelo"){
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Template", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Template") as! TemplateScreen
+            newViewController.image = imageTake.image
+            newViewController.escolha = escolha
+            
+            self.navigationController?.pushViewController(newViewController, animated: true)
+            
+        }
     }
     
     func setupLabel(){
@@ -52,10 +72,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     }
     
     @IBAction func BackTorecipesScreen(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
-        
-        self.navigationController?.pushViewController(newViewController, animated: true)
+       navigation(Destino: "Home")
     }
     
     //MARK: - Take image

@@ -215,7 +215,6 @@ extension ViewController {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "OnBoard", bundle: nil)
         
-        // create an array of viewController
         let page1 = storyBoard.instantiateViewController(withIdentifier: "Page1") as! Page1
         let page2 = storyBoard.instantiateViewController(withIdentifier: "Page2") as! Page2
         let page3 = storyBoard.instantiateViewController(withIdentifier: "Page3") as! Page3
