@@ -9,7 +9,7 @@ class IsInitialUser : UIViewController{
     }
     override func viewDidAppear(_ animated: Bool) {
         let modelName = UIDevice.modelName
-        if LandscapeManager.shared.isFirstLaunch && modelName.localizedStandardContains("Simulator iPhone") {
+        if LandscapeManager.shared.isFirstLaunch && modelName.localizedStandardContains("iPhone") {
             var newViewController = ViewController()
             newViewController = ViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: .none)
             newViewController.modalPresentationStyle = .fullScreen

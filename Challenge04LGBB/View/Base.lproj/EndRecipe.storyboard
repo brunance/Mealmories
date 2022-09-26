@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -223,7 +224,14 @@
                             <constraint firstItem="1MO-Jw-M2u" firstAttribute="trailing" secondItem="Dux-gE-VPe" secondAttribute="trailingMargin" id="xgP-dy-mVk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0Wd-3d-Ww9"/>
+                    <navigationItem key="navigationItem" id="0Wd-3d-Ww9">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="wiJ-4C-ECs">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="ShareButton:" destination="WN3-Ie-LiG" id="Lxu-4u-vak"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="CameraButton" destination="996-w9-6dY" id="fe2-Kh-cTn"/>
                         <outlet property="ImageMedalha" destination="zb0-a3-5oF" id="foc-WA-HbE"/>
@@ -273,5 +281,8 @@
         <namedColor name="Mix_Magenta">
             <color red="0.97647058823529409" green="0.38039215686274508" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
