@@ -14,6 +14,8 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     @IBOutlet weak var ImageMedalha: UIImageView!
     @IBOutlet weak var endButton: UIButton!
+    @IBOutlet weak var MedalhaView: UIView!
+    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var labelDesbloqueio: UILabel!
     @IBOutlet weak var CameraButton: UIButton!
     @IBOutlet weak var ImagePlaceholder: UIView!
@@ -21,7 +23,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     var imagePicker: UIImagePickerController!
     var escolha = 0
     
-//    let confetti = classyConfetti()
+    //    let confetti = classyConfetti()
     
     enum ImageSource {
         case photoLibrary
@@ -37,7 +39,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        confetti.emit(in: view, with: .fromCenter)
+        //        confetti.emit(in: view, with: .fromCenter)
         ImagePlaceholder.layer.cornerRadius = 10
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
     }
@@ -61,10 +63,10 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     //MARK: - Take image
     @IBAction func takePhoto(_ sender: UIButton) {
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
-             if response {
-                 autorizacao = true
-             }
-         }
+            if response {
+                autorizacao = true
+            }
+        }
         if autorizacao == true {
             guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
                 selectImageFrom(.photoLibrary)
@@ -77,7 +79,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
             }
         }
     }
-
+    
     func selectImageFrom(_ source: ImageSource){
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
@@ -89,7 +91,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         }
         present(imagePicker, animated: true, completion: nil)
     }
-
+    
     //MARK: - Saving Image here
     func save(_ sender: AnyObject) {
         guard let selectedImage = imageTake.image else {
@@ -101,20 +103,32 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         CameraButton.isHidden = true
         ImagePlaceholder.isHidden = true
     }
-
+    
     //MARK: - Add image to Library
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
             showAlertWith(title: "Save error", message: error.localizedDescription)
         } else {
-            if salvou == true{
-                showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
-                salvou = true
-            }
+            showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
         }
     }
-
+    @IBAction func sharePhoto(_ sender: Any) {
+        
+        let renderer = UIGraphicsImageRenderer(size: MedalhaView.bounds.size)
+        let image2 = renderer.image { ctx in
+            MedalhaView.drawHierarchy(in: MedalhaView.bounds, afterScreenUpdates: true)
+        }
+        
+        let imageToShare = [ image2, imageTake ]
+        
+        let activityViewController = UIActivityViewController(activityItems: imageToShare as [Any], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        self.present(activityViewController, animated: true, completion: nil)
+        
+    }
+    
     func showAlertWith(title: String, message: String){
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
@@ -123,16 +137,16 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
 }
 
 extension EndRecipeViewController: UIImagePickerControllerDelegate{
-
-   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
-       imagePicker.dismiss(animated: true, completion: nil)
-       guard let selectedImage = info[.originalImage] as? UIImage else {
-           print("Image not found!")
-           return
-       }
-       imageTake.image = selectedImage
-       save(self)
-   }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        imagePicker.dismiss(animated: true, completion: nil)
+        guard let selectedImage = info[.originalImage] as? UIImage else {
+            print("Image not found!")
+            return
+        }
+        imageTake.image = selectedImage
+        save(self)
+    }
 }
 
 
