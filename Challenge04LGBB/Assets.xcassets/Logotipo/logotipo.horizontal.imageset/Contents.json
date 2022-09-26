@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "logotipo.horizontal-1.svg",
+      "filename" : "logotipo.horizontal.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "logotipo.horizontal-3.svg",
+      "filename" : "logotipo.horizontal 1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "logotipo.horizontal-2.svg",
+      "filename" : "logotipo.horizontal 2.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
