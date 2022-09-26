@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F641BC228E1DECF007FAF50 /* TimerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F641BC128E1DECF007FAF50 /* TimerScreen.storyboard */; };
+		4F641BCC28E1E4A6007FAF50 /* TImerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F641BCB28E1E4A6007FAF50 /* TImerController.swift */; };
 		4FED12F628AA8A80002113D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED12F528AA8A80002113D3 /* AppDelegate.swift */; };
 		4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED12F728AA8A80002113D3 /* SceneDelegate.swift */; };
 		4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FB28AA8A80002113D3 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		4F10029928AD21540052D2B8 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
 		4F10029A28AD21540052D2B8 /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
 		4F10029B28AD21540052D2B8 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4F641BC128E1DECF007FAF50 /* TimerScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerScreen.storyboard; sourceTree = "<group>"; };
+		4F641BCB28E1E4A6007FAF50 /* TImerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImerController.swift; sourceTree = "<group>"; };
 		4FED12F228AA8A80002113D3 /* Mealmories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealmories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FED12F528AA8A80002113D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FED12F728AA8A80002113D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 				660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */,
 				660EB4AC28B90E6E007D2425 /* EndRecipeViewController.swift */,
 				665C691628BD096F00E9F1FA /* ForgotRecipeViewController.swift */,
+				4F641BCB28E1E4A6007FAF50 /* TImerController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */,
 				66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */,
 				663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */,
+				4F641BC128E1DECF007FAF50 /* TimerScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			files = (
 				66AAE5B528CC1C4A00915D62 /* Localizable.strings in Resources */,
 				51862A8028AE90CE00C5F3AE /* Baloo2-Bold.ttf in Resources */,
+				4F641BC228E1DECF007FAF50 /* TimerScreen.storyboard in Resources */,
 				665C691228BCF63900E9F1FA /* voltar.mp3 in Resources */,
 				4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */,
 				665C691028BCF63900E9F1FA /* iniciar-receita.mp3 in Resources */,
@@ -361,6 +368,7 @@
 				6608016128ABEDB2005FC8A0 /* RecipeViewController.swift in Sources */,
 				513F104328D9FF91000C8CFC /* OnBoardVc.swift in Sources */,
 				51A0099D28CF8682005A4465 /* ProgressBarClass.swift in Sources */,
+				4F641BCC28E1E4A6007FAF50 /* TImerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
