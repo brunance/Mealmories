@@ -363,6 +363,21 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
                         generator.notificationOccurred(.warning)
                     }
                 }
+            }else {
+                DispatchQueue.main.async { [unowned self] in
+                    let alertController = UIAlertController(title: "Permissão Necessária".localize(), message: "Para salvar as fotos, é necessário habilitar a permissão nos Ajustes".localize(), preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ajustes".localize(), style: .cancel) { _ in
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            UIApplication.shared.open(url, options: [:] , completionHandler: {
+                                _ in
+                            })
+                        }
+                    })
+                    alertController.addAction(UIAlertAction(title: "Cancelar".localize(), style: .default))
+                    
+                    
+                    present(alertController, animated: true)
+                }
             }
         }
         
@@ -391,20 +406,22 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     
     //MARK: - Add image to Library
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        PHPhotoLibrary.requestAuthorization(for: .addOnly) { [unowned self] (status) in
-            DispatchQueue.main.async { [unowned self] in
-                let alertController = UIAlertController(title: "Permissão Necessária".localize(), message: "Para salvar as fotos, é necessário habilitar a permissão nos Ajustes".localize(), preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Ajustes".localize(), style: .cancel) { _ in
-                    if let url = URL(string: UIApplication.openSettingsURLString) {
-                        UIApplication.shared.open(url, options: [:] , completionHandler: {
-                            _ in
-                        })
-                    }
-                })
-                alertController.addAction(UIAlertAction(title: "Cancelar".localize(), style: .default))
-                
-                
-                present(alertController, animated: true)
+        PHPhotoLibrary.requestAuthorization(for: .addOnly) { response in
+            if response == PHAuthorizationStatus.denied{
+                DispatchQueue.main.async { [unowned self] in
+                    let alertController = UIAlertController(title: "Permissão Necessária".localize(), message: "Para salvar as fotos, é necessário habilitar a permissão nos Ajustes".localize(), preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ajustes".localize(), style: .cancel) { _ in
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            UIApplication.shared.open(url, options: [:] , completionHandler: {
+                                _ in
+                            })
+                        }
+                    })
+                    alertController.addAction(UIAlertAction(title: "Cancelar".localize(), style: .default))
+                    
+                    
+                    present(alertController, animated: true)
+                }
             }
         }
     }

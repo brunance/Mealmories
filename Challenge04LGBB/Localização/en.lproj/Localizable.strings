@@ -5,8 +5,8 @@
   Created by Luciano Uchoa on 09/09/22.
   
 */
-"Ajustes" == "Settings";
-"Cancelar" == "Cancel";
+"Ajustes" = "Settings";
+"Cancelar" = "Cancel";
 "Permissão Necessária" = "Permission Required";
 "Para salvar as fotos, é necessário habilitar a permissão nos Ajustes" = "To save photos, you need to enable permission in Settings";
 

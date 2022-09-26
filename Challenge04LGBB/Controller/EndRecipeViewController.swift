@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import AVFoundation
-
+import PhotosUI
 
 class EndRecipeViewController: UIViewController, UINavigationControllerDelegate {
     
@@ -81,18 +81,32 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     @IBAction func takePhoto(_ sender: UIButton) {
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
             if response {
-                autorizacao = true
-            }
-        }
-        if autorizacao == true {
-            guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-                selectImageFrom(.photoLibrary)
-                return
-            }
-            selectImageFrom(.camera)
-            if haptic == true {
-                let generator = UINotificationFeedbackGenerator()
-                generator.notificationOccurred(.warning)
+                DispatchQueue.main.async {
+                    guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+                        self.selectImageFrom(.photoLibrary)
+                        return
+                    }
+                    self.selectImageFrom(.camera)
+                    if haptic == true {
+                        let generator = UINotificationFeedbackGenerator()
+                        generator.notificationOccurred(.warning)
+                    }
+                }
+            }else {
+                DispatchQueue.main.async { [unowned self] in
+                    let alertController = UIAlertController(title: "Permissão Necessária".localize(), message: "Para ter acesso a camera, é necessário habilitar a permissão nos Ajustes".localize(), preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ajustes".localize(), style: .cancel) { _ in
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            UIApplication.shared.open(url, options: [:] , completionHandler: {
+                                _ in
+                            })
+                        }
+                    })
+                    alertController.addAction(UIAlertAction(title: "Cancelar".localize(), style: .default))
+                    
+                    
+                    present(alertController, animated: true)
+                }
             }
         }
     }
@@ -123,9 +137,23 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     //MARK: - Add image to Library
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        if let error = error {
-            // we got back an error!
-            showAlertWith(title: "Save error", message: error.localizedDescription)
+        PHPhotoLibrary.requestAuthorization(for: .addOnly) { response in
+            if response == PHAuthorizationStatus.denied{
+                DispatchQueue.main.async { [unowned self] in
+                    let alertController = UIAlertController(title: "Permissão Necessária".localize(), message: "Para salvar as fotos, é necessário habilitar a permissão nos Ajustes".localize(), preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ajustes".localize(), style: .cancel) { _ in
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            UIApplication.shared.open(url, options: [:] , completionHandler: {
+                                _ in
+                            })
+                        }
+                    })
+                    alertController.addAction(UIAlertAction(title: "Cancelar".localize(), style: .default))
+                    
+                    
+                    present(alertController, animated: true)
+                }
+            }
         }
     }
     

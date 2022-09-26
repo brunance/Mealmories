@@ -62,16 +62,6 @@
                                                         <color key="textColor" name="Mix_LightMagenta"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeT-zE-7wd">
-                                                        <rect key="frame" x="305" y="18" width="48" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" name="Mix_Magenta"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
-                                                        <connections>
-                                                            <action selector="sharePhoto:" destination="WN3-Ie-LiG" eventType="touchUpInside" id="4WY-01-Kil"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="LabelMagenta"/>
                                                 <constraints>
@@ -239,7 +229,6 @@
                         <outlet property="MedalhaView" destination="xEc-4E-sUQ" id="rd9-uG-dOb"/>
                         <outlet property="imageTake" destination="KD7-Wl-lLe" id="JcK-1v-z3G"/>
                         <outlet property="labelDesbloqueio" destination="IZR-Uh-86L" id="VPZ-8c-WKn"/>
-                        <outlet property="shareButton" destination="SeT-zE-7wd" id="zkf-fl-Hu6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTO-F7-6vQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
