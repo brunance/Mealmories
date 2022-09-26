@@ -12,6 +12,7 @@ import AVFoundation
 var teste = false
 var autorizacao = false
 var count = 0
+
 class ConfigViewController: UIViewController {
     
     @IBOutlet weak var touch: UISwitch!
