@@ -5,6 +5,9 @@
   Created by Luciano Uchoa on 09/09/22.
   
 */
+
+//Geral
+
 "Ajustes" = "Settings";
 "Cancelar" = "Cancel";
 "Permissão Necessária" = "Permission Required";
@@ -13,6 +16,8 @@
 //Titulo-Receitas
 "Pão de Queijo" = "Cheese Bread";
 "Pipoca" = "Popcorn";
+"Panqueca Colorida" = "Colored pancakes";
+"Mini Gelatinas" = "Mini Jellys";
 
 //Tipo de Turnos
 "Adulto" = "Adult";
@@ -26,10 +31,16 @@
 "+ 3 anos" = "+3 years old";
 "+4 anos" = "+4 years";
 "+3 anos" = "+3 years";
+"+ 5 anos" = "+5 years old";
+"+5 anos" = "+5 years";
+"+ 6 anos" = "+6 years old";
+"+6 anos" = "+6 years";
 
 //Label embaixo do Turno
 "Siga as instruções abaixo:" = "Follow the instructions bellow:";
 "Vocês podem fazer essa etapa juntos!!!" = "You can do this step together!!!";
+
+//Pão de Queijo
 
 //Ingredientes - Pão de Queijo
 
@@ -63,6 +74,8 @@
 "Preparo das formas" = "Form preparation";
 "Finalizar preparo" = "Finish preparation";
 
+//Pipoca
+
 //Ingredientes - Pipoca
 "4 colheres (sopa) de milho para pipoca" = "4 tablespoons of corn for popcorn";
 "4 colheres (sopa) de água" = "4 tablespoons of water";
@@ -87,3 +100,68 @@
 "Juntar" = "Gather";
 "Cobrir" = "Cover Up";
 "Microondas" = "Microwave";
+
+//Panqueca Colorida
+
+//Ingredientes - Panquecas Coloridas
+
+"1 xícara de leite" = "1 cup of milk";
+"2 ovos" = "2 eggs";
+"1 xícara de farinha" = "1 cup of flour";
+"1 colher de sopa de óleo" =  "1 tablespoon of oil";
+"1 colher de café rasa de sal" = "1 teaspoon of salt";
+"2 xícaras de cenoura ralada" = "2 cups grated carrots";
+"1 ½ xícara de beterraba ralada" = "1 ½ cup grated beets";
+
+//Descrição das Etapas - Panquecas Coloridas
+
+"Misture o leite, os ovos, a farinha, o óleo e o sal dentro do liquidificador." = "Mix the milk, eggs, flour, oil and salt in the blender.";
+"Se quiser a panqueca laranja, adicione cenoura ralada, se quiser a panqueca rosa, adicione a beterraba." = "If you want the orange pancake, add the grated carrot, if you want the pink pancake, add the beetroot.";
+"Bata a massa no liquidificador até ficar homogênea." = "Blend the dough in a blender until smooth.";
+"Unte uma frigideira com um pouco de manteiga." = "Grease a frying pan with some butter.";
+"Com uma concha, coloque uma porção da massa na frigideira e espalhe por toda a superfície." = "With a ladle, place a portion of the dough in the skillet and spread over the entire surface.";
+"Deixe dourar dos dois lados." = "Let it brown on both sides.";
+"Tire da frigideira e repita o processo com a concha até a massa acabar." = "Take it out of the pan and repeat the process with the ladle until the dough runs out.";
+"Retire o resto das panquecas e sirva." = "Remove the rest of the pancakes and serve.";
+
+//Dicas - Panqueca Colorida
+
+"Recomendação de recheio: carne moída, cenoura ralada, beterraba ralada, queijo branco picadinho" = "Stuffing recommendation: ground beef, grated carrots, grated beets, finely chopped white cheese";
+
+//Etapas - Panquecas Colorida
+
+"Fazer a Massa" = "Making the Dought";
+"Fritar" = "Fry";
+"Finalizar" = "Finish";
+
+//Mini Gelatina
+
+//Ingredientes - Mini gelatina
+
+"1 sachê de gelatina de sua preferência" = "1 packet of jelly of your choice";
+"250ml de agua fervendo" = "8,45 oz of boiling water";
+"250ml de agua fria" = "8,45 oz of cold water";
+"1 caixa de creme de leite" = "6,76 oz of milk cream";
+"1 caixa de leite condensado" = "6,76 oz of condensed milk";
+"1 xícara de leite" = "1 cup of milk";
+"1 suco em pó de sua preferência" = "1 powdered juice of your choice";
+"Granulados variados (opcional)" = "Assorted granules (optional)";
+
+//Descrição das Etapas - Mini gelatina
+
+"Coloque o sachê de gelatina na agua fervente e misture até dissolver todo o açúcar da gelatina." = "Place the gelatin sachet in the boiling water and mix until all the sugar in the gelatin dissolves.";
+"Adicione a água fria a gelatina e misture bem." = "Add cold water to gelatin and mix well.";
+"Coloque a gelatina em copinhos até a metade e leve a geladeira até ficarem bem durinhas." = "Pour the gelatin in cups halfway and take the fridge until they are very hard.";
+"Adicione o creme de leite, leite condensado, leite e o suco em pó no liquidificador." = "Add the cream, condensed milk, milk and powdered juice to the blender.";
+"Misture por 1 minutinho ou até ficar consistente." = "Blend for 1 minute or until consistent.";
+"Adicione o mousse por cima da gelatina no copinho." = "Add the mousse over the gelatin in the cup.";
+"Finalize com granulados (Opcional) e sirva." = "Finish with sprinkles (Optional) and serve.";
+
+//Dicas - Mini Gelatina
+
+"Decore de acordo com a cor da gelatina escolhida!" = "Decorate according to the color of the chosen jelly!";
+
+//Etapas - Mini Gelatina
+
+"Gelatina" = "Jelly";
+"Decorar" = "Decorate";
