@@ -232,9 +232,9 @@
                                                                 <rect key="frame" x="0.0" y="250" width="374" height="136"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbM-FJ-dRC">
-                                                                        <rect key="frame" x="15" y="15" width="136" height="25"/>
+                                                                        <rect key="frame" x="15" y="15" width="185" height="25"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="136" id="1U7-WH-P52"/>
+                                                                            <constraint firstAttribute="width" constant="185" id="1U7-WH-P52"/>
                                                                             <constraint firstAttribute="height" constant="25" id="Wfv-fd-y1s"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
@@ -424,9 +424,11 @@
                         <outlet property="FundoCards" destination="Lxk-06-Op5" id="z69-fc-KPm"/>
                         <outlet property="ImageCard" destination="MFF-Qi-k8q" id="Osz-bT-4wK"/>
                         <outlet property="NameCard" destination="zbM-FJ-dRC" id="MoW-J0-StO"/>
+                        <outlet property="ScrollRecipesHeight" destination="GIP-yT-xee" id="SvO-rP-KTb"/>
                         <outlet property="TimeCard" destination="c76-mQ-LoN" id="8Fa-xE-9md"/>
                         <outlet property="confete" destination="My5-cT-MKU" id="bZR-Y1-CTw"/>
                         <outlet property="difficultyCard" destination="fm9-CO-36o" id="Ie9-vA-sOd"/>
+                        <outlet property="tableViewReceitasRapidasHeight" destination="dCo-xV-Hmy" id="FH5-2n-02i"/>
                         <outlet property="tablleViewReceitasRapidas" destination="F1W-3H-fB2" id="yMZ-vV-GQP"/>
                     </connections>
                 </viewController>

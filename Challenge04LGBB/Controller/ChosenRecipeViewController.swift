@@ -76,7 +76,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     override func viewWillLayoutSubviews() {
         self.tableIngredientsHeight.constant = self.tableIngredients.contentSize.height
         self.tableEtapasHeight.constant = self.tableEtapas.contentSize.height
-        if choosenrecipe[escolha].idadeRecomendada > 5 {
+        if choosenrecipe[escolha].idadeRecomendada >= 5 {
             self.ScrollViewHeight.constant += self.tableIngredients.contentSize.height / 2.3
         }
     }

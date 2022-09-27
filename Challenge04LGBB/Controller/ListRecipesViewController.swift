@@ -13,12 +13,14 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     @IBOutlet weak var NameCard: UILabel!
     @IBOutlet weak var ImageCard: UIImageView!
     
+    @IBOutlet weak var ScrollRecipesHeight: NSLayoutConstraint!
     //Outlets das Receitas Rapidas
     @IBOutlet weak var tablleViewReceitasRapidas: UITableView!
+    @IBOutlet weak var tableViewReceitasRapidasHeight: NSLayoutConstraint!
     
     var escolha : Int = -1
     
-    let randomInt = Int.random(in: 0..<3)
+    let randomInt = Int.random(in: 0..<4)
     // 2 é o numero total de receitas
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +46,14 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         appearence.backgroundImage = nil
         appearence.shadowImage = nil
         self.navigationController?.navigationBar.standardAppearance = appearence
-
+        
+        self.ScrollRecipesHeight.constant += self.tableViewReceitasRapidasHeight.constant / 2.3
     }
+    
+    override func viewWillLayoutSubviews() {
+        self.tableViewReceitasRapidasHeight.constant += self.tablleViewReceitasRapidas.contentSize.height
+    }
+    
     func BackBarButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.setHidesBackButton(true, animated: false)
