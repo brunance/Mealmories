@@ -22,8 +22,10 @@ class Recipe {
     var Etapa:[String]
     var progressBar : [Float]
     var medalha : UIImage
+    var imagemShare : UIImage
+    var tempoDeReceita : Int
     
-    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String],CorDoFundoDatela: [UIColor],CorDasEtapas: [UIColor],Etapa:[String],progressBar:[Float],medalha:UIImage){
+    init(tituloReceita: String, numeroIntrucoes: Int, pessoaTurno: [String], descricaoReceita: [String], numeroEtapas: Int, imagemIntrucao: [UIImage],CorDaTela: [UIColor],dicas: [String],CorDoFundoDatela: [UIColor],CorDasEtapas: [UIColor],Etapa:[String],progressBar:[Float],medalha:UIImage,imagemShare:UIImage,tempoDeReceita:Int){
         self.tituloReceita = tituloReceita
         self.numeroIntrucoes = numeroIntrucoes
         self.pessoaTurno = pessoaTurno
@@ -37,6 +39,8 @@ class Recipe {
         self.Etapa = Etapa
         self.progressBar = progressBar
         self.medalha = medalha
+        self.imagemShare = imagemShare
+        self.tempoDeReceita = tempoDeReceita
        
         
     }
@@ -55,6 +59,8 @@ class Recipe {
         self.Etapa = []
         self.progressBar = []
         self.medalha = UIImage(named: "imagePlaceholder")!
+        self.imagemShare = UIImage(named: "imagePlaceholder")!
+        self.tempoDeReceita = 0
     }
 }
 
@@ -102,7 +108,8 @@ func getRecipes() -> [Recipe]{
                                      UIColor(named: "Mix_DarkMagenta")!,
                                      UIColor(named: "Adulto_DarkBlue")!,
                                      UIColor(named: "Adulto_DarkBlue")!],
-                      Etapa: ["Preparo da massa","Preparo da massa","Preparo da massa","Preparo das formas","Preparo das formas","Finalizar preparo","Finalizar preparo","Finalizar preparo","Finalizar preparo"], progressBar: [0.1111,0.2222,0.3333,0.4444,0.5555,0.6666,0.7777,0.8888,0.9999], medalha: UIImage(named: "reward.paodequeijo")!),
+                      Etapa: ["Preparo da massa","Preparo da massa","Preparo da massa","Preparo das formas","Preparo das formas","Finalizar preparo","Finalizar preparo","Finalizar preparo","Finalizar preparo"], progressBar: [0.1111,0.2222,0.3333,0.4444,0.5555,0.6666,0.7777,0.8888,0.9999], medalha: UIImage(named: "reward.paodequeijo")!,
+                     imagemShare: UIImage(named: "reward.paodequeijo.2")!,tempoDeReceita: 900),
                
                Recipe(tituloReceita: "Pipoca",
                       numeroIntrucoes: 6,
@@ -134,7 +141,8 @@ func getRecipes() -> [Recipe]{
                                      UIColor(named: "Adulto_DarkBlue")!,
                                      UIColor(named: "Mix_DarkMagenta")!,
                                      UIColor(named: "Adulto_DarkBlue")!],
-                      Etapa: ["Juntar","Juntar","Cobrir","Cobrir","Microondas","Microondas"], progressBar:[0.1666,0.3333,0.4999,0.6656,0.8322,1], medalha: UIImage(named: "reward.pipoca")!),
+                      Etapa: ["Juntar","Juntar","Cobrir","Cobrir","Microondas","Microondas"], progressBar:[0.1666,0.3333,0.4999,0.6656,0.8322,1], medalha: UIImage(named: "reward.pipoca")!,
+                      imagemShare: UIImage(named: "reward.pipoca.2")!,tempoDeReceita: 240),
     
                Recipe(tituloReceita: "Panqueca Colorida",
                       numeroIntrucoes: 8,
@@ -174,7 +182,8 @@ func getRecipes() -> [Recipe]{
                                      UIColor(named: "Adulto_DarkBlue")!,
                                      UIColor(named: "Adulto_DarkBlue")!,
                                      UIColor(named: "Adulto_DarkBlue")!],
-                      Etapa: ["Fazer a Massa","Fazer a Massa","Fazer a Massa","Fazer a Massa","Fritar","Fritar","Finalizar","Finalizar"], progressBar:[0.125,0.25,0.375,0.5,0.625,0.75,0.875,1], medalha: UIImage(named: "reward.pipoca")!),
+                      Etapa: ["Fazer a Massa","Fazer a Massa","Fazer a Massa","Fazer a Massa","Fritar","Fritar","Finalizar","Finalizar"], progressBar:[0.125,0.25,0.375,0.5,0.625,0.75,0.875,1], medalha: UIImage(named: "reward.pipoca")!,
+                      imagemShare: UIImage(named: "reward.pipoca.2")!,tempoDeReceita: 0),
                
                Recipe(tituloReceita: "Mini Gelatinas",
                       numeroIntrucoes: 7,
@@ -210,6 +219,7 @@ func getRecipes() -> [Recipe]{
                                      UIColor(named: "Adulto_DarkBlue")!,
                                      UIColor(named: "Mix_DarkMagenta")!,
                                      UIColor(named: "Adulto_DarkBlue")!],
-                      Etapa: ["Gelatina","Gelatina","Gelatina","Mousse","Mousse","Mousse","Decorar"], progressBar:[0.142,0.284,0.426,0.568,0.71,0.852,1], medalha: UIImage(named: "reward.pipoca")!)]
+                      Etapa: ["Gelatina","Gelatina","Gelatina","Mousse","Mousse","Mousse","Decorar"], progressBar:[0.142,0.284,0.426,0.568,0.71,0.852,1], medalha: UIImage(named: "reward.pipoca")!,
+                      imagemShare: UIImage(named: "reward.pipoca.2")!,tempoDeReceita: 0)]
     return recipes
 }
