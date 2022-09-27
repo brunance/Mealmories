@@ -46,13 +46,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos Criar " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFt-pX-v86">
-                                                <rect key="frame" x="20" y="0.0" width="107.5" height="32.5"/>
+                                                <rect key="frame" x="20" y="0.0" width="114.5" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvP-H6-gWn">
-                                                <rect key="frame" x="20" y="32.5" width="167" height="31"/>
+                                                <rect key="frame" x="20" y="23.5" width="167" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="BA2-GF-fH2"/>
                                                     <constraint firstAttribute="width" constant="167" id="lJd-6n-dY8"/>
@@ -62,7 +62,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receitas em destaque" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axs-N1-jAw">
-                                                <rect key="frame" x="20" y="79.5" width="217" height="36"/>
+                                                <rect key="frame" x="20" y="70.5" width="217" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="217" id="BXJ-0c-9g0"/>
                                                     <constraint firstAttribute="height" constant="36" id="Jil-gy-agf"/>
@@ -72,13 +72,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receitas Rápidas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0x-eN-oBv">
-                                                <rect key="frame" x="20" y="546.5" width="167.5" height="35.5"/>
+                                                <rect key="frame" x="20" y="537.5" width="172" height="26"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
                                                 <color key="textColor" name="Mix_Magenta"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="F1W-3H-fB2">
-                                                <rect key="frame" x="20" y="594" width="374" height="438"/>
+                                                <rect key="frame" x="20" y="575.5" width="374" height="438"/>
                                                 <color key="backgroundColor" name="CorDaview"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="438" id="dCo-xV-Hmy"/>
@@ -97,7 +97,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por Isabelle Colares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSv-BZ-xJR">
-                                                                            <rect key="frame" x="128" y="47" width="102.5" height="19.5"/>
+                                                                            <rect key="frame" x="128" y="47" width="107.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
                                                                             <color key="textColor" name="Mealmories_Gray"/>
                                                                             <nil key="highlightedColor"/>
@@ -110,30 +110,30 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer-16px" translatesAutoresizingMaskIntoConstraints="NO" id="mTg-16-XOF">
-                                                                            <rect key="frame" x="128" y="76.5" width="16" height="16"/>
+                                                                            <rect key="frame" x="128" y="71" width="16" height="16"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="16" id="J1b-gc-3gY"/>
                                                                                 <constraint firstAttribute="height" constant="16" id="Rfw-Vo-ZfN"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="easy-16px" translatesAutoresizingMaskIntoConstraints="NO" id="I2l-CW-keP">
-                                                                            <rect key="frame" x="192.5" y="76.5" width="16" height="16"/>
+                                                                            <rect key="frame" x="193.5" y="71" width="16" height="16"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="16" id="3bR-Yo-kys"/>
                                                                                 <constraint firstAttribute="width" constant="16" id="Fcf-Dp-18i"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="age-16px" translatesAutoresizingMaskIntoConstraints="NO" id="98H-Ic-Nyh">
-                                                                            <rect key="frame" x="257" y="76.5" width="16" height="16"/>
+                                                                            <rect key="frame" x="259" y="71" width="16" height="16"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="16" id="Kfk-cl-rcG"/>
                                                                                 <constraint firstAttribute="width" constant="16" id="WFg-sT-3Tl"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Da Receita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlA-Ri-iju">
-                                                                            <rect key="frame" x="128" y="30" width="113" height="17"/>
+                                                                            <rect key="frame" x="128" y="30" width="147" height="17"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="113" id="0Ka-YC-ePx"/>
+                                                                                <constraint firstAttribute="width" constant="147" id="0Ka-YC-ePx"/>
                                                                                 <constraint firstAttribute="height" constant="17" id="7bp-C0-nx4"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="15"/>
@@ -141,19 +141,19 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nI6-0I-Opg">
-                                                                            <rect key="frame" x="154" y="75" width="28.5" height="19.5"/>
+                                                                            <rect key="frame" x="154" y="72" width="29.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-SG-AQf">
-                                                                            <rect key="frame" x="283" y="75" width="28.5" height="19.5"/>
+                                                                            <rect key="frame" x="285" y="72" width="29.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pc1-d5-Zvm">
-                                                                            <rect key="frame" x="218.5" y="75" width="28.5" height="19.5"/>
+                                                                            <rect key="frame" x="219.5" y="72" width="29.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -215,7 +215,7 @@
                                                 <sections/>
                                             </tableView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-06-Op5" userLabel="CardBackground" customClass="recipe">
-                                                <rect key="frame" x="20" y="127.5" width="374" height="389"/>
+                                                <rect key="frame" x="20" y="118.5" width="374" height="389"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpG-ha-IZz" userLabel="Card">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="389"/>
@@ -242,7 +242,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por Isabelle Colares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDW-Ne-LYO">
-                                                                        <rect key="frame" x="15" y="40" width="130.5" height="24.5"/>
+                                                                        <rect key="frame" x="15" y="40" width="134" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="15"/>
                                                                         <color key="textColor" name="Mealmories_Gray"/>
                                                                         <nil key="highlightedColor"/>
@@ -255,20 +255,20 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c76-mQ-LoN">
-                                                                        <rect key="frame" x="55" y="95.5" width="36" height="19.5"/>
+                                                                        <rect key="frame" x="55" y="98" width="36" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="age-32px" translatesAutoresizingMaskIntoConstraints="NO" id="9kv-Tv-khS">
-                                                                        <rect key="frame" x="289.5" y="89" width="32" height="32"/>
+                                                                        <rect key="frame" x="288.5" y="89" width="32" height="32"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="32" id="DnU-cs-7Es"/>
                                                                             <constraint firstAttribute="height" constant="32" id="HdT-5Y-lUb"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Br-F6-jyq">
-                                                                        <rect key="frame" x="329.5" y="95.5" width="29.5" height="19.5"/>
+                                                                        <rect key="frame" x="328.5" y="98" width="30.5" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="12"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>

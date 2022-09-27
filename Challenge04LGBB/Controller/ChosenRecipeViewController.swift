@@ -18,8 +18,10 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     @IBOutlet weak var tableIngredientsHeight: NSLayoutConstraint!
     @IBOutlet weak var tableEtapas: UITableView!
     @IBOutlet weak var tableEtapasHeight: NSLayoutConstraint!
+    @IBOutlet weak var ScrollViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var ImagemReceitaEscolhida: UIImageView!
+    
     @IBOutlet weak var nomeReceitaEscolhida: UILabel!
     @IBOutlet weak var tempoReceitaEscolhida: UILabel!
     @IBOutlet weak var dificultyReceitaEscolhida: UILabel!
@@ -74,6 +76,9 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     override func viewWillLayoutSubviews() {
         self.tableIngredientsHeight.constant = self.tableIngredients.contentSize.height
         self.tableEtapasHeight.constant = self.tableEtapas.contentSize.height
+        if choosenrecipe[escolha].idadeRecomendada > 5 {
+            self.ScrollViewHeight.constant += self.tableIngredients.contentSize.height / 2.3
+        }
     }
     
     private func setTabeleViewData(){
