@@ -85,12 +85,61 @@ func getRecipes() -> [Recipe]{
                       pessoaTurno: ["Criança", "Mix", "Criança","Adulto", "Mix", "Adulto"],
                       descricaoReceita: ["Em uma tigela de vidro, adicione o milho para pipoca e sal.", "Adicione as colheres de água e misture", "Cubra com um filme plástico", "Faça 4 furos com garfo", "Coloque por 4 minutos no microondas", "Retire a pipoca do microondas"], numeroEtapas: 2,
                       imagemIntrucao:
-                        [UIImage(named: "pipocasecos")!,UIImage(named: "pipoca.agua")!,UIImage(named: "pipoca.plastico")!,UIImage(named: "pipoca.furos")!,UIImage(named: "pipoca.microondas")!,UIImage(named: "pipoca")!]
-                      ,CorDaTela: [UIColor(named: "Child_Orange")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Child_Orange")!,UIColor(named: "Adulto_Blue")!,UIColor(named: "Mix_Magenta")!,UIColor(named: "Adulto_Blue")!],
+                        [UIImage(named: "pipocasecos")!,
+                         UIImage(named: "pipoca.agua")!,
+                         UIImage(named: "pipoca.plastico")!,
+                         UIImage(named: "pipoca.furos")!,
+                         UIImage(named: "pipoca.microondas")!
+                         ,UIImage(named: "pipoca")!]
+                      ,CorDaTela: [UIColor(named: "Child_Orange")!,
+                                   UIColor(named: "Mix_Magenta")!,
+                                   UIColor(named: "Child_Orange")!,
+                                   UIColor(named: "Adulto_Blue")!,
+                                   UIColor(named: "Mix_Magenta")!,
+                                   UIColor(named: "Adulto_Blue")!],
                       dicas: ["Esqueceu a quantidade? Verifique-a no ícone do canto superior direito da tela!","Esqueceu a quantidade? Verifique-a no ícone do canto superior direito da tela!","","","",""],
                       CorDoFundoDatela: [UIColor(named: "LabelOrange")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelOrange")!,UIColor(named: "LabelBlue")!,UIColor(named: "LabelMagenta")!,UIColor(named: "LabelBlue")!],
                       CorDasEtapas: [UIColor(named: "Child_DarkOrange")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Child_DarkOrange")!,UIColor(named: "Adulto_DarkBlue")!,UIColor(named: "Mix_DarkMagenta")!,UIColor(named: "Adulto_DarkBlue")!],
-                      Etapa: ["Juntar","Juntar","Cobrir","Cobrir","Microondas","Microondas"], progressBar:[0.1666,0.3333,0.4999,0.6656,0.8322,1], medalha: UIImage(named: "reward.pipoca")!)]
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                      Etapa: ["Juntar","Juntar","Cobrir","Cobrir","Microondas","Microondas"], progressBar:[0.1666,0.3333,0.4999,0.6656,0.8322,1], medalha: UIImage(named: "reward.pipoca")!),
+    
+               Recipe(tituloReceita: "Panqueca Colorida",
+                      numeroIntrucoes: 8,
+                      pessoaTurno: ["Criança", "Criança", "Adulto","Criança", "Mix", "Adulto","Adulto","Adulto"],
+                      descricaoReceita: ["Misture o leite, os ovos, a farinha, o óleo e o sal dentro do liquidificador.", "Se quiser a panqueca laranja, adicione cenoura ralada, se quiser a panqueca rosa, adicione a beterraba.", "Bata a massa no liquidificador até ficar homogênea.", "Unte uma frigideira com um pouco de manteiga.", "Com uma concha, coloque uma porção da massa na frigideira e espalhe por toda a superfície.", "Deixe dorar dos dois lados.", "Tire da frigideira e repita o processo com a concha até a massa acabar.", "Retire o resto das panquecas e sirva."], numeroEtapas: 3,
+                      imagemIntrucao:
+                        [UIImage(named: "pipocasecos")!,
+                         UIImage(named: "pipoca.agua")!,
+                         UIImage(named: "pipoca.plastico")!,
+                         UIImage(named: "pipoca.furos")!,
+                         UIImage(named: "pipoca.microondas")!,
+                         UIImage(named: "pipoca")!,
+                         UIImage(named: "pipoca")!,
+                         UIImage(named: "pipoca")!]
+                      ,CorDaTela: [UIColor(named: "Child_Orange")!,
+                                   UIColor(named: "Child_Orange")!,
+                                   UIColor(named: "Adulto_Blue")!,
+                                   UIColor(named: "Child_Orange")!,
+                                   UIColor(named: "Mix_Magenta")!,
+                                   UIColor(named: "Adulto_Blue")!,
+                                   UIColor(named: "Adulto_Blue")!,
+                                   UIColor(named: "Adulto_Blue")!],
+                      dicas: ["","","","","","","Recomendação de recheio: carne moída, cenoura ralada, beterraba ralada, queijo branco picadinho",""],
+                      CorDoFundoDatela: [UIColor(named: "LabelOrange")!,
+                                         UIColor(named: "LabelOrange")!,
+                                         UIColor(named: "LabelBlue")!,
+                                         UIColor(named: "LabelOrange")!,
+                                         UIColor(named: "LabelMagenta")!,
+                                         UIColor(named: "LabelBlue")!,
+                                         UIColor(named: "LabelBlue")!,
+                                         UIColor(named: "LabelBlue")!],
+                      CorDasEtapas: [UIColor(named: "Child_DarkOrange")!,
+                                     UIColor(named: "Child_DarkOrange")!,
+                                     UIColor(named: "Adulto_DarkBlue")!,
+                                     UIColor(named: "Child_DarkOrange")!,
+                                     UIColor(named: "Mix_DarkMagenta")!,
+                                     UIColor(named: "Adulto_DarkBlue")!,
+                                     UIColor(named: "Adulto_DarkBlue")!,
+                                     UIColor(named: "Adulto_DarkBlue")!],
+                      Etapa: ["Fazer a Massa","Fazer a Massa","Fazer a Massa","Fazer a Massa","Fritar","Fritar","Finalizar","Finalizar"], progressBar:[0.125,0.25,0.375,0.5,0.625,0.75,0.875,1], medalha: UIImage(named: "reward.pipoca")!)]
     return recipes
 }

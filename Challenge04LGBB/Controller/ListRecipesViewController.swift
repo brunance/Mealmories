@@ -18,7 +18,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     
     var escolha : Int = -1
     
-    let randomInt = Int.random(in: 0..<2)
+    let randomInt = Int.random(in: 0..<3)
     // 2 é o numero total de receitas
     override func viewDidLoad() {
         super.viewDidLoad()
