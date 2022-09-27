@@ -3,6 +3,7 @@ import UIKit
 import ARKit
 import AVFoundation
 import PhotosUI
+import SwiftUI
 
 var eye = false
 var sound = false
@@ -272,9 +273,11 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         }
         
         if destino == "Timer"{
-            let storyBoard: UIStoryboard = UIStoryboard(name: "TimerScreen", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "TimerStoryboard") as! TimerController
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Timer", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Timer") as! TimeController
             
+           
+            navigationController?.modalPresentationStyle = .formSheet
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
     }

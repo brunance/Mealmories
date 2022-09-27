@@ -19,42 +19,42 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="Template" id="Y6W-OH-hqX" customClass="TemplateScreen" customModule="Mealmories" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-Fp-geX">
-                                <rect key="frame" x="110.66666666666669" y="746.66666666666663" width="169" height="43.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-Fp-geX">
+                                <rect key="frame" x="110.66666666666669" y="748.66666666666663" width="169" height="41.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Compartilhar">
-                                    <fontDescription key="titleFontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="25"/>
+                                    <fontDescription key="titleFontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
                                     <color key="baseBackgroundColor" name="Mix_Magenta"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="Share:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dZv-9Y-1PF"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-ka-WxD">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-ka-WxD">
                                 <rect key="frame" x="20" y="123" width="350" height="457"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mealmories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-AQ-e39">
-                                        <rect key="frame" x="20" y="20.000000000000004" width="166" height="37.333333333333343"/>
+                                        <rect key="frame" x="20" y="20.000000000000004" width="168.33333333333334" height="51.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="32"/>
                                         <color key="textColor" name="Mix_Magenta"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jix-3G-pJ2">
-                                        <rect key="frame" x="10" y="111" width="330" height="326"/>
+                                        <rect key="frame" x="160" y="111" width="5280" height="326"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward.pipoca.2" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-jH-EW8">
-                                        <rect key="frame" x="30" y="353" width="64" height="64"/>
+                                        <rect key="frame" x="180" y="353" width="1024" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="M6S-dO-OEa"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="g6C-Qh-UXF"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon sharing" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-mr-IGO">
-                                        <rect key="frame" x="256" y="353" width="64" height="64"/>
+                                        <rect key="frame" x="4396" y="353" width="1024" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="PlX-at-dhU"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="ZI8-7V-4er"/>

@@ -10,6 +10,7 @@ class TemplateScreen: UIViewController {
     var escolha : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        Imagem.layer.cornerRadius = 10
         let receitas = getChoosenRecipe()
         let medalha = getRecipes()
 //        imagemMedalha.image = medalha[escolha].medalha
