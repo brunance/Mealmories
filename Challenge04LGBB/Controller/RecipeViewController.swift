@@ -2,11 +2,11 @@ import Foundation
 import UIKit
 import ARKit
 import AVFoundation
+import PhotosUI
 
 var eye = false
 var sound = false
 var haptic = false
-var salvou = false
 
 class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationControllerDelegate {
     
@@ -28,7 +28,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     @IBOutlet weak var imageTake: UIImageView!
     @IBOutlet weak var botaoFoto: UIButton!
     var imagePicker: UIImagePickerController!
-
+    
     enum ImageSource {
         case photoLibrary
         case camera
@@ -358,23 +358,38 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     //MARK: - Take image
     @IBAction func takePhoto(_ sender: UIButton) {
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
-             if response {
-                 autorizacao = true
-             }
-         }
-        if autorizacao == true {
-            guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-                selectImageFrom(.photoLibrary)
-                return
-            }
-            selectImageFrom(.camera)
-            if haptic == true {
-                let generator = UINotificationFeedbackGenerator()
-                generator.notificationOccurred(.warning)
+            if response {
+                DispatchQueue.main.async {
+                    guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+                        self.selectImageFrom(.photoLibrary)
+                        return
+                    }
+                    self.selectImageFrom(.camera)
+                    if haptic == true {
+                        let generator = UINotificationFeedbackGenerator()
+                        generator.notificationOccurred(.warning)
+                    }
+                }
+            }else {
+                DispatchQueue.main.async { [unowned self] in
+                    let alertController = UIAlertController(title: "Permissão Necessária".localize(), message: "Para salvar as fotos, é necessário habilitar a permissão nos Ajustes".localize(), preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ajustes".localize(), style: .cancel) { _ in
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            UIApplication.shared.open(url, options: [:] , completionHandler: {
+                                _ in
+                            })
+                        }
+                    })
+                    alertController.addAction(UIAlertAction(title: "Cancelar".localize(), style: .default))
+                    
+                    
+                    present(alertController, animated: true)
+                }
             }
         }
+        
     }
-
+    
     func selectImageFrom(_ source: ImageSource){
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
@@ -386,7 +401,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         }
         present(imagePicker, animated: true, completion: nil)
     }
-
+    
     //MARK: - Saving Image here
     func save(_ sender: AnyObject) {
         guard let selectedImage = imageTake.image else {
@@ -395,20 +410,29 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         }
         UIImageWriteToSavedPhotosAlbum(selectedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
-
+    
     //MARK: - Add image to Library
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        if let error = error {
-            // we got back an error!
-            showAlertWith(title: "Falha ao salvar foto".localize(), message: error.localizedDescription)
-        } else {
-            if salvou == false {
-                showAlertWith(title: "Foto Salva!".localize(), message: "A sua foto foi salva em sua galeria com sucesso!.".localize())
-                salvou = true
+        PHPhotoLibrary.requestAuthorization(for: .addOnly) { response in
+            if response == PHAuthorizationStatus.denied{
+                DispatchQueue.main.async { [unowned self] in
+                    let alertController = UIAlertController(title: "Permissão Necessária".localize(), message: "Para salvar as fotos, é necessário habilitar a permissão nos Ajustes".localize(), preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ajustes".localize(), style: .cancel) { _ in
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            UIApplication.shared.open(url, options: [:] , completionHandler: {
+                                _ in
+                            })
+                        }
+                    })
+                    alertController.addAction(UIAlertAction(title: "Cancelar".localize(), style: .default))
+                    
+                    
+                    present(alertController, animated: true)
+                }
             }
         }
     }
-
+    
     func showAlertWith(title: String, message: String){
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
@@ -424,15 +448,15 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
 
 
 extension RecipeViewController: UIImagePickerControllerDelegate{
-
-   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
-       imagePicker.dismiss(animated: true, completion: nil)
-       guard let selectedImage = info[.originalImage] as? UIImage else {
-           print("Image not found!")
-           return
-       }
-       imageTake.image = selectedImage
-       save(self)
-   }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        imagePicker.dismiss(animated: true, completion: nil)
+        guard let selectedImage = info[.originalImage] as? UIImage else {
+            print("Image not found!")
+            return
+        }
+        imageTake.image = selectedImage
+        save(self)
+    }
 }
 

@@ -14,6 +14,8 @@
 		4FED12FD28AA8A80002113D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FB28AA8A80002113D3 /* Main.storyboard */; };
 		4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FE28AA8A83002113D3 /* Assets.xcassets */; };
 		511625BC28DE476A00CB2842 /* OnBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511625BE28DE476A00CB2842 /* OnBoard.storyboard */; };
+		511625EA28E1E1C900CB2842 /* Template.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511625E928E1E1C900CB2842 /* Template.storyboard */; };
+		511625EC28E1E55F00CB2842 /* TemplateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511625EB28E1E55F00CB2842 /* TemplateScreen.swift */; };
 		513F103D28D9F939000C8CFC /* IsInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F103C28D9F939000C8CFC /* IsInitialVC.swift */; };
 		513F103F28D9F95E000C8CFC /* IsInitialuser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */; };
 		513F104328D9FF91000C8CFC /* OnBoardVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F104228D9FF91000C8CFC /* OnBoardVc.swift */; };
@@ -67,6 +69,8 @@
 		511625C028DE476C00CB2842 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OnBoard.strings; sourceTree = "<group>"; };
 		511625C428DE476E00CB2842 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/OnBoard.strings"; sourceTree = "<group>"; };
 		511625C528DE477A00CB2842 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/OnBoard.strings; sourceTree = "<group>"; };
+		511625E928E1E1C900CB2842 /* Template.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Template.storyboard; sourceTree = "<group>"; };
+		511625EB28E1E55F00CB2842 /* TemplateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScreen.swift; sourceTree = "<group>"; };
 		513F103C28D9F939000C8CFC /* IsInitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsInitialVC.swift; sourceTree = "<group>"; };
 		513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IsInitialuser.storyboard; sourceTree = "<group>"; };
 		513F104228D9FF91000C8CFC /* OnBoardVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardVc.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				666B235628B6DDED00C6E62A /* ConfigViewController.swift */,
 				660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */,
 				660EB4AC28B90E6E007D2425 /* EndRecipeViewController.swift */,
+				511625EB28E1E55F00CB2842 /* TemplateScreen.swift */,
 				665C691628BD096F00E9F1FA /* ForgotRecipeViewController.swift */,
 				4F641BCB28E1E4A6007FAF50 /* TImerController.swift */,
 			);
@@ -166,6 +171,7 @@
 				513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */,
 				66AAE5C428CC2CAA00915D62 /* ChosenRecipe.storyboard */,
 				511625BE28DE476A00CB2842 /* OnBoard.storyboard */,
+				511625E928E1E1C900CB2842 /* Template.storyboard */,
 				66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */,
 				66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */,
 				663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */,
@@ -340,6 +346,7 @@
 				665C691328BCF63900E9F1FA /* passar.mp3 in Resources */,
 				66AAE5BD28CC2A3900915D62 /* ForgetRecipe.storyboard in Resources */,
 				665C691128BCF63900E9F1FA /* fim-receita.mp3 in Resources */,
+				511625EA28E1E1C900CB2842 /* Template.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +365,7 @@
 				4FED12F828AA8A80002113D3 /* SceneDelegate.swift in Sources */,
 				5165C1BF28BFA61900F5F1CF /* ChoosenModel.swift in Sources */,
 				660EB4AD28B90E6E007D2425 /* EndRecipeViewController.swift in Sources */,
+				511625EC28E1E55F00CB2842 /* TemplateScreen.swift in Sources */,
 				665C691728BD096F00E9F1FA /* ForgotRecipeViewController.swift in Sources */,
 				666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */,
 				51FAF0C228C1A99500C66619 /* RecipesTableViewCell.swift in Sources */,
@@ -605,7 +613,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MealmoriesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MealmoriesAppj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -620,7 +628,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2VBT66DD5V;
+				DEVELOPMENT_TEAM = XKBJR2ZWTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mealmories!";
@@ -637,7 +645,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MealmoriesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MealmoriesAppj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
