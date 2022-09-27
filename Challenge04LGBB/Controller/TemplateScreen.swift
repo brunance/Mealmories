@@ -12,7 +12,7 @@ class TemplateScreen: UIViewController {
         super.viewDidLoad()
         let receitas = getChoosenRecipe()
         let medalha = getRecipes()
-        imagemMedalha.image = medalha[escolha].medalha
+//        imagemMedalha.image = medalha[escolha].medalha
         Imagem.image = image
         
         if Imagem.image == nil {
