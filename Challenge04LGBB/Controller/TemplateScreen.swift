@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 class TemplateScreen: UIViewController {
+    @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var shareView: UIView!
     
     @IBOutlet weak var imagemMedalha: UIImageView!
@@ -10,17 +11,20 @@ class TemplateScreen: UIViewController {
     var escolha : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         Imagem.layer.cornerRadius = 10
         let receitas = getChoosenRecipe()
         let medalha = getRecipes()
-//        imagemMedalha.image = medalha[escolha].medalha
+        imagemMedalha.image = medalha[escolha].imagemShare
         Imagem.image = image
-        
+        Name.text = medalha[escolha].tituloReceita.localize()
         if Imagem.image == nil {
             Imagem.image = receitas[escolha].imagemReceita
         }
         
     }
+    
+    
     @IBAction func Share(_ sender: Any) {
         
         let renderer = UIGraphicsImageRenderer(size: shareView.bounds.size)

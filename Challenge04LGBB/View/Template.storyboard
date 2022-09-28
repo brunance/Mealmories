@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-Fp-geX">
-                                <rect key="frame" x="110.66666666666669" y="748.66666666666663" width="169" height="41.333333333333371"/>
+                                <rect key="frame" x="237.33333333333331" y="748.66666666666663" width="125.33333333333331" height="41.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Compartilhar">
                                     <fontDescription key="titleFontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-ka-WxD">
-                                <rect key="frame" x="20" y="123" width="350" height="457"/>
+                                <rect key="frame" x="20" y="123" width="560" height="457"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mealmories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-AQ-e39">
                                         <rect key="frame" x="20" y="20.000000000000004" width="168.33333333333334" height="51.333333333333343"/>
@@ -98,6 +98,7 @@
                     </view>
                     <connections>
                         <outlet property="Imagem" destination="Jix-3G-pJ2" id="i4u-vd-pdx"/>
+                        <outlet property="Name" destination="5Bi-AQ-e39" id="wSW-Fw-efd"/>
                         <outlet property="imagemMedalha" destination="ViK-jH-EW8" id="Upp-Sp-yk6"/>
                         <outlet property="shareView" destination="7ln-ka-WxD" id="1CI-cY-17Y"/>
                     </connections>
