@@ -13,6 +13,7 @@
 		4FED12FF28AA8A83002113D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FED12FE28AA8A83002113D3 /* Assets.xcassets */; };
 		510501D928E3445400BFA35A /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510501D828E3445400BFA35A /* Timer.storyboard */; };
 		510501DB28E3452700BFA35A /* TimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510501DA28E3452700BFA35A /* TimeController.swift */; };
+		510B91B328E4927900ED5ECF /* notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B91B228E4927900ED5ECF /* notifications.swift */; };
 		511625BC28DE476A00CB2842 /* OnBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511625BE28DE476A00CB2842 /* OnBoard.storyboard */; };
 		511625EA28E1E1C900CB2842 /* Template.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511625E928E1E1C900CB2842 /* Template.storyboard */; };
 		511625EC28E1E55F00CB2842 /* TemplateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511625EB28E1E55F00CB2842 /* TemplateScreen.swift */; };
@@ -65,6 +66,7 @@
 		4FED130328AA8A83002113D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		510501D828E3445400BFA35A /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		510501DA28E3452700BFA35A /* TimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeController.swift; sourceTree = "<group>"; };
+		510B91B228E4927900ED5ECF /* notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notifications.swift; sourceTree = "<group>"; };
 		511625BD28DE476A00CB2842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OnBoard.storyboard; sourceTree = "<group>"; };
 		511625C028DE476C00CB2842 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OnBoard.strings; sourceTree = "<group>"; };
 		511625C428DE476E00CB2842 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/OnBoard.strings"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */,
+				510B91B228E4927900ED5ECF /* notifications.swift */,
 				515AA40028BEBAA700F903BE /* ListRecipesViewController.swift */,
 				513F104228D9FF91000C8CFC /* OnBoardVc.swift */,
 				513F103C28D9F939000C8CFC /* IsInitialVC.swift */,
@@ -370,6 +373,7 @@
 				665C691728BD096F00E9F1FA /* ForgotRecipeViewController.swift in Sources */,
 				666B235728B6DDED00C6E62A /* ConfigViewController.swift in Sources */,
 				51FAF0C228C1A99500C66619 /* RecipesTableViewCell.swift in Sources */,
+				510B91B328E4927900ED5ECF /* notifications.swift in Sources */,
 				513F103D28D9F939000C8CFC /* IsInitialVC.swift in Sources */,
 				515AA40128BEBAA700F903BE /* ListRecipesViewController.swift in Sources */,
 				66E5F76228DBE3E5007178CF /* Confetti.swift in Sources */,
