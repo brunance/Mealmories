@@ -47,11 +47,11 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         appearence.shadowImage = nil
         self.navigationController?.navigationBar.standardAppearance = appearence
         
-        self.ScrollRecipesHeight.constant += self.tableViewReceitasRapidasHeight.constant / 2.3
     }
     
     override func viewWillLayoutSubviews() {
         self.tableViewReceitasRapidasHeight.constant += self.tablleViewReceitasRapidas.contentSize.height
+        self.ScrollRecipesHeight.constant += self.tableViewReceitasRapidasHeight.constant / 3.5
     }
     
     func BackBarButton(){
