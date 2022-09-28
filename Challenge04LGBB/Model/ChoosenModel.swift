@@ -60,6 +60,12 @@ func getChoosenRecipe() -> [ChosenRecipeModel]{
                           tempoDePreparo: "10 min",
                           dificuldade: "Fácil",
                           idadeRecomendada: 5,
-                          ingredientes: ["1 sachê de gelatina de sua preferência", "250ml de agua fervendo", "250ml de agua fria", "1 caixa de creme de leite", "1 caixa de leite condensado", "1 xícara de leite", "1 suco em pó de sua preferência", "Granulados variados (opcional)"], etapas: ["Gelatina","Mousse","Decorar"])]
+                          ingredientes: ["1 sachê de gelatina de sua preferência", "250ml de agua fervendo", "250ml de agua fria", "1 caixa de creme de leite", "1 caixa de leite condensado", "1 xícara de leite", "1 suco em pó de sua preferência", "Granulados variados (opcional)"], etapas: ["Gelatina","Mousse","Decorar"]),
+        ChosenRecipeModel(imagemReceita: UIImage(named: "brigadeiro")!,
+                          nomeDaReceita: "Brigadeiro",
+                          tempoDePreparo: "30 min",
+                          dificuldade: "Fácil",
+                          idadeRecomendada: 5,
+                          ingredientes: ["1/2 colher (sopa) de margarina", "1 unidade de gema de ovo", "1 lata de leite condensado", "2 colheres (sopa) de chocolate em pó", "Chocolate granulado a gosto"], etapas: ["Mistura os ingredientes","Preparar o doce","Fazer bolinhas com granulado"])]
     return ChosenRecipe
 }

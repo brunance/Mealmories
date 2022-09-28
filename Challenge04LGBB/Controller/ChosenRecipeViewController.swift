@@ -48,6 +48,9 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         SetChoosenRecipe()
         startButton.layer.cornerRadius = 20
         self.setTableView()
+        if choosenrecipe[escolha].ingredientes.count >= 5 {
+            self.ScrollViewHeight.constant += self.tableIngredients.contentSize.height - 260.0
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +61,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         let defaults = UserDefaults.standard
         soundEffect = defaults.bool(forKey: "Sound")
         hapticEffect = defaults.bool(forKey: "Haptic")
+
     }
     
     private func setTableView(){
@@ -76,9 +80,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     override func viewWillLayoutSubviews() {
         self.tableIngredientsHeight.constant = self.tableIngredients.contentSize.height
         self.tableEtapasHeight.constant = self.tableEtapas.contentSize.height
-        if choosenrecipe[escolha].idadeRecomendada >= 5 {
-            self.ScrollViewHeight.constant += self.tableIngredients.contentSize.height / 2.3
-        }
+        
     }
     
     private func setTabeleViewData(){
