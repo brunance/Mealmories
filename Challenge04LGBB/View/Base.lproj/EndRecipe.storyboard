@@ -132,7 +132,7 @@
                                                     <action selector="takePhoto:" destination="WN3-Ie-LiG" eventType="touchUpInside" id="ELS-xt-oDZ"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KD7-Wl-lLe">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KD7-Wl-lLe">
                                                 <rect key="frame" x="20" y="521" width="374" height="350"/>
                                             </imageView>
                                         </subviews>

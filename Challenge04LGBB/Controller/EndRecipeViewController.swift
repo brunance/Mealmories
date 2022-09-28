@@ -114,6 +114,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     func selectImageFrom(_ source: ImageSource){
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
+        imageTake.sizeToFit()
         switch source {
         case .camera:
             imagePicker.sourceType = .camera
@@ -184,13 +185,32 @@ extension EndRecipeViewController: UIImagePickerControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         imagePicker.dismiss(animated: true, completion: nil)
-        guard let selectedImage = info[.originalImage] as? UIImage else {
+        guard var selectedImage = info[.originalImage] as? UIImage else {
             print("Image not found!")
             return
         }
+        selectedImage = selectedImage.withRoundedCorners(radius: 100)!
         imageTake.image = selectedImage
         save(self)
     }
 }
 
-
+extension UIImage {
+        // image with rounded corners
+        public func withRoundedCorners(radius: CGFloat? = nil) -> UIImage? {
+            let maxRadius = min(size.width, size.height) / 2
+            let cornerRadius: CGFloat
+            if let radius = radius, radius > 0 && radius <= maxRadius {
+                cornerRadius = radius
+            } else {
+                cornerRadius = maxRadius
+            }
+            UIGraphicsBeginImageContextWithOptions(size, false, scale)
+            let rect = CGRect(origin: .zero, size: size)
+            UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
+            draw(in: rect)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return image
+        }
+    }
