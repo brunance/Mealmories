@@ -36,7 +36,6 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         SetReceitaDestaque()
         
     }
-
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
         self.navigationController?.isNavigationBarHidden = false
@@ -51,8 +50,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     }
     
     override func viewWillLayoutSubviews() {
-        self.tableViewReceitasRapidasHeight.constant += self.tablleViewReceitasRapidas.contentSize.height
-        self.ScrollRecipesHeight.constant += self.tableViewReceitasRapidasHeight.constant / 3.5
+        self.tableViewReceitasRapidasHeight.constant += self.tablleViewReceitasRapidas.contentSize.height + 100
+        self.ScrollRecipesHeight.constant += self.tableViewReceitasRapidasHeight.constant / 2
     }
     func notifications(){
         

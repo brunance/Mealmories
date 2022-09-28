@@ -171,14 +171,14 @@
 				4FED12FB28AA8A80002113D3 /* Main.storyboard */,
 				66AAE5CE28CC2FBA00915D62 /* ConfigScreen.storyboard */,
 				66AAE5C928CC2EC900915D62 /* ListRecipesScreen.storyboard */,
-				513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */,
 				66AAE5C428CC2CAA00915D62 /* ChosenRecipe.storyboard */,
 				511625BE28DE476A00CB2842 /* OnBoard.storyboard */,
-				511625E928E1E1C900CB2842 /* Template.storyboard */,
 				66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */,
 				66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */,
-				663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */,
+				511625E928E1E1C900CB2842 /* Template.storyboard */,
 				510501D828E3445400BFA35A /* Timer.storyboard */,
+				513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */,
+				663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,7 +600,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XKBJR2ZWTW;
+				DEVELOPMENT_TEAM = 2VBT66DD5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mealmories!";
@@ -632,7 +632,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XKBJR2ZWTW;
+				DEVELOPMENT_TEAM = 2VBT66DD5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mealmories!";
