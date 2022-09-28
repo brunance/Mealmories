@@ -13,18 +13,22 @@
         <array key="Baloo2-Bold.ttf">
             <string>Baloo2-Bold</string>
         </array>
+        <array key="Baloo2-SemiBold.ttf">
+            <string>Baloo2-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Template Screen-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="Template" id="Y6W-OH-hqX" customClass="TemplateScreen" customModule="Mealmories" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-Fp-geX">
-                                <rect key="frame" x="133.66666666666669" y="756" width="122.66666666666669" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-Fp-geX">
+                                <rect key="frame" x="132.33333333333334" y="748.66666666666663" width="125.33333333333334" height="41.333333333333371"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Compartilhar">
                                     <fontDescription key="titleFontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
@@ -34,61 +38,68 @@
                                     <action selector="Share:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dZv-9Y-1PF"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-ka-WxD">
-                                <rect key="frame" x="-5230" y="123" width="5600" height="457"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-ka-WxD">
+                                <rect key="frame" x="20" y="122" width="350" height="443"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mealmories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-AQ-e39">
-                                        <rect key="frame" x="20" y="20.000000000000004" width="166" height="37.333333333333343"/>
-                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-AQ-e39">
+                                        <rect key="frame" x="20" y="20" width="185" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="158" id="4IG-uG-xn1"/>
+                                            <constraint firstAttribute="height" constant="32" id="dE3-4M-R8v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
                                         <color key="textColor" name="Mix_Magenta"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jix-3G-pJ2">
-                                        <rect key="frame" x="160" y="111" width="5280" height="326"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward.pipoca.2" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-jH-EW8">
-                                        <rect key="frame" x="180" y="353" width="1024" height="64"/>
+                                        <rect key="frame" x="10" y="93" width="330" height="330"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="M6S-dO-OEa"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="g6C-Qh-UXF"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="FQ0-gu-A5o"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="330" id="TfH-h7-K2g"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon sharing" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-mr-IGO">
-                                        <rect key="frame" x="4396" y="353" width="1024" height="64"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon sharing" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-mr-IGO" userLabel="Mealmories">
+                                        <rect key="frame" x="20" y="206" width="107" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feito com Mealmories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M78-2x-Kxj">
+                                        <rect key="frame" x="20" y="57" width="146" height="16"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="PlX-at-dhU"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="ZI8-7V-4er"/>
+                                            <constraint firstAttribute="height" constant="16" id="Eug-PN-P9A"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="aoU-SR-8Cl"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reward.pipoca.2" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-jH-EW8" userLabel="Medalha">
+                                        <rect key="frame" x="158" y="166" width="118" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelMagenta"/>
                                 <constraints>
-                                    <constraint firstItem="ViK-jH-EW8" firstAttribute="height" secondItem="Jix-3G-pJ2" secondAttribute="height" multiplier="0.196319" id="0M8-TG-B9X"/>
-                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="width" secondItem="7ln-ka-WxD" secondAttribute="width" multiplier="0.942857" id="5Br-Y1-3yw"/>
-                                    <constraint firstItem="ViK-jH-EW8" firstAttribute="width" secondItem="Jix-3G-pJ2" secondAttribute="width" multiplier="0.193939" id="9eL-0A-CEh"/>
-                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="bottom" secondItem="ViK-jH-EW8" secondAttribute="bottom" constant="20" id="9gU-jG-HzR"/>
-                                    <constraint firstItem="iPM-mr-IGO" firstAttribute="height" secondItem="Jix-3G-pJ2" secondAttribute="height" multiplier="0.196319" id="C1T-tt-uIx"/>
-                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="height" secondItem="7ln-ka-WxD" secondAttribute="height" multiplier="0.713348" id="ClY-bW-Wtc"/>
-                                    <constraint firstItem="5Bi-AQ-e39" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" constant="20" id="Hrx-Qy-nMr"/>
-                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="centerX" secondItem="7ln-ka-WxD" secondAttribute="centerX" id="Hzc-Rf-snD"/>
-                                    <constraint firstItem="5Bi-AQ-e39" firstAttribute="top" secondItem="7ln-ka-WxD" secondAttribute="top" constant="20" id="Sfj-Ew-0GX"/>
-                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="trailing" secondItem="iPM-mr-IGO" secondAttribute="trailing" constant="20" id="WYL-Lm-z9C"/>
-                                    <constraint firstAttribute="bottom" secondItem="Jix-3G-pJ2" secondAttribute="bottom" constant="20" id="WuB-ce-Glv"/>
-                                    <constraint firstItem="ViK-jH-EW8" firstAttribute="leading" secondItem="Jix-3G-pJ2" secondAttribute="leading" constant="20" id="ZqM-bD-Hjy"/>
-                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="bottom" secondItem="iPM-mr-IGO" secondAttribute="bottom" constant="20" id="e9p-nn-097"/>
-                                    <constraint firstItem="iPM-mr-IGO" firstAttribute="width" secondItem="Jix-3G-pJ2" secondAttribute="width" multiplier="0.193939" id="kTh-M6-7bs"/>
+                                    <constraint firstAttribute="width" constant="350" id="18R-QT-0a6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jix-3G-pJ2" secondAttribute="trailing" constant="10" id="99d-rp-KGy"/>
+                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="width" secondItem="7ln-ka-WxD" secondAttribute="width" multiplier="0.942857" id="Hx0-2H-NSs"/>
+                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="height" secondItem="7ln-ka-WxD" secondAttribute="height" multiplier="0.744921" id="Mga-XM-9BD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="443" id="NjP-er-EwJ"/>
+                                    <constraint firstItem="M78-2x-Kxj" firstAttribute="top" secondItem="5Bi-AQ-e39" secondAttribute="bottom" constant="5" id="PJB-lV-PoS"/>
+                                    <constraint firstItem="M78-2x-Kxj" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" constant="20" id="R3l-Rw-ZD6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jix-3G-pJ2" secondAttribute="bottom" constant="20" id="VpB-E0-1DS"/>
+                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" constant="10" id="ZS4-Bm-76X"/>
+                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="top" secondItem="M78-2x-Kxj" secondAttribute="bottom" constant="20" id="fbd-B8-JJs"/>
+                                    <constraint firstItem="5Bi-AQ-e39" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" constant="20" id="kfe-Uc-YHa"/>
+                                    <constraint firstItem="5Bi-AQ-e39" firstAttribute="top" secondItem="7ln-ka-WxD" secondAttribute="top" constant="20" id="pcG-9b-ue4"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jas-Fp-geX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3tp-MI-WhN"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7ln-ka-WxD" secondAttribute="trailing" constant="20" id="B4p-b9-CgB"/>
-                            <constraint firstAttribute="bottom" secondItem="7ln-ka-WxD" secondAttribute="bottom" constant="264" id="MSc-uV-rrb"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jas-Fp-geX" secondAttribute="bottom" constant="20" id="Yx1-SF-Kh0"/>
-                            <constraint firstItem="7ln-ka-WxD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="76" id="khg-Ni-olQ"/>
-                            <constraint firstItem="7ln-ka-WxD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xwM-8H-DlZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7ln-ka-WxD" secondAttribute="trailing" constant="20" id="a9k-QP-SSO"/>
+                            <constraint firstItem="7ln-ka-WxD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="iEX-H5-T26"/>
+                            <constraint firstItem="7ln-ka-WxD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="75" id="u0p-OQ-23X"/>
                         </constraints>
                     </view>
                     <connections>
