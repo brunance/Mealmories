@@ -24,7 +24,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     // 2 é o numero total de receitas
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        notifications()
         self.navigationController?.navigationBar.tintColor = UIColor.label
         
         BackBarButton()
@@ -36,7 +36,6 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         SetReceitaDestaque()
         
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
         self.navigationController?.isNavigationBarHidden = false
@@ -53,6 +52,69 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     override func viewWillLayoutSubviews() {
         self.tableViewReceitasRapidasHeight.constant += self.tablleViewReceitasRapidas.contentSize.height + 100
         self.ScrollRecipesHeight.constant += self.tableViewReceitasRapidasHeight.constant / 2
+    }
+    func notifications(){
+        
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+        }
+        
+        //notificacao 1
+        
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Vamos Cozinhar"
+        content.body = "É hora de cozinhar em conjunto"
+        
+        
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
+
+        dateComponents.weekday = 4
+        dateComponents.hour = 11
+        dateComponents.minute = 41
+        
+           
+        let trigger = UNCalendarNotificationTrigger(
+                 dateMatching: dateComponents, repeats: true)
+        
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                    content: content, trigger: trigger)
+
+       
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { (error) in
+           if error != nil {
+           }
+        }
+//        let content2 = UNMutableNotificationContent()
+//        content2.title = "Weekly Staff Meeting"
+//        content2.body = "Every Tuesday at 2pm"
+//
+//
+//        var dateComponents2 = DateComponents()
+//        dateComponents2.calendar = Calendar.current
+//
+//        dateComponents2.weekday = 4
+//        dateComponents2.hour = 11
+//        dateComponents2.minute = 20
+//
+//
+//        let trigger2 = UNCalendarNotificationTrigger(
+//                 dateMatching: dateComponents2, repeats: true)
+//
+//        let uuidString2 = UUID().uuidString
+//        let request2 = UNNotificationRequest(identifier: uuidString2,
+//                    content: content2, trigger: trigger2)
+//
+//
+//        let notificationCenter2 = UNUserNotificationCenter.current()
+//        notificationCenter2.add(request2) { (error) in
+//           if error != nil {
+//           }
+//        }
     }
     
     func BackBarButton(){
