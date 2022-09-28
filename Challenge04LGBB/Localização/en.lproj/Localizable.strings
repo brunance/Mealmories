@@ -12,6 +12,11 @@
 "Cancelar" = "Cancel";
 "Permissão Necessária" = "Permission Required";
 "Para salvar as fotos, é necessário habilitar a permissão nos Ajustes" = "To save photos, you need to enable permission in Settings";
+//Dicas - Gerais
+
+"Mãos ocupadas para passar as instruções? Ative a interação sem toque nas configurações!" = "Hands full to pass instructions? Enable touchless interaction in settings!";
+"Esqueceu a quantidade? Verifique-a no ícone do canto superior direito da tela!" = "Forgot the amount? Check it in the icon at the top right of the screen!";
+"Lembre-se de registrar mealmories e guarde as fotos na sua galeria!"= "Remember to register mealmories and save the photos in your gallery!";
 
 //Titulo-Receitas
 "Pão de Queijo" = "Cheese Bread";
@@ -165,3 +170,39 @@
 
 "Gelatina" = "Jelly";
 "Decorar" = "Decorate";
+
+//Brigadeiro
+
+//Ingredientes - Brigadeiro
+
+"1/2 colher (sopa) de margarina" = "1/2 tablespoon of butter";
+"1 unidade de gema de ovo" = "1 unit of egg yolk";
+"1 lata de leite condensado" = "1 can of condensed milk";
+"2 colheres (sopa) de chocolate em pó" = "2 tablespoons of powdered chocolate";
+"Chocolate granulado a gosto" = "Chocolate sprinkles to taste";
+
+//Etapas - Brigadeiro
+
+"Mistura os ingredientes" = "Mix the ingredients";
+"Preparar o doce" =  "Prepare the candy";
+"Fazer bolinhas com granulado"= "Make small balls with sprinkles";
+
+//Descrição das Etapas - Brigadeiro
+
+"Em uma panela coloque todos os ingredientes, menos o granulado." = "In a pan put all the ingredients, except the sprinkles.";
+"Misture até ficar homogêneo." = "Mix until smooth.";
+"Leve ao fogo baixo, sem para de mexer, por aproximadamente 10 minutos, até engrossar." = "Cook over low heat, stirring constantly, for approximately 10 minutes, until thickened.";
+"Coloque num prato e deixe esfriar na geladeira por 30 minutos após disso retire." = "Put it on the plate and let it cool in the fridge for 30 minutes after that remove it.";
+"Faça pequenas bolinhas e adicione chocolate granulado." = "Make small balls and add chocolate sprinkles.";
+"Sirva e aproveite!" = "Serve it and enjoy!";
+
+//Dicas - Brigadeiro
+
+"Precisa desprender do fundo da panela." = " It needs to come off the bottom of the pan.";
+"Unte as mãos com um pouco de margarina." = "Grease your hands with a little butter.";
+
+//Etapas - Brigadeiro
+
+"Mistura os ingredientes" = "Mix the ingredients";
+"Preparar o doce" = "Prepare the candy";
+"Fazer bolinhas com granulado" = "Make small balls with sprinkles";

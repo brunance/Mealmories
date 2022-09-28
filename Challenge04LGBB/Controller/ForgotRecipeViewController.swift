@@ -7,6 +7,7 @@ class ForgotRecipeViewController: UIViewController {
     @IBOutlet weak var tableIngredientsHeight: NSLayoutConstraint!
     @IBOutlet weak var tableEtapas: UITableView!
     @IBOutlet weak var tableEtapasHeight: NSLayoutConstraint!
+    @IBOutlet weak var ScrollViewHeight: NSLayoutConstraint!
     
     private var itemList1 : [String] = [String]()
     private var itemList2 : [String] = [String]()
@@ -18,6 +19,9 @@ class ForgotRecipeViewController: UIViewController {
         super.viewDidLoad()
         AppDelegate.AppUtility.lockOrientation(.portrait)
         self.setTableView()
+        if choosenrecipe[escolha].ingredientes.count >= 5 {
+            self.ScrollViewHeight.constant += self.tableIngredients.contentSize.height - 360.0
+        }
     }
     
     private func setTableView(){
@@ -36,6 +40,7 @@ class ForgotRecipeViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         self.tableIngredientsHeight.constant = self.tableIngredients.contentSize.height
         self.tableEtapasHeight.constant = self.tableEtapas.contentSize.height
+        
     }
     
     private func setTabeleViewData(){
