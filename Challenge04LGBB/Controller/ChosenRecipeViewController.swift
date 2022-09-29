@@ -34,7 +34,6 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     @IBOutlet weak var startButton : UIButton!
     
     var player : AVAudioPlayer?
-    let transition = CustomTransition()
     var escolha : Int = 0
     var count : Int = 0
     

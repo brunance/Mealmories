@@ -23,7 +23,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     var imagePicker: UIImagePickerController!
     var escolha = 0
     
-    //    let confetti = classyConfetti()
+    let confetti = classyConfetti()
     
     enum ImageSource {
         case photoLibrary
@@ -40,12 +40,15 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     @IBAction func ShareButton(_ sender: Any) {
         navigation(Destino: "Modelo")
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //        confetti.emit(in: view, with: .fromCenter)
+        confetti.emit(in: view, with: .fromTopLeft)
+        confetti.emit(in: view, with: .fromTopRight)
         ImagePlaceholder.layer.cornerRadius = 10
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
     }
+    
     func navigation(Destino:String){
         if(Destino == "Home"){
             let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)

@@ -121,7 +121,7 @@ extension Position {
 
 public class classyConfetti : CAEmitterLayer {
     
-    let contentsType : [Content] = [.Image(UIImage(named: "Circulo") ?? UIImage()),.Image(UIImage(named: "Confetti") ?? UIImage())
+    let contentsType : [Content] = [.Image(UIImage(named: "Circulo") ?? UIImage()),.Image(UIImage(named: "Confetti") ?? UIImage()),.Image(UIImage(named: "Triangle") ?? UIImage())
     ]
     
     let colors : [UIColor] = [.red,.red,.red,.red]
@@ -139,7 +139,7 @@ public class classyConfetti : CAEmitterLayer {
                 cell.spin = .pi
                 cell.spinRange = .pi * 4
                 cell.scaleRange = 0.25
-                cell.scale = 1.0 - cell.scaleRange
+                cell.scale = 0.1 - cell.scaleRange
                 cell.contents = content.image.cgImage
                 cell.yAcceleration = position.yAcc
                 

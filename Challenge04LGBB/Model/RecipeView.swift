@@ -66,7 +66,8 @@ class Recipe {
 
 func getRecipes() -> [Recipe]{
     var recipes : [Recipe] = []
-    recipes = [Recipe(tituloReceita: "Pão de Queijo",
+    recipes = [
+        Recipe(tituloReceita: "Pão de Queijo",
                       numeroIntrucoes: 9,
                       pessoaTurno: ["Adulto", "Criança", "Mix", "Adulto", "Mix", "Criança", "Mix", "Adulto", "Adulto"],
                       descricaoReceita: ["Em uma vasilha, junte os ingredientes secos: polvilho doce, e parmesão.", "Misture bem com uma colher ou com a mão!", "Adicione o creme de leite, misturando com as mãos até formar uma massa homogênea e firme.","Retire porções pequenas da massa.", "Modele do formato que quiser, bolinhas, dadinhos, seja criativo!", "Unte uma fôrma com manteiga e trigo, papel manteiga ou spray de untar.", "Coloque as massas modeladas ao lado da outra na fôrma untada.", "Leve ao forno alto, preaquecido a 180°C , por 15 minutos ou até dourar.", "Retire e sirva em seguida."], numeroEtapas: 3,
@@ -149,14 +150,14 @@ func getRecipes() -> [Recipe]{
                       pessoaTurno: ["Criança", "Criança", "Adulto","Criança", "Mix", "Adulto","Adulto","Adulto"],
                       descricaoReceita: ["Misture o leite, os ovos, a farinha, o óleo e o sal dentro do liquidificador.", "Se quiser a panqueca laranja, adicione cenoura ralada, se quiser a panqueca rosa, adicione a beterraba.", "Bata a massa no liquidificador até ficar homogênea.", "Unte uma frigideira com um pouco de manteiga.", "Com uma concha, coloque uma porção da massa na frigideira e espalhe por toda a superfície.", "Deixe dourar dos dois lados.", "Tire da frigideira e repita o processo com a concha até a massa acabar.", "Retire o resto das panquecas e sirva."], numeroEtapas: 3,
                       imagemIntrucao:
-                        [UIImage(named: "pipocasecos")!,
-                         UIImage(named: "pipoca.agua")!,
-                         UIImage(named: "pipoca.plastico")!,
-                         UIImage(named: "pipoca.furos")!,
-                         UIImage(named: "pipoca.microondas")!,
-                         UIImage(named: "pipoca")!,
-                         UIImage(named: "pipoca")!,
-                         UIImage(named: "pipoca")!]
+                        [UIImage(named: "liquidificador.mix")!,
+                         UIImage(named: "liquidificador.cor")!,
+                         UIImage(named: "liquidificador.final")!,
+                         UIImage(named: "fogao.manteiga")!,
+                         UIImage(named: "fogao.massa")!,
+                         UIImage(named: "fogao.lado")!,
+                         UIImage(named: "fogao.massa.2")!,
+                         UIImage(named: "pancake.final")!]
                       ,CorDaTela: [UIColor(named: "Child_Orange")!,
                                    UIColor(named: "Child_Orange")!,
                                    UIColor(named: "Adulto_Blue")!,
@@ -183,22 +184,22 @@ func getRecipes() -> [Recipe]{
                                      UIColor(named: "Adulto_DarkBlue")!,
                                      UIColor(named: "Adulto_DarkBlue")!],
                       Etapa: ["Fazer a Massa","Fazer a Massa","Fazer a Massa","Fazer a Massa","Fritar","Fritar","Finalizar","Finalizar"], progressBar:[0.125,0.25,0.375,0.5,0.625,0.75,0.875,1],
-                      medalha: UIImage(named: "reward.pipoca")!,
-                      imagemShare: UIImage(named: "reward.pipoca.2")!,
-                      tempoDeReceita: 0),
+                      medalha: UIImage(named: "reward.pancake")!,
+                      imagemShare: UIImage(named: "share.pancake")!,
+                      tempoDeReceita: 60),
                
                Recipe(tituloReceita: "Mini Gelatinas",
                       numeroIntrucoes: 7,
                       pessoaTurno: ["Adulto", "Criança", "Mix", "Mix", "Adulto", "Mix", "Adulto"],
                       descricaoReceita: ["Coloque o sachê de gelatina na agua fervente e misture até dissolver todo o açúcar da gelatina.","Adicione a água fria a gelatina e misture bem.","Coloque a gelatina em copinhos até a metade e leve a geladeira até ficarem bem durinhas.","Adicione o creme de leite, leite condensado, leite e o suco em pó no liquidificador.","Misture por 1 minutinho ou até ficar consistente.","Adicione o mousse por cima da gelatina no copinho.","Finalize com granulados (Opcional) e sirva."], numeroEtapas: 3,
                       imagemIntrucao:
-                        [UIImage(named: "pipocasecos")!,
-                         UIImage(named: "pipoca.agua")!,
-                         UIImage(named: "pipoca.plastico")!,
-                         UIImage(named: "pipoca.furos")!,
-                         UIImage(named: "pipoca.microondas")!,
-                         UIImage(named: "pipoca")!,
-                         UIImage(named: "pipoca")!]
+                        [UIImage(named: "mix.gelatina")!,
+                         UIImage(named: "water.gelatina")!,
+                         UIImage(named: "cup.freeze")!,
+                         UIImage(named: "liquidificador")!,
+                         UIImage(named: "mix.mousse")!,
+                         UIImage(named: "cup.mousse")!,
+                         UIImage(named: "gelatin.finish")!]
                       ,CorDaTela: [UIColor(named: "Adulto_Blue")!,
                                    UIColor(named: "Child_Orange")!,
                                    UIColor(named: "Mix_Magenta")!,
@@ -222,9 +223,9 @@ func getRecipes() -> [Recipe]{
                                      UIColor(named: "Mix_DarkMagenta")!,
                                      UIColor(named: "Adulto_DarkBlue")!],
                       Etapa: ["Gelatina","Gelatina","Gelatina","Mousse","Mousse","Mousse","Decorar"], progressBar:[0.142,0.284,0.426,0.568,0.71,0.852,1],
-                      medalha: UIImage(named: "reward.pipoca")!,
-                      imagemShare: UIImage(named: "reward.pipoca.2")!,
-                      tempoDeReceita: 900),
+                      medalha: UIImage(named: "reward.gelatina")!,
+                      imagemShare: UIImage(named: "share.gelatina")!,
+                      tempoDeReceita: 0),
                
                Recipe(tituloReceita: "Brigadeiro",
                       numeroIntrucoes: 6,
