@@ -77,7 +77,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
 
         dateComponents.weekday = 5
         dateComponents.hour = 16
-        dateComponents.minute = 13
+        dateComponents.minute = 23
         
         let trigger = UNCalendarNotificationTrigger(
                  dateMatching: dateComponents, repeats: true)
@@ -102,7 +102,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
 
         dateComponents2.weekday = 5
         dateComponents2.hour = 16
-        dateComponents2.minute = 14
+        dateComponents2.minute = 24
 
 
         let trigger2 = UNCalendarNotificationTrigger(
@@ -129,7 +129,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
       
               dateComponents3.weekday = 5
               dateComponents3.hour = 16
-              dateComponents3.minute = 15
+              dateComponents3.minute = 25
       
       
               let trigger3 = UNCalendarNotificationTrigger(
@@ -155,7 +155,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
       
               dateComponents4.weekday = 5
               dateComponents4.hour = 16
-              dateComponents4.minute = 16
+              dateComponents4.minute = 26
       
       
               let trigger4 = UNCalendarNotificationTrigger(
@@ -182,7 +182,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
       
               dateComponents5.weekday = 5
               dateComponents5.hour = 16
-              dateComponents5.minute = 17
+              dateComponents5.minute = 27
       
       
               let trigger5 = UNCalendarNotificationTrigger(
