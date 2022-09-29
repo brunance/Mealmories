@@ -13,5 +13,6 @@ class RecipesTableViewCell: UITableViewCell {
     @IBOutlet weak var nameTableView: UILabel!
     @IBOutlet weak var dificultyTableView: UILabel!
     @IBOutlet weak var AgeTableView: UILabel!
+    @IBOutlet weak var dificultyImageView: UIImageView!
     @IBOutlet weak var timeTableView: UILabel!
 }

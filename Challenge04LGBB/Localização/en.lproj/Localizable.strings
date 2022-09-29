@@ -42,6 +42,8 @@
 
 //Dificuldades
 "Fácil" = "Easy";
+"Médio" = "Medium";
+"Difícil" = "Hard";
 
 //Idades
 "+ 4 anos" = "+4 years old";
