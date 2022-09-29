@@ -76,8 +76,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         dateComponents.calendar = Calendar.current
 
         dateComponents.weekday = 5
-        dateComponents.hour = 14
-        dateComponents.minute = 47
+        dateComponents.hour = 16
+        dateComponents.minute = 13
         
         let trigger = UNCalendarNotificationTrigger(
                  dateMatching: dateComponents, repeats: true)
@@ -101,8 +101,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         dateComponents2.calendar = Calendar.current
 
         dateComponents2.weekday = 5
-        dateComponents2.hour = 14
-        dateComponents2.minute = 48
+        dateComponents2.hour = 16
+        dateComponents2.minute = 14
 
 
         let trigger2 = UNCalendarNotificationTrigger(
@@ -128,8 +128,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
               dateComponents3.calendar = Calendar.current
       
               dateComponents3.weekday = 5
-              dateComponents3.hour = 14
-              dateComponents3.minute = 49
+              dateComponents3.hour = 16
+              dateComponents3.minute = 15
       
       
               let trigger3 = UNCalendarNotificationTrigger(
@@ -154,8 +154,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
               dateComponents4.calendar = Calendar.current
       
               dateComponents4.weekday = 5
-              dateComponents4.hour = 14
-              dateComponents4.minute = 50
+              dateComponents4.hour = 16
+              dateComponents4.minute = 16
       
       
               let trigger4 = UNCalendarNotificationTrigger(
@@ -181,8 +181,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
               dateComponents5.calendar = Calendar.current
       
               dateComponents5.weekday = 5
-              dateComponents5.hour = 14
-              dateComponents5.minute = 55
+              dateComponents5.hour = 16
+              dateComponents5.minute = 17
       
       
               let trigger5 = UNCalendarNotificationTrigger(
