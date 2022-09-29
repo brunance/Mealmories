@@ -238,16 +238,16 @@ extension ViewController {
        
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.setTitleColor(.clear, for: .normal)
+        nextButton.setTitleColor(.blue, for: .normal)
         nextButton.setTitle("Next", for: .normal)
         nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .primaryActionTriggered)
-        
+        nextButton.backgroundColor = UIColor.red
         
         skipButton.translatesAutoresizingMaskIntoConstraints = false
-        skipButton.setTitleColor(.clear, for: .normal)
+        skipButton.setTitleColor(.blue, for: .normal)
         skipButton.setTitle("Skip", for: .normal)
         skipButton.addTarget(self, action: #selector(skipTapped(_:)), for: .primaryActionTriggered)
-        
+        skipButton.backgroundColor = UIColor.red
        
     }
     
@@ -264,12 +264,12 @@ extension ViewController {
                 pageControl.heightAnchor.constraint(equalToConstant: 20),
                 view.bottomAnchor.constraint(equalToSystemSpacingBelow: pageControl.bottomAnchor, multiplier:8),
                 
-                nextButton.widthAnchor.constraint(equalToConstant: 70),
+                nextButton.widthAnchor.constraint(equalToConstant: 100),
                 nextButton.heightAnchor.constraint(equalToConstant: 150),
                 nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
                 nextButton.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -300),
                 
-                skipButton.widthAnchor.constraint(equalToConstant: 70),
+                skipButton.widthAnchor.constraint(equalToConstant: 100),
                 skipButton.heightAnchor.constraint(equalToConstant: 150),
                 skipButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
                 skipButton.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -300),
@@ -286,12 +286,12 @@ extension ViewController {
                 pageControl.heightAnchor.constraint(equalToConstant: 20),
                 view.bottomAnchor.constraint(equalToSystemSpacingBelow: pageControl.bottomAnchor, multiplier:8),
                 
-                nextButton.widthAnchor.constraint(equalToConstant: 70),
+                nextButton.widthAnchor.constraint(equalToConstant: 100),
                 nextButton.heightAnchor.constraint(equalToConstant: 100),
-                nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
+                nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10),
                 nextButton.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -40),
                 
-                skipButton.widthAnchor.constraint(equalToConstant: 70),
+                skipButton.widthAnchor.constraint(equalToConstant: 100),
                 skipButton.heightAnchor.constraint(equalToConstant: 100),
                 skipButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
                 skipButton.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -40),
