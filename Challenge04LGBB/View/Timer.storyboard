@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Time Controller-->
+        <!--Timer Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="Timer" id="Y6W-OH-hqX" customClass="TimeController" customModule="Mealmories" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Timer" id="Y6W-OH-hqX" customClass="TimerController" customModule="Mealmories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,18 +22,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="-5"/>
-                                <connections>
-                                    <action selector="minusSeconds:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rg1-Xn-heZ"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qf-PG-gXW">
                                 <rect key="frame" x="173" y="732" width="45" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+5"/>
-                                <connections>
-                                    <action selector="addSeconds:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dcc-VS-2i9"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYq-r7-THM">
                                 <rect key="frame" x="162" y="689" width="68" height="35"/>
@@ -41,7 +35,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Reset"/>
                                 <connections>
-                                    <action selector="resetButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9g4-mZ-9aw"/>
+                                    <action selector="resetAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5JS-Yo-Kp1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9x-Ba-dPR">
@@ -49,9 +43,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Pause"/>
-                                <connections>
-                                    <action selector="pauseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7mn-UZ-Mcj"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ot2-9u-sMh">
                                 <rect key="frame" x="165" y="603" width="62" height="35"/>
@@ -59,7 +50,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start"/>
                                 <connections>
-                                    <action selector="startButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MR4-0G-5zp"/>
+                                    <action selector="startStopAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PNk-8D-X3f"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fez-Gg-PUF">
@@ -74,12 +65,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="addSeconds" destination="9Qf-PG-gXW" id="fRe-2S-jRo"/>
-                        <outlet property="minusSeconds" destination="E3c-5K-NeJ" id="JH5-tT-c1E"/>
-                        <outlet property="pauseButton" destination="G9x-Ba-dPR" id="SMx-Wz-hSt"/>
-                        <outlet property="resetButton" destination="pYq-r7-THM" id="dfk-Ef-QQ4"/>
-                        <outlet property="startButton" destination="ot2-9u-sMh" id="CbJ-PP-TSx"/>
-                        <outlet property="timerLabel" destination="Fez-Gg-PUF" id="S7b-ah-h3U"/>
+                        <outlet property="resetButton" destination="pYq-r7-THM" id="WNV-Re-87Z"/>
+                        <outlet property="startStopButton" destination="ot2-9u-sMh" id="tQ3-ok-u2y"/>
+                        <outlet property="timeLabel" destination="Fez-Gg-PUF" id="BSV-od-pr5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

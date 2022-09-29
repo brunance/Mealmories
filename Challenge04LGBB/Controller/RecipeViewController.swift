@@ -274,7 +274,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         
         if destino == "Timer"{
             let storyBoard: UIStoryboard = UIStoryboard(name: "Timer", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Timer") as! TimeController
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Timer") as! TimerController
             
            
             navigationController?.modalPresentationStyle = .formSheet
