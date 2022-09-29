@@ -16,6 +16,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     @IBOutlet weak var NameCard: UILabel!
     @IBOutlet weak var ImageCard: UIImageView!
     
+    @IBOutlet weak var difficultyCardImage: UIImageView!
     @IBOutlet weak var ScrollRecipesHeight: NSLayoutConstraint!
     //Outlets das Receitas Rapidas
     @IBOutlet weak var tablleViewReceitasRapidas: UITableView!
@@ -35,6 +36,9 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         FundoCards.layer.borderColor = UIColor(named: "Mix_Magenta")!.cgColor
         FundoCards.layer.borderWidth = 3
         confete.layer.opacity = 0.4
+        
+        self.ScrollRecipesHeight.constant += self.tableViewReceitasRapidasHeight.constant - 100
+        
         SetReceitaDestaque()
     }
     
@@ -53,8 +57,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     }
     
     override func viewWillLayoutSubviews() {
-        self.tableViewReceitasRapidasHeight.constant += self.tablleViewReceitasRapidas.contentSize.height + 100
-        self.ScrollRecipesHeight.constant += self.tableViewReceitasRapidasHeight.constant / 2
+        let recipes = getChoosenRecipe()
+        self.tableViewReceitasRapidasHeight.constant = (self.tablleViewReceitasRapidas.contentSize.height * CGFloat(recipes.count))
     }
 
     func notifications(){
@@ -216,6 +220,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         ImageCard.image = receitaDeDestaque[randomInt].imagemReceita
         ImageCard.isAccessibilityElement = true
         ImageCard.accessibilityLabel = "Imagem da receita em destaque, \(receitaDeDestaque[randomInt].nomeDaReceita)"
+        difficultyCardImage.image = UIImage(named: "\(receitaDeDestaque[randomInt].dificuldade)-32px")
+        
     }
     
     @IBAction func ClickReceitaDestaque(_ sender: Any) {
@@ -241,6 +247,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         cell.AgeTableView.text = "+\(recipes[indexPath.row].idadeRecomendada) anos".localize()
         cell.dificultyTableView.text = "\(recipes[indexPath.row].dificuldade)".localize()
         cell.timeTableView.text = "\(recipes[indexPath.row].tempoDePreparo)".localize()
+        cell.dificultyImageView.image = UIImage(named: "\(recipes[indexPath.row].dificuldade)-16px")
         cell.selectionStyle = .none
         return cell
     }

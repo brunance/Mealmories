@@ -25,6 +25,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     @IBOutlet weak var nomeReceitaEscolhida: UILabel!
     @IBOutlet weak var tempoReceitaEscolhida: UILabel!
     @IBOutlet weak var dificultyReceitaEscolhida: UILabel!
+    @IBOutlet weak var dificultyReceitaEscolhidaImage: UIImageView!
     @IBOutlet weak var AgeReceitaEscolhida: UILabel!
     
     var itemList1 : [String] = [String]()
@@ -178,6 +179,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         tempoReceitaEscolhida.accessibilityLabel = "Tempo estimado de duração da receita escolhida, \(chossenRecipe[escolha].tempoDePreparo)"
         dificultyReceitaEscolhida.text = "\(chossenRecipe[escolha].dificuldade)".localize()
         dificultyReceitaEscolhida.accessibilityLabel = "Dificuldade da receita escolhida, \(chossenRecipe[escolha].dificuldade)"
+        dificultyReceitaEscolhidaImage.image = UIImage(named: "\(chossenRecipe[escolha].dificuldade)-32px")
         AgeReceitaEscolhida.text = "+ \(chossenRecipe[escolha].idadeRecomendada) anos".localize()
         AgeReceitaEscolhida.accessibilityLabel = "Faixa etária da receita escolhida, \(chossenRecipe[escolha].idadeRecomendada) anos ou mais"
     }

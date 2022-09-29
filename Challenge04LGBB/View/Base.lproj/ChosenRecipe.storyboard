@@ -408,6 +408,7 @@
                         <outlet property="ImagemReceitaEscolhida" destination="8RO-Pt-imc" id="3I9-oz-wyp"/>
                         <outlet property="ScrollViewHeight" destination="dQP-pr-iE0" id="fOH-J2-suj"/>
                         <outlet property="dificultyReceitaEscolhida" destination="OWb-pM-Dpc" id="1Eq-z5-rNJ"/>
+                        <outlet property="dificultyReceitaEscolhidaImage" destination="4wD-sC-sYo" id="8sG-D0-ygl"/>
                         <outlet property="nomeReceitaEscolhida" destination="6ov-Dq-3bS" id="MBP-D2-bJk"/>
                         <outlet property="startButton" destination="aj3-nP-hDa" id="hCb-jZ-1CV"/>
                         <outlet property="tableEtapas" destination="S3c-vl-bsK" id="Hiy-8a-e3Z"/>
