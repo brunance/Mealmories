@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import NotificationCenter
 
 class ListRecipesViewController : UIViewController,UITableViewDataSource,UITableViewDelegate{
     
@@ -53,29 +54,29 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         self.tableViewReceitasRapidasHeight.constant += self.tablleViewReceitasRapidas.contentSize.height + 100
         self.ScrollRecipesHeight.constant += self.tableViewReceitasRapidasHeight.constant / 2
     }
+
     func notifications(){
+         
         
         let center = UNUserNotificationCenter.current()
-        
         center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
         }
         
-        //notificacao 1
         
         
         let content = UNMutableNotificationContent()
-        content.title = "Vamos Cozinhar"
-        content.body = "É hora de cozinhar em conjunto"
-        
+        content.title = "not1"
+        content.body = "not1Body"
+        content.sound = .defaultRingtone
+
         
         var dateComponents = DateComponents()
         dateComponents.calendar = Calendar.current
 
-        dateComponents.weekday = 4
-        dateComponents.hour = 11
-        dateComponents.minute = 41
+        dateComponents.weekday = 5
+        dateComponents.hour = 10
+        dateComponents.minute = 33
         
-           
         let trigger = UNCalendarNotificationTrigger(
                  dateMatching: dateComponents, repeats: true)
         
@@ -89,32 +90,112 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
            if error != nil {
            }
         }
-//        let content2 = UNMutableNotificationContent()
-//        content2.title = "Weekly Staff Meeting"
-//        content2.body = "Every Tuesday at 2pm"
-//
-//
-//        var dateComponents2 = DateComponents()
-//        dateComponents2.calendar = Calendar.current
-//
-//        dateComponents2.weekday = 4
-//        dateComponents2.hour = 11
-//        dateComponents2.minute = 20
-//
-//
-//        let trigger2 = UNCalendarNotificationTrigger(
-//                 dateMatching: dateComponents2, repeats: true)
-//
-//        let uuidString2 = UUID().uuidString
-//        let request2 = UNNotificationRequest(identifier: uuidString2,
-//                    content: content2, trigger: trigger2)
-//
-//
-//        let notificationCenter2 = UNUserNotificationCenter.current()
-//        notificationCenter2.add(request2) { (error) in
-//           if error != nil {
-//           }
-//        }
+        let content2 = UNMutableNotificationContent()
+        content2.title = "not2"
+        content2.body = "not2Body"
+        content2.sound = .defaultRingtone
+
+        var dateComponents2 = DateComponents()
+        dateComponents2.calendar = Calendar.current
+
+        dateComponents2.weekday = 5
+        dateComponents2.hour = 10
+        dateComponents2.minute = 34
+
+
+        let trigger2 = UNCalendarNotificationTrigger(
+                 dateMatching: dateComponents2, repeats: true)
+
+        let uuidString2 = UUID().uuidString
+        let request2 = UNNotificationRequest(identifier: uuidString2,
+                    content: content2, trigger: trigger2)
+
+
+        let notificationCenter2 = UNUserNotificationCenter.current()
+        notificationCenter2.add(request2) { (error) in
+           if error != nil {
+           }
+        }
+              let content3 = UNMutableNotificationContent()
+              content3.title = "Not3"
+              content3.body = "bod3"
+              content3.sound = .defaultRingtone
+        
+      
+              var dateComponents3 = DateComponents()
+              dateComponents3.calendar = Calendar.current
+      
+              dateComponents3.weekday = 5
+              dateComponents3.hour = 10
+              dateComponents3.minute = 35
+      
+      
+              let trigger3 = UNCalendarNotificationTrigger(
+                       dateMatching: dateComponents3, repeats: true)
+      
+              let uuidString3 = UUID().uuidString
+              let request3 = UNNotificationRequest(identifier: uuidString3,
+                          content: content3, trigger: trigger3)
+      
+      
+              let notificationCenter3 = UNUserNotificationCenter.current()
+              notificationCenter3.add(request3) { (error) in
+                 if error != nil {
+                 }
+              }
+              let content4 = UNMutableNotificationContent()
+              content4.title = "not4"
+              content4.body = "bod4"
+              content4.sound = .defaultRingtone
+      
+              var dateComponents4 = DateComponents()
+              dateComponents4.calendar = Calendar.current
+      
+              dateComponents4.weekday = 5
+              dateComponents4.hour = 10
+              dateComponents4.minute = 36
+      
+      
+              let trigger4 = UNCalendarNotificationTrigger(
+                       dateMatching: dateComponents2, repeats: true)
+      
+              let uuidString4 = UUID().uuidString
+              let request4 = UNNotificationRequest(identifier: uuidString4,
+                          content: content4, trigger: trigger4)
+      
+      
+              let notificationCenter4 = UNUserNotificationCenter.current()
+              notificationCenter4.add(request4) { (error) in
+                 if error != nil {
+                 }
+              }
+        
+        let content5 = UNMutableNotificationContent()
+              content5.title = "not5"
+              content5.body = "bod5"
+              content5.sound = .defaultRingtone
+      
+              var dateComponents5 = DateComponents()
+              dateComponents5.calendar = Calendar.current
+      
+              dateComponents5.weekday = 5
+              dateComponents5.hour = 10
+              dateComponents5.minute = 37
+      
+      
+              let trigger5 = UNCalendarNotificationTrigger(
+                       dateMatching: dateComponents5, repeats: true)
+      
+              let uuidString5 = UUID().uuidString
+              let request5 = UNNotificationRequest(identifier: uuidString5,
+                          content: content5, trigger: trigger5)
+      
+      
+              let notificationCenter5 = UNUserNotificationCenter.current()
+              notificationCenter5.add(request5) { (error) in
+                 if error != nil {
+                 }
+              }
     }
     
     func BackBarButton(){
