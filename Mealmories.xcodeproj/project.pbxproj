@@ -31,7 +31,6 @@
 		51FAF0C228C1A99500C66619 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FAF0C128C1A99400C66619 /* RecipesTableViewCell.swift */; };
 		6608015D28ABE785005FC8A0 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608015C28ABE785005FC8A0 /* RecipeView.swift */; };
 		6608016128ABEDB2005FC8A0 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608016028ABEDB2005FC8A0 /* RecipeViewController.swift */; };
-		660EB4A928B8F77F007D2425 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660EB4A828B8F77F007D2425 /* CustomTransition.swift */; };
 		660EB4AB28B8F7BE007D2425 /* ChosenRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */; };
 		660EB4AD28B90E6E007D2425 /* EndRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660EB4AC28B90E6E007D2425 /* EndRecipeViewController.swift */; };
 		663CCA5328CF8C72000D5B47 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */; };
@@ -89,7 +88,6 @@
 		66097CEA28CD8E8900A9B6BA /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/EndRecipe.strings; sourceTree = "<group>"; };
 		66097CEB28CD8E8900A9B6BA /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/ForgetRecipe.strings; sourceTree = "<group>"; };
 		66097CEC28CD8E8900A9B6BA /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
-		660EB4A828B8F77F007D2425 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		660EB4AA28B8F7BE007D2425 /* ChosenRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenRecipeViewController.swift; sourceTree = "<group>"; };
 		660EB4AC28B90E6E007D2425 /* EndRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndRecipeViewController.swift; sourceTree = "<group>"; };
 		663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 				4F10029E28AD37970052D2B8 /* View */,
 				4F10029D28AD37740052D2B8 /* Controller */,
 				665C690B28BCF63900E9F1FA /* SoundEffects */,
-				66AAE5A928CBF21800915D62 /* CustomTransition */,
 				66AAE5D128CC304C00915D62 /* Localization */,
 				4F10029C28AD215B0052D2B8 /* Fonts */,
 				4FED130328AA8A83002113D3 /* Info.plist */,
@@ -237,14 +234,6 @@
 				665C690F28BCF63900E9F1FA /* passar.mp3 */,
 			);
 			path = SoundEffects;
-			sourceTree = "<group>";
-		};
-		66AAE5A928CBF21800915D62 /* CustomTransition */ = {
-			isa = PBXGroup;
-			children = (
-				660EB4A828B8F77F007D2425 /* CustomTransition.swift */,
-			);
-			path = CustomTransition;
 			sourceTree = "<group>";
 		};
 		66AAE5BC28CC2A1900915D62 /* Extensions */ = {
@@ -361,7 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FED12F628AA8A80002113D3 /* AppDelegate.swift in Sources */,
-				660EB4A928B8F77F007D2425 /* CustomTransition.swift in Sources */,
 				6608015D28ABE785005FC8A0 /* RecipeView.swift in Sources */,
 				666B235928B6F12600C6E62A /* UserKeys.swift in Sources */,
 				510501DB28E3452700BFA35A /* TimeController.swift in Sources */,
