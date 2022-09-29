@@ -26,80 +26,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-Fp-geX">
-                                <rect key="frame" x="132.33333333333334" y="748.66666666666663" width="125.33333333333334" height="41.333333333333371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-Fp-geX">
+                                <rect key="frame" x="20" y="733" width="350" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="YK8-YC-S1M"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Compartilhar">
+                                <buttonConfiguration key="configuration" style="gray" title="Compartilhar">
                                     <fontDescription key="titleFontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
                                     <color key="baseBackgroundColor" name="Mix_Magenta"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Share:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dZv-9Y-1PF"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-ka-WxD">
-                                <rect key="frame" x="20" y="122" width="350" height="443"/>
+                                <rect key="frame" x="20" y="96.999999999999972" width="350" height="474.33333333333326"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-AQ-e39">
-                                        <rect key="frame" x="20" y="20" width="185" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="158" id="4IG-uG-xn1"/>
-                                            <constraint firstAttribute="height" constant="32" id="dE3-4M-R8v"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-AQ-e39">
+                                        <rect key="frame" x="20" y="20" width="310" height="35"/>
                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
                                         <color key="textColor" name="Mix_Magenta"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jix-3G-pJ2">
-                                        <rect key="frame" x="10" y="93" width="330" height="330"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="FQ0-gu-A5o"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="330" id="TfH-h7-K2g"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon sharing" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-mr-IGO" userLabel="Mealmories">
-                                        <rect key="frame" x="20" y="206" width="107" height="94"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feito com Mealmories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M78-2x-Kxj">
-                                        <rect key="frame" x="20" y="57" width="146" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="Eug-PN-P9A"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="aoU-SR-8Cl"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feito com Mealmories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="M78-2x-Kxj">
+                                        <rect key="frame" x="20" y="61.000000000000007" width="310" height="26.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reward.pipoca.2" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-jH-EW8" userLabel="Medalha">
-                                        <rect key="frame" x="158" y="166" width="118" height="160"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jix-3G-pJ2">
+                                        <rect key="frame" x="10" y="107.33333333333337" width="330" height="347"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward.pipoca.2" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-jH-EW8" userLabel="Medalha">
+                                        <rect key="frame" x="0.0" y="354.33333333333331" width="104" height="120"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon sharing" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-mr-IGO" userLabel="Mealmories">
+                                        <rect key="frame" x="270" y="394.33333333333331" width="80" height="80"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelMagenta"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="18R-QT-0a6"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jix-3G-pJ2" secondAttribute="trailing" constant="10" id="99d-rp-KGy"/>
-                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="width" secondItem="7ln-ka-WxD" secondAttribute="width" multiplier="0.942857" id="Hx0-2H-NSs"/>
-                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="height" secondItem="7ln-ka-WxD" secondAttribute="height" multiplier="0.744921" id="Mga-XM-9BD"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="443" id="NjP-er-EwJ"/>
-                                    <constraint firstItem="M78-2x-Kxj" firstAttribute="top" secondItem="5Bi-AQ-e39" secondAttribute="bottom" constant="5" id="PJB-lV-PoS"/>
-                                    <constraint firstItem="M78-2x-Kxj" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" constant="20" id="R3l-Rw-ZD6"/>
-                                    <constraint firstAttribute="bottom" secondItem="Jix-3G-pJ2" secondAttribute="bottom" constant="20" id="VpB-E0-1DS"/>
-                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" constant="10" id="ZS4-Bm-76X"/>
-                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="top" secondItem="M78-2x-Kxj" secondAttribute="bottom" constant="20" id="fbd-B8-JJs"/>
-                                    <constraint firstItem="5Bi-AQ-e39" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" constant="20" id="kfe-Uc-YHa"/>
-                                    <constraint firstItem="5Bi-AQ-e39" firstAttribute="top" secondItem="7ln-ka-WxD" secondAttribute="top" constant="20" id="pcG-9b-ue4"/>
+                                    <constraint firstItem="5Bi-AQ-e39" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" constant="20" id="1kP-q6-XcC"/>
+                                    <constraint firstAttribute="trailing" secondItem="M78-2x-Kxj" secondAttribute="trailing" constant="20" id="9jR-CF-eTD"/>
+                                    <constraint firstItem="iPM-mr-IGO" firstAttribute="width" secondItem="7ln-ka-WxD" secondAttribute="width" multiplier="0.228571" id="9qb-92-KAs"/>
+                                    <constraint firstAttribute="bottom" secondItem="ViK-jH-EW8" secondAttribute="bottom" id="C6F-g0-6MO"/>
+                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="top" secondItem="M78-2x-Kxj" secondAttribute="bottom" constant="20" id="E2c-1A-yvg"/>
+                                    <constraint firstItem="ViK-jH-EW8" firstAttribute="width" secondItem="7ln-ka-WxD" secondAttribute="width" multiplier="0.297143" id="I4p-jy-3sS"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jix-3G-pJ2" secondAttribute="bottom" constant="20" id="IRJ-1Q-u5S"/>
+                                    <constraint firstItem="ViK-jH-EW8" firstAttribute="height" secondItem="7ln-ka-WxD" secondAttribute="height" multiplier="0.252987" id="Jz0-lz-lmr"/>
+                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="height" secondItem="7ln-ka-WxD" secondAttribute="height" multiplier="0.731707" id="LEQ-7Q-Wla"/>
+                                    <constraint firstItem="5Bi-AQ-e39" firstAttribute="width" secondItem="7ln-ka-WxD" secondAttribute="width" multiplier="0.885714" id="Mo3-Y5-afZ"/>
+                                    <constraint firstItem="M78-2x-Kxj" firstAttribute="top" secondItem="5Bi-AQ-e39" secondAttribute="bottom" constant="6" id="P8b-yQ-3wA"/>
+                                    <constraint firstItem="ViK-jH-EW8" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" id="Q3j-E1-xeQ"/>
+                                    <constraint firstItem="iPM-mr-IGO" firstAttribute="height" secondItem="7ln-ka-WxD" secondAttribute="height" multiplier="0.168658" id="S8M-HL-wpQ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="475" id="Tao-60-jcj"/>
+                                    <constraint firstAttribute="bottom" secondItem="iPM-mr-IGO" secondAttribute="bottom" id="ZaT-fb-pSv"/>
+                                    <constraint firstAttribute="trailing" secondItem="iPM-mr-IGO" secondAttribute="trailing" id="Zny-Lj-DGa"/>
+                                    <constraint firstItem="M78-2x-Kxj" firstAttribute="width" secondItem="7ln-ka-WxD" secondAttribute="width" multiplier="0.885714" id="b2L-eN-Tec"/>
+                                    <constraint firstItem="5Bi-AQ-e39" firstAttribute="height" secondItem="7ln-ka-WxD" secondAttribute="height" multiplier="0.0736842" id="cnq-Sg-cxP"/>
+                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" constant="10" id="jBW-Qm-UOq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jix-3G-pJ2" secondAttribute="trailing" constant="10" id="kCe-kC-Bx9"/>
+                                    <constraint firstItem="M78-2x-Kxj" firstAttribute="leading" secondItem="7ln-ka-WxD" secondAttribute="leading" constant="20" id="of4-FF-gqH"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Bi-AQ-e39" secondAttribute="trailing" constant="20" id="qrg-nb-Dgn"/>
+                                    <constraint firstItem="M78-2x-Kxj" firstAttribute="height" secondItem="7ln-ka-WxD" secondAttribute="height" multiplier="0.0554386" id="tJL-U0-atQ"/>
+                                    <constraint firstItem="5Bi-AQ-e39" firstAttribute="top" secondItem="7ln-ka-WxD" secondAttribute="top" constant="20" id="wet-Ld-qhu"/>
+                                    <constraint firstItem="Jix-3G-pJ2" firstAttribute="width" secondItem="7ln-ka-WxD" secondAttribute="width" multiplier="0.942857" id="yFt-OD-5d8"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7ln-ka-WxD" secondAttribute="trailing" constant="20" id="a9k-QP-SSO"/>
-                            <constraint firstItem="7ln-ka-WxD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="iEX-H5-T26"/>
-                            <constraint firstItem="7ln-ka-WxD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="75" id="u0p-OQ-23X"/>
+                            <constraint firstItem="7ln-ka-WxD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="293-oQ-Jhd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7ln-ka-WxD" secondAttribute="trailing" constant="20" id="7jl-mk-PVW"/>
+                            <constraint firstItem="jas-Fp-geX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="8z7-bg-u9V"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jas-Fp-geX" secondAttribute="trailing" constant="20" id="Ap7-wu-JjU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jas-Fp-geX" secondAttribute="bottom" constant="20" id="Nxa-sk-00z"/>
+                            <constraint firstItem="7ln-ka-WxD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="mOB-SW-7rx"/>
                         </constraints>
                     </view>
                     <connections>
