@@ -186,7 +186,7 @@ class ViewController: UIPageViewController {
 
    
     var pages = [UIViewController]()
-    let pageControl = UIPageControl() // external - not part of underlying pages
+    let pageControl = UIPageControl()
     let initialPage = 0
     let nextButton = UIButton()
     let skipButton = UIButton()
@@ -256,7 +256,7 @@ extension ViewController {
         view.addSubview(nextButton)
         view.addSubview(skipButton)
         let modelName = UIDevice.modelName
-        if (modelName.localizedStandardContains("Simulator iPad Pro (12.9-inch)")){
+        if (modelName.localizedStandardContains(" iPad Pro (12.9-inch)")){
             NSLayoutConstraint.activate([
                 
                
@@ -322,7 +322,7 @@ extension ViewController {
     }
 }
 
-// MARK: - Actions
+
 
 extension ViewController {
     
@@ -332,7 +332,7 @@ extension ViewController {
     }
 }
 
-// MARK: - DataSources
+
 
 extension ViewController: UIPageViewControllerDataSource {
     
@@ -370,12 +370,10 @@ extension ViewController: UIPageViewControllerDataSource {
     }
 }
 
-// MARK: - Delegates
 
 extension ViewController: UIPageViewControllerDelegate {
     
-    // How we keep our pageControl in sync with viewControllers
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         guard let viewControllers = pageViewController.viewControllers else { return }
         guard let currentIndex = pages.firstIndex(of: viewControllers[0]) else { return }
@@ -405,4 +403,3 @@ extension UIPageViewController {
     
 }
 
-// MARK: - ViewControllers

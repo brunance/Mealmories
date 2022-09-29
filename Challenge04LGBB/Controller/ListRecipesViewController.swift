@@ -65,8 +65,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         
         
         let content = UNMutableNotificationContent()
-        content.title = "not1"
-        content.body = "not1Body"
+        content.title = "Quais seus planos pra noite?".localize()
+        content.body = "Faça uma receita deliciosa em conjunto para criar mais Mealmories.".localize()
         content.sound = .defaultRingtone
 
         
@@ -74,8 +74,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         dateComponents.calendar = Calendar.current
 
         dateComponents.weekday = 5
-        dateComponents.hour = 10
-        dateComponents.minute = 33
+        dateComponents.hour = 14
+        dateComponents.minute = 47
         
         let trigger = UNCalendarNotificationTrigger(
                  dateMatching: dateComponents, repeats: true)
@@ -91,16 +91,16 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
            }
         }
         let content2 = UNMutableNotificationContent()
-        content2.title = "not2"
-        content2.body = "not2Body"
+        content2.title = "Que tal um café da manhã delicioso?".localize()
+        content2.body = "Com panquecas coloridas o tudo fica mais divertido! ".localize()
         content2.sound = .defaultRingtone
 
         var dateComponents2 = DateComponents()
         dateComponents2.calendar = Calendar.current
 
         dateComponents2.weekday = 5
-        dateComponents2.hour = 10
-        dateComponents2.minute = 34
+        dateComponents2.hour = 14
+        dateComponents2.minute = 48
 
 
         let trigger2 = UNCalendarNotificationTrigger(
@@ -117,8 +117,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
            }
         }
               let content3 = UNMutableNotificationContent()
-              content3.title = "Not3"
-              content3.body = "bod3"
+        content3.title = "Lanche da tarde rápido".localize()
+        content3.body = "Uma pipoca? Mini Gelatinas? Brigadeiro? Há vários jeitos de se divertir.".localize()
               content3.sound = .defaultRingtone
         
       
@@ -126,8 +126,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
               dateComponents3.calendar = Calendar.current
       
               dateComponents3.weekday = 5
-              dateComponents3.hour = 10
-              dateComponents3.minute = 35
+              dateComponents3.hour = 14
+              dateComponents3.minute = 49
       
       
               let trigger3 = UNCalendarNotificationTrigger(
@@ -144,16 +144,16 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
                  }
               }
               let content4 = UNMutableNotificationContent()
-              content4.title = "not4"
-              content4.body = "bod4"
+        content4.title = "Crie Mealmories para suas manhãs!".localize()
+        content4.body = "Faça várias receitas e combine possibilidades pra ter uma refeição única.".localize()
               content4.sound = .defaultRingtone
       
               var dateComponents4 = DateComponents()
               dateComponents4.calendar = Calendar.current
       
               dateComponents4.weekday = 5
-              dateComponents4.hour = 10
-              dateComponents4.minute = 36
+              dateComponents4.hour = 14
+              dateComponents4.minute = 50
       
       
               let trigger4 = UNCalendarNotificationTrigger(
@@ -171,16 +171,16 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
               }
         
         let content5 = UNMutableNotificationContent()
-              content5.title = "not5"
-              content5.body = "bod5"
+        content5.title = "Que tal um filme e bastante comida?".localize()
+        content5.body = "Venha fazer as receitas mais gostosas e divertidas com quem ama, combine todas e faça um grande lanche! ".localize()
               content5.sound = .defaultRingtone
       
               var dateComponents5 = DateComponents()
               dateComponents5.calendar = Calendar.current
       
               dateComponents5.weekday = 5
-              dateComponents5.hour = 10
-              dateComponents5.minute = 37
+              dateComponents5.hour = 14
+              dateComponents5.minute = 55
       
       
               let trigger5 = UNCalendarNotificationTrigger(

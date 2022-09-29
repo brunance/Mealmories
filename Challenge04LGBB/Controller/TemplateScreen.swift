@@ -9,6 +9,10 @@ class TemplateScreen: UIViewController {
     @IBOutlet weak var Imagem: UIImageView!
     var image : UIImage!
     var escolha : Int = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(.portrait)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
