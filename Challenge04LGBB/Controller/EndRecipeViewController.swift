@@ -43,8 +43,13 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        confetti.emit(in: view, with: .fromTopLeft)
-        confetti.emit(in: view, with: .fromTopRight)
+        
+        if confettiAppear == false {
+            confetti.emit(in: view, with: .fromTopLeft)
+            confetti.emit(in: view, with: .fromTopRight)
+            confettiAppear = true
+        }
+        
         ImagePlaceholder.layer.cornerRadius = 10
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
     }
