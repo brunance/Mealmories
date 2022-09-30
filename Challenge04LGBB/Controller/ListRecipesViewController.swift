@@ -78,9 +78,9 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         var dateComponents = DateComponents()
         dateComponents.calendar = Calendar.current
 
-        dateComponents.weekday = 5
-        dateComponents.hour = 16
-        dateComponents.minute = 23
+        dateComponents.weekday = 4
+        dateComponents.hour = 19
+      
         
         let trigger = UNCalendarNotificationTrigger(
                  dateMatching: dateComponents, repeats: true)
@@ -103,9 +103,9 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         var dateComponents2 = DateComponents()
         dateComponents2.calendar = Calendar.current
 
-        dateComponents2.weekday = 5
-        dateComponents2.hour = 16
-        dateComponents2.minute = 24
+        dateComponents2.weekday = 6
+        dateComponents2.hour = 10
+      
 
 
         let trigger2 = UNCalendarNotificationTrigger(
@@ -130,9 +130,9 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
               var dateComponents3 = DateComponents()
               dateComponents3.calendar = Calendar.current
       
-              dateComponents3.weekday = 5
+              dateComponents3.weekday = 6
               dateComponents3.hour = 16
-              dateComponents3.minute = 25
+             
       
       
               let trigger3 = UNCalendarNotificationTrigger(
@@ -156,9 +156,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
               var dateComponents4 = DateComponents()
               dateComponents4.calendar = Calendar.current
       
-              dateComponents4.weekday = 5
-              dateComponents4.hour = 16
-              dateComponents4.minute = 26
+              dateComponents4.weekday = 7
+              dateComponents4.hour = 10
       
       
               let trigger4 = UNCalendarNotificationTrigger(
@@ -183,9 +182,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
               var dateComponents5 = DateComponents()
               dateComponents5.calendar = Calendar.current
       
-              dateComponents5.weekday = 5
+              dateComponents5.weekday = 7
               dateComponents5.hour = 16
-              dateComponents5.minute = 27
       
       
               let trigger5 = UNCalendarNotificationTrigger(
