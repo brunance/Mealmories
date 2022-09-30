@@ -32,9 +32,12 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        BackBarButton()
         setupLabel()
         imageTake.layer.cornerRadius = 10
+    }
+    func BackBarButton(){
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     @IBAction func ShareButton(_ sender: Any) {

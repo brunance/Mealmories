@@ -238,16 +238,16 @@ extension ViewController {
        
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.setTitleColor(.blue, for: .normal)
+        nextButton.setTitleColor(.clear, for: .normal)
         nextButton.setTitle("Next", for: .normal)
         nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .primaryActionTriggered)
-        nextButton.backgroundColor = UIColor.red
+        nextButton.isEnabled = false
         
         skipButton.translatesAutoresizingMaskIntoConstraints = false
-        skipButton.setTitleColor(.blue, for: .normal)
+        skipButton.setTitleColor(.clear, for: .normal)
         skipButton.setTitle("Skip", for: .normal)
         skipButton.addTarget(self, action: #selector(skipTapped(_:)), for: .primaryActionTriggered)
-        skipButton.backgroundColor = UIColor.red
+       
        
     }
     
@@ -341,9 +341,7 @@ extension ViewController: UIPageViewControllerDataSource {
        
         guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
      
-//        if currentIndex == 0 {pageControl.backgroundColor = UIColor.red}
-//        if currentIndex == 1 {pageControl.backgroundColor = UIColor.blue}
-//        if currentIndex == 2 {pageControl.backgroundColor = UIColor.green}
+
         
         if currentIndex == 0 {
             return nil

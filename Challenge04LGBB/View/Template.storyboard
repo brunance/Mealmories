@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -102,7 +101,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="CorDaview"/>
                         <constraints>
                             <constraint firstItem="7ln-ka-WxD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="293-oQ-Jhd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7ln-ka-WxD" secondAttribute="trailing" constant="20" id="7jl-mk-PVW"/>
@@ -127,14 +126,14 @@
     <resources>
         <image name="icon sharing" width="1024" height="1024"/>
         <image name="reward.pipoca.2" width="139.52999877929688" height="160"/>
+        <namedColor name="CorDaview">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="LabelMagenta">
             <color red="0.99607843137254903" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Mix_Magenta">
             <color red="0.97647058823529409" green="0.38039215686274508" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
