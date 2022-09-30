@@ -15,7 +15,6 @@
 		510501DB28E3452700BFA35A /* TimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510501DA28E3452700BFA35A /* TimeController.swift */; };
 		510B91B328E4927900ED5ECF /* notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B91B228E4927900ED5ECF /* notifications.swift */; };
 		511625BC28DE476A00CB2842 /* OnBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511625BE28DE476A00CB2842 /* OnBoard.storyboard */; };
-		511625EA28E1E1C900CB2842 /* Template.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511625E928E1E1C900CB2842 /* Template.storyboard */; };
 		511625EC28E1E55F00CB2842 /* TemplateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511625EB28E1E55F00CB2842 /* TemplateScreen.swift */; };
 		513F103D28D9F939000C8CFC /* IsInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513F103C28D9F939000C8CFC /* IsInitialVC.swift */; };
 		513F103F28D9F95E000C8CFC /* IsInitialuser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */; };
@@ -27,6 +26,7 @@
 		51862A7F28AE90CE00C5F3AE /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029B28AD21540052D2B8 /* Baloo2-ExtraBold.ttf */; };
 		51862A8028AE90CE00C5F3AE /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029928AD21540052D2B8 /* Baloo2-Bold.ttf */; };
 		51862A8128AE90CE00C5F3AE /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F10029828AD21540052D2B8 /* Baloo2-Regular.ttf */; };
+		5191E22B28E7433100ED6441 /* Template.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5191E22D28E7433100ED6441 /* Template.storyboard */; };
 		51A0099D28CF8682005A4465 /* ProgressBarClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A0099C28CF8682005A4465 /* ProgressBarClass.swift */; };
 		51FAF0C228C1A99500C66619 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FAF0C128C1A99400C66619 /* RecipesTableViewCell.swift */; };
 		6608015D28ABE785005FC8A0 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608015C28ABE785005FC8A0 /* RecipeView.swift */; };
@@ -70,13 +70,14 @@
 		511625C028DE476C00CB2842 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OnBoard.strings; sourceTree = "<group>"; };
 		511625C428DE476E00CB2842 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/OnBoard.strings"; sourceTree = "<group>"; };
 		511625C528DE477A00CB2842 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/OnBoard.strings; sourceTree = "<group>"; };
-		511625E928E1E1C900CB2842 /* Template.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Template.storyboard; sourceTree = "<group>"; };
 		511625EB28E1E55F00CB2842 /* TemplateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScreen.swift; sourceTree = "<group>"; };
 		513F103C28D9F939000C8CFC /* IsInitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsInitialVC.swift; sourceTree = "<group>"; };
 		513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IsInitialuser.storyboard; sourceTree = "<group>"; };
 		513F104228D9FF91000C8CFC /* OnBoardVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardVc.swift; sourceTree = "<group>"; };
 		515AA40028BEBAA700F903BE /* ListRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRecipesViewController.swift; sourceTree = "<group>"; };
 		5165C1BE28BFA61900F5F1CF /* ChoosenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenModel.swift; sourceTree = "<group>"; };
+		5191E22C28E7433100ED6441 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Template.storyboard; sourceTree = "<group>"; };
+		5191E22F28E7433500ED6441 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Template.strings; sourceTree = "<group>"; };
 		51A0099C28CF8682005A4465 /* ProgressBarClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarClass.swift; sourceTree = "<group>"; };
 		51FAF0C128C1A99400C66619 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		6608015C28ABE785005FC8A0 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
@@ -173,7 +174,7 @@
 				511625BE28DE476A00CB2842 /* OnBoard.storyboard */,
 				66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */,
 				66AAE5BF28CC2A3900915D62 /* ForgetRecipe.storyboard */,
-				511625E928E1E1C900CB2842 /* Template.storyboard */,
+				5191E22D28E7433100ED6441 /* Template.storyboard */,
 				510501D828E3445400BFA35A /* Timer.storyboard */,
 				513F103E28D9F95E000C8CFC /* IsInitialuser.storyboard */,
 				663CCA5228CF8C72000D5B47 /* Launch Screen.storyboard */,
@@ -338,7 +339,7 @@
 				665C691328BCF63900E9F1FA /* passar.mp3 in Resources */,
 				66AAE5BD28CC2A3900915D62 /* ForgetRecipe.storyboard in Resources */,
 				665C691128BCF63900E9F1FA /* fim-receita.mp3 in Resources */,
-				511625EA28E1E1C900CB2842 /* Template.storyboard in Resources */,
+				5191E22B28E7433100ED6441 /* Template.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +396,15 @@
 				511625C528DE477A00CB2842 /* he */,
 			);
 			name = OnBoard.storyboard;
+			sourceTree = "<group>";
+		};
+		5191E22D28E7433100ED6441 /* Template.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5191E22C28E7433100ED6441 /* Base */,
+				5191E22F28E7433500ED6441 /* en */,
+			);
+			name = Template.storyboard;
 			sourceTree = "<group>";
 		};
 		66AAE5B028CC1A0B00915D62 /* EndRecipe.storyboard */ = {
