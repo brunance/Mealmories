@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-Fp-geX">
-                                <rect key="frame" x="20" y="733" width="350" height="57"/>
+                                <rect key="frame" x="20" y="733.66666666666663" width="350" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="YK8-YC-S1M"/>
                                 </constraints>
@@ -46,28 +46,28 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-ka-WxD">
-                                <rect key="frame" x="20" y="96.999999999999972" width="350" height="474.33333333333326"/>
+                                <rect key="frame" x="20" y="97" width="350" height="475"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-AQ-e39">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pão de Queijo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="5Bi-AQ-e39">
                                         <rect key="frame" x="20" y="20" width="310" height="35"/>
-                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="60"/>
                                         <color key="textColor" name="Mix_Magenta"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feito com Mealmories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="M78-2x-Kxj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feito com Mealmories" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="M78-2x-Kxj">
                                         <rect key="frame" x="20" y="61.000000000000007" width="310" height="26.333333333333336"/>
-                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="30"/>
+                                        <color key="textColor" name="Mix_LightMagenta"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jix-3G-pJ2">
-                                        <rect key="frame" x="10" y="107.33333333333337" width="330" height="347"/>
+                                        <rect key="frame" x="10" y="107.33333333333334" width="330" height="347.66666666666663"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward.pipoca.2" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-jH-EW8" userLabel="Medalha">
-                                        <rect key="frame" x="0.0" y="354.33333333333331" width="104" height="120"/>
+                                        <rect key="frame" x="0.0" y="354.66666666666669" width="104" height="120.33333333333331"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon sharing" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-mr-IGO" userLabel="Mealmories">
-                                        <rect key="frame" x="270" y="394.33333333333331" width="80" height="80"/>
+                                        <rect key="frame" x="270" y="395" width="80" height="80"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="LabelMagenta"/>
@@ -76,6 +76,7 @@
                                     <constraint firstAttribute="trailing" secondItem="M78-2x-Kxj" secondAttribute="trailing" constant="20" id="9jR-CF-eTD"/>
                                     <constraint firstItem="iPM-mr-IGO" firstAttribute="width" secondItem="7ln-ka-WxD" secondAttribute="width" multiplier="0.228571" id="9qb-92-KAs"/>
                                     <constraint firstAttribute="bottom" secondItem="ViK-jH-EW8" secondAttribute="bottom" id="C6F-g0-6MO"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="700" id="CoJ-m7-9qC"/>
                                     <constraint firstItem="Jix-3G-pJ2" firstAttribute="top" secondItem="M78-2x-Kxj" secondAttribute="bottom" constant="20" id="E2c-1A-yvg"/>
                                     <constraint firstItem="ViK-jH-EW8" firstAttribute="width" secondItem="7ln-ka-WxD" secondAttribute="width" multiplier="0.297143" id="I4p-jy-3sS"/>
                                     <constraint firstAttribute="bottom" secondItem="Jix-3G-pJ2" secondAttribute="bottom" constant="20" id="IRJ-1Q-u5S"/>
@@ -103,12 +104,14 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="CorDaview"/>
                         <constraints>
-                            <constraint firstItem="7ln-ka-WxD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="293-oQ-Jhd"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7ln-ka-WxD" secondAttribute="trailing" constant="20" id="7jl-mk-PVW"/>
                             <constraint firstItem="jas-Fp-geX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="8z7-bg-u9V"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jas-Fp-geX" secondAttribute="trailing" constant="20" id="Ap7-wu-JjU"/>
+                            <constraint firstItem="jas-Fp-geX" firstAttribute="top" secondItem="7ln-ka-WxD" secondAttribute="bottom" constant="161.66999999999999" id="Ira-Wz-ViR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jas-Fp-geX" secondAttribute="bottom" constant="20" id="Nxa-sk-00z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7ln-ka-WxD" secondAttribute="trailing" constant="20" id="R0s-0p-jlh"/>
+                            <constraint firstItem="7ln-ka-WxD" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="VIp-23-Oju"/>
                             <constraint firstItem="7ln-ka-WxD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="mOB-SW-7rx"/>
+                            <constraint firstItem="7ln-ka-WxD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="oEz-aR-q1W"/>
                         </constraints>
                     </view>
                     <connections>
@@ -131,6 +134,9 @@
         </namedColor>
         <namedColor name="LabelMagenta">
             <color red="0.99607843137254903" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Mix_LightMagenta">
+            <color red="0.42699998617172241" green="0.090000003576278687" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Mix_Magenta">
             <color red="0.97647058823529409" green="0.38039215686274508" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
