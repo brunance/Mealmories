@@ -238,16 +238,16 @@ extension ViewController {
        
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.setTitleColor(.blue, for: .normal)
+        nextButton.setTitleColor(.clear, for: .normal)
         nextButton.setTitle("Next", for: .normal)
         nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .primaryActionTriggered)
-        nextButton.backgroundColor = UIColor.red
+       
         
         skipButton.translatesAutoresizingMaskIntoConstraints = false
-        skipButton.setTitleColor(.blue, for: .normal)
+        skipButton.setTitleColor(.clear, for: .normal)
         skipButton.setTitle("Skip", for: .normal)
         skipButton.addTarget(self, action: #selector(skipTapped(_:)), for: .primaryActionTriggered)
-        skipButton.backgroundColor = UIColor.red
+       
        
     }
     

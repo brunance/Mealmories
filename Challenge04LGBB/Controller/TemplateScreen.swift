@@ -27,7 +27,7 @@ class TemplateScreen: UIViewController {
         }
         
     }
-    
+   
     
     @IBAction func Share(_ sender: Any) {
         
