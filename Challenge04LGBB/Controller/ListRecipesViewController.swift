@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 import NotificationCenter
 
-var confettiAppear = false
 
 class ListRecipesViewController : UIViewController,UITableViewDataSource,UITableViewDelegate{
     
@@ -44,7 +43,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
-        confettiAppear = false
+        
         self.navigationController?.isNavigationBarHidden = false
         let appearence = UINavigationBarAppearance()
         appearence.configureWithTransparentBackground()
