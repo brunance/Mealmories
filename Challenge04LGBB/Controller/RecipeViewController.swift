@@ -10,27 +10,32 @@ var sound = false
 var haptic = false
 
 class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationControllerDelegate {
-    
+    //Progess Bar
     @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var botaovoltar: UIButton!
-    @IBOutlet weak var BotaoTerminarReceita: UIButton!
-    @IBOutlet weak var botaoir: UIButton!
+    //Botoes da tela
+    @IBOutlet weak var botaoVoltar: UIButton!
+    @IBOutlet weak var botaoTerminarReceita: UIButton!
+    @IBOutlet weak var botaoIr: UIButton!
+    //Informacoes da tela
     @IBOutlet weak var labelIntrucao: UILabel!
     @IBOutlet weak var imagemIntrucao: UIImageView!
     @IBOutlet weak var labelTurno: UILabel!
     @IBOutlet weak var labelImagem: UILabel!
     @IBOutlet weak var viewTurno: UIView!
     @IBOutlet weak var imagemTurno: UIImageView!
-    @IBOutlet weak var CorDoFundoDaTela: UIView!
-    @IBOutlet weak var LampImage: UIImageView!
-    @IBOutlet weak var LabelDica: UILabel!
+    @IBOutlet weak var corDoFundoDaTela: UIView!
+    @IBOutlet weak var lampImage: UIImageView!
+    @IBOutlet weak var labelDica: UILabel!
+    //SceneView
     @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var TituloDaReceita: UINavigationItem!
+    //Nome da receita na Navigation Bar
+    @IBOutlet weak var tituloDaReceita: UINavigationItem!
+    //Funcoes de tirar foto
     @IBOutlet weak var imageTake: UIImageView!
     @IBOutlet weak var botaoFoto: UIButton!
     var imagePicker: UIImagePickerController!
     
-    enum ImageSource {
+    enum imageSource {
         case photoLibrary
         case camera
     }
@@ -38,7 +43,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     var player : AVAudioPlayer?
     var recipes : [Recipe] = []
     var xspace = 5
-    var xspaceaux = 5
     var analysis = ""
     var texto = ""
     var escolha : Int = 0
@@ -117,12 +121,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     }
     
     override func viewDidLoad() {
-        BackBarButton()
+        setupNavigationBackButton()
         recipes = getRecipes()
         
         updateData()
         
-        BotaoTerminarReceita.layer.cornerRadius = 20
+        botaoTerminarReceita.layer.cornerRadius = 20
         sceneView.delegate = self
         
     }
@@ -162,95 +166,109 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         
     }
     
-    func BackBarButton(){
+    func setupNavigationBackButton(){
+        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationItem.rightBarButtonItem?.isAccessibilityElement = true
         self.navigationItem.rightBarButtonItem?.accessibilityLabel = "Botão para mostrar a lista de ingredientes e etapas da receita"
     }
     
     func updateData(){
-        
         progressBar.progress = recipes[escolha].progressBar[count]
-        progressBar.progressTintColor = recipes[escolha].CorDaTela[count]
-        TituloDaReceita.title = "\(recipes[escolha].tituloReceita)".localize()
-        botaoir.backgroundColor = recipes[escolha].CorDaTela[count]
-        botaovoltar.backgroundColor = recipes[escolha].CorDaTela[count]
-        viewTurno.backgroundColor = recipes[escolha].CorDoFundoDatela[count]
-        if recipes[escolha].pessoaTurno[count] == "Adulto" {
-            imagemTurno.image = UIImage(named: "turno.adulto")
-        }else if recipes[escolha].pessoaTurno[count] == "Criança" {
-            imagemTurno.image = UIImage(named: "turno.child")
-        }else {
+        tituloDaReceita.title = "\(recipes[escolha].tituloReceita)".localize()
+        
+        if recipes[escolha].pessoaTurno[count] == "Mix"{
+            progressBar.progressTintColor = UIColor.magentaTela
+            botaoIr.backgroundColor = UIColor.magentaTela
+            botaoVoltar.backgroundColor = UIColor.magentaTela
+            botaoTerminarReceita.backgroundColor = UIColor.magentaTela
+            viewTurno.backgroundColor = UIColor.magentaFundo
+            corDoFundoDaTela.backgroundColor = UIColor.magentaFundo
+            botaoFoto.backgroundColor = UIColor.magentaTela
+            labelImagem.text = "Vocês podem fazer essa etapa juntos!!!".localize()
+            lampImage.image = UIImage(named: "Dica - Magenta")
             imagemTurno.image = UIImage(named: "turno.mix")
         }
-        CorDoFundoDaTela.backgroundColor = recipes[escolha].CorDoFundoDatela[count]
+        
+        if recipes[escolha].pessoaTurno[count] == "Adulto"{
+            progressBar.progressTintColor = UIColor.blueTela
+            botaoIr.backgroundColor = UIColor.blueTela
+            botaoVoltar.backgroundColor = UIColor.blueTela
+            botaoTerminarReceita.backgroundColor = UIColor.blueTela
+            viewTurno.backgroundColor = UIColor.blueFundo
+            corDoFundoDaTela.backgroundColor = UIColor.blueFundo
+            botaoFoto.backgroundColor = UIColor.blueTela
+            labelImagem.text = "Siga as instruções abaixo:".localize()
+            lampImage.image = UIImage(named: "Dica - Blue")
+            imagemTurno.image = UIImage(named: "turno.adulto")
+        }
+        
+        if recipes[escolha].pessoaTurno[count] == "Criança"{
+            progressBar.progressTintColor = UIColor.orangeTela
+            botaoIr.backgroundColor = UIColor.orangeTela
+            botaoVoltar.backgroundColor = UIColor.orangeTela
+            botaoTerminarReceita.backgroundColor = UIColor.orangeTela
+            viewTurno.backgroundColor = UIColor.orangeFundo
+            corDoFundoDaTela.backgroundColor = UIColor.orangeFundo
+            botaoFoto.backgroundColor = UIColor.orangeTela
+            labelImagem.text = "Siga as instruções abaixo:".localize()
+            lampImage.image = UIImage(named: "Dica - ORANGE")
+            imagemTurno.image = UIImage(named: "turno.child")
+        }
+        
         labelTurno.text = "\(recipes[escolha].pessoaTurno[count])".localize()
         labelIntrucao.text = "\(recipes[escolha].descricaoReceita[count])".localize()
-        LabelDica.text = "\(recipes[escolha].dicas[count])".localize()
+        labelDica.text = "\(recipes[escolha].dicas[count])".localize()
         imagemIntrucao.image = recipes[escolha].imagemIntrucao[count]
+        
         imagemIntrucao.isAccessibilityElement = true
         imagemIntrucao.accessibilityLabel = "Imagem que resume a intrução da etapa atual da receita"
-        LampImage.isAccessibilityElement = true
-        LampImage.accessibilityLabel = "Icone de dicas com texto ao lado direito"
-        botaoFoto.backgroundColor = recipes[escolha].CorDaTela[count]
+        lampImage.isAccessibilityElement = true
+        lampImage.accessibilityLabel = "Icone de dicas com texto ao lado direito"
+        
         botaoFoto.layer.cornerRadius = 0.5 * botaoFoto.bounds.size.width
         botaoFoto.clipsToBounds = true
         botaoFoto.isAccessibilityElement = true
         botaoFoto.accessibilityLabel = "Botão para tirar foto"
         
         if count == recipes[escolha].numeroIntrucoes-1{
-            BotaoTerminarReceita.isHidden = false
-            BotaoTerminarReceita.layer.cornerRadius = 550
-            BotaoTerminarReceita.backgroundColor = recipes[escolha].CorDaTela[count]
-            BotaoTerminarReceita.isAccessibilityElement = true
-            BotaoTerminarReceita.accessibilityLabel = "Botão para terminar a receita, É hora de comer!"
+            botaoTerminarReceita.isHidden = false
+            botaoTerminarReceita.layer.cornerRadius = 550
+            botaoTerminarReceita.isAccessibilityElement = true
+            botaoTerminarReceita.accessibilityLabel = "Botão para terminar a receita, É hora de comer!"
         }
         else{
-            BotaoTerminarReceita.isHidden = true
+            botaoTerminarReceita.isHidden = true
         }
         
         if count == 0 {
-            botaovoltar.isHidden = true
-            
+            botaoVoltar.isHidden = true
         }else{
-            botaovoltar.isHidden = false
-            botaovoltar.isAccessibilityElement = true
-            botaovoltar.accessibilityLabel = "Botão para voltar uma etapa da receita"
+            botaoVoltar.isHidden = false
+            botaoVoltar.isAccessibilityElement = true
+            botaoVoltar.accessibilityLabel = "Botão para voltar uma etapa da receita"
         }
         
         if count == recipes[escolha].numeroIntrucoes - 1 {
-            botaoir.isHidden = true
+            botaoIr.isHidden = true
         }else {
-            botaoir.isHidden = false
-            botaoir.isAccessibilityElement = true
-            botaoir.accessibilityLabel = "Botão para avançar uma etapa da receita"
+            botaoIr.isHidden = false
+            botaoIr.isAccessibilityElement = true
+            botaoIr.accessibilityLabel = "Botão para avançar uma etapa da receita"
         }
         
-        if recipes[escolha].pessoaTurno[count] == "Mix"{
-            labelImagem.text = "Vocês podem fazer essa etapa juntos!!!".localize()
-            LampImage.image = UIImage(named: "Dica - Magenta")
-        }
-        
-        if recipes[escolha].pessoaTurno[count] == "Adulto"{
-            labelImagem.text = "Siga as instruções abaixo:".localize()
-            LampImage.image = UIImage(named: "Dica - Blue")
-        }
-        
-        if recipes[escolha].pessoaTurno[count] == "Criança"{
-            labelImagem.text = "Siga as instruções abaixo:".localize()
-            LampImage.image = UIImage(named: "Dica - ORANGE")
-        }
         
         if recipes[escolha].dicas[count] == "" {
-            LampImage.isHidden = true
+            lampImage.isHidden = true
         }else {
-            LampImage.isHidden = false
+            lampImage.isHidden = false
             
         }
         
     }
     
-    func navigation(destino:String){
+    func navigation(destino:String) {
+        
         if destino == "ForgotRecipe"{
             let storyBoard: UIStoryboard = UIStoryboard(name: "ForgetRecipe", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "ForgetRecipe") as! ForgotRecipeViewController
@@ -276,19 +294,18 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             let storyBoard: UIStoryboard = UIStoryboard(name: "Timer", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "Timer") as! TimerController
             
-           
+            
             navigationController?.modalPresentationStyle = .formSheet
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
     }
     
-    @IBAction func goright(_ sender: Any) {
+    @IBAction func goRight(_ sender: Any) {
         
         if count == recipes[escolha].numeroIntrucoes-1{
             count = recipes[escolha].numeroIntrucoes-1
             
-        }
-        else{
+        } else{
             count += 1
             play(tiposom: "passar")
             if haptic == true {
@@ -297,14 +314,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             }
             viewDidLoad()
         }
-        
     }
     
-    @IBAction func goleft(_ sender: Any) {
+    @IBAction func goLeft(_ sender: Any) {
         if count == 0{
             count = 0
-        }
-        else{
+        }else{
             count -= 1
             play(tiposom: "voltar")
             if haptic == true {
@@ -313,12 +328,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             }
             viewDidLoad()
         }
-        
     }
     
-    @IBAction func ForgetRecipeButton(_ sender: Any) {
+    @IBAction func forgetRecipeButton(_ sender: Any) {
         navigation(destino: "ForgotRecipe")
-        
     }
     
     @IBAction func playSound(_ sender: Any) {
@@ -328,15 +341,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             generator.notificationOccurred(.warning)
         }
         play(tiposom: "fim-receita")
-        
     }
     
     func play(tiposom : String) {
         if sound == true{
             let urlString = Bundle.main.path(forResource: tiposom, ofType: "mp3")
-            
             do {
-                
                 try? AVAudioSession.sharedInstance().setMode(.default)
                 try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
                 
@@ -349,7 +359,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
                 guard let player = player else {
                     return
                 }
-                
                 player.play()
             }
             catch {
@@ -393,7 +402,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         
     }
     
-    func selectImageFrom(_ source: ImageSource){
+    func selectImageFrom(_ source: imageSource){
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         switch source {
@@ -447,8 +456,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         navigation(destino: "Timer")
     }
 }
-
-
 
 extension RecipeViewController: UIImagePickerControllerDelegate{
     

@@ -12,31 +12,29 @@ import PhotosUI
 
 class EndRecipeViewController: UIViewController, UINavigationControllerDelegate {
     
-    @IBOutlet weak var ImageMedalha: UIImageView!
-    @IBOutlet weak var endButton: UIButton!
-    @IBOutlet weak var MedalhaView: UIView!
-    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var imageMedalha: UIImageView!
+    @IBOutlet weak var medalhaView: UIView!
     @IBOutlet weak var labelDesbloqueio: UILabel!
-    @IBOutlet weak var CameraButton: UIButton!
-    @IBOutlet weak var ImagePlaceholder: UIView!
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var imagePlaceholder: UIView!
     @IBOutlet weak var imageTake: UIImageView!
     var imagePicker: UIImagePickerController!
     var escolha = 0
     
-    let confetti = classyConfetti()
+    let confetti = showConfetti()
     
-    enum ImageSource {
+    enum imageSource {
         case photoLibrary
         case camera
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        BackBarButton()
+        setupNavigationBackButton()
         setupLabel()
         imageTake.layer.cornerRadius = 10
     }
-    func BackBarButton(){
+    func setupNavigationBackButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
@@ -49,8 +47,8 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         
         confetti.emit(in: view, with: .fromTopLeft)
         confetti.emit(in: view, with: .fromTopRight)
-
-        ImagePlaceholder.layer.cornerRadius = 10
+        
+        imagePlaceholder.layer.cornerRadius = 10
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
     }
     
@@ -74,15 +72,15 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     func setupLabel(){
         let receitas = getRecipes()
-        ImageMedalha.image = receitas[escolha].medalha
+        imageMedalha.image = receitas[escolha].medalha
         labelDesbloqueio.text = receitas[escolha].tituloReceita.localize()
-        ImageMedalha.isAccessibilityElement = true
-        ImageMedalha.accessibilityLabel = "Imagem da medalha ganha por terminar a receita!"
-        CameraButton.layer.cornerRadius = 10
+        imageMedalha.isAccessibilityElement = true
+        imageMedalha.accessibilityLabel = "Imagem da medalha ganha por terminar a receita!"
+        cameraButton.layer.cornerRadius = 10
     }
     
-    @IBAction func BackTorecipesScreen(_ sender: Any) {
-       navigation(Destino: "Home")
+    @IBAction func backToRecipesScreen(_ sender: Any) {
+        navigation(Destino: "Home")
     }
     
     //MARK: - Take image
@@ -119,7 +117,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         }
     }
     
-    func selectImageFrom(_ source: ImageSource){
+    func selectImageFrom(_ source: imageSource){
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         imageTake.sizeToFit()
@@ -140,8 +138,8 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         }
         UIImageWriteToSavedPhotosAlbum(selectedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         imageTake.isHidden = false
-        CameraButton.isHidden = true
-        ImagePlaceholder.isHidden = true
+        cameraButton.isHidden = true
+        imagePlaceholder.isHidden = true
     }
     
     //MARK: - Add image to Library
@@ -168,9 +166,9 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     
     @IBAction func sharePhoto(_ sender: Any) {
         
-        let renderer = UIGraphicsImageRenderer(size: MedalhaView.bounds.size)
+        let renderer = UIGraphicsImageRenderer(size: medalhaView.bounds.size)
         let image2 = renderer.image { ctx in
-            MedalhaView.drawHierarchy(in: MedalhaView.bounds, afterScreenUpdates: true)
+            medalhaView.drawHierarchy(in: medalhaView.bounds, afterScreenUpdates: true)
         }
         
         let imageToShare = [ image2, imageTake ]
@@ -203,22 +201,3 @@ extension EndRecipeViewController: UIImagePickerControllerDelegate{
     }
 }
 
-extension UIImage {
-        // image with rounded corners
-        public func withRoundedCorners(radius: CGFloat? = nil) -> UIImage? {
-            let maxRadius = min(size.width, size.height) / 2
-            let cornerRadius: CGFloat
-            if let radius = radius, radius > 0 && radius <= maxRadius {
-                cornerRadius = radius
-            } else {
-                cornerRadius = maxRadius
-            }
-            UIGraphicsBeginImageContextWithOptions(size, false, scale)
-            let rect = CGRect(origin: .zero, size: size)
-            UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
-            draw(in: rect)
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            return image
-        }
-    }

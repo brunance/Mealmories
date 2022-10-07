@@ -34,8 +34,9 @@ class ConfigViewController: UIViewController {
     }
     
     @IBAction func touchswitch(_ sender: Any) {
-        pedirPermissao()
+        getPermission()
     }
+    
     @IBAction func switchDidChange(_ sender: UISwitch){
         if touch.isOn == true {
             UserKeys.StatusEye = true
@@ -49,34 +50,35 @@ class ConfigViewController: UIViewController {
     }
     
     func presentCameraSettings() {
-            let alertController = UIAlertController(title: "Permission Required", message: "You need camera permission to use Touchless Interaction", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Cancel", style: .default))
-            alertController.addAction(UIAlertAction(title: "Settings", style: .cancel) { _ in
-                if let url = URL(string: UIApplication.openSettingsURLString) {
-                    UIApplication.shared.open(url, options: [:] , completionHandler: {
-                        _ in
-                    })
-                }
-            })
-            
-            present(alertController, animated: true)
-        }
-    func pedirPermissao(){
+        let alertController = UIAlertController(title: "Permission Required", message: "You need camera permission to use Touchless Interaction", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default))
+        alertController.addAction(UIAlertAction(title: "Settings", style: .cancel) { _ in
+            if let url = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(url, options: [:] , completionHandler: {
+                    _ in
+                })
+            }
+        })
+        
+        present(alertController, animated: true)
+    }
+    
+    func getPermission(){
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
-             if response {
-                 autorizacao = true
-             } else {
-                 DispatchQueue.main.async{
-                     self.touch.setOn(false, animated: false)
-                     let defaults = UserDefaults.standard
-                     defaults.set(false, forKey: "Touch")
-                     if count > 0{
-                         self.presentCameraSettings()
-                     }
-                     count += 1
-                 }
-             }
-         }
+            if response {
+                autorizacao = true
+            } else {
+                DispatchQueue.main.async{
+                    self.touch.setOn(false, animated: false)
+                    let defaults = UserDefaults.standard
+                    defaults.set(false, forKey: "Touch")
+                    if count > 0{
+                        self.presentCameraSettings()
+                    }
+                    count += 1
+                }
+            }
+        }
     }
     
     @IBAction func soundSwitchDidChange(_ sender: Any) {

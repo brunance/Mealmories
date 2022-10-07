@@ -119,7 +119,7 @@ extension Position {
     }
 }
 
-public class classyConfetti : CAEmitterLayer {
+public class showConfetti : CAEmitterLayer {
     
     let contentsType : [Content] = [.Image(UIImage(named: "Circulo") ?? UIImage()),.Image(UIImage(named: "Confetti") ?? UIImage()),.Image(UIImage(named: "Triangle") ?? UIImage())
     ]
@@ -150,7 +150,7 @@ public class classyConfetti : CAEmitterLayer {
     
     public func emit(in view : UIView,with position : Position,for duration : CFTimeInterval = 1) {
         
-         let layer = classyConfetti()
+         let layer = showConfetti()
          
          layer.birthRate = 0
          layer.emitterPosition = Position.getPoint(view: view, position: position)

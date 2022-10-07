@@ -7,7 +7,7 @@ class Page1: UIViewController {
     
     @IBOutlet weak var confeteAmarelo: UIImageView!
     @IBOutlet weak var botao1: UIButton!
-   
+    
     override func viewDidDisappear(_ animated: Bool) {
         confeteAmarelo.isHidden = true
     }
@@ -16,16 +16,13 @@ class Page1: UIViewController {
     }
     
     override func viewDidLoad() {
-    
-       
-        
         super.viewDidLoad()
         confeteAmarelo.layer.zPosition = 0
         botao1.layer.zPosition = 1
         confeteAmarelo.layer.opacity = 0.5
     }
-
-   
+    
+    
 }
 
 class Page2: UIViewController {
@@ -41,7 +38,7 @@ class Page2: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         confeteVermelho.layer.zPosition = 0
         confeteVermelho.layer.opacity = 0.5
         b2.layer.zPosition = 1
@@ -57,9 +54,9 @@ class Page3: UIViewController {
         confeteAzul.isHidden = true
         
     }
-   
-    override func viewWillAppear(_ animated: Bool) {
     
+    override func viewWillAppear(_ animated: Bool) {
+        
         confeteAzul.isHidden = false
     }
     override func viewDidLoad() {
@@ -80,7 +77,7 @@ class Page3: UIViewController {
     
 }
 public extension UIDevice {
-
+    
     static let modelName: String = {
         var systemInfo = utsname()
         uname(&systemInfo)
@@ -89,9 +86,9 @@ public extension UIDevice {
             guard let value = element.value as? Int8, value != 0 else { return identifier }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
-
+        
         func mapToDevice(identifier: String) -> String { // swiftlint:disable:this cyclomatic_complexity
-            #if os(iOS)
+#if os(iOS)
             switch identifier {
             case "iPod5,1":                                       return "iPod touch (5th generation)"
             case "iPod7,1":                                       return "iPod touch (6th generation)"
@@ -167,24 +164,24 @@ public extension UIDevice {
             case "i386", "x86_64", "arm64":                       return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))"
             default:                                              return identifier
             }
-            #elseif os(tvOS)
+#elseif os(tvOS)
             switch identifier {
             case "AppleTV5,3": return "Apple TV 4"
             case "AppleTV6,2": return "Apple TV 4K"
             case "i386", "x86_64": return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "tvOS"))"
             default: return identifier
             }
-            #endif
+#endif
         }
-
+        
         return mapToDevice(identifier: identifier)
     }()
-
+    
 }
 
 class ViewController: UIPageViewController {
-
-   
+    
+    
     var pages = [UIViewController]()
     let pageControl = UIPageControl()
     let initialPage = 0
@@ -195,7 +192,7 @@ class ViewController: UIPageViewController {
         AppDelegate.AppUtility.lockOrientation(.portrait)
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "CorDaview")
@@ -207,7 +204,7 @@ class ViewController: UIPageViewController {
 
 extension ViewController {
     
-  
+    
     func setup() {
         dataSource = self
         delegate = self
@@ -218,24 +215,24 @@ extension ViewController {
         let page1 = storyBoard.instantiateViewController(withIdentifier: "Page1") as! Page1
         let page2 = storyBoard.instantiateViewController(withIdentifier: "Page2") as! Page2
         let page3 = storyBoard.instantiateViewController(withIdentifier: "Page3") as! Page3
-
+        
         pages.append(page1)
         pages.append(page2)
         pages.append(page3)
-    
-       
-       
+        
+        
+        
         setViewControllers([pages[initialPage]], direction: .forward, animated: true, completion: nil)
     }
     
     func style() {
-       
+        
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         pageControl.currentPageIndicatorTintColor = .black
         pageControl.pageIndicatorTintColor = .systemGray2
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = initialPage
-       
+        
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.setTitleColor(.clear, for: .normal)
@@ -247,8 +244,8 @@ extension ViewController {
         skipButton.setTitleColor(.clear, for: .normal)
         skipButton.setTitle("Skip", for: .normal)
         skipButton.addTarget(self, action: #selector(skipTapped(_:)), for: .primaryActionTriggered)
-       
-       
+        
+        
     }
     
     func layout() {
@@ -259,7 +256,7 @@ extension ViewController {
         if (modelName.localizedStandardContains(" iPad Pro (12.9-inch)")){
             NSLayoutConstraint.activate([
                 
-               
+                
                 pageControl.widthAnchor.constraint(equalTo: view.widthAnchor),
                 pageControl.heightAnchor.constraint(equalToConstant: 20),
                 view.bottomAnchor.constraint(equalToSystemSpacingBelow: pageControl.bottomAnchor, multiplier:8),
@@ -273,7 +270,7 @@ extension ViewController {
                 skipButton.heightAnchor.constraint(equalToConstant: 150),
                 skipButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
                 skipButton.bottomAnchor.constraint(equalTo: pageControl.topAnchor, constant: -300),
-        
+                
                 
             ])
         }
@@ -303,9 +300,9 @@ extension ViewController {
     }
 }
 extension ViewController {
-
-   
-
+    
+    
+    
     @objc func skipTapped(_ sender: UIButton) {
         let lastPageIndex = pages.count - 1
         pageControl.currentPage = lastPageIndex
@@ -317,8 +314,8 @@ extension ViewController {
     @objc func nextTapped(_ sender: UIButton) {
         pageControl.currentPage += 1
         goToNextPage()
-     
-       
+        
+        
     }
 }
 
@@ -326,7 +323,7 @@ extension ViewController {
 
 extension ViewController {
     
-   
+    
     @objc func pageControlTapped(_ sender: UIPageControl) {
         setViewControllers([pages[sender.currentPage]], direction: .forward, animated: true, completion: nil)
     }
@@ -338,10 +335,10 @@ extension ViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-       
+        
         guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
-     
-
+        
+        
         
         if currentIndex == 0 {
             return nil
@@ -371,7 +368,7 @@ extension ViewController: UIPageViewControllerDataSource {
 
 extension ViewController: UIPageViewControllerDelegate {
     
-        func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         guard let viewControllers = pageViewController.viewControllers else { return }
         guard let currentIndex = pages.firstIndex(of: viewControllers[0]) else { return }
@@ -380,7 +377,7 @@ extension ViewController: UIPageViewControllerDelegate {
     }
 }
 extension UIPageViewController {
-
+    
     func goToNextPage(animated: Bool = true, completion: ((Bool) -> Void)? = nil) {
         guard let currentPage = viewControllers?[0] else { return }
         guard let nextPage = dataSource?.pageViewController(self, viewControllerAfter: currentPage) else { return }
