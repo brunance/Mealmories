@@ -32,9 +32,10 @@ class ChosenRecipeModel {
     
 }
 
-func getChoosenRecipe() -> [ChosenRecipeModel]{
-    var ChosenRecipe : [ChosenRecipeModel] = []
-    ChosenRecipe = [
+func getChosenRecipe() -> [ChosenRecipeModel]{
+    var chosenRecipe : [ChosenRecipeModel] = []
+    
+    chosenRecipe = [
         ChosenRecipeModel(imagemReceita: UIImage(named: "paodequeijo.1")!,
                           nomeDaReceita: "Pão de Queijo",
                           tempoDePreparo: "30 min",
@@ -54,18 +55,21 @@ func getChoosenRecipe() -> [ChosenRecipeModel]{
                           tempoDePreparo: "15 min",
                           dificuldade: "Médio",
                           idadeRecomendada: 6,
-                          ingredientes: ["1 xícara de leite","2 ovos","1 xícara de farinha","1 colher de sopa de óleo", "1 colher de café rasa de sal", "2 xícaras de cenoura ralada", "1 ½ xícara de beterraba ralada"], etapas: ["Fazer a Massa","Fritar","Finalizar"]),
+                          ingredientes: ["1 xícara de leite","2 ovos","1 xícara de farinha","1 colher de sopa de óleo", "1 colher de café rasa de sal", "2 xícaras de cenoura ralada", "1 ½ xícara de beterraba ralada"],
+                          etapas: ["Fazer a Massa","Fritar","Finalizar"]),
         ChosenRecipeModel(imagemReceita: UIImage(named: "gelatin")!,
                           nomeDaReceita: "Mini Gelatinas",
                           tempoDePreparo: "10 min",
                           dificuldade: "Médio",
                           idadeRecomendada: 5,
-                          ingredientes: ["1 sachê de gelatina de sua preferência", "250ml de agua fervendo", "250ml de agua fria", "1 caixa de creme de leite", "1 caixa de leite condensado", "1 xícara de leite", "1 suco em pó de sua preferência", "Granulados variados (opcional)"], etapas: ["Gelatina","Mousse","Decorar"]),
+                          ingredientes: ["1 sachê de gelatina de sua preferência", "250ml de agua fervendo", "250ml de agua fria", "1 caixa de creme de leite", "1 caixa de leite condensado", "1 xícara de leite", "1 suco em pó de sua preferência", "Granulados variados (opcional)"],
+                          etapas: ["Gelatina","Mousse","Decorar"]),
         ChosenRecipeModel(imagemReceita: UIImage(named: "brigadeiro")!,
                           nomeDaReceita: "Brigadeiro",
                           tempoDePreparo: "30 min",
                           dificuldade: "Fácil",
                           idadeRecomendada: 5,
-                          ingredientes: ["1/2 colher (sopa) de margarina", "1 unidade de gema de ovo", "1 lata de leite condensado", "2 colheres (sopa) de chocolate em pó", "Chocolate granulado a gosto"], etapas: ["Mistura os ingredientes","Preparar o doce","Fazer bolinhas com granulado"])]
-    return ChosenRecipe
+                          ingredientes: ["1/2 colher (sopa) de margarina", "1 unidade de gema de ovo", "1 lata de leite condensado", "2 colheres (sopa) de chocolate em pó", "Chocolate granulado a gosto"],
+                          etapas: ["Mistura os ingredientes","Preparar o doce","Fazer bolinhas com granulado"])]
+    return chosenRecipe
 }

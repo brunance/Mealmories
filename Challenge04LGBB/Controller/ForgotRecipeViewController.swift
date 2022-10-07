@@ -7,7 +7,7 @@ class ForgotRecipeViewController: UIViewController {
     @IBOutlet weak var tableIngredientsHeight: NSLayoutConstraint!
     @IBOutlet weak var tableEtapas: UITableView!
     @IBOutlet weak var tableEtapasHeight: NSLayoutConstraint!
-    @IBOutlet weak var ScrollViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
     
     private var itemList1 : [String] = [String]()
     private var itemList2 : [String] = [String]()
@@ -20,7 +20,7 @@ class ForgotRecipeViewController: UIViewController {
         AppDelegate.AppUtility.lockOrientation(.portrait)
         self.setTableView()
         if choosenrecipe[escolha].ingredientes.count >= 5 {
-            self.ScrollViewHeight.constant += self.tableIngredients.contentSize.height - 360.0
+            self.scrollViewHeight.constant += self.tableIngredients.contentSize.height - 360.0
         }
     }
     
@@ -44,7 +44,7 @@ class ForgotRecipeViewController: UIViewController {
     }
     
     private func setTabeleViewData(){
-        choosenrecipe = getChoosenRecipe()
+        choosenrecipe = getChosenRecipe()
         for i in 0...choosenrecipe[escolha].ingredientes.count - 1 {
             self.itemList1.append(choosenrecipe[escolha].ingredientes[i])
         }
@@ -62,7 +62,7 @@ class ForgotRecipeViewController: UIViewController {
 class TableIngredientCell: UITableViewCell{
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var imageCell: UIImageView!
-    @IBOutlet weak var LabelCell: UILabel!
+    @IBOutlet weak var labelCell: UILabel!
 }
 
 class TableEtapasCell :UITableViewCell {
@@ -94,7 +94,7 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
         if tableView == self.tableIngredients{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableIngredientCell
             
-            cell.LabelCell.text = self.itemList1[indexPath.item].localize()
+            cell.labelCell.text = self.itemList1[indexPath.item].localize()
             cell.bgView.backgroundColor = UIColor(named: "LabelMagenta")
             cell.imageCell.image = UIImage(named: "ingrediente")
             

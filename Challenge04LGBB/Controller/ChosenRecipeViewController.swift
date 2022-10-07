@@ -20,17 +20,17 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     @IBOutlet weak var tableEtapasHeight: NSLayoutConstraint!
     @IBOutlet weak var ScrollViewHeight: NSLayoutConstraint!
     
-    @IBOutlet weak var ImagemReceitaEscolhida: UIImageView!
+    @IBOutlet weak var imagemReceitaEscolhida: UIImageView!
     
     @IBOutlet weak var nomeReceitaEscolhida: UILabel!
     @IBOutlet weak var tempoReceitaEscolhida: UILabel!
     @IBOutlet weak var dificultyReceitaEscolhida: UILabel!
     @IBOutlet weak var dificultyReceitaEscolhidaImage: UIImageView!
-    @IBOutlet weak var AgeReceitaEscolhida: UILabel!
+    @IBOutlet weak var ageReceitaEscolhida: UILabel!
     
     var itemList1 : [String] = [String]()
     var itemList2 : [String] = [String]()
-    var choosenrecipe : [ChosenRecipeModel] = []
+    var chosenRecipe : [ChosenRecipeModel] = []
     
     @IBOutlet weak var startButton : UIButton!
     
@@ -41,14 +41,14 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        BackBarButton()
+        setupNavigationBackButton()
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.rightBarButtonItem?.isAccessibilityElement = true
         self.navigationItem.rightBarButtonItem?.accessibilityLabel = "Botão de configurações de som e interação sem toque"
-        SetChoosenRecipe()
+        setChosenRecipe()
         startButton.layer.cornerRadius = 20
         self.setTableView()
-        if choosenrecipe[escolha].ingredientes.count >= 5 {
+        if chosenRecipe[escolha].ingredientes.count >= 5 {
             self.ScrollViewHeight.constant += self.tableIngredients.contentSize.height - 260.0
         }
     }
@@ -56,12 +56,11 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
-        print("papa Som:\(UserKeys.StatusSound)")
-        print("papa Olho:\(UserKeys.StatusEye)")
+        
         let defaults = UserDefaults.standard
         soundEffect = defaults.bool(forKey: "Sound")
         hapticEffect = defaults.bool(forKey: "Haptic")
-
+        
     }
     
     private func setTableView(){
@@ -80,16 +79,15 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     override func viewWillLayoutSubviews() {
         self.tableIngredientsHeight.constant = self.tableIngredients.contentSize.height
         self.tableEtapasHeight.constant = self.tableEtapas.contentSize.height
-        
     }
     
     private func setTabeleViewData(){
-        choosenrecipe = getChoosenRecipe()
-        for i in 0...choosenrecipe[escolha].ingredientes.count - 1 {
-            self.itemList1.append(choosenrecipe[escolha].ingredientes[i])
+        chosenRecipe = getChosenRecipe()
+        for i in 0...chosenRecipe[escolha].ingredientes.count - 1 {
+            self.itemList1.append(chosenRecipe[escolha].ingredientes[i])
         }
-        for i in 0...choosenrecipe[escolha].etapas.count - 1 {
-            self.itemList2.append(choosenrecipe[escolha].etapas[i])
+        for i in 0...chosenRecipe[escolha].etapas.count - 1 {
+            self.itemList2.append(chosenRecipe[escolha].etapas[i])
         }
         
         self.tableIngredients.reloadData()
@@ -102,7 +100,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         navigation(destino: "Config")
     }
     
-    func BackBarButton(){
+    func setupNavigationBackButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
@@ -136,6 +134,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.success)
         }
+        
         if soundEffect == true {
             if let player = player, player.isPlaying {
                 
@@ -168,20 +167,26 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     }
     
     
-    func SetChoosenRecipe()  {
-        let chossenRecipe = getChoosenRecipe()
-        ImagemReceitaEscolhida.image = chossenRecipe[escolha].imagemReceita
-        ImagemReceitaEscolhida.isAccessibilityElement = true
-        ImagemReceitaEscolhida.accessibilityLabel = "Imagem da Receita Escolhida, \(chossenRecipe[escolha].nomeDaReceita)"
-        nomeReceitaEscolhida.text = "\(chossenRecipe[escolha].nomeDaReceita)".localize()
-        nomeReceitaEscolhida.accessibilityLabel = "Nome da Receita Escolhida, \(chossenRecipe[escolha].nomeDaReceita)"
-        tempoReceitaEscolhida.text = "\(chossenRecipe[escolha].tempoDePreparo)".localize()
-        tempoReceitaEscolhida.accessibilityLabel = "Tempo estimado de duração da receita escolhida, \(chossenRecipe[escolha].tempoDePreparo)"
-        dificultyReceitaEscolhida.text = "\(chossenRecipe[escolha].dificuldade)".localize()
-        dificultyReceitaEscolhida.accessibilityLabel = "Dificuldade da receita escolhida, \(chossenRecipe[escolha].dificuldade)"
-        dificultyReceitaEscolhidaImage.image = UIImage(named: "\(chossenRecipe[escolha].dificuldade)-32px")
-        AgeReceitaEscolhida.text = "+ \(chossenRecipe[escolha].idadeRecomendada) anos".localize()
-        AgeReceitaEscolhida.accessibilityLabel = "Faixa etária da receita escolhida, \(chossenRecipe[escolha].idadeRecomendada) anos ou mais"
+    func setChosenRecipe()  {
+        
+        let chosenRecipe = getChosenRecipe()
+        
+        imagemReceitaEscolhida.image = chosenRecipe[escolha].imagemReceita
+        imagemReceitaEscolhida.isAccessibilityElement = true
+        imagemReceitaEscolhida.accessibilityLabel = "Imagem da Receita Escolhida, \(chosenRecipe[escolha].nomeDaReceita)"
+        
+        nomeReceitaEscolhida.text = "\(chosenRecipe[escolha].nomeDaReceita)".localize()
+        nomeReceitaEscolhida.accessibilityLabel = "Nome da Receita Escolhida, \(chosenRecipe[escolha].nomeDaReceita)"
+        
+        tempoReceitaEscolhida.text = "\(chosenRecipe[escolha].tempoDePreparo)".localize()
+        tempoReceitaEscolhida.accessibilityLabel = "Tempo estimado de duração da receita escolhida, \(chosenRecipe[escolha].tempoDePreparo)"
+        
+        dificultyReceitaEscolhida.text = "\(chosenRecipe[escolha].dificuldade)".localize()
+        dificultyReceitaEscolhida.accessibilityLabel = "Dificuldade da receita escolhida, \(chosenRecipe[escolha].dificuldade)"
+        dificultyReceitaEscolhidaImage.image = UIImage(named: "\(chosenRecipe[escolha].dificuldade)-32px")
+        
+        ageReceitaEscolhida.text = "+ \(chosenRecipe[escolha].idadeRecomendada) anos".localize()
+        ageReceitaEscolhida.accessibilityLabel = "Faixa etária da receita escolhida, \(chosenRecipe[escolha].idadeRecomendada) anos ou mais"
     }
     
     
@@ -222,7 +227,7 @@ extension ChosenRecipeViewController: UITableViewDataSource, UITableViewDelegate
         if tableView == self.tableIngredients{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableIngredientCell
             
-            cell.LabelCell.text = self.itemList1[indexPath.item].localize()
+            cell.labelCell.text = self.itemList1[indexPath.item].localize()
             cell.bgView.backgroundColor = UIColor(named: "LabelMagenta")
             cell.imageCell.image = UIImage(named: "ingrediente")
             

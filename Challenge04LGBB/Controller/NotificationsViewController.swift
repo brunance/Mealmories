@@ -8,8 +8,8 @@
 import UIKit
 import UserNotifications
 
-class notificationfsfsfs: UIViewController {
-
+class NotificationsViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,7 +43,7 @@ class notificationfsfsfs: UIViewController {
             // Check the error parameter and handle any errors
         }
     }
-
-
+    
+    
 }
 

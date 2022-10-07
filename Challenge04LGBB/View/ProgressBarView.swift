@@ -10,4 +10,5 @@ class ProgressBar: UIProgressView{
         maskLayer.frame = self.bounds
         layer.mask = maskLayer
     }
+    
 }

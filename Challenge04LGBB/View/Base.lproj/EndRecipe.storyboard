@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nk6-mH-vQE">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -23,41 +21,41 @@
             <objects>
                 <viewController storyboardIdentifier="EndRecipe" id="WN3-Ie-LiG" customClass="EndRecipeViewController" customModule="Mealmories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dux-gE-VPe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAc-eo-FBE">
-                                <rect key="frame" x="0.0" y="92" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="459"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h17-1n-MiA">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registre suas Mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-yo-ZIj">
-                                                <rect key="frame" x="20" y="413" width="374" height="26"/>
+                                                <rect key="frame" x="20" y="413" width="560" height="26"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEc-4E-sUQ">
-                                                <rect key="frame" x="20" y="50" width="374" height="328"/>
+                                                <rect key="frame" x="20" y="50" width="560" height="328"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjV-c0-nc3">
-                                                        <rect key="frame" x="20" y="20" width="334" height="29"/>
+                                                        <rect key="frame" x="20" y="20" width="520" height="29"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reward.pipoca" translatesAutoresizingMaskIntoConstraints="NO" id="zb0-a3-5oF">
-                                                        <rect key="frame" x="20" y="69" width="334" height="160"/>
+                                                        <rect key="frame" x="20" y="69" width="520" height="160"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receita Concluída:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-am-477">
-                                                        <rect key="frame" x="20" y="249" width="334" height="23.5"/>
+                                                        <rect key="frame" x="20" y="249.00000000000003" width="520" height="23.333333333333343"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cheese Bread" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZR-Uh-86L">
-                                                        <rect key="frame" x="20" y="273" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="273" width="520" height="30"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
                                                         <color key="textColor" name="Mix_LightMagenta"/>
                                                         <nil key="highlightedColor"/>
@@ -88,7 +86,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lembre-se de tirar uma foto quando o prato estiver pronto e registre essas mealmories!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK3-rx-rUD">
-                                                <rect key="frame" x="20" y="437" width="374" height="56"/>
+                                                <rect key="frame" x="20" y="437" width="560" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="ejG-3o-mqh"/>
                                                 </constraints>
@@ -97,13 +95,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGG-tl-yel">
-                                                <rect key="frame" x="20" y="521" width="374" height="350"/>
+                                                <rect key="frame" x="20" y="521" width="560" height="350"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="eW5-4o-EzI">
-                                                        <rect key="frame" x="127" y="79" width="120" height="100"/>
+                                                        <rect key="frame" x="127" y="79" width="306" height="100"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique aqui para registrar o resultado!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmV-j4-Mcc">
-                                                        <rect key="frame" x="20" y="207" width="334" height="23.5"/>
+                                                        <rect key="frame" x="20" y="207" width="520" height="23.666666666666657"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="23.5" id="qRL-9d-U3b"/>
                                                         </constraints>
@@ -125,7 +123,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="996-w9-6dY">
-                                                <rect key="frame" x="20" y="521" width="374" height="350"/>
+                                                <rect key="frame" x="20" y="521" width="560" height="350"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
@@ -133,7 +131,7 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KD7-Wl-lLe">
-                                                <rect key="frame" x="20" y="521" width="374" height="350"/>
+                                                <rect key="frame" x="20" y="521" width="560" height="350"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="CorDaview"/>
@@ -172,7 +170,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="wAq-yG-6Ch"/>
                             </scrollView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MO-Jw-M2u">
-                                <rect key="frame" x="20" y="785" width="374" height="57"/>
+                                <rect key="frame" x="20" y="523" width="560" height="57"/>
                                 <color key="backgroundColor" name="Mix_Magenta"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="wKN-T0-2ie"/>
@@ -223,12 +221,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="CameraButton" destination="996-w9-6dY" id="fe2-Kh-cTn"/>
-                        <outlet property="ImageMedalha" destination="zb0-a3-5oF" id="foc-WA-HbE"/>
-                        <outlet property="ImagePlaceholder" destination="fGG-tl-yel" id="Z6q-A4-Loe"/>
-                        <outlet property="MedalhaView" destination="xEc-4E-sUQ" id="rd9-uG-dOb"/>
+                        <outlet property="cameraButton" destination="996-w9-6dY" id="fe2-Kh-cTn"/>
+                        <outlet property="imageMedalha" destination="zb0-a3-5oF" id="foc-WA-HbE"/>
+                        <outlet property="imagePlaceholder" destination="fGG-tl-yel" id="Z6q-A4-Loe"/>
                         <outlet property="imageTake" destination="KD7-Wl-lLe" id="JcK-1v-z3G"/>
                         <outlet property="labelDesbloqueio" destination="IZR-Uh-86L" id="VPZ-8c-WKn"/>
+                        <outlet property="medalhaView" destination="xEc-4E-sUQ" id="rd9-uG-dOb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTO-F7-6vQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

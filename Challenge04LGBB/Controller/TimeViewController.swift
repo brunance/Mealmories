@@ -47,14 +47,14 @@ class TimerController: UIViewController {
             
             setTimeLabel(tempo)
             
-//            stopTimer()
-//            if let start = startTime{
-//                if let stop = stopTime{
-//                    let time = calcRestartTime(start: start, stop: stop)
-//                    let diff = Date().timeIntervalSince(time)
-//                    setTimeLabel(Int(diff))
-//                }
-//            }
+            //            stopTimer()
+            //            if let start = startTime{
+            //                if let stop = stopTime{
+            //                    let time = calcRestartTime(start: start, stop: stop)
+            //                    let diff = Date().timeIntervalSince(time)
+            //                    setTimeLabel(Int(diff))
+            //                }
+            //            }
         }
     }
     
@@ -91,7 +91,7 @@ class TimerController: UIViewController {
                 self?.setTimeLabel(seconds)
             }
         }
-//        scheduledTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(tempoNovo), userInfo: nil, repeats: true)
+        //        scheduledTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(tempoNovo), userInfo: nil, repeats: true)
         setTimerCounting(true)
         startStopButton.setTitle("STOP", for: .normal)
         startStopButton.setTitleColor(UIColor.red, for: .normal)
@@ -141,9 +141,9 @@ class TimerController: UIViewController {
     }
     
     func stopTimer(){
-//        if scheduledTimer != nil{
-//            scheduledTimer.invalidate()
-//        }
+        //        if scheduledTimer != nil{
+        //            scheduledTimer.invalidate()
+        //        }
         TimerModel.sharedTimer.stopTimer()
         setTimerCounting(false)
         startStopButton.setTitle("START", for: .normal)
@@ -185,7 +185,7 @@ class TimerModel {
         let timer = TimerModel()
         return timer
     }()
-
+    
     private(set) var internalTimer: Timer?
     private(set) var currentSeconds = 0
     private(set) var finalSeconds = 60
@@ -193,7 +193,7 @@ class TimerModel {
     private var timerModelType: TimerModelType = .increment
     
     private init() {}
-
+    
     func startTimer(withInitialSeconds initialSeconds: Int,
                     finalSeconds: Int,
                     interval: Double,
@@ -213,7 +213,7 @@ class TimerModel {
                                              userInfo: nil,
                                              repeats: true)
     }
-
+    
     func pauseTimer() {
         guard internalTimer != nil else {
             print("No timer active, start the timer before you stop it.")
@@ -229,7 +229,7 @@ class TimerModel {
         }
         internalTimer?.fire()
     }
-
+    
     func stopTimer() {
         guard internalTimer != nil else {
             print("No timer active, start the timer before you stop it.")
@@ -247,7 +247,7 @@ class TimerModel {
     func removeListener(forKey key: String) {
         listeners.removeValue(forKey: key)
     }
-
+    
     @objc func notifyListeners() {
         currentSeconds += (timerModelType == .decrease) ? -1 : 1
         for listener in listeners.values {
