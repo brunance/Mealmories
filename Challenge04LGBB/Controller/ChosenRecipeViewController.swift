@@ -97,15 +97,15 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     }
     
     @IBAction func configbutton(_ sender: Any) {
-        navigation(destino: "Config")
+        navigation(destino: .config)
     }
     
     func setupNavigationBackButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    func navigation(destino:String){
-        if destino == "Recipe" {
+    func navigation(destino:Destinations){
+        if destino == .recipe{
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
             
@@ -116,7 +116,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             self.navigationController?.pushViewController(newViewController, animated: true)
             
         }
-        if destino == "Config" {
+        if destino == .config{
             let storyBoard: UIStoryboard = UIStoryboard(name: "ConfigScreen", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "ConfigScreen") as! ConfigViewController
             
@@ -129,7 +129,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     
     
     @IBAction func playSound(_ sender: Any){
-        navigation(destino: "Recipe")
+        navigation(destino: .recipe)
         if hapticEffect == true {
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.success)

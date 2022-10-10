@@ -205,12 +205,12 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     
     @IBAction func ClickReceitaDestaque(_ sender: Any) {
         escolha = randomInt
-        navigation(destino: "Chosen")
+        navigation(destino: .chosen)
         
     }
     
     @IBAction func ConfigButton(_ sender: Any) {
-        navigation(destino: "Config")
+        navigation(destino: .config)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -231,8 +231,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         return cell
     }
     
-    func navigation(destino: String) {
-        if destino == "Chosen" {
+    func navigation(destino: Destinations) {
+        if destino == .chosen {
             let storyBoard: UIStoryboard = UIStoryboard(name: "ChosenRecipe", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChosenRecipe") as! ChosenRecipeViewController
             
@@ -242,7 +242,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
         
-        if destino == "Config" {
+        if destino == .config {
             let storyBoard: UIStoryboard = UIStoryboard(name: "ConfigScreen", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "ConfigScreen") as! ConfigViewController
             
@@ -257,7 +257,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         escolha = indexPath.row
-        navigation(destino: "Chosen")
+        navigation(destino: .chosen)
     }
 
 }
