@@ -1,9 +1,3 @@
-//
-//  ConfigViewController.swift
-//  Challenge04LGBB
-//
-//  Created by Luciano Uchoa on 24/08/22.
-//
 
 import Foundation
 import UIKit
