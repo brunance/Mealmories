@@ -267,9 +267,9 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         
     }
     
-    func navigation(destino:String) {
+    func navigation(destino:Destinations) {
         
-        if destino == "ForgotRecipe"{
+        if destino == .forgot{
             let storyBoard: UIStoryboard = UIStoryboard(name: "ForgetRecipe", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "ForgetRecipe") as! ForgotRecipeViewController
             
@@ -280,7 +280,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             
         }
         
-        if destino == "End"{
+        if destino == .end{
             let storyBoard: UIStoryboard = UIStoryboard(name: "EndRecipe", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "EndRecipe") as! EndRecipeViewController
             
@@ -290,7 +290,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
         
-        if destino == "Timer"{
+        if destino == .timer{
             let storyBoard: UIStoryboard = UIStoryboard(name: "Timer", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "Timer") as! TimerController
             
@@ -331,11 +331,11 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     }
     
     @IBAction func forgetRecipeButton(_ sender: Any) {
-        navigation(destino: "ForgotRecipe")
+        navigation(destino: .forgot)
     }
     
     @IBAction func playSound(_ sender: Any) {
-        navigation(destino: "End")
+        navigation(destino: .end)
         if haptic == true {
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.warning)
@@ -453,7 +453,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     
     
     @IBAction func timerButton(_ sender: Any) {
-        navigation(destino: "Timer")
+        navigation(destino: .timer)
     }
 }
 

@@ -8,8 +8,8 @@ class IsInitialUser : UIViewController{
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        let modelName = UIDevice.modelName
-        if LandscapeManager.shared.isFirstLaunch && modelName.localizedStandardContains("iPhone") {
+     
+        if LandscapeManager.shared.isFirstLaunch {
             var newViewController = ViewController()
             newViewController = ViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: .none)
             newViewController.modalPresentationStyle = .fullScreen
@@ -19,12 +19,7 @@ class IsInitialUser : UIViewController{
             LandscapeManager.shared.isFirstLaunch = true
         }
         else{
-            //            var newViewController = ViewController()
-            //            newViewController = ViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: .none)
-            //            newViewController.modalPresentationStyle = .fullScreen
-            //            self.present(newViewController, animated:true, completion:nil)
-            
-            
+     
             LandscapeManager.shared.isFirstLaunch = true
             let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
