@@ -9,8 +9,8 @@ class ForgotRecipeViewController: UIViewController {
     @IBOutlet weak var tableEtapasHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
     
-    private var itemList1 : [String] = [String]()
-    private var itemList2 : [String] = [String]()
+    private var ingredientsList : [String] = [String]()
+    private var etapasList : [String] = [String]()
     
     var choosenrecipe : [ChosenRecipeModel] = []
     var escolha : Int = 0
@@ -46,10 +46,10 @@ class ForgotRecipeViewController: UIViewController {
     private func setTabeleViewData(){
         choosenrecipe = getChosenRecipe()
         for i in 0...choosenrecipe[escolha].ingredientes.count - 1 {
-            self.itemList1.append(choosenrecipe[escolha].ingredientes[i])
+            self.ingredientsList.append(choosenrecipe[escolha].ingredientes[i])
         }
         for i in 0...choosenrecipe[escolha].etapas.count - 1 {
-            self.itemList2.append(choosenrecipe[escolha].etapas[i])
+            self.etapasList.append(choosenrecipe[escolha].etapas[i])
         }
         
         self.tableIngredients.reloadData()
@@ -77,11 +77,11 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
         var count: Int?
         
         if tableView == self.tableIngredients {
-            count = self.itemList1.count
+            count = self.ingredientsList.count
         }
         
         if tableView == self.tableEtapas {
-            count = self.itemList2.count
+            count = self.etapasList.count
         }
         
         return count!
@@ -89,12 +89,11 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell: UITableViewCell?
         
         if tableView == self.tableIngredients{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableIngredientCell
             
-            cell.labelCell.text = self.itemList1[indexPath.item].localize()
+            cell.labelCell.text = self.ingredientsList[indexPath.item].localize()
             cell.bgView.backgroundColor = UIColor(named: "LabelMagenta")
             cell.imageCell.image = UIImage(named: "ingrediente")
             
@@ -104,14 +103,18 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
         if tableView == self.tableEtapas{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! TableEtapasCell
             
-            cell.labelEtapaCell.text = self.itemList2[indexPath.item].localize()
+            cell.labelEtapaCell.text = self.etapasList[indexPath.item].localize()
             cell.backView.backgroundColor = UIColor(named: "LabelOrange")
             cell.imageEtapaCell.image = UIImage(named: "Numero \(indexPath.item + 1)")
             
             return cell
         }
         
-        return cell!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableEtapasCell else {
+            fatalError("Failed to load tableView")
+        }
+        
+        return cell
     }
 }
 
