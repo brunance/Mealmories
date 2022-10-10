@@ -39,7 +39,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     }
     
     @IBAction func ShareButton(_ sender: Any) {
-        navigation(Destino: "Modelo")
+        navigation(Destino: .modelo)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,14 +52,14 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         AppDelegate.AppUtility.lockOrientation(.allButUpsideDown)
     }
     
-    func navigation(Destino:String){
-        if(Destino == "Home"){
+    func navigation(Destino:Destinations){
+        if(Destino == .recipe){
             let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
             
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
-        if(Destino == "Modelo"){
+        if(Destino == .modelo){
             let storyBoard: UIStoryboard = UIStoryboard(name: "Template", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "Template") as! TemplateScreen
             newViewController.image = imageTake.image
@@ -80,7 +80,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     }
     
     @IBAction func backToRecipesScreen(_ sender: Any) {
-        navigation(Destino: "Home")
+        navigation(Destino: .recipe)
     }
     
     //MARK: - Take image

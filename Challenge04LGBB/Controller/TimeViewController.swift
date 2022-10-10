@@ -141,9 +141,7 @@ class TimerController: UIViewController {
     }
     
     func stopTimer(){
-        //        if scheduledTimer != nil{
-        //            scheduledTimer.invalidate()
-        //        }
+     
         TimerModel.sharedTimer.stopTimer()
         setTimerCounting(false)
         startStopButton.setTitle("START", for: .normal)
