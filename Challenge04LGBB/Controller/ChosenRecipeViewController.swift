@@ -110,9 +110,9 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
             
             let escolha = escolha
-            newViewController.escolha = escolha
+            newViewController.indexReceitaEscolhida = escolha
             let count = count
-            newViewController.count = 0
+            newViewController.contadorInstrucoes = 0
             self.navigationController?.pushViewController(newViewController, animated: true)
             
         }
