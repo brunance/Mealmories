@@ -49,7 +49,9 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     
     override func viewWillAppear(_ animated: Bool) {
         
-        AppDelegate.AppUtility.lockOrientation(.portrait)
+        if UIDevice.current.model == "iPhone"{
+            AppDelegate.AppUtility.lockOrientation(.portrait)
+        }
         
         let defaults = UserDefaults.standard
         eye = defaults.bool(forConfigKey: .touch)
