@@ -18,7 +18,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     @IBOutlet weak var tableIngredientsHeight: NSLayoutConstraint!
     @IBOutlet weak var tableEtapas: UITableView!
     @IBOutlet weak var tableEtapasHeight: NSLayoutConstraint!
-    @IBOutlet weak var ScrollViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var imagemReceitaEscolhida: UIImageView!
     
@@ -28,8 +28,8 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     @IBOutlet weak var dificultyReceitaEscolhidaImage: UIImageView!
     @IBOutlet weak var ageReceitaEscolhida: UILabel!
     
-    var itemList1 : [String] = [String]()
-    var itemList2 : [String] = [String]()
+    var ingredientsList : [String] = [String]()
+    var etapasList : [String] = [String]()
     var chosenRecipe : [ChosenRecipeModel] = []
     
     @IBOutlet weak var startButton : UIButton!
@@ -49,7 +49,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         startButton.layer.cornerRadius = 20
         self.setTableView()
         if chosenRecipe[escolha].ingredientes.count >= 5 {
-            self.ScrollViewHeight.constant += self.tableIngredients.contentSize.height - 260.0
+            self.scrollViewHeight.constant += self.tableIngredients.contentSize.height - 260.0
         }
     }
     
@@ -84,10 +84,10 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     private func setTabeleViewData(){
         chosenRecipe = getChosenRecipe()
         for i in 0...chosenRecipe[escolha].ingredientes.count - 1 {
-            self.itemList1.append(chosenRecipe[escolha].ingredientes[i])
+            self.ingredientsList.append(chosenRecipe[escolha].ingredientes[i])
         }
         for i in 0...chosenRecipe[escolha].etapas.count - 1 {
-            self.itemList2.append(chosenRecipe[escolha].etapas[i])
+            self.etapasList.append(chosenRecipe[escolha].etapas[i])
         }
         
         self.tableIngredients.reloadData()
@@ -210,11 +210,11 @@ extension ChosenRecipeViewController: UITableViewDataSource, UITableViewDelegate
         var count: Int?
         
         if tableView == self.tableIngredients {
-            count = self.itemList1.count
+            count = self.ingredientsList.count
         }
         
         if tableView == self.tableEtapas {
-            count = self.itemList2.count
+            count = self.etapasList.count
         }
         
         return count!
@@ -222,12 +222,10 @@ extension ChosenRecipeViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell: UITableViewCell?
-        
         if tableView == self.tableIngredients{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableIngredientCell
             
-            cell.labelCell.text = self.itemList1[indexPath.item].localize()
+            cell.labelCell.text = self.ingredientsList[indexPath.item].localize()
             cell.bgView.backgroundColor = UIColor(named: "LabelMagenta")
             cell.imageCell.image = UIImage(named: "ingrediente")
             
@@ -237,14 +235,18 @@ extension ChosenRecipeViewController: UITableViewDataSource, UITableViewDelegate
         if tableView == self.tableEtapas{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! TableEtapasCell
             
-            cell.labelEtapaCell.text = self.itemList2[indexPath.item].localize()
+            cell.labelEtapaCell.text = self.etapasList[indexPath.item].localize()
             cell.backView.backgroundColor = UIColor(named: "LabelOrange")
             cell.imageEtapaCell.image = UIImage(named: "Numero \(indexPath.item + 1)")
             
             return cell
         }
         
-        return cell!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableEtapasCell else {
+            fatalError("Failed to load tableView")
+        }
+        
+        return cell
     }
 }
 
