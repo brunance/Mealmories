@@ -90,12 +90,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
                     if self.contadorInstrucoes < 9 {
                         self.contadorInstrucoes += 1
                     }
-                    self.play(tiposom: "passar")
+                    self.play(tipoSom: "passar")
                     self.viewDidLoad()
                     print(self.contadorInstrucoes)
                 }
                 if(self.labelEyeFinalState == "You are blinking left." && self.contadorInstrucoes != 0){
-                    self.play(tiposom: "voltar")
+                    self.play(tipoSom: "voltar")
                     self.contadorInstrucoes -= 1
                     self.viewDidLoad()
                     print(self.contadorInstrucoes)
@@ -142,7 +142,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             viewDidLoad()
         }
         
-        play(tiposom: "passar")
+        play(tipoSom: "passar")
         if haptic == true {
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.success)
@@ -159,7 +159,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         }
         
         
-        play(tiposom: "voltar")
+        play(tipoSom: "voltar")
         if haptic == true {
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.success)
@@ -300,7 +300,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             
         } else{
             contadorInstrucoes += 1
-            play(tiposom: "passar")
+            play(tipoSom: "passar")
             if haptic == true {
                 let generator = UINotificationFeedbackGenerator()
                 generator.notificationOccurred(.success)
@@ -314,7 +314,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             contadorInstrucoes = 0
         }else{
             contadorInstrucoes -= 1
-            play(tiposom: "voltar")
+            play(tipoSom: "voltar")
             if haptic == true {
                 let generator = UINotificationFeedbackGenerator()
                 generator.notificationOccurred(.success)
@@ -333,12 +333,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.warning)
         }
-        play(tiposom: "fim-receita")
+        play(tipoSom: "fim-receita")
     }
     
-    func play(tiposom : String) {
+    func play(tipoSom : String) {
         if sound == true{
-            let urlString = Bundle.main.path(forResource: tiposom, ofType: "mp3")
+            let urlString = Bundle.main.path(forResource: tipoSom, ofType: "mp3")
             do {
                 try? AVAudioSession.sharedInstance().setMode(.default)
                 try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
