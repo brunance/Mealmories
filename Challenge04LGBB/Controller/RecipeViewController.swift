@@ -288,15 +288,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             navigationController?.modalPresentationStyle = .formSheet
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
-        
-        if destino == .timer{
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Timer", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Timer") as! TimerController
-            
-            
-            navigationController?.modalPresentationStyle = .formSheet
-            self.navigationController?.pushViewController(newViewController, animated: true)
-        }
     }
     
     @IBAction func goRight(_ sender: Any) {
