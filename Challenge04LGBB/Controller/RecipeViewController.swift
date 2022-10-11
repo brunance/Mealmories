@@ -270,8 +270,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     func navigation(destino:Destinations) {
         
         if destino == .forgot{
-            let storyBoard: UIStoryboard = UIStoryboard(name: "ForgetRecipe", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ForgetRecipe") as! ForgotRecipeViewController
+            let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.forgot.rawValue) as! ForgotRecipeViewController
             
             let escolha = escolha
             newViewController.escolha = escolha
@@ -281,8 +281,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         }
         
         if destino == .end{
-            let storyBoard: UIStoryboard = UIStoryboard(name: "EndRecipe", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "EndRecipe") as! EndRecipeViewController
+            let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.end.rawValue) as! EndRecipeViewController
             
             let escolha = escolha
             newViewController.escolha = escolha
@@ -291,8 +291,8 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         }
         
         if destino == .timer{
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Timer", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Timer") as! TimerController
+            let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.timer.rawValue) as! TimerController
             
             
             navigationController?.modalPresentationStyle = .formSheet

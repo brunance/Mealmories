@@ -67,8 +67,8 @@ class Page3: UIViewController {
     }
     
     @IBAction func gotoApp(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
+        let storyBoard: UIStoryboard = UIStoryboard(name: Destinations.listRecipes.rawValue, bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.listRecipes.rawValue) as! ListRecipesViewController
         let targetNavigationController = UINavigationController(rootViewController: newViewController)
         targetNavigationController.modalPresentationStyle = .fullScreen
         

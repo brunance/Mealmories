@@ -53,15 +53,15 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     }
     
     func navigation(Destino:Destinations){
-        if(Destino == .recipe){
-            let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
+        if(Destino == .listRecipes){
+            let storyBoard: UIStoryboard = UIStoryboard(name: Destino.rawValue, bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.listRecipes.rawValue) as! ListRecipesViewController
             
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
         if(Destino == .modelo){
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Template", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Template") as! TemplateScreen
+            let storyBoard: UIStoryboard = UIStoryboard(name: Destino.rawValue, bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.modelo.rawValue) as! TemplateScreen
             newViewController.image = imageTake.image
             newViewController.escolha = escolha
             
@@ -79,9 +79,11 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         cameraButton.layer.cornerRadius = 10
     }
     
-    @IBAction func backToRecipesScreen(_ sender: Any) {
-        navigation(Destino: .recipe)
+ 
+    @IBAction func backToRecipeScrenn(_ sender: Any) {
+        navigation(Destino: .listRecipes)
     }
+    
     
     //MARK: - Take image
     @IBAction func takePhoto(_ sender: UIButton) {

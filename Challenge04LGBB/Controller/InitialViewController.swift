@@ -21,8 +21,8 @@ class IsInitialUser : UIViewController{
         else{
      
             LandscapeManager.shared.isFirstLaunch = true
-            let storyBoard: UIStoryboard = UIStoryboard(name: "ListRecipesScreen", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "recipesScreen") as! ListRecipesViewController
+            let storyBoard: UIStoryboard = UIStoryboard(name: Destinations.listRecipes.rawValue, bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.listRecipes.rawValue) as! ListRecipesViewController
             
             self.navigationController?.pushViewController(newViewController, animated: false)
             

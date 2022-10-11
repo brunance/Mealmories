@@ -233,8 +233,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     
     func navigation(destino: Destinations) {
         if destino == .chosen {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "ChosenRecipe", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChosenRecipe") as! ChosenRecipeViewController
+            let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.chosen.rawValue) as! ChosenRecipeViewController
             
             let escolha = escolha
             newViewController.escolha = escolha
@@ -243,8 +243,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         }
         
         if destino == .config {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "ConfigScreen", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ConfigScreen") as! ConfigViewController
+            let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.config.rawValue) as! ConfigViewController
             
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
