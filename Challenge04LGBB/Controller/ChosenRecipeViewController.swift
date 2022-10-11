@@ -106,8 +106,8 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     
     func navigation(destino:Destinations){
         if destino == .recipe{
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Main") as! RecipeViewController
+            let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.recipe.rawValue) as! RecipeViewController
             
             let escolha = escolha
             newViewController.indexReceitaEscolhida = escolha
@@ -117,8 +117,8 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             
         }
         if destino == .config{
-            let storyBoard: UIStoryboard = UIStoryboard(name: "ConfigScreen", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ConfigScreen") as! ConfigViewController
+            let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.config.rawValue) as! ConfigViewController
             
             self.navigationController?.pushViewController(newViewController, animated: true)
             
