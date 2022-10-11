@@ -12,14 +12,14 @@ class ConfigViewController: UIViewController {
     @IBOutlet weak var touch: UISwitch!
     @IBOutlet weak var soundEffect: UISwitch!
     @IBOutlet weak var haptic: UISwitch!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let defaults = UserDefaults.standard
-        touch.setOn(defaults.bool(forKey: "Touch"), animated: true)
-        soundEffect.setOn(defaults.bool(forKey: "Sound"), animated: true)
-        haptic.setOn(defaults.bool(forKey: "Haptic"), animated: true)
+        touch.setOn(defaults.bool(forConfigKey: .touch), animated: true)
+        soundEffect.setOn(defaults.bool(forConfigKey: .sound), animated: true)
+        haptic.setOn(defaults.bool(forConfigKey: .haptic), animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,11 +35,11 @@ class ConfigViewController: UIViewController {
         if touch.isOn == true {
             UserKeys.StatusEye = true
             let defaults = UserDefaults.standard
-            defaults.set(true, forKey: "Touch")
+            defaults.set(true, forConfigKey: .touch)
         }
         else{
             let defaults = UserDefaults.standard
-            defaults.set(false, forKey: "Touch")
+            defaults.set(false, forConfigKey: .touch)
         }
     }
     
@@ -65,7 +65,7 @@ class ConfigViewController: UIViewController {
                 DispatchQueue.main.async{
                     self.touch.setOn(false, animated: false)
                     let defaults = UserDefaults.standard
-                    defaults.set(false, forKey: "Touch")
+                    defaults.set(false, forConfigKey: .touch)
                     if count > 0{
                         self.presentCameraSettings()
                     }
@@ -79,10 +79,10 @@ class ConfigViewController: UIViewController {
         if soundEffect.isOn {
             UserKeys.StatusSound = true
             let defaults = UserDefaults.standard
-            defaults.set(true, forKey: "Sound")
+            defaults.set(true, forConfigKey: .sound)
         }else {
             let defaults = UserDefaults.standard
-            defaults.set(false, forKey: "Sound")
+            defaults.set(false, forConfigKey: .sound)
         }
     }
     
@@ -90,10 +90,10 @@ class ConfigViewController: UIViewController {
         if haptic.isOn {
             UserKeys.StatusSound = true
             let defaults = UserDefaults.standard
-            defaults.set(true, forKey: "Haptic")
+            defaults.set(true, forConfigKey: .haptic)
         }else {
             let defaults = UserDefaults.standard
-            defaults.set(false, forKey: "Haptic")
+            defaults.set(false, forConfigKey: .haptic)
         }
     }
     

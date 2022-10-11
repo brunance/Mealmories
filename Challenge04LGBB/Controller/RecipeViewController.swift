@@ -40,22 +40,21 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         case camera
     }
     
-    var player : AVAudioPlayer?
+    var soundEffectPlayer : AVAudioPlayer?
     var recipes : [Recipe] = []
-    var xspace = 5
-    var analysis = ""
-    var texto = ""
-    var escolha : Int = 0
-    var count : Int = 0
+    var labelEyeSide = ""
+    var labelEyeFinalState = ""
+    var indexReceitaEscolhida : Int = 0
+    var contadorInstrucoes : Int = 0
     
     override func viewWillAppear(_ animated: Bool) {
         
         AppDelegate.AppUtility.lockOrientation(.portrait)
         
         let defaults = UserDefaults.standard
-        eye = defaults.bool(forKey: "Touch")
-        sound = defaults.bool(forKey: "Sound")
-        haptic = defaults.bool(forKey: "Haptic")
+        eye = defaults.bool(forConfigKey: .touch)
+        sound = defaults.bool(forConfigKey: .sound)
+        haptic = defaults.bool(forConfigKey: .haptic)
         
         let configuration = ARFaceTrackingConfiguration()
         
@@ -82,22 +81,22 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             
             DispatchQueue.main.async {
                 if eye == true {
-                    self.texto = self.analysis
+                    self.labelEyeFinalState = self.labelEyeSide
                 }
                 
-                if (self.texto == "You are blinking right." && self.count < self.recipes[self.escolha].numeroIntrucoes - 1){
-                    if self.count < 9 {
-                        self.count += 1
+                if (self.labelEyeFinalState == "You are blinking right." && self.contadorInstrucoes < self.recipes[self.indexReceitaEscolhida].numeroIntrucoes - 1){
+                    if self.contadorInstrucoes < 9 {
+                        self.contadorInstrucoes += 1
                     }
                     self.play(tiposom: "passar")
                     self.viewDidLoad()
-                    print(self.count)
+                    print(self.contadorInstrucoes)
                 }
-                if(self.texto == "You are blinking left." && self.count != 0){
+                if(self.labelEyeFinalState == "You are blinking left." && self.contadorInstrucoes != 0){
                     self.play(tiposom: "voltar")
-                    self.count -= 1
+                    self.contadorInstrucoes -= 1
                     self.viewDidLoad()
-                    print(self.count)
+                    print(self.contadorInstrucoes)
                 }
                 
                 
@@ -110,13 +109,13 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         let eyeblinkleft = anchor.blendShapes[.eyeBlinkLeft]
         let mouthLeft = anchor.blendShapes[.mouthRight]
         let mouthRight = anchor.blendShapes[.mouthLeft]
-        self.analysis = ""
+        self.labelEyeSide = ""
         
         if eyeblinkright?.decimalValue ?? 0.0 > 0.7 ||  mouthLeft?.decimalValue ?? 0.0 > 0.7{
-            self.analysis += "You are blinking left."
+            self.labelEyeSide += "You are blinking left."
         }
         if eyeblinkleft?.decimalValue ?? 0.0 > 0.7 || mouthRight?.decimalValue ?? 0.0 > 0.7{
-            self.analysis += "You are blinking right."
+            self.labelEyeSide += "You are blinking right."
         }
     }
     
@@ -132,12 +131,12 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     }
     
     @IBAction func NextStep(_ sender: Any) {
-        if count == recipes[escolha].numeroIntrucoes-1{
-            count = recipes[escolha].numeroIntrucoes-1
+        if contadorInstrucoes == recipes[indexReceitaEscolhida].numeroIntrucoes-1{
+            contadorInstrucoes = recipes[indexReceitaEscolhida].numeroIntrucoes-1
         }
         else{
             
-            count += 1
+            contadorInstrucoes += 1
             viewDidLoad()
         }
         
@@ -149,11 +148,11 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     }
     
     @IBAction func LastStep(_ sender: Any) {
-        if count == 0{
-            count = 0
+        if contadorInstrucoes == 0{
+            contadorInstrucoes = 0
         }
         else{
-            count -= 1
+            contadorInstrucoes -= 1
             viewDidLoad()
         }
         
@@ -174,10 +173,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     }
     
     func updateData(){
-        progressBar.progress = recipes[escolha].progressBar[count]
-        tituloDaReceita.title = "\(recipes[escolha].tituloReceita)".localize()
+        progressBar.progress = recipes[indexReceitaEscolhida].progressBar[contadorInstrucoes]
+        tituloDaReceita.title = "\(recipes[indexReceitaEscolhida].tituloReceita)".localize()
         
-        if recipes[escolha].pessoaTurno[count] == "Mix"{
+        if recipes[indexReceitaEscolhida].pessoaTurno[contadorInstrucoes] == "Mix"{
             progressBar.progressTintColor = UIColor.magentaTela
             botaoIr.backgroundColor = UIColor.magentaTela
             botaoVoltar.backgroundColor = UIColor.magentaTela
@@ -190,7 +189,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             imagemTurno.image = UIImage(named: "turno.mix")
         }
         
-        if recipes[escolha].pessoaTurno[count] == "Adulto"{
+        if recipes[indexReceitaEscolhida].pessoaTurno[contadorInstrucoes] == "Adulto"{
             progressBar.progressTintColor = UIColor.blueTela
             botaoIr.backgroundColor = UIColor.blueTela
             botaoVoltar.backgroundColor = UIColor.blueTela
@@ -203,7 +202,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             imagemTurno.image = UIImage(named: "turno.adulto")
         }
         
-        if recipes[escolha].pessoaTurno[count] == "Criança"{
+        if recipes[indexReceitaEscolhida].pessoaTurno[contadorInstrucoes] == "Criança"{
             progressBar.progressTintColor = UIColor.orangeTela
             botaoIr.backgroundColor = UIColor.orangeTela
             botaoVoltar.backgroundColor = UIColor.orangeTela
@@ -216,10 +215,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             imagemTurno.image = UIImage(named: "turno.child")
         }
         
-        labelTurno.text = "\(recipes[escolha].pessoaTurno[count])".localize()
-        labelIntrucao.text = "\(recipes[escolha].descricaoReceita[count])".localize()
-        labelDica.text = "\(recipes[escolha].dicas[count])".localize()
-        imagemIntrucao.image = recipes[escolha].imagemIntrucao[count]
+        labelTurno.text = "\(recipes[indexReceitaEscolhida].pessoaTurno[contadorInstrucoes])".localize()
+        labelIntrucao.text = "\(recipes[indexReceitaEscolhida].descricaoReceita[contadorInstrucoes])".localize()
+        labelDica.text = "\(recipes[indexReceitaEscolhida].dicas[contadorInstrucoes])".localize()
+        imagemIntrucao.image = recipes[indexReceitaEscolhida].imagemIntrucao[contadorInstrucoes]
         
         imagemIntrucao.isAccessibilityElement = true
         imagemIntrucao.accessibilityLabel = "Imagem que resume a intrução da etapa atual da receita"
@@ -231,7 +230,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         botaoFoto.isAccessibilityElement = true
         botaoFoto.accessibilityLabel = "Botão para tirar foto"
         
-        if count == recipes[escolha].numeroIntrucoes-1{
+        if contadorInstrucoes == recipes[indexReceitaEscolhida].numeroIntrucoes-1{
             botaoTerminarReceita.isHidden = false
             botaoTerminarReceita.layer.cornerRadius = 550
             botaoTerminarReceita.isAccessibilityElement = true
@@ -241,7 +240,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             botaoTerminarReceita.isHidden = true
         }
         
-        if count == 0 {
+        if contadorInstrucoes == 0 {
             botaoVoltar.isHidden = true
         }else{
             botaoVoltar.isHidden = false
@@ -249,7 +248,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             botaoVoltar.accessibilityLabel = "Botão para voltar uma etapa da receita"
         }
         
-        if count == recipes[escolha].numeroIntrucoes - 1 {
+        if contadorInstrucoes == recipes[indexReceitaEscolhida].numeroIntrucoes - 1 {
             botaoIr.isHidden = true
         }else {
             botaoIr.isHidden = false
@@ -258,7 +257,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         }
         
         
-        if recipes[escolha].dicas[count] == "" {
+        if recipes[indexReceitaEscolhida].dicas[contadorInstrucoes] == "" {
             lampImage.isHidden = true
         }else {
             lampImage.isHidden = false
@@ -273,7 +272,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.forgot.rawValue) as! ForgotRecipeViewController
             
-            let escolha = escolha
+            let escolha = indexReceitaEscolhida
             newViewController.escolha = escolha
             
             self.present(newViewController, animated:true, completion:nil)
@@ -284,21 +283,21 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.end.rawValue) as! EndRecipeViewController
             
-            let escolha = escolha
+            let escolha = indexReceitaEscolhida
             newViewController.escolha = escolha
             navigationController?.modalPresentationStyle = .formSheet
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
-        
+
     }
     
     @IBAction func goRight(_ sender: Any) {
         
-        if count == recipes[escolha].numeroIntrucoes-1{
-            count = recipes[escolha].numeroIntrucoes-1
+        if contadorInstrucoes == recipes[indexReceitaEscolhida].numeroIntrucoes-1{
+            contadorInstrucoes = recipes[indexReceitaEscolhida].numeroIntrucoes-1
             
         } else{
-            count += 1
+            contadorInstrucoes += 1
             play(tiposom: "passar")
             if haptic == true {
                 let generator = UINotificationFeedbackGenerator()
@@ -309,10 +308,10 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     }
     
     @IBAction func goLeft(_ sender: Any) {
-        if count == 0{
-            count = 0
+        if contadorInstrucoes == 0{
+            contadorInstrucoes = 0
         }else{
-            count -= 1
+            contadorInstrucoes -= 1
             play(tiposom: "voltar")
             if haptic == true {
                 let generator = UINotificationFeedbackGenerator()
@@ -346,9 +345,9 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
                     return
                 }
                 
-                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+                soundEffectPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
                 
-                guard let player = player else {
+                guard let player = soundEffectPlayer else {
                     return
                 }
                 player.play()

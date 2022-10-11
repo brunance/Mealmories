@@ -13,3 +13,9 @@
 
 /* Class = "UILabel"; text = "Habilite ou Desabilite os efeitos sonoros."; ObjectID = "je1-Ts-nQu"; */
 "je1-Ts-nQu.text" = "Enable or Disable sound effects.";
+
+/* Class = "UILabel"; text = "Háptica"; ObjectID = "c2e-Ll-UvA"; */
+"c2e-Ll-UvA.text" = "Haptic";
+
+/* Class = "UILabel"; text = "Habilite ou Desabilite o feedback háptico ao apertar os botões."; ObjectID = "r6g-I7-2R1"; */
+"r6g-I7-2R1.text" = "Enable or Disable haptic feedback when pushing buttons.";
