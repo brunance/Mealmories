@@ -3,16 +3,15 @@ import Foundation
 import UIKit
 import AVFoundation
 
-var teste = false
-var autorizacao = false
-var count = 0
 
 class ConfigViewController: UIViewController {
     
     @IBOutlet weak var touch: UISwitch!
     @IBOutlet weak var soundEffect: UISwitch!
     @IBOutlet weak var haptic: UISwitch!
-
+    var autorizacao = false
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +19,7 @@ class ConfigViewController: UIViewController {
         touch.setOn(defaults.bool(forConfigKey: .touch), animated: true)
         soundEffect.setOn(defaults.bool(forConfigKey: .sound), animated: true)
         haptic.setOn(defaults.bool(forConfigKey: .haptic), animated: true)
+        autorizacao = defaults.bool(forConfigKey: .userAuthorization)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,16 +60,19 @@ class ConfigViewController: UIViewController {
     func getPermission(){
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
             if response {
-                autorizacao = true
+                let defaults = UserDefaults.standard
+                defaults.set(true, forConfigKey: .userAuthorization)
+                self.autorizacao = true
             } else {
                 DispatchQueue.main.async{
                     self.touch.setOn(false, animated: false)
                     let defaults = UserDefaults.standard
                     defaults.set(false, forConfigKey: .touch)
-                    if count > 0{
+                    defaults.set(false, forConfigKey: .userAuthorization)
+                    if self.count > 0{
                         self.presentCameraSettings()
                     }
-                    count += 1
+                    self.count += 1
                 }
             }
         }

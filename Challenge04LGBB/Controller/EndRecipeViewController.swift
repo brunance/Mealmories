@@ -20,6 +20,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     @IBOutlet weak var imageTake: UIImageView!
     var imagePicker: UIImagePickerController!
     var escolha = 0
+    var haptic = false
     
     let confetti = showConfetti()
     
@@ -33,6 +34,8 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         setupNavigationBackButton()
         setupLabel()
         imageTake.layer.cornerRadius = 10
+        let defaults = UserDefaults.standard
+        haptic = defaults.bool(forConfigKey: .haptic)
     }
     func setupNavigationBackButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -95,7 +98,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
                         return
                     }
                     self.selectImageFrom(.camera)
-                    if haptic == true {
+                    if self.haptic == true {
                         let generator = UINotificationFeedbackGenerator()
                         generator.notificationOccurred(.warning)
                     }

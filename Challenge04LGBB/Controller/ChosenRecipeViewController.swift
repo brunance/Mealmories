@@ -9,9 +9,6 @@ import Foundation
 import UIKit
 import AVFoundation
 
-var soundEffect = false
-var hapticEffect = false
-
 class ChosenRecipeViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var tableIngredients: UITableView!
@@ -31,6 +28,8 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     var ingredientsList : [String] = [String]()
     var etapasList : [String] = [String]()
     var chosenRecipe : [ChosenRecipeModel] = []
+    var soundEffect = false
+    var hapticEffect = false
     
     @IBOutlet weak var startButton : UIButton!
     

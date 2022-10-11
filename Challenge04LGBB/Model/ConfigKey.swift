@@ -11,4 +11,5 @@ enum ConfigKey : String {
     case touch = "Touch"
     case sound = "Sound"
     case haptic = "Haptic"
+    case userAuthorization = "userAuthorization"
 }
