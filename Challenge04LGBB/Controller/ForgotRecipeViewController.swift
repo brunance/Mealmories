@@ -94,7 +94,7 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableIngredientCell
             
             cell.labelCell.text = self.ingredientsList[indexPath.item].localize()
-            cell.bgView.backgroundColor = UIColor(named: "LabelMagenta")
+            cell.bgView.backgroundColor = UIColor.magentaFundo
             cell.imageCell.image = UIImage(named: "ingrediente")
             
             return cell
@@ -104,7 +104,7 @@ extension ForgotRecipeViewController: UITableViewDataSource, UITableViewDelegate
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! TableEtapasCell
             
             cell.labelEtapaCell.text = self.etapasList[indexPath.item].localize()
-            cell.backView.backgroundColor = UIColor(named: "LabelOrange")
+            cell.backView.backgroundColor = UIColor.orangeFundo
             cell.imageEtapaCell.image = UIImage(named: "Numero \(indexPath.item + 1)")
             
             return cell

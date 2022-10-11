@@ -37,6 +37,7 @@ class TemplateScreen: UIViewController {
             shareView.drawHierarchy(in: shareView.bounds, afterScreenUpdates: true)
         }
         
+        
         let imageToShare = [ image2 ]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         
