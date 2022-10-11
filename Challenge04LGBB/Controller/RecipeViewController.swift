@@ -5,9 +5,6 @@ import AVFoundation
 import PhotosUI
 import SwiftUI
 
-var eye = false
-var sound = false
-var haptic = false
 
 class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationControllerDelegate {
     //Progess Bar
@@ -40,6 +37,9 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         case camera
     }
     
+    var eye = false
+    var sound = false
+    var haptic = false
     var soundEffectPlayer : AVAudioPlayer?
     var recipes : [Recipe] = []
     var labelEyeSide = ""
@@ -82,7 +82,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             expression(anchor: faceAnchor)
             
             DispatchQueue.main.async {
-                if eye == true {
+                if self.eye == true {
                     self.labelEyeFinalState = self.labelEyeSide
                 }
                 
@@ -370,7 +370,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
                         return
                     }
                     self.selectImageFrom(.camera)
-                    if haptic == true {
+                    if self.haptic == true {
                         let generator = UINotificationFeedbackGenerator()
                         generator.notificationOccurred(.warning)
                     }
