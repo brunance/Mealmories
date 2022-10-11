@@ -33,7 +33,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
         setupNavigationBackButton()
         tableViewReceitasRapidas.dataSource = self
         tableViewReceitasRapidas.delegate = self
-        fundoCards.layer.borderColor = UIColor(named: "Mix_Magenta")!.cgColor
+        fundoCards.layer.borderColor = UIColor.magentaTela?.cgColor
         fundoCards.layer.borderWidth = 3
         confetti.layer.opacity = 0.4
         

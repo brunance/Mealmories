@@ -94,7 +94,7 @@ class ViewController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(named: "CorDaview")
+        view.backgroundColor = UIColor.corDaView
         setup()
         style()
         layout()

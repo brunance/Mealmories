@@ -18,4 +18,5 @@ extension UIColor {
     static var orangeTela = UIColor(named: "Child_Orange")
     static var orangeFundo = UIColor(named: "LabelOrange")
     static var orangeEtapa = UIColor(named: "Adulto_DarkBlue")
+    static var corDaView = UIColor(named: "CorDaView")
 }
