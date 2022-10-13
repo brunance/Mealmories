@@ -33,7 +33,6 @@ class ConfigViewController: UIViewController {
     
     @IBAction func switchDidChange(_ sender: UISwitch){
         if touch.isOn == true {
-            UserKeys.StatusEye = true
             let defaults = UserDefaults.standard
             defaults.set(true, forConfigKey: .touch)
         }
@@ -80,7 +79,6 @@ class ConfigViewController: UIViewController {
     
     @IBAction func soundSwitchDidChange(_ sender: Any) {
         if soundEffect.isOn {
-            UserKeys.StatusSound = true
             let defaults = UserDefaults.standard
             defaults.set(true, forConfigKey: .sound)
         }else {
@@ -91,7 +89,6 @@ class ConfigViewController: UIViewController {
     
     @IBAction func hapticSwitchChange(_ sender: Any) {
         if haptic.isOn {
-            UserKeys.StatusSound = true
             let defaults = UserDefaults.standard
             defaults.set(true, forConfigKey: .haptic)
         }else {
