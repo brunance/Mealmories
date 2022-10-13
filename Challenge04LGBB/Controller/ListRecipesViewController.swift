@@ -20,7 +20,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     @IBOutlet weak var tableViewReceitasRapidas: UITableView!
     @IBOutlet weak var tableViewReceitasRapidasHeight: NSLayoutConstraint!
     
-    var escolha : Int = -1
+    var indexReceitas : Int = -1
     
     let randomInt = Int.random(in: 0..<5)
     
@@ -204,7 +204,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     }
     
     @IBAction func ClickReceitaDestaque(_ sender: Any) {
-        escolha = randomInt
+        indexReceitas = randomInt
         navigation(destino: .chosen)
         
     }
@@ -236,8 +236,8 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
             let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.chosen.rawValue) as! ChosenRecipeViewController
             
-            let escolha = escolha
-            newViewController.escolha = escolha
+            let escolha = indexReceitas
+            newViewController.indexReceitaEscolhida = escolha
             
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
@@ -256,7 +256,7 @@ class ListRecipesViewController : UIViewController,UITableViewDataSource,UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        escolha = indexPath.row
+        indexReceitas = indexPath.row
         navigation(destino: .chosen)
     }
 

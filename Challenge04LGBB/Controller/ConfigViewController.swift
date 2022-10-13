@@ -9,8 +9,8 @@ class ConfigViewController: UIViewController {
     @IBOutlet weak var touch: UISwitch!
     @IBOutlet weak var soundEffect: UISwitch!
     @IBOutlet weak var haptic: UISwitch!
-    var autorizacao = false
-    var count = 0
+    var autorizacaoDoUsuario = false
+    var contadorPermissoes = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class ConfigViewController: UIViewController {
         touch.setOn(defaults.bool(forConfigKey: .touch), animated: true)
         soundEffect.setOn(defaults.bool(forConfigKey: .sound), animated: true)
         haptic.setOn(defaults.bool(forConfigKey: .haptic), animated: true)
-        autorizacao = defaults.bool(forConfigKey: .userAuthorization)
+        autorizacaoDoUsuario = defaults.bool(forConfigKey: .userAuthorization)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,17 +61,17 @@ class ConfigViewController: UIViewController {
             if response {
                 let defaults = UserDefaults.standard
                 defaults.set(true, forConfigKey: .userAuthorization)
-                self.autorizacao = true
+                self.autorizacaoDoUsuario = true
             } else {
                 DispatchQueue.main.async{
                     self.touch.setOn(false, animated: false)
                     let defaults = UserDefaults.standard
                     defaults.set(false, forConfigKey: .touch)
                     defaults.set(false, forConfigKey: .userAuthorization)
-                    if self.count > 0{
+                    if self.contadorPermissoes > 0{
                         self.presentCameraSettings()
                     }
-                    self.count += 1
+                    self.contadorPermissoes += 1
                 }
             }
         }

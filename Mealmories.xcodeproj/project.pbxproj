@@ -123,6 +123,7 @@
 		66D22F3628F59E3000385EAD /* UserDefaults+withConfigType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+withConfigType.swift"; sourceTree = "<group>"; };
 		66D22F3828F59FDC00385EAD /* ConfigKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigKey.swift; sourceTree = "<group>"; };
 		66D22F3B28F5A46F00385EAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ConfigScreen.strings; sourceTree = "<group>"; };
+		66DEFA5828F85C21007BCA07 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Template.strings"; sourceTree = "<group>"; };
 		66E5F76128DBE3E5007178CF /* CAEmitterLayer+createConfetti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAEmitterLayer+createConfetti.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -434,6 +435,7 @@
 			children = (
 				5191E22C28E7433100ED6441 /* Base */,
 				5191E22F28E7433500ED6441 /* en */,
+				66DEFA5828F85C21007BCA07 /* pt-BR */,
 			);
 			name = Template.storyboard;
 			sourceTree = "<group>";
@@ -646,9 +648,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.1;
-
 				PRODUCT_BUNDLE_IDENTIFIER = com.MealmoriesApp;
-
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -680,9 +680,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.1;
-
 				PRODUCT_BUNDLE_IDENTIFIER = com.MealmoriesAppjj;
-
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

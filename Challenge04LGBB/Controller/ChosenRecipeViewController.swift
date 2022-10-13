@@ -34,8 +34,8 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     @IBOutlet weak var startButton : UIButton!
     
     var player : AVAudioPlayer?
-    var escolha : Int = 0
-    var count : Int = 0
+    var indexReceitaEscolhida : Int = 0
+    var contadorReceita : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         setChosenRecipe()
         startButton.layer.cornerRadius = 20
         self.setTableView()
-        if chosenRecipe[escolha].ingredientes.count >= 5 {
+        if chosenRecipe[indexReceitaEscolhida].ingredientes.count >= 5 {
             self.scrollViewHeight.constant += self.tableIngredients.contentSize.height - 260.0
         }
     }
@@ -82,11 +82,11 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
     
     private func setTabeleViewData(){
         chosenRecipe = getChosenRecipe()
-        for i in 0...chosenRecipe[escolha].ingredientes.count - 1 {
-            self.ingredientsList.append(chosenRecipe[escolha].ingredientes[i])
+        for i in 0...chosenRecipe[indexReceitaEscolhida].ingredientes.count - 1 {
+            self.ingredientsList.append(chosenRecipe[indexReceitaEscolhida].ingredientes[i])
         }
-        for i in 0...chosenRecipe[escolha].etapas.count - 1 {
-            self.etapasList.append(chosenRecipe[escolha].etapas[i])
+        for i in 0...chosenRecipe[indexReceitaEscolhida].etapas.count - 1 {
+            self.etapasList.append(chosenRecipe[indexReceitaEscolhida].etapas[i])
         }
         
         self.tableIngredients.reloadData()
@@ -108,9 +108,9 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.recipe.rawValue) as! RecipeViewController
             
-            let escolha = escolha
+            let escolha = indexReceitaEscolhida
             newViewController.indexReceitaEscolhida = escolha
-            _ = count
+            _ = contadorReceita
             newViewController.contadorInstrucoes = 0
             self.navigationController?.pushViewController(newViewController, animated: true)
             
@@ -170,22 +170,22 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
         
         let chosenRecipe = getChosenRecipe()
         
-        imagemReceitaEscolhida.image = chosenRecipe[escolha].imagemReceita
+        imagemReceitaEscolhida.image = chosenRecipe[indexReceitaEscolhida].imagemReceita
         imagemReceitaEscolhida.isAccessibilityElement = true
-        imagemReceitaEscolhida.accessibilityLabel = "Imagem da Receita Escolhida, \(chosenRecipe[escolha].nomeDaReceita)"
+        imagemReceitaEscolhida.accessibilityLabel = "Imagem da Receita Escolhida, \(chosenRecipe[indexReceitaEscolhida].nomeDaReceita)"
         
-        nomeReceitaEscolhida.text = "\(chosenRecipe[escolha].nomeDaReceita)".localize()
-        nomeReceitaEscolhida.accessibilityLabel = "Nome da Receita Escolhida, \(chosenRecipe[escolha].nomeDaReceita)"
+        nomeReceitaEscolhida.text = "\(chosenRecipe[indexReceitaEscolhida].nomeDaReceita)".localize()
+        nomeReceitaEscolhida.accessibilityLabel = "Nome da Receita Escolhida, \(chosenRecipe[indexReceitaEscolhida].nomeDaReceita)"
         
-        tempoReceitaEscolhida.text = "\(chosenRecipe[escolha].tempoDePreparo)".localize()
-        tempoReceitaEscolhida.accessibilityLabel = "Tempo estimado de duração da receita escolhida, \(chosenRecipe[escolha].tempoDePreparo)"
+        tempoReceitaEscolhida.text = "\(chosenRecipe[indexReceitaEscolhida].tempoDePreparo)".localize()
+        tempoReceitaEscolhida.accessibilityLabel = "Tempo estimado de duração da receita escolhida, \(chosenRecipe[indexReceitaEscolhida].tempoDePreparo)"
         
-        dificultyReceitaEscolhida.text = "\(chosenRecipe[escolha].dificuldade)".localize()
-        dificultyReceitaEscolhida.accessibilityLabel = "Dificuldade da receita escolhida, \(chosenRecipe[escolha].dificuldade)"
-        dificultyReceitaEscolhidaImage.image = UIImage(named: "\(chosenRecipe[escolha].dificuldade)-32px")
+        dificultyReceitaEscolhida.text = "\(chosenRecipe[indexReceitaEscolhida].dificuldade)".localize()
+        dificultyReceitaEscolhida.accessibilityLabel = "Dificuldade da receita escolhida, \(chosenRecipe[indexReceitaEscolhida].dificuldade)"
+        dificultyReceitaEscolhidaImage.image = UIImage(named: "\(chosenRecipe[indexReceitaEscolhida].dificuldade)-32px")
         
-        ageReceitaEscolhida.text = "+ \(chosenRecipe[escolha].idadeRecomendada) anos".localize()
-        ageReceitaEscolhida.accessibilityLabel = "Faixa etária da receita escolhida, \(chosenRecipe[escolha].idadeRecomendada) anos ou mais"
+        ageReceitaEscolhida.text = "+ \(chosenRecipe[indexReceitaEscolhida].idadeRecomendada) anos".localize()
+        ageReceitaEscolhida.accessibilityLabel = "Faixa etária da receita escolhida, \(chosenRecipe[indexReceitaEscolhida].idadeRecomendada) anos ou mais"
     }
     
     

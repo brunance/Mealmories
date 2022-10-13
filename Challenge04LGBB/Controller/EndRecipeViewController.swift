@@ -19,7 +19,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var imagePlaceholder: UIView!
     @IBOutlet weak var imageTake: UIImageView!
     var imagePicker: UIImagePickerController!
-    var escolha = 0
+    var indexReceitaEscolhida = 0
     var haptic = false
     
     let confetti = showConfetti()
@@ -37,6 +37,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate,
         let defaults = UserDefaults.standard
         haptic = defaults.bool(forConfigKey: .haptic)
     }
+    
     func setupNavigationBackButton(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
@@ -66,7 +67,7 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate,
             let storyBoard: UIStoryboard = UIStoryboard(name: Destino.rawValue, bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.modelo.rawValue) as! TemplateScreen
             newViewController.image = imageTake.image
-            newViewController.escolha = escolha
+            newViewController.escolha = indexReceitaEscolhida
             
             self.navigationController?.pushViewController(newViewController, animated: true)
             
@@ -75,8 +76,8 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate,
     
     func setupLabel(){
         let receitas = getRecipes()
-        imageMedalha.image = receitas[escolha].medalha
-        labelDesbloqueio.text = receitas[escolha].tituloReceita.localize()
+        imageMedalha.image = receitas[indexReceitaEscolhida].medalha
+        labelDesbloqueio.text = receitas[indexReceitaEscolhida].tituloReceita.localize()
         imageMedalha.isAccessibilityElement = true
         imageMedalha.accessibilityLabel = "Imagem da medalha ganha por terminar a receita!"
         cameraButton.layer.cornerRadius = 10

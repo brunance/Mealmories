@@ -240,7 +240,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate, UINavigationCon
             let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: Destinations.end.rawValue) as! EndRecipeViewController
             let escolha = indexReceitaEscolhida
-            newViewController.escolha = escolha
+            newViewController.indexReceitaEscolhida = escolha
             navigationController?.modalPresentationStyle = .formSheet
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
