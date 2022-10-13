@@ -110,7 +110,7 @@ class ChosenRecipeViewController: UIViewController, UIViewControllerTransitionin
             
             let escolha = escolha
             newViewController.indexReceitaEscolhida = escolha
-            let count = count
+            _ = count
             newViewController.contadorInstrucoes = 0
             self.navigationController?.pushViewController(newViewController, animated: true)
             

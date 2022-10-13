@@ -6,7 +6,7 @@ import PhotosUI
 import SwiftUI
 
 
-class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationControllerDelegate {
+class RecipeViewController: UIViewController, ARSCNViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     //Progess Bar
     @IBOutlet weak var progressBar: UIProgressView!
     //Botoes da tela
@@ -435,6 +435,16 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         }
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        imagePicker.dismiss(animated: true, completion: nil)
+        guard let selectedImage = info[.originalImage] as? UIImage else {
+            print("Image not found!")
+            return
+        }
+        imageTake.image = selectedImage
+        save(self)
+    }
+    
     func showAlertWith(title: String, message: String){
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
@@ -444,19 +454,6 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     
     @IBAction func timerButton(_ sender: Any) {
         navigation(destino: .timer)
-    }
-}
-
-extension RecipeViewController: UIImagePickerControllerDelegate{
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
-        imagePicker.dismiss(animated: true, completion: nil)
-        guard let selectedImage = info[.originalImage] as? UIImage else {
-            print("Image not found!")
-            return
-        }
-        imageTake.image = selectedImage
-        save(self)
     }
 }
 
