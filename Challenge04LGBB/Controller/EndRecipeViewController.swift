@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import PhotosUI
 
-class EndRecipeViewController: UIViewController, UINavigationControllerDelegate {
+class EndRecipeViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var imageMedalha: UIImageView!
     @IBOutlet weak var medalhaView: UIView!
@@ -169,6 +169,17 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
         }
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        imagePicker.dismiss(animated: true, completion: nil)
+        guard var selectedImage = info[.originalImage] as? UIImage else {
+            print("Image not found!")
+            return
+        }
+        selectedImage = selectedImage.withRoundedCorners(radius: 100)!
+        imageTake.image = selectedImage
+        save(self)
+    }
+    
     @IBAction func sharePhoto(_ sender: Any) {
         
         let renderer = UIGraphicsImageRenderer(size: medalhaView.bounds.size)
@@ -192,17 +203,4 @@ class EndRecipeViewController: UIViewController, UINavigationControllerDelegate 
     }
 }
 
-extension EndRecipeViewController: UIImagePickerControllerDelegate{
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
-        imagePicker.dismiss(animated: true, completion: nil)
-        guard var selectedImage = info[.originalImage] as? UIImage else {
-            print("Image not found!")
-            return
-        }
-        selectedImage = selectedImage.withRoundedCorners(radius: 100)!
-        imageTake.image = selectedImage
-        save(self)
-    }
-}
 

@@ -5,8 +5,11 @@ import AVFoundation
 import PhotosUI
 import SwiftUI
 
-class RecipeViewController: UIViewController, ARSCNViewDelegate, UINavigationControllerDelegate {
-    // Progess Bar
+
+
+class RecipeViewController: UIViewController, ARSCNViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+    //Progess Bar
+
     @IBOutlet weak var progressBar: UIProgressView!
     // Botoes da tela
     @IBOutlet weak var botaoVoltar: UIButton!
@@ -364,17 +367,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate, UINavigationCon
             }
         }
     }
-    func showAlertWith(title: String, message: String){
-        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
-    }
-    @IBAction func timerButton(_ sender: Any) {
-        navigation(destino: .timer)
-    }
-}
-
-extension RecipeViewController: UIImagePickerControllerDelegate{
+  
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         imagePicker.dismiss(animated: true, completion: nil)
         guard let selectedImage = info[.originalImage] as? UIImage else {
@@ -383,6 +376,14 @@ extension RecipeViewController: UIImagePickerControllerDelegate{
         }
         imageTake.image = selectedImage
         save(self)
+    }
+    func showAlertWith(title: String, message: String){
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+    @IBAction func timerButton(_ sender: Any) {
+        navigation(destino: .timer)
     }
 }
 
