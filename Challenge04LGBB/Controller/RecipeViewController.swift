@@ -268,7 +268,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
         
     }
     
-    func navigation(destino:Destinations) {
+    func navigation(destino: Destinations) {
         
         if destino == .forgot{
             let storyBoard: UIStoryboard = UIStoryboard(name: destino.rawValue, bundle: nil)
@@ -290,7 +290,7 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
             navigationController?.modalPresentationStyle = .formSheet
             self.navigationController?.pushViewController(newViewController, animated: true)
         }
-
+        
     }
     
     @IBAction func goRight(_ sender: Any) {
@@ -310,17 +310,14 @@ class RecipeViewController: UIViewController, ARSCNViewDelegate,UINavigationCont
     }
     
     @IBAction func goLeft(_ sender: Any) {
-        if contadorInstrucoes == 0{
-            contadorInstrucoes = 0
-        }else{
-            contadorInstrucoes -= 1
-            play(tipoSom: "voltar")
-            if haptic == true {
-                let generator = UINotificationFeedbackGenerator()
-                generator.notificationOccurred(.success)
-            }
-            viewDidLoad()
+        contadorInstrucoes -= 1
+        play(tipoSom: "voltar")
+        if haptic == true {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
         }
+        viewDidLoad()
+        
     }
     
     @IBAction func forgetRecipeButton(_ sender: Any) {
