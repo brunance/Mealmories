@@ -85,7 +85,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="LastStep:" destination="0BQ-UW-R7E" eventType="touchUpInside" id="y0E-5j-UYg"/>
+                                    <action selector="lastStep:" destination="0BQ-UW-R7E" eventType="touchUpInside" id="Yit-Xb-Bv9"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Lf-PWV" userLabel="InstrucoesView">
@@ -127,7 +127,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhd-gs-qhb">
-                                        <rect key="frame" x="25.333333333333343" y="434" width="299.33333333333326" height="34"/>
+                                        <rect key="frame" x="25.333333333333343" y="430.33333333333337" width="299.33333333333326" height="41.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="É hora de comer!">
                                             <fontDescription key="titleFontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="17"/>
@@ -243,7 +243,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="NextStep:" destination="0BQ-UW-R7E" eventType="touchUpInside" id="HUH-x4-cU7"/>
+                                    <action selector="nextStep:" destination="0BQ-UW-R7E" eventType="touchUpInside" id="GHu-FW-YjR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk8-2Y-0fh">
