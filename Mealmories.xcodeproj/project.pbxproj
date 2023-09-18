@@ -355,6 +355,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		4F977CB628EF24C800459F5D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -635,6 +636,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mealmories;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Detects facial gestures to transition between turns and takes pictures.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save the pictures to your device's gallery";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Save the pictures to your device's gallery";
@@ -667,6 +669,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge04LGBB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mealmories;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Detects facial gestures to transition between turns and takes pictures.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save the pictures to your device's gallery";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Save the pictures to your device's gallery";
