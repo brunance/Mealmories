@@ -9,6 +9,7 @@ class ProgressBar: UIProgressView{
         maskLayer.path = maskLayerPath.cgPath
         maskLayer.frame = self.bounds
         layer.mask = maskLayer
+        
     }
     
 }
